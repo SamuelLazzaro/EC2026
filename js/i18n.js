@@ -15,6 +15,7 @@ const TRANSLATIONS = {
       sub:   "Pattinaggio Corsa a Rotelle 2026"
     },
     nav: {
+      home:        "Home",
       classifiche: "Classifiche",
       sponsor:     "Sponsor",
       alloggi:     "Alloggi",
@@ -141,6 +142,7 @@ const TRANSLATIONS = {
       sub:   "Inline Speed Skating 2026"
     },
     nav: {
+      home:        "Home",
       classifiche: "Rankings",
       sponsor:     "Sponsors",
       alloggi:     "Accommodation",
@@ -267,6 +269,7 @@ const TRANSLATIONS = {
       sub:   "Patinage de Vitesse en Ligne 2026"
     },
     nav: {
+      home:        "Accueil",
       classifiche: "Classements",
       sponsor:     "Sponsors",
       alloggi:     "Hébergements",
@@ -393,6 +396,7 @@ const TRANSLATIONS = {
       sub:   "Inline-Speedskating 2026"
     },
     nav: {
+      home:        "Startseite",
       classifiche: "Ergebnisse",
       sponsor:     "Sponsoren",
       alloggi:     "Unterkünfte",
@@ -519,6 +523,7 @@ const TRANSLATIONS = {
       sub:   "Patinaje de Velocidad en Línea 2026"
     },
     nav: {
+      home:        "Inicio",
       classifiche: "Clasificaciones",
       sponsor:     "Patrocinadores",
       alloggi:     "Alojamientos",
@@ -645,6 +650,7 @@ const TRANSLATIONS = {
       sub:   "Patinagem de Velocidade em Linha 2026"
     },
     nav: {
+      home:        "Início",
       classifiche: "Classificações",
       sponsor:     "Patrocinadores",
       alloggi:     "Alojamentos",
