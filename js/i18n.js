@@ -21,6 +21,7 @@ const TRANSLATIONS = {
       alloggi:     "Alloggi",
       luogo:       "Luogo",
       news:        "News",
+      contatti:    "Contatti",
       footer:      "Cardano al Campo (VA), Italia · 20–26 Luglio 2026"
     },
     footer: {
@@ -128,6 +129,13 @@ const TRANSLATIONS = {
       title:    "News",
       desc:     "Le ultime notizie dai Campionati Europei 2026.",
       readmore: "Leggi di più"
+    },
+    contatti: {
+      tag:         "Informazioni",
+      title:       "Contatti",
+      desc:        "Per informazioni e richieste, contattaci via email, telefono o attraverso i nostri canali social.",
+      email_label: "Email",
+      phone_label: "Telefono"
     }
   },
 
@@ -148,6 +156,7 @@ const TRANSLATIONS = {
       alloggi:     "Accommodation",
       luogo:       "Luogo",
       news:        "News",
+      contatti:    "Contacts",
       footer:      "Cardano al Campo (VA), Italy · 20–26 July 2026"
     },
     footer: {
@@ -255,6 +264,13 @@ const TRANSLATIONS = {
       title:    "News",
       desc:     "The latest news from the 2026 European Championships.",
       readmore: "Read more"
+    },
+    contatti: {
+      tag:         "Information",
+      title:       "Contacts",
+      desc:        "For information and enquiries, contact us by email, phone or through our social channels.",
+      email_label: "Email",
+      phone_label: "Phone"
     }
   },
 
@@ -275,6 +291,7 @@ const TRANSLATIONS = {
       alloggi:     "Hébergements",
       luogo:       "Lieu",
       news:        "Actualités",
+      contatti:    "Contacts",
       footer:      "Cardano al Campo (VA), Italie · 20–26 juillet 2026"
     },
     footer: {
@@ -382,6 +399,13 @@ const TRANSLATIONS = {
       title:    "Actualités",
       desc:     "Les dernières nouvelles des Championnats d'Europe 2026.",
       readmore: "Lire la suite"
+    },
+    contatti: {
+      tag:         "Informations",
+      title:       "Contacts",
+      desc:        "Pour toute information ou demande, contactez-nous par email, téléphone ou via nos réseaux sociaux.",
+      email_label: "Email",
+      phone_label: "Téléphone"
     }
   },
 
@@ -402,6 +426,7 @@ const TRANSLATIONS = {
       alloggi:     "Unterkünfte",
       luogo:       "Veranstaltungsort",
       news:        "Neuigkeiten",
+      contatti:    "Kontakt",
       footer:      "Cardano al Campo (VA), Italien · 20.–26. Juli 2026"
     },
     footer: {
@@ -509,6 +534,13 @@ const TRANSLATIONS = {
       title:    "Neuigkeiten",
       desc:     "Die neuesten Nachrichten von den Europameisterschaften 2026.",
       readmore: "Weiterlesen"
+    },
+    contatti: {
+      tag:         "Informationen",
+      title:       "Kontakt",
+      desc:        "Für Informationen und Anfragen kontaktieren Sie uns per E-Mail, Telefon oder über unsere Social-Media-Kanäle.",
+      email_label: "E-Mail",
+      phone_label: "Telefon"
     }
   },
 
@@ -529,6 +561,7 @@ const TRANSLATIONS = {
       alloggi:     "Alojamientos",
       luogo:       "Sede",
       news:        "Noticias",
+      contatti:    "Contacto",
       footer:      "Cardano al Campo (VA), Italia · 20–26 de julio de 2026"
     },
     footer: {
@@ -636,6 +669,13 @@ const TRANSLATIONS = {
       title:    "Noticias",
       desc:     "Las últimas noticias de los Campeonatos de Europa 2026.",
       readmore: "Leer más"
+    },
+    contatti: {
+      tag:         "Información",
+      title:       "Contacto",
+      desc:        "Para información y consultas, contáctenos por correo electrónico, teléfono o a través de nuestras redes sociales.",
+      email_label: "Email",
+      phone_label: "Teléfono"
     }
   },
 
@@ -656,6 +696,7 @@ const TRANSLATIONS = {
       alloggi:     "Alojamentos",
       luogo:       "Local",
       news:        "Notícias",
+      contatti:    "Contacto",
       footer:      "Cardano al Campo (VA), Itália · 20–26 de julho de 2026"
     },
     footer: {
@@ -763,6 +804,13 @@ const TRANSLATIONS = {
       title:    "Notícias",
       desc:     "As últimas notícias dos Campeonatos Europeus 2026.",
       readmore: "Ler mais"
+    },
+    contatti: {
+      tag:         "Informação",
+      title:       "Contacto",
+      desc:        "Para informações e pedidos, contacte-nos por email, telefone ou através dos nossos canais sociais.",
+      email_label: "Email",
+      phone_label: "Telefone"
     }
   }
 };

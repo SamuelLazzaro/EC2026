@@ -1193,3 +1193,103 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: var(--c-accent);
   color: var(--c-bg);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Sezione Contatti
+   ═══════════════════════════════════════════════════════════ */
+
+.contatti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contatti-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  background: var(--c-card);
+  border: 1px solid var(--c-border-sub);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--c-text);
+  transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
+}
+
+.contatti-card:hover {
+  border-color: var(--c-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.contatti-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-accent);
+  transition: background var(--trans), border-color var(--trans), color var(--trans);
+}
+
+.contatti-card:hover .contatti-icon {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: var(--c-bg);
+}
+
+.contatti-label {
+  font-family: var(--f-title);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+}
+
+.contatti-value {
+  font-size: 0.875rem;
+  color: var(--c-accent);
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* Accent hover per social */
+.contatti-card--ig:hover                { border-color: #e1306c; }
+.contatti-card--ig:hover .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
+.contatti-card--fb:hover                { border-color: #1877f2; }
+.contatti-card--fb:hover .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
+
+/* ═══════════════════════════════════════════════════════════
+   Footer – Contatti
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--c-text-mute);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  transition: color var(--trans);
+}
+
+.footer-contact-link:hover { color: var(--c-accent); }
+.footer-contact-link svg   { flex-shrink: 0; }
