@@ -1100,7 +1100,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 @media (max-width: 640px) {
-  /* Su mobile la lingua si cambia dal drawer → nascondi dall'header */
+  /* Su mobile la lingua si cambia dal FAB → nascondi dall'header */
   .header-actions .lang-switcher { display: none; }
 
   .section-wrap { padding: 2rem 1rem 3rem; }
@@ -1118,4 +1118,98 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .news-grid,
   .grid-2,
   .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Language FAB – Solo mobile (≤640px)
+   ═══════════════════════════════════════════════════════════ */
+
+.lang-fab {
+  display: none;          /* nascosto su desktop */
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 300;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .lang-fab { display: flex; }
+}
+
+/* Bottone principale (pill) */
+.lang-fab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--c-accent);
+  color: var(--c-bg);
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.1rem;
+  font-family: var(--f-title);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: transform var(--trans), box-shadow var(--trans);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.lang-fab-btn:active { transform: scale(0.95); }
+
+.lang-fab-icon { font-size: 1rem; line-height: 1; }
+
+/* Menu a tendina */
+.lang-fab-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 0.4rem;
+  box-shadow: var(--shadow);
+  /* Stato chiuso */
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px) scale(0.95);
+  transform-origin: bottom right;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.lang-fab-menu.open {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Voci del menu */
+.lang-fab-item {
+  background: transparent;
+  color: var(--c-text);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1.25rem;
+  font-family: var(--f-title);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-align: center;
+  transition: background var(--trans), color var(--trans);
+}
+
+.lang-fab-item:hover {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--c-accent-lt);
+}
+
+.lang-fab-item.active {
+  background: var(--c-accent);
+  color: var(--c-bg);
 }

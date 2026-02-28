@@ -822,6 +822,10 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  // Aggiorna label FAB e chiudi menu
+  const fabLabel = document.getElementById('langFabLabel');
+  if (fabLabel) fabLabel.textContent = lang.toUpperCase();
+  if (typeof closeFabMenu === 'function') closeFabMenu();
   // Notifica main.js per ri-tradurre la sezione corrente
   document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
 }
@@ -845,4 +849,7 @@ function detectLanguage() {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
+  // Imposta label iniziale del FAB
+  const fabLabel = document.getElementById('langFabLabel');
+  if (fabLabel) fabLabel.textContent = currentLang.toUpperCase();
 })();

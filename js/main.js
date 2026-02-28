@@ -208,6 +208,41 @@ function initAlloggi(root) {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Language FAB – Toggle menu
+   ═══════════════════════════════════════════════════════════ */
+const langFabBtn  = document.getElementById('langFabBtn');
+const langFabMenu = document.getElementById('langFabMenu');
+
+function closeFabMenu() {
+  if (!langFabMenu) return;
+  langFabMenu.classList.remove('open');
+  langFabMenu.setAttribute('aria-hidden', 'true');
+  langFabBtn.setAttribute('aria-expanded', 'false');
+}
+
+if (langFabBtn && langFabMenu) {
+  langFabBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const opening = !langFabMenu.classList.contains('open');
+    langFabMenu.classList.toggle('open', opening);
+    langFabBtn.setAttribute('aria-expanded', String(opening));
+    langFabMenu.setAttribute('aria-hidden', String(!opening));
+  });
+
+  // Chiudi cliccando fuori
+  document.addEventListener('click', e => {
+    if (!document.getElementById('langFab').contains(e.target)) {
+      closeFabMenu();
+    }
+  });
+
+  // Chiudi con Esc
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeFabMenu();
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════
    Avvio
    ═══════════════════════════════════════════════════════════ */
 loadSection('home');
