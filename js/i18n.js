@@ -821,6 +821,8 @@ const TRANSLATIONS = {
 
 let currentLang = 'it';
 
+const LANG_FLAGS = { it: '🇮🇹', en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', pt: '🇵🇹' };
+
 /**
  * Risolve una chiave dot-notation (es. "nav.classifiche")
  * nelle traduzioni della lingua attiva.
@@ -870,9 +872,11 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-  // Aggiorna label FAB e chiudi menu
+  // Aggiorna label e bandiera FAB, chiudi menu
   const fabLabel = document.getElementById('langFabLabel');
   if (fabLabel) fabLabel.textContent = lang.toUpperCase();
+  const fabFlag = document.getElementById('langFabFlag');
+  if (fabFlag) fabFlag.textContent = LANG_FLAGS[lang] || '🌍';
   if (typeof closeFabMenu === 'function') closeFabMenu();
   // Notifica main.js per ri-tradurre la sezione corrente
   document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
@@ -897,7 +901,9 @@ function detectLanguage() {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
-  // Imposta label iniziale del FAB
+  // Imposta label e bandiera iniziale del FAB
   const fabLabel = document.getElementById('langFabLabel');
   if (fabLabel) fabLabel.textContent = currentLang.toUpperCase();
+  const fabFlag = document.getElementById('langFabFlag');
+  if (fabFlag) fabFlag.textContent = LANG_FLAGS[currentLang] || '🌍';
 })();
