@@ -651,9 +651,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Label di sezione (es. "Main Sponsor", "Sponsor") */
 .sponsor-section { margin-bottom: 2.5rem; }
 .sponsor-section-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
   font-family: var(--f-title);
   font-size: 0.7rem;
   font-weight: 700;
@@ -662,13 +662,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-accent);
   margin-bottom: 1.5rem;
 }
+.sponsor-section-label::before,
 .sponsor-section-label::after {
   content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
+  flex: 1;
+  height: 1px;
   background: var(--c-accent);
-  border-radius: 2px;
+  opacity: 0.4;
 }
 
 /* Griglia main sponsor: card più grandi, 2 colonne su desktop */
