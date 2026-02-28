@@ -127,7 +127,7 @@ const TRANSLATIONS = {
       tag:      "Aggiornamenti",
       title:    "News",
       desc:     "Le ultime notizie dai Campionati Europei 2026.",
-      readmore: "Leggi"
+      readmore: "Leggi di più"
     }
   },
 
