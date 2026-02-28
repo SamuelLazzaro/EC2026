@@ -821,7 +821,7 @@ const TRANSLATIONS = {
 
 let currentLang = 'it';
 
-const LANG_FLAGS = { it: '🇮🇹', en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', pt: '🇵🇹' };
+const LANG_FLAGS = { it: 'it', en: 'gb', fr: 'fr', de: 'de', es: 'es', pt: 'pt' };
 
 /**
  * Risolve una chiave dot-notation (es. "nav.classifiche")
@@ -876,7 +876,7 @@ function setLanguage(lang) {
   const fabLabel = document.getElementById('langFabLabel');
   if (fabLabel) fabLabel.textContent = lang.toUpperCase();
   const fabFlag = document.getElementById('langFabFlag');
-  if (fabFlag) fabFlag.textContent = LANG_FLAGS[lang] || '🌍';
+  if (fabFlag) fabFlag.className = `fi fi-${LANG_FLAGS[lang] || 'it'}`;
   if (typeof closeFabMenu === 'function') closeFabMenu();
   // Notifica main.js per ri-tradurre la sezione corrente
   document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
@@ -905,5 +905,5 @@ function detectLanguage() {
   const fabLabel = document.getElementById('langFabLabel');
   if (fabLabel) fabLabel.textContent = currentLang.toUpperCase();
   const fabFlag = document.getElementById('langFabFlag');
-  if (fabFlag) fabFlag.textContent = LANG_FLAGS[currentLang] || '🌍';
+  if (fabFlag) fabFlag.className = `fi fi-${LANG_FLAGS[currentLang] || 'it'}`;
 })();

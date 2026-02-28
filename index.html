@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -103,15 +104,15 @@
   <!-- ── Language FAB (solo mobile) ──────────────────────── -->
   <div class="lang-fab" id="langFab">
     <div class="lang-fab-menu" id="langFabMenu" aria-hidden="true" role="menu">
-      <button class="lang-btn lang-fab-item" data-lang="pt" role="menuitem">PT</button>
-      <button class="lang-btn lang-fab-item" data-lang="es" role="menuitem">ES</button>
-      <button class="lang-btn lang-fab-item" data-lang="de" role="menuitem">DE</button>
-      <button class="lang-btn lang-fab-item" data-lang="fr" role="menuitem">FR</button>
-      <button class="lang-btn lang-fab-item" data-lang="en" role="menuitem">EN</button>
-      <button class="lang-btn lang-fab-item" data-lang="it" role="menuitem">IT</button>
+      <button class="lang-btn lang-fab-item" data-lang="pt" role="menuitem"><span class="fi fi-pt"></span> PT</button>
+      <button class="lang-btn lang-fab-item" data-lang="es" role="menuitem"><span class="fi fi-es"></span> ES</button>
+      <button class="lang-btn lang-fab-item" data-lang="de" role="menuitem"><span class="fi fi-de"></span> DE</button>
+      <button class="lang-btn lang-fab-item" data-lang="fr" role="menuitem"><span class="fi fi-fr"></span> FR</button>
+      <button class="lang-btn lang-fab-item" data-lang="en" role="menuitem"><span class="fi fi-gb"></span> EN</button>
+      <button class="lang-btn lang-fab-item" data-lang="it" role="menuitem"><span class="fi fi-it"></span> IT</button>
     </div>
     <button class="lang-fab-btn" id="langFabBtn" aria-label="Seleziona lingua" aria-expanded="false" aria-haspopup="true">
-      <span id="langFabFlag">🇮🇹</span>
+      <span id="langFabFlag" class="fi fi-it"></span>
       <span id="langFabLabel">IT</span>
     </button>
   </div>
