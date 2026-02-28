@@ -1,1 +1,5 @@
 Sistemare le scritte "venue"
+class="news-cat">Sponsor
+class="news-cat">Atleti
+class="news-cat">Logistica
+class="news-cat">Media
