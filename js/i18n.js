@@ -73,9 +73,8 @@ const TRANSLATIONS = {
       tag:    "Partner",
       title:  "I Nostri Sponsor",
       desc:   "Ringraziamo i partner che rendono possibile questa manifestazione.",
-      gold:   "Sponsor Oro",
-      silver: "Sponsor Argento",
-      bronze: "Sponsor Bronzo"
+      main:   "Main Sponsor",
+      other:  "Sponsor"
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -200,9 +199,8 @@ const TRANSLATIONS = {
       tag:    "Partners",
       title:  "Our Sponsors",
       desc:   "We thank our partners who make this event possible.",
-      gold:   "Gold Sponsors",
-      silver: "Silver Sponsors",
-      bronze: "Bronze Sponsors"
+      main:   "Main Sponsor",
+      other:  "Sponsors"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -327,9 +325,8 @@ const TRANSLATIONS = {
       tag:    "Partenaires",
       title:  "Nos Sponsors",
       desc:   "Nous remercions nos partenaires qui rendent cet événement possible.",
-      gold:   "Sponsors Or",
-      silver: "Sponsors Argent",
-      bronze: "Sponsors Bronze"
+      main:   "Sponsor Principal",
+      other:  "Sponsors"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -454,9 +451,8 @@ const TRANSLATIONS = {
       tag:    "Partner",
       title:  "Unsere Sponsoren",
       desc:   "Wir danken unseren Partnern, die diese Veranstaltung ermöglichen.",
-      gold:   "Gold-Sponsoren",
-      silver: "Silber-Sponsoren",
-      bronze: "Bronze-Sponsoren"
+      main:   "Hauptsponsor",
+      other:  "Sponsoren"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -581,9 +577,8 @@ const TRANSLATIONS = {
       tag:    "Socios",
       title:  "Nuestros Patrocinadores",
       desc:   "Agradecemos a los socios que hacen posible este evento.",
-      gold:   "Patrocinadores Oro",
-      silver: "Patrocinadores Plata",
-      bronze: "Patrocinadores Bronce"
+      main:   "Patrocinador Principal",
+      other:  "Patrocinadores"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -708,9 +703,8 @@ const TRANSLATIONS = {
       tag:    "Parceiros",
       title:  "Os Nossos Patrocinadores",
       desc:   "Agradecemos aos parceiros que tornam este evento possível.",
-      gold:   "Patrocinadores Ouro",
-      silver: "Patrocinadores Prata",
-      bronze: "Patrocinadores Bronze"
+      main:   "Patrocinador Principal",
+      other:  "Patrocinadores"
     },
     alloggi: {
       tag:          "Onde ficar",
