@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Campionati Europei Pattinaggio Corsa a Rotelle 2026</title>
+  <meta name="description" data-i18n="meta.desc" content="Campionati Europei di Pattinaggio Corsa a Rotelle 2026 - Cardano al Campo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Backdrop per chiudere il drawer cliccando fuori -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="#" class="logo" id="logoHome">
+        <div class="logo-emblem">EC</div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="header.title">CAMPIONATI EUROPEI</span>
+          <span class="logo-sub"  data-i18n="header.sub">Pattinaggio Corsa a Rotelle 2026</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ── Nav Drawer ──────────────────────────────────────── -->
+  <nav class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <div class="nav-drawer-inner">
+      <ul class="nav-list">
+        <li>
+          <a href="#" class="nav-link" data-section="classifiche">
+            <span class="nav-arrow"></span>
+            <span data-i18n="nav.classifiche">Classifiche</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-section="sponsor">
+            <span class="nav-arrow"></span>
+            <span data-i18n="nav.sponsor">Sponsor</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-section="alloggi">
+            <span class="nav-arrow"></span>
+            <span data-i18n="nav.alloggi">Alloggi</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-section="luogo">
+            <span class="nav-arrow"></span>
+            <span data-i18n="nav.luogo">Luogo</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-section="news">
+            <span class="nav-arrow"></span>
+            <span data-i18n="nav.news">News</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Selettore lingua nel drawer (visibile su mobile) -->
+      <div class="drawer-lang">
+        <button class="lang-btn" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <div class="nav-footer">
+        <span data-i18n="nav.footer">Cardano al Campo &middot; 20&ndash;26 Luglio 2026</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Main Content (caricato dinamicamente) ───────────── -->
+  <main id="mainContent" class="main-content">
+    <div class="loading-spinner" id="loadingSpinner">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p data-i18n="footer.rights">
+        &copy; 2026 Campionati Europei Pattinaggio Corsa a Rotelle &middot; Cardano al Campo
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
