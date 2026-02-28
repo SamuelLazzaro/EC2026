@@ -227,27 +227,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .nav-link:hover .nav-arrow,
 .nav-link.active .nav-arrow { transform: rotate(-45deg) translateX(2px); }
-.drawer-lang {
-  display: flex;
-  gap: 4px;
-  padding: 1rem 1.75rem;
-  border-top: 1px solid var(--c-border-sub);
-}
-.drawer-lang .lang-btn {
-  flex: 1 1 0;  /* distribuzione uguale, permette di restringere */
-  min-width: 0; /* permette ai bottoni di scendere sotto min-content */
-  padding: 0.4rem 0;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-align: center;
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  color: var(--c-text-mute);
-  transition: all var(--trans);
-}
-.drawer-lang .lang-btn:hover  { color: var(--c-text); background: rgba(255,255,255,0.07); }
-.drawer-lang .lang-btn.active { background: var(--c-accent); color: var(--c-bg); border-color: var(--c-accent); }
 
 .nav-footer {
   padding: 1rem 1.75rem;
@@ -1094,9 +1073,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
 /* Su schermi grandi il selettore lingua nel drawer non serve */
-@media (min-width: 641px) {
-  .drawer-lang { display: none; }
-}
 
 @media (max-width: 860px) {
   :root { --drawer-w: 280px; }
