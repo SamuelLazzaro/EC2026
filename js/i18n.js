@@ -8,7 +8,7 @@ const TRANSLATIONS = {
   it: {
     meta: {
       title: "Campionati Europei Pattinaggio Corsa a Rotelle 2026",
-      desc:  "Campionati Europei di Pattinaggio Corsa a Rotelle 2026 – Cardano al Campo, 20–26 Luglio"
+      desc:  "Campionati Europei di Pattinaggio Corsa a Rotelle 2026 – Cardano al Campo (VA), Italia, 20–26 Luglio"
     },
     header: {
       title: "CAMPIONATI EUROPEI",
@@ -24,10 +24,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Italia · 20–26 Luglio 2026"
     },
     footer: {
-      rights: "© 2026 Campionati Europei Pattinaggio Corsa a Rotelle · Cardano al Campo"
+      rights: "© 2026 Campionati Europei Pattinaggio Corsa a Rotelle · Cardano al Campo (VA), Italia"
     },
     home: {
-      badge:          "Cardano al Campo, Italia",
+      badge:          "Cardano al Campo (VA), Italia",
       title1:         "CAMPIONATI",
       title2:         "EUROPEI",
       title3:         "PATTINAGGIO",
@@ -95,7 +95,7 @@ const TRANSLATIONS = {
       tag:            "Venue",
       title:          "Il Luogo",
       desc:           "Cardano al Campo ospita per la prima volta i Campionati Europei di Pattinaggio Corsa a Rotelle.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Italia",
       country:        "Varese · Lombardia · Italia",
       city_desc:      "Cardano al Campo è un comune della provincia di Varese, a pochi chilometri dall'aeroporto internazionale di Milano Malpensa. La città offre eccellenti infrastrutture sportive e facili collegamenti con tutta Europa.",
       vd_venue:       "Impianto",
@@ -135,7 +135,7 @@ const TRANSLATIONS = {
   en: {
     meta: {
       title: "European Inline Speed Skating Championships 2026",
-      desc:  "European Inline Speed Skating Championships 2026 – Cardano al Campo, 20–26 July"
+      desc:  "European Inline Speed Skating Championships 2026 – Cardano al Campo (VA), Italy, 20–26 July"
     },
     header: {
       title: "EUROPEAN CHAMPIONSHIPS",
@@ -151,10 +151,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Italy · 20–26 July 2026"
     },
     footer: {
-      rights: "© 2026 European Inline Speed Skating Championships · Cardano al Campo"
+      rights: "© 2026 European Inline Speed Skating Championships · Cardano al Campo (VA), Italy"
     },
     home: {
-      badge:          "Cardano al Campo, Italy",
+      badge:          "Cardano al Campo (VA), Italy",
       title1:         "EUROPEAN",
       title2:         "CHAMPIONSHIPS",
       title3:         "INLINE SPEED SKATING",
@@ -222,7 +222,7 @@ const TRANSLATIONS = {
       tag:            "Venue",
       title:          "The Venue",
       desc:           "Cardano al Campo hosts the European Inline Speed Skating Championships for the first time.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Italy",
       country:        "Varese · Lombardy · Italy",
       city_desc:      "Cardano al Campo is a municipality in the province of Varese, a few kilometres from Milan Malpensa International Airport. The town offers excellent sports infrastructure and easy connections throughout Europe.",
       vd_venue:       "Facility",
@@ -262,7 +262,7 @@ const TRANSLATIONS = {
   fr: {
     meta: {
       title: "Championnats d'Europe de Patinage de Vitesse en Ligne 2026",
-      desc:  "Championnats d'Europe de Patinage de Vitesse en Ligne 2026 – Cardano al Campo, 20–26 Juillet"
+      desc:  "Championnats d'Europe de Patinage de Vitesse en Ligne 2026 – Cardano al Campo (VA), Italie, 20–26 Juillet"
     },
     header: {
       title: "CHAMPIONNATS D'EUROPE",
@@ -278,10 +278,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Italie · 20–26 juillet 2026"
     },
     footer: {
-      rights: "© 2026 Championnats d'Europe de Patinage de Vitesse en Ligne · Cardano al Campo"
+      rights: "© 2026 Championnats d'Europe de Patinage de Vitesse en Ligne · Cardano al Campo (VA), Italie"
     },
     home: {
-      badge:          "Cardano al Campo, Italie",
+      badge:          "Cardano al Campo (VA), Italie",
       title1:         "CHAMPIONNATS",
       title2:         "D'EUROPE",
       title3:         "PATINAGE EN LIGNE",
@@ -349,7 +349,7 @@ const TRANSLATIONS = {
       tag:            "Site",
       title:          "Le Lieu",
       desc:           "Cardano al Campo accueille pour la première fois les Championnats d'Europe de Patinage de Vitesse en Ligne.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Italie",
       country:        "Varese · Lombardie · Italie",
       city_desc:      "Cardano al Campo est une commune de la province de Varese, à quelques kilomètres de l'aéroport international de Milan Malpensa. La ville offre d'excellentes infrastructures sportives et de bonnes liaisons avec toute l'Europe.",
       vd_venue:       "Installation",
@@ -389,7 +389,7 @@ const TRANSLATIONS = {
   de: {
     meta: {
       title: "Europameisterschaften Inline-Speedskating 2026",
-      desc:  "Europameisterschaften Inline-Speedskating 2026 – Cardano al Campo, 20.–26. Juli"
+      desc:  "Europameisterschaften Inline-Speedskating 2026 – Cardano al Campo (VA), Italien, 20.–26. Juli"
     },
     header: {
       title: "EUROPAMEISTERSCHAFTEN",
@@ -405,10 +405,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Italien · 20.–26. Juli 2026"
     },
     footer: {
-      rights: "© 2026 Europameisterschaften Inline-Speedskating · Cardano al Campo"
+      rights: "© 2026 Europameisterschaften Inline-Speedskating · Cardano al Campo (VA), Italien"
     },
     home: {
-      badge:          "Cardano al Campo, Italien",
+      badge:          "Cardano al Campo (VA), Italien",
       title1:         "EUROPA-",
       title2:         "MEISTER-",
       title3:         "SCHAFTEN",
@@ -476,7 +476,7 @@ const TRANSLATIONS = {
       tag:            "Veranstaltungsort",
       title:          "Der Veranstaltungsort",
       desc:           "Cardano al Campo richtet die Europameisterschaften im Inline-Speedskating zum ersten Mal aus.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Italien",
       country:        "Varese · Lombardei · Italien",
       city_desc:      "Cardano al Campo ist eine Gemeinde in der Provinz Varese, wenige Kilometer vom internationalen Flughafen Mailand Malpensa entfernt. Die Stadt bietet hervorragende Sportinfrastruktur und gute Anbindungen an ganz Europa.",
       vd_venue:       "Anlage",
@@ -516,7 +516,7 @@ const TRANSLATIONS = {
   es: {
     meta: {
       title: "Campeonatos de Europa de Patinaje de Velocidad en Línea 2026",
-      desc:  "Campeonatos de Europa de Patinaje de Velocidad en Línea 2026 – Cardano al Campo, 20–26 Julio"
+      desc:  "Campeonatos de Europa de Patinaje de Velocidad en Línea 2026 – Cardano al Campo (VA), Italia, 20–26 Julio"
     },
     header: {
       title: "CAMPEONATOS DE EUROPA",
@@ -532,10 +532,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Italia · 20–26 de julio de 2026"
     },
     footer: {
-      rights: "© 2026 Campeonatos de Europa de Patinaje de Velocidad en Línea · Cardano al Campo"
+      rights: "© 2026 Campeonatos de Europa de Patinaje de Velocidad en Línea · Cardano al Campo (VA), Italia"
     },
     home: {
-      badge:          "Cardano al Campo, Italia",
+      badge:          "Cardano al Campo (VA), Italia",
       title1:         "CAMPEONATOS",
       title2:         "DE EUROPA",
       title3:         "PATINAJE EN LÍNEA",
@@ -603,7 +603,7 @@ const TRANSLATIONS = {
       tag:            "Sede",
       title:          "La Sede",
       desc:           "Cardano al Campo acoge por primera vez los Campeonatos de Europa de Patinaje de Velocidad en Línea.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Italia",
       country:        "Varese · Lombardía · Italia",
       city_desc:      "Cardano al Campo es un municipio de la provincia de Varese, a pocos kilómetros del aeropuerto internacional de Milán Malpensa. La ciudad ofrece excelentes infraestructuras deportivas y fáciles conexiones con toda Europa.",
       vd_venue:       "Instalación",
@@ -643,7 +643,7 @@ const TRANSLATIONS = {
   pt: {
     meta: {
       title: "Campeonatos Europeus de Patinagem de Velocidade em Linha 2026",
-      desc:  "Campeonatos Europeus de Patinagem de Velocidade em Linha 2026 – Cardano al Campo, 20–26 Julho"
+      desc:  "Campeonatos Europeus de Patinagem de Velocidade em Linha 2026 – Cardano al Campo (VA), Itália, 20–26 Julho"
     },
     header: {
       title: "CAMPEONATOS EUROPEUS",
@@ -659,10 +659,10 @@ const TRANSLATIONS = {
       footer:      "Cardano al Campo (VA), Itália · 20–26 de julho de 2026"
     },
     footer: {
-      rights: "© 2026 Campeonatos Europeus de Patinagem de Velocidade em Linha · Cardano al Campo"
+      rights: "© 2026 Campeonatos Europeus de Patinagem de Velocidade em Linha · Cardano al Campo (VA), Itália"
     },
     home: {
-      badge:          "Cardano al Campo, Itália",
+      badge:          "Cardano al Campo (VA), Itália",
       title1:         "CAMPEONATOS",
       title2:         "EUROPEUS",
       title3:         "PATINAGEM EM LINHA",
@@ -730,7 +730,7 @@ const TRANSLATIONS = {
       tag:            "Local",
       title:          "O Local",
       desc:           "Cardano al Campo acolhe pela primeira vez os Campeonatos Europeus de Patinagem de Velocidade em Linha.",
-      city:           "Cardano al Campo",
+      city:           "Cardano al Campo (VA), Itália",
       country:        "Varese · Lombardia · Itália",
       city_desc:      "Cardano al Campo é um município da província de Varese, a poucos quilómetros do Aeroporto Internacional de Milão Malpensa. A cidade oferece excelentes infraestruturas desportivas e boas ligações com toda a Europa.",
       vd_venue:       "Instalação",
