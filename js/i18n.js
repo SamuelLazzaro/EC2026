@@ -92,7 +92,7 @@ const TRANSLATIONS = {
       note:      "Per prenotazioni e tariffe agevolate per atleti e delegazioni, contattare la segreteria organizzativa all'indirizzo <strong>info@ec2026pattinaggio.it</strong>"
     },
     luogo: {
-      tag:            "Venue",
+      tag:            "Luogo",
       title:          "Il Luogo",
       desc:           "Cardano al Campo ospita per la prima volta i Campionati Europei di Pattinaggio Corsa a Rotelle.",
       city:           "Cardano al Campo (VA), Italia",
@@ -146,7 +146,7 @@ const TRANSLATIONS = {
       classifiche: "Rankings",
       sponsor:     "Sponsors",
       alloggi:     "Accommodation",
-      luogo:       "Venue",
+      luogo:       "Luogo",
       news:        "News",
       footer:      "Cardano al Campo (VA), Italy · 20–26 July 2026"
     },
@@ -160,7 +160,7 @@ const TRANSLATIONS = {
       title3:         "INLINE SPEED SKATING",
       date_label:     "Dates",
       date_value:     "20–26 July 2026",
-      loc_label:      "Venue",
+      loc_label:      "Luogo",
       loc_value:      "Cardano al Campo (VA)",
       country_label:  "Country",
       country_value:  "Italy",
