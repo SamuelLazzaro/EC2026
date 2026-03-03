@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Diventa Sponsor · Campionati Europei Pattinaggio 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0a1628;
+      --bg2:    #0e1f3d;
+      --card:   #152340;
+      --gold:   #c9a84c;
+      --border: rgba(201,168,76,.18);
+      --brd2:   rgba(255,255,255,.06);
+      --text:   #e8edf5;
+      --mute:   #6e8bab;
+      --silver: #b4bed2;
+      --T: 'Montserrat','Arial',sans-serif;
+      --B: 'Inter','Arial',sans-serif;
+      --r: 9px;
+      --rs: 5px;
+    }
+
+    @page { size: A4; margin: 0; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--B);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Slide ───────────────────────────────────────────── */
+    .slide {
+      width: 210mm;
+      height: 297mm;
+      padding: 13mm 17mm;
+      background: var(--bg);
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide:last-child { page-break-after: auto; break-after: auto; }
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 1 — Cover
+    ══════════════════════════════════════════════════════ */
+    .slide-cover {
+      background:
+        radial-gradient(ellipse 80% 70% at 15% 55%, rgba(201,168,76,.10) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 50% at 80% 25%, rgba(15,40,80,.85) 0%, transparent 60%),
+        linear-gradient(165deg, #0a1628 0%, #0e2248 50%, #0a1628 100%);
+      justify-content: space-between;
+    }
+
+    /* Section tag + "Diventa Sponsor" */
+    .cover-tag {
+      font-family: var(--T);
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2mm;
+    }
+    .cover-h1 {
+      font-family: var(--T);
+      font-size: 24pt;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 1mm;
+    }
+    .cover-h1 .acc { color: var(--gold); }
+    .gold-bar {
+      width: 32mm;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 3mm 0;
+    }
+    .cover-desc {
+      font-size: 8.5pt;
+      color: var(--mute);
+      line-height: 1.65;
+      margin-bottom: 4mm;
+    }
+
+    /* Hero banner on cover */
+    .hero-banner {
+      text-align: center;
+      padding: 2mm 0 3mm;
+    }
+    .hb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--T);
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,.10);
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: 100px;
+      padding: 1.5mm 4mm;
+      margin-bottom: 3mm;
+    }
+    .hb-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .hb-title {
+      font-family: var(--T);
+      font-size: 38pt;
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -.01em;
+      margin-bottom: 3mm;
+    }
+    .hb-title .acc { color: var(--gold); }
+    .hb-sub {
+      font-family: var(--T);
+      font-size: 10pt;
+      font-weight: 400;
+      letter-spacing: .28em;
+      color: var(--mute);
+      margin-bottom: 5mm;
+    }
+    .hb-meta {
+      display: flex;
+      justify-content: center;
+      max-width: 130mm;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      background: rgba(255,255,255,.03);
+    }
+    .hb-meta-item {
+      flex: 1;
+      padding: 4.5mm 2mm;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .hb-meta-item:last-child { border-right: none; }
+    .hb-meta-label {
+      display: block;
+      font-size: 6pt;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5mm;
+    }
+    .hb-meta-val {
+      display: block;
+      font-family: var(--T);
+      font-size: 10pt;
+      font-weight: 600;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 3mm;
+      margin: 4mm 0;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 5mm 2mm;
+      text-align: center;
+    }
+    .stat-n {
+      display: block;
+      font-family: var(--T);
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-l {
+      display: block;
+      font-size: 6.5pt;
+      color: var(--mute);
+      letter-spacing: .04em;
+      margin-top: 2mm;
+    }
+
+    /* Cover hero photo — fills remaining space */
+    .cover-photo {
+      flex: 1;
+      min-height: 0;
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+    .cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 2 — Chi siamo · Risultati · Sede · Campioni
+    ══════════════════════════════════════════════════════ */
+
+    /* Block title */
+    .bt {
+      font-family: var(--T);
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-bottom: 1.5mm;
+      border-bottom: 1px solid var(--brd2);
+      margin-bottom: 3mm;
+    }
+
+    /* Two-column */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; align-items: center; }
+    .col-text p { font-size: 8.5pt; line-height: 1.75; }
+
+    /* Images */
+    .col-img { width: 100%; height: 44mm; border-radius: var(--r); object-fit: contain; object-position: top; background: var(--bg); display: block; }
+
+    /* Achievements */
+    .achievements { display: flex; flex-direction: column; gap: 3mm; }
+    .ach {
+      display: flex; gap: 3.5mm;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 3mm; align-items: flex-start;
+    }
+    .ach-img { width: 24mm; height: 24mm; object-fit: cover; border-radius: var(--rs); flex-shrink: 0; }
+    .ach-badge {
+      display: inline-block; font-size: 5.5pt; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--gold);
+      background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.3);
+      border-radius: 3px; padding: 0.8mm 1.8mm; margin-bottom: 1.5mm;
+    }
+    .ach-list { list-style: none; }
+    .ach-list li { font-size: 8pt; line-height: 1.6; }
+
+    /* Venue — 3 columns: img | img | text */
+    .venue { display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 4mm; align-items: start; }
+    .venue-img { width: 100%; border-radius: var(--r); object-fit: cover; display: block; max-height: 22mm; }
+    .venue-info p { font-size: 8pt; line-height: 1.7; margin-bottom: 2mm; }
+    .venue-list { list-style: none; }
+    .venue-list li { font-size: 7.5pt; line-height: 1.6; padding-left: 3mm; position: relative; }
+    .venue-list li::before { content: '›'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+    /* Champions */
+    .champions { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+    .champion { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; }
+    .champ-img { width: 100%; height: 28mm; object-fit: contain; background: var(--bg); display: block; }
+    .champ-info { padding: 2.5mm 4mm 4mm; }
+    .champ-name { font-family: var(--T); font-size: 9pt; font-weight: 700; margin-bottom: 1mm; }
+    .champ-info p { font-size: 7.5pt; color: var(--mute); line-height: 1.5; }
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 3 — Galleria · Perché · Pacchetti · Contatti
+    ══════════════════════════════════════════════════════ */
+
+    /* Section heading (for Pacchetti) */
+    .s-tag { font-size: 6.5pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5mm; }
+    .s-title { font-family: var(--T); font-size: 18pt; font-weight: 700; line-height: 1.1; margin-bottom: 2.5mm; }
+    .s-div { width: 26mm; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 4mm; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 3mm; }
+    .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--rs); display: block; }
+
+    /* Lead */
+    .lead { font-size: 8.5pt; line-height: 1.8; }
+
+    /* Packages */
+    .packages { display: grid; grid-template-columns: repeat(4,1fr); gap: 3.5mm; }
+    .pkg { background: var(--card); border: 1px solid var(--brd2); border-radius: var(--r); padding: 3.5mm 3mm; display: flex; flex-direction: column; gap: 2.5mm; }
+    .pkg-tier { font-family: var(--T); font-size: 7pt; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; padding: 1.5mm 2mm; border-radius: 4px; text-align: center; }
+    .pkg-list { list-style: none; }
+    .pkg-list li { font-size: 7.5pt; line-height: 1.6; padding-left: 3mm; position: relative; }
+    .pkg-list li::before { content: '›'; position: absolute; left: 0; }
+
+    .pkg--main { border-color: rgba(201,168,76,.5); }
+    .pkg--main .pkg-tier { background: var(--gold); color: var(--bg); }
+    .pkg--main .pkg-list li::before { color: var(--gold); }
+    .pkg--gold { border-color: rgba(201,168,76,.3); }
+    .pkg--gold .pkg-tier { background: rgba(201,168,76,.18); color: var(--gold); border: 1px solid rgba(201,168,76,.4); }
+    .pkg--gold .pkg-list li::before { color: var(--gold); }
+    .pkg--silver { border-color: rgba(180,190,210,.3); }
+    .pkg--silver .pkg-tier { background: rgba(180,190,210,.12); color: var(--silver); border: 1px solid rgba(180,190,210,.35); }
+    .pkg--silver .pkg-list li::before { color: var(--silver); }
+    .pkg--other .pkg-tier { background: rgba(110,139,171,.12); color: var(--mute); border: 1px solid var(--brd2); }
+    .pkg--other .pkg-list li::before { color: var(--mute); }
+
+    /* Contacts */
+    .cta-box { background: var(--card); border: 1px solid rgba(201,168,76,.22); border-radius: var(--r); padding: 4mm 5mm; }
+    .contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+    .contact-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--rs); padding: 3.5mm 5mm; display: flex; flex-direction: column; gap: 1mm; }
+    .contact-role { font-size: 6pt; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+    .contact-name { font-family: var(--T); font-size: 12pt; font-weight: 700; }
+    .contact-phone { font-size: 13pt; font-weight: 600; color: var(--gold); margin-top: 1mm; }
+
+    /* Slide footer */
+    .slide-foot { margin-top: auto; padding-top: 4mm; border-top: 1px solid var(--brd2); display: flex; justify-content: space-between; align-items: flex-end; }
+    .slide-foot-l { font-family: var(--T); font-size: 7pt; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--mute); }
+    .slide-foot-l small { display: block; font-weight: 400; text-transform: none; letter-spacing: .02em; font-size: 6.5pt; margin-top: .5mm; }
+    .slide-foot-r { font-size: 7pt; color: var(--gold); text-align: right; }
+
+    /* Spacing */
+    .mt3 { margin-top: 3mm; } .mt4 { margin-top: 4mm; } .mt5 { margin-top: 5mm; }
+    .mb3 { margin-bottom: 3mm; } .mb4 { margin-bottom: 4mm; }
+    strong { font-weight: 600; } em { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE 1 — Cover
+══════════════════════════════════════════════════════ -->
+<div class="slide slide-cover">
+
+  <div>
+    <div class="cover-tag">Opportunità di sponsorizzazione</div>
+    <div class="cover-h1">Diventa <span class="acc">Sponsor</span></div>
+    <div class="gold-bar"></div>
+    <p class="cover-desc">
+      Il <strong>Cardano Skating</strong> organizzerà dal <strong>20 al 26 luglio 2026</strong>
+      i campionati europei di pattinaggio corsa su pista, strada e maratona.
+    </p>
+  </div>
+
+  <div class="hero-banner">
+    <div class="hb-badge">Cardano al Campo (VA), Italia</div>
+    <div class="hb-title">CAMPIONATI<br><span class="acc">EUROPEI</span><br>PATTINAGGIO</div>
+    <div class="hb-sub">PISTA &nbsp;·&nbsp; STRADA &nbsp;·&nbsp; MARATONA</div>
+    <div class="hb-meta">
+      <div class="hb-meta-item">
+        <span class="hb-meta-label">Date</span>
+        <span class="hb-meta-val">20–26 Luglio 2026</span>
+      </div>
+      <div class="hb-meta-item">
+        <span class="hb-meta-label">Luogo</span>
+        <span class="hb-meta-val">Cardano al Campo (VA)</span>
+      </div>
+      <div class="hb-meta-item">
+        <span class="hb-meta-label">Paese</span>
+        <span class="hb-meta-val">Italia</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-n">8</span><span class="stat-l">giorni di manifestazione</span></div>
+    <div class="stat"><span class="stat-n">400+</span><span class="stat-l">atleti partecipanti</span></div>
+    <div class="stat"><span class="stat-n">17</span><span class="stat-l">nazionalità europee</span></div>
+    <div class="stat"><span class="stat-n">1.000+</span><span class="stat-l">persone di capienza</span></div>
+  </div>
+
+  <div>
+    <div class="bt mb3">Chi siamo</div>
+    <div class="two-col">
+      <div class="col-text">
+        <p>Il <strong>Cardano Skating</strong> nasce nel 2018 dalla fusione di due storiche società:
+        la <em>Faro Skating Club</em> e la <em>Cardano Inline</em>. I nostri atleti gareggiano sia
+        nel pattinaggio corsa a rotelle che nel pattinaggio sul ghiaccio di pista lunga, con diversi
+        atleti all'interno della nazionale di entrambe le specialità.</p>
+      </div>
+      <img src="foto/foto_squadra.jpeg" alt="La squadra del Cardano Skating" class="col-img">
+    </div>
+  </div>
+
+  <div>
+    <div class="bt mb3">Risultati recenti</div>
+    <div class="achievements">
+      <div class="ach">
+        <img src="foto/vittoria_melissa.jpeg" alt="Melissa Gatti" class="ach-img">
+        <div>
+          <div class="ach-badge">Campionati italiani indoor — Pescara, febbraio 2026</div>
+          <ul class="ach-list">
+            <li>🥇 <strong>Titolo italiano</strong> 1000 m senior femmine — Melissa Gatti</li>
+            <li>🥉 <strong>Medaglia di bronzo</strong> 1000 m senior femmine — Giorgia Iannarelli</li>
+            <li>🥈 <strong>Medaglia d'argento</strong> staffetta femminile — Julia Bedon, Melissa Gatti, Giorgia Iannarelli</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ach">
+        <img src="foto/foto_marco.jpeg" alt="Marco Bedon" class="ach-img">
+        <div>
+          <div class="ach-badge">Campionato italiano maratona 2025</div>
+          <ul class="ach-list">
+            <li>🥉 <strong>Medaglia di bronzo</strong> — Marco Bedon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE 2 — Chi siamo · Risultati · Sede · Campioni
+══════════════════════════════════════════════════════ -->
+<div class="slide">
+
+  <div class="bt mb3">La sede dell'evento</div>
+  <div class="venue mb4">
+    <img src="foto/pattinodromo.jpeg" alt="Pattinodromo" class="venue-img">
+    <img src="foto/progetto_impianto.jpeg" alt="Progetto impianto" class="venue-img">
+    <div class="venue-info">
+      <p><strong>Pattinodromo Comunale di Via Carreggia</strong>, Cardano al Campo —
+      rinnovato con investimenti pubblici di circa <strong>600.000 €</strong>.</p>
+      <ul class="venue-list">
+        <li>Capienza oltre <strong>1.000 persone</strong></li>
+        <li>Pista sopraelevata di <strong>200 m</strong></li>
+        <li>Circuito stradale di <strong>500 m</strong></li>
+        <li>Dirette streaming delle gare</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bt mb3">Campioni che hanno fatto la storia</div>
+  <div class="champions mb4">
+    <div class="champion">
+      <img src="foto/francesca_lollobrigida.jpeg" alt="Francesca Lollobrigida" class="champ-img">
+      <div class="champ-info">
+        <div class="champ-name">Francesca Lollobrigida</div>
+        <p>2 medaglie d'oro alle Olimpiadi di Milano-Cortina 2026</p>
+      </div>
+    </div>
+    <div class="champion">
+      <img src="foto/fabio_francolini.jpeg" alt="Fabio Francolini" class="champ-img">
+      <div class="champ-info">
+        <div class="champ-name">Fabio Francolini</div>
+        <p>Atleta dell'Aeronautica Militare, campione del mondo con la Cardano Inline</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bt mb3">Perché sponsorizzare</div>
+  <p class="lead mb4">Diventa partner di un <strong>evento sportivo di rilevanza europea</strong>
+  per ottenere una <strong>continua visibilità</strong> all'interno dell'impianto, nelle dirette
+  streaming, sui materiali ufficiali e molto altro.</p>
+
+  <div class="s-tag">Opportunità</div>
+  <div class="s-title">Pacchetti di sponsorizzazione</div>
+  <div class="s-div"></div>
+
+  <div class="packages mb4">
+    <div class="pkg pkg--main">
+      <div class="pkg-tier">Main Sponsor</div>
+      <ul class="pkg-list">
+        <li>Logo sulla pista</li>
+        <li>Logo sulle maglie dello staff</li>
+        <li>Massima visibilità sui social</li>
+        <li>Visibilità nelle dirette streaming</li>
+      </ul>
+    </div>
+    <div class="pkg pkg--gold">
+      <div class="pkg-tier">Gold Sponsor</div>
+      <ul class="pkg-list">
+        <li>Striscioni a bordo pista</li>
+        <li>Logo sui materiali ufficiali</li>
+        <li>Menzioni sui social dell'evento</li>
+      </ul>
+    </div>
+    <div class="pkg pkg--silver">
+      <div class="pkg-tier">Silver Sponsor</div>
+      <ul class="pkg-list">
+        <li>Visibilità durante l'evento</li>
+        <li>Logo sui materiali secondari</li>
+      </ul>
+    </div>
+    <div class="pkg pkg--other">
+      <div class="pkg-tier">Altri pacchetti</div>
+      <ul class="pkg-list">
+        <li>Pacchetti personalizzabili</li>
+        <li>Visibilità su misura</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bt mb3">Contattaci per diventare sponsor</div>
+  <div class="cta-box mb4">
+    <div class="contacts">
+      <div class="contact-card">
+        <div class="contact-role">Presidente</div>
+        <div class="contact-name">Andrea Bordignon</div>
+        <div class="contact-phone">+39 331 905 5150</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-role">Vice-Presidente</div>
+        <div class="contact-name">Luigi Amicone</div>
+        <div class="contact-phone">+39 328 693 4407</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-foot">
+    <div class="slide-foot-l">
+      Cardano Skating
+      <small>info-2026european@cardanoskating.it</small>
+    </div>
+    <div class="slide-foot-r">
+      Campionati Europei · Pattinaggio Corsa a Rotelle<br>
+      <strong>Cardano al Campo (VA) · 20–26 Luglio 2026</strong>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

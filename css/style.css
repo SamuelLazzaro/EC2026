@@ -1293,3 +1293,241 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .footer-contact-link[href*="instagram.com"]:hover { color: #e1306c; }
 .footer-contact-link[href*="facebook.com"]:hover  { color: #1877f2; }
 .footer-contact-link svg { flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   Diventa Sponsor – ds-*
+   ═══════════════════════════════════════════════════════════ */
+
+/* Numeri chiave */
+.ds-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.ds-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+}
+.ds-stat-num {
+  font-family: var(--f-title);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  line-height: 1;
+}
+.ds-stat-label {
+  font-size: 0.72rem;
+  color: var(--c-text-mute);
+  margin-top: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+/* Immagine hero */
+.ds-hero-img-wrap { margin-bottom: 2.5rem; border-radius: var(--radius); overflow: hidden; }
+.ds-full-img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+
+/* Blocchi di contenuto */
+.ds-block { margin-bottom: 2.5rem; }
+.ds-block-title {
+  font-family: var(--f-title);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--c-border-sub);
+}
+
+/* Layout a due colonne */
+.ds-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.ds-text p { line-height: 1.75; color: var(--c-text); }
+.ds-img { width: 100%; border-radius: var(--radius); object-fit: cover; display: block; }
+.ds-img-rounded { border-radius: var(--radius); }
+
+/* Risultati recenti */
+.ds-achievements { display: flex; flex-direction: column; gap: 1.25rem; }
+.ds-achievement {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.ds-achievement-img {
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.ds-achievement-body { flex: 1; }
+.ds-achievement-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.75rem;
+}
+.ds-achievement-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.ds-achievement-list li { font-size: 0.9rem; line-height: 1.5; }
+
+/* Sede */
+.ds-venue { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+.ds-venue-imgs { display: flex; flex-direction: column; gap: 0.75rem; }
+.ds-venue-info p { line-height: 1.75; margin-bottom: 1rem; }
+.ds-venue-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.ds-venue-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--c-text);
+}
+.ds-venue-list li::before { content: "›"; color: var(--c-accent); font-weight: 700; }
+
+/* Campioni */
+.ds-champions { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.ds-champion {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ds-champion-img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--c-bg); display: block; }
+.ds-champion-info { padding: 1rem 1.1rem 1.25rem; }
+.ds-champion-name { font-family: var(--f-title); font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
+.ds-champion-info p { font-size: 0.85rem; color: var(--c-text-mute); line-height: 1.5; }
+
+/* Galleria */
+.ds-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.ds-gallery-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: transform var(--trans), opacity var(--trans);
+  cursor: pointer;
+}
+.ds-gallery-img:hover { transform: scale(1.02); opacity: 0.9; }
+
+/* Lead text */
+.ds-lead { font-size: 1rem; line-height: 1.8; color: var(--c-text); }
+
+/* Pacchetti */
+.ds-packages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.ds-package {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ds-package-tier {
+  font-family: var(--f-title);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  text-align: center;
+}
+.ds-package-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.ds-package-list li {
+  font-size: 0.84rem;
+  color: var(--c-text);
+  padding-left: 0.9rem;
+  position: relative;
+}
+.ds-package-list li::before { content: "›"; position: absolute; left: 0; color: currentColor; }
+
+/* Colori tier */
+.ds-package--main { border-color: rgba(201, 168, 76, 0.5); }
+.ds-package--main .ds-package-tier { background: var(--c-accent); color: var(--c-bg); }
+.ds-package--main .ds-package-list li::before { color: var(--c-accent); }
+
+.ds-package--gold { border-color: rgba(201, 168, 76, 0.3); }
+.ds-package--gold .ds-package-tier { background: rgba(201, 168, 76, 0.18); color: var(--c-accent); border: 1px solid rgba(201, 168, 76, 0.4); }
+.ds-package--gold .ds-package-list li::before { color: var(--c-accent); }
+
+.ds-package--silver { border-color: rgba(180, 190, 210, 0.3); }
+.ds-package--silver .ds-package-tier { background: rgba(180, 190, 210, 0.12); color: #b4bed2; border: 1px solid rgba(180, 190, 210, 0.35); }
+.ds-package--silver .ds-package-list li::before { color: #b4bed2; }
+
+.ds-package--other { border-color: var(--c-border-sub); }
+.ds-package--other .ds-package-tier { background: rgba(110, 139, 171, 0.12); color: var(--c-text-mute); border: 1px solid var(--c-border-sub); }
+
+/* CTA Contatti */
+.ds-cta-block {
+  background: var(--c-card);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+.ds-cta-block .ds-block-title { border-color: rgba(201, 168, 76, 0.2); }
+.ds-contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.ds-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  transition: border-color var(--trans), background var(--trans);
+}
+.ds-contact-card:hover { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
+.ds-contact-role { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-text-mute); }
+.ds-contact-name { font-family: var(--f-title); font-size: 1rem; font-weight: 600; color: var(--c-text); }
+.ds-contact-phone { font-size: 1.05rem; font-weight: 500; color: var(--c-accent); margin-top: 0.2rem; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .ds-stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .ds-packages  { grid-template-columns: repeat(2, 1fr); }
+  .ds-two-col   { grid-template-columns: 1fr; }
+  .ds-venue     { grid-template-columns: 1fr; }
+  .ds-venue-imgs { flex-direction: row; }
+  .ds-champions { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .ds-stats-bar { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .ds-stat-num  { font-size: 1.5rem; }
+  .ds-packages  { grid-template-columns: 1fr; }
+  .ds-gallery   { grid-template-columns: 1fr 1fr; }
+  .ds-champions { grid-template-columns: 1fr; }
+  .ds-achievement { flex-direction: column; }
+  .ds-achievement-img { width: 100%; height: 200px; }
+  .ds-contacts  { grid-template-columns: 1fr; }
+  .ds-venue-imgs { flex-direction: column; }
+  .ds-full-img  { max-height: 240px; }
+}
