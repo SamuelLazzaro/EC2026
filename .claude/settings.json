@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where puppeteer)",
+      "Bash(node -e \"require\\(''puppeteer''\\)\")",
+      "Bash(npx puppeteer --version)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"d:/Personal/EC2026/diventa-sponsor.pdf\" --print-to-pdf-no-header \"file:///d:/Personal/EC2026/diventa-sponsor-print.html\")"
+    ]
+  }
+}

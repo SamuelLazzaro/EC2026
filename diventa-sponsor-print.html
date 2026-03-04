@@ -95,7 +95,7 @@
     /* Hero banner on cover */
     .hero-banner {
       text-align: center;
-      padding: 2mm 0 3mm;
+      padding: 1mm 0 1mm;
     }
     .hb-badge {
       display: inline-flex;
@@ -111,7 +111,7 @@
       border: 1px solid rgba(201,168,76,.3);
       border-radius: 100px;
       padding: 1.5mm 4mm;
-      margin-bottom: 3mm;
+      margin-bottom: 1.5mm;
     }
     .hb-badge::before {
       content: '';
@@ -122,20 +122,20 @@
     }
     .hb-title {
       font-family: var(--T);
-      font-size: 38pt;
+      font-size: 26pt;
       font-weight: 900;
       line-height: 1.0;
       letter-spacing: -.01em;
-      margin-bottom: 3mm;
+      margin-bottom: 2mm;
     }
     .hb-title .acc { color: var(--gold); }
     .hb-sub {
       font-family: var(--T);
-      font-size: 10pt;
+      font-size: 9pt;
       font-weight: 400;
       letter-spacing: .28em;
       color: var(--mute);
-      margin-bottom: 5mm;
+      margin-bottom: 2mm;
     }
     .hb-meta {
       display: flex;
@@ -149,7 +149,7 @@
     }
     .hb-meta-item {
       flex: 1;
-      padding: 4.5mm 2mm;
+      padding: 2.5mm 2mm;
       text-align: center;
       border-right: 1px solid var(--border);
     }
@@ -175,19 +175,19 @@
       display: grid;
       grid-template-columns: repeat(4,1fr);
       gap: 3mm;
-      margin: 4mm 0;
+      margin: 2mm 0;
     }
     .stat {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--r);
-      padding: 5mm 2mm;
+      padding: 3mm 2mm;
       text-align: center;
     }
     .stat-n {
       display: block;
       font-family: var(--T);
-      font-size: 24pt;
+      font-size: 18pt;
       font-weight: 700;
       color: var(--gold);
       line-height: 1;
@@ -345,7 +345,7 @@
     <div class="hb-meta">
       <div class="hb-meta-item">
         <span class="hb-meta-label">Date</span>
-        <span class="hb-meta-val">20–26 Luglio 2026</span>
+        <span class="hb-meta-val">19–26 Luglio 2026</span>
       </div>
       <div class="hb-meta-item">
         <span class="hb-meta-label">Luogo</span>
@@ -362,7 +362,7 @@
     <div class="stat"><span class="stat-n">8</span><span class="stat-l">giorni di manifestazione</span></div>
     <div class="stat"><span class="stat-n">400+</span><span class="stat-l">atleti partecipanti</span></div>
     <div class="stat"><span class="stat-n">17</span><span class="stat-l">nazionalità europee</span></div>
-    <div class="stat"><span class="stat-n">1.000+</span><span class="stat-l">persone di capienza</span></div>
+    <div class="stat"><span class="stat-n">1.000+</span><span class="stat-l">spettatori al giorno</span></div>
   </div>
 
   <div>
@@ -378,45 +378,12 @@
     </div>
   </div>
 
-  <div>
-    <div class="bt mb3">Risultati recenti</div>
-    <div class="achievements">
-      <div class="ach">
-        <img src="foto/vittoria_melissa.jpeg" alt="Melissa Gatti" class="ach-img">
-        <div>
-          <div class="ach-badge">Campionati italiani indoor — Pescara, febbraio 2026</div>
-          <ul class="ach-list">
-            <li>🥇 <strong>Titolo italiano</strong> 1000 m senior femmine — Melissa Gatti</li>
-            <li>🥉 <strong>Medaglia di bronzo</strong> 1000 m senior femmine — Giorgia Iannarelli</li>
-            <li>🥈 <strong>Medaglia d'argento</strong> staffetta femminile — Julia Bedon, Melissa Gatti, Giorgia Iannarelli</li>
-          </ul>
-        </div>
-      </div>
-      <div class="ach">
-        <img src="foto/foto_marco.jpeg" alt="Marco Bedon" class="ach-img">
-        <div>
-          <div class="ach-badge">Campionato italiano maratona 2025</div>
-          <ul class="ach-list">
-            <li>🥉 <strong>Medaglia di bronzo</strong> — Marco Bedon</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════
-     PAGE 2 — Chi siamo · Risultati · Sede · Campioni
-══════════════════════════════════════════════════════ -->
-<div class="slide">
-
   <div class="bt mb3">La sede dell'evento</div>
-  <div class="venue mb4">
+  <div class="venue">
     <img src="foto/pattinodromo.jpeg" alt="Pattinodromo" class="venue-img">
     <img src="foto/progetto_impianto.jpeg" alt="Progetto impianto" class="venue-img">
     <div class="venue-info">
-      <p><strong>Pattinodromo Comunale di Via Carreggia</strong>, Cardano al Campo —
+      <p><strong>Pattinodromo Comunale di Via Carreggia</strong>, Cardano al Campo (Comune Europeo dello Sport 2023) —
       rinnovato con investimenti pubblici di circa <strong>600.000 €</strong>.</p>
       <ul class="venue-list">
         <li>Capienza oltre <strong>1.000 persone</strong></li>
@@ -426,6 +393,13 @@
       </ul>
     </div>
   </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE 2 — Campioni · Risultati · Perché · Contatti
+══════════════════════════════════════════════════════ -->
+<div class="slide">
 
   <div class="bt mb3">Campioni che hanno fatto la storia</div>
   <div class="champions mb4">
@@ -445,10 +419,32 @@
     </div>
   </div>
 
+  <div class="bt mb3">Risultati recenti</div>
+  <div class="achievements mb4">
+    <div class="ach">
+      <img src="foto/vittoria_melissa.jpeg" alt="Melissa Gatti" class="ach-img">
+      <div>
+        <div class="ach-badge">Campionati italiani indoor — Pescara, febbraio 2026</div>
+        <ul class="ach-list">
+          <li>🥇 <strong>Titolo italiano</strong> 1000 m senior femmine — Melissa Gatti</li>
+          <li>🥉 <strong>Medaglia di bronzo</strong> 1000 m senior femmine — Giorgia Iannarelli</li>
+          <li>🥈 <strong>Medaglia d'argento</strong> staffetta femminile — Julia Bedon, Melissa Gatti, Giorgia Iannarelli</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ach">
+      <img src="foto/foto_marco.jpeg" alt="Marco Bedon" class="ach-img">
+      <div>
+        <div class="ach-badge">Campionato italiano maratona 2025</div>
+        <ul class="ach-list">
+          <li>🥉 <strong>Medaglia di bronzo</strong> — Marco Bedon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="bt mb3">Perché sponsorizzare</div>
-  <p class="lead mb4">Diventa partner di un <strong>evento sportivo di rilevanza europea</strong>
-  per ottenere una <strong>continua visibilità</strong> all'interno dell'impianto, nelle dirette
-  streaming, sui materiali ufficiali e molto altro.</p>
+  <p class="lead mb4">Entra in pista con noi e lega il tuo <strong>brand</strong> ai <strong>Campionati Europei di Pattinaggio Corsa a Rotelle 2026</strong>.<br>Diventare sponsor significa associare il tuo nome a eccellenza sportiva, giovani talenti italiani e a una competizione internazionale che offre visibilità concreta e continuativa. Vuoi che la prossima vittoria porti anche il tuo <strong>logo</strong> sul gradino più alto del podio?</p>
 
   <div class="s-tag">Opportunità</div>
   <div class="s-title">Pacchetti di sponsorizzazione</div>
@@ -511,7 +507,7 @@
     </div>
     <div class="slide-foot-r">
       Campionati Europei · Pattinaggio Corsa a Rotelle<br>
-      <strong>Cardano al Campo (VA) · 20–26 Luglio 2026</strong>
+      <strong>Cardano al Campo (VA) · 19–26 Luglio 2026</strong>
     </div>
   </div>
 

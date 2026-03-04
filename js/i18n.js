@@ -8,7 +8,7 @@ const TRANSLATIONS = {
   it: {
     meta: {
       title: "Campionati Europei Pattinaggio Corsa a Rotelle 2026",
-      desc:  "Campionati Europei di Pattinaggio Corsa a Rotelle 2026 – Cardano al Campo (VA), Italia, 20–26 Luglio"
+      desc:  "Campionati Europei di Pattinaggio Corsa a Rotelle 2026 – Cardano al Campo (VA), Italia, 19–26 Luglio"
     },
     header: {
       title: "CAMPIONATI EUROPEI",
@@ -23,7 +23,7 @@ const TRANSLATIONS = {
       news:        "News",
       contatti:        "Contatti",
       diventa_sponsor: "Diventa Sponsor",
-      footer:          "Cardano al Campo (VA), Italia · 20–26 Luglio 2026"
+      footer:          "Cardano al Campo (VA), Italia · 19–26 Luglio 2026"
     },
     footer: {
       rights: "© 2026 Campionati Europei Pattinaggio Corsa a Rotelle · Cardano al Campo (VA), Italia"
@@ -34,7 +34,7 @@ const TRANSLATIONS = {
       title2:         "EUROPEI",
       title3:         "PATTINAGGIO",
       date_label:     "Date",
-      date_value:     "20–26 Luglio 2026",
+      date_value:     "19–26 Luglio 2026",
       loc_label:      "Luogo",
       loc_value:      "Cardano al Campo (VA)",
       country_label:  "Paese",
@@ -144,7 +144,7 @@ const TRANSLATIONS = {
   en: {
     meta: {
       title: "European Inline Speed Skating Championships 2026",
-      desc:  "European Inline Speed Skating Championships 2026 – Cardano al Campo (VA), Italy, 20–26 July"
+      desc:  "European Inline Speed Skating Championships 2026 – Cardano al Campo (VA), Italy, 19–26 July"
     },
     header: {
       title: "EUROPEAN CHAMPIONSHIPS",
@@ -159,7 +159,7 @@ const TRANSLATIONS = {
       news:        "News",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
-      footer:          "Cardano al Campo (VA), Italy · 20–26 July 2026"
+      footer:          "Cardano al Campo (VA), Italy · 19–26 July 2026"
     },
     footer: {
       rights: "© 2026 European Inline Speed Skating Championships · Cardano al Campo (VA), Italy"
@@ -170,7 +170,7 @@ const TRANSLATIONS = {
       title2:         "CHAMPIONSHIPS",
       title3:         "INLINE SPEED SKATING",
       date_label:     "Dates",
-      date_value:     "20–26 July 2026",
+      date_value:     "19–26 July 2026",
       loc_label:      "Luogo",
       loc_value:      "Cardano al Campo (VA)",
       country_label:  "Country",
