@@ -94,7 +94,7 @@ const TRANSLATIONS = {
     },
     luogo: {
       tag:            "Luogo",
-      title:          "Il Luogo",
+      title:          "Luogo",
       desc:           "Cardano al Campo ospita i Campionati Europei di pattinaggio corsa a rotelle.",
       city:           "Cardano al Campo (VA), Italia",
       country:        "Varese · Lombardia · Italia",
@@ -157,7 +157,7 @@ const TRANSLATIONS = {
       classifiche: "Rankings",
       sponsor:     "Sponsors",
       alloggi:     "Accommodation",
-      luogo:       "Luogo",
+      luogo:       "Venue",
       news:        "News",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
@@ -232,7 +232,7 @@ const TRANSLATIONS = {
     },
     luogo: {
       tag:            "Venue",
-      title:          "The Venue",
+      title:          "Venue",
       desc:           "Cardano al Campo hosts the European Inline Speed Skating Championships.",
       city:           "Cardano al Campo (VA), Italy",
       country:        "Varese · Lombardy · Italy",
