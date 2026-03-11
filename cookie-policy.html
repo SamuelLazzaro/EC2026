@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy – EC 2026 Pattinaggio Corsa a Rotelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --c-bg:        #0a1628;
+      --c-bg2:       #0e1f3d;
+      --c-card:      #152340;
+      --c-accent:    #c9a84c;
+      --c-accent-lt: #e8c76a;
+      --c-text:      #f0f4f8;
+      --c-text-mute: #6e8bab;
+      --c-border:    rgba(201, 168, 76, 0.22);
+      --f-title:     'Montserrat', sans-serif;
+      --f-body:      'Inter', sans-serif;
+      --max-w:       800px;
+      --radius:      12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--f-body);
+      background: var(--c-bg);
+      color: var(--c-text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--c-accent-lt); }
+
+    /* Header */
+    .cp-header {
+      background: rgba(10, 22, 40, 0.96);
+      border-bottom: 1px solid var(--c-border);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .cp-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .cp-logo-emblem {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #c9a84c, #9a7a2e);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--f-title);
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: var(--c-bg);
+      flex-shrink: 0;
+    }
+    .cp-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+    .cp-logo-title {
+      font-family: var(--f-title);
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      color: var(--c-accent);
+    }
+    .cp-logo-sub {
+      font-size: 0.58rem;
+      letter-spacing: 0.05em;
+      color: var(--c-text-mute);
+    }
+    .cp-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.9rem;
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+      color: var(--c-accent);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .cp-back-btn:hover { background: rgba(201, 168, 76, 0.18); color: var(--c-accent-lt); }
+
+    /* Content */
+    .cp-content {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .cp-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 0.6rem;
+    }
+    .cp-title {
+      font-family: var(--f-title);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .cp-date {
+      font-size: 0.75rem;
+      color: var(--c-text-mute);
+      margin-bottom: 2.5rem;
+    }
+    .cp-section {
+      background: #152340;
+      border: 1px solid rgba(201, 168, 76, 0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .cp-section h2 {
+      font-family: var(--f-title);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 0.75rem;
+    }
+    .cp-section p {
+      font-size: 0.88rem;
+      color: var(--c-text-mute);
+      margin-bottom: 0.6rem;
+    }
+    .cp-section p:last-child { margin-bottom: 0; }
+    .cp-section ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .cp-section ul li {
+      font-size: 0.85rem;
+      color: var(--c-text-mute);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0.75rem;
+    }
+    .cp-section ul li:last-child { border-bottom: none; }
+    .cp-section ul li strong {
+      color: var(--c-text);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .cp-footer {
+      background: var(--c-bg2);
+      border-top: 1px solid var(--c-border);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--c-text-mute);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cp-header">
+    <a href="index.html" class="cp-logo">
+      <div class="cp-logo-emblem">EC</div>
+      <div class="cp-logo-text">
+        <span class="cp-logo-title">CAMPIONATI EUROPEI</span>
+        <span class="cp-logo-sub">Pattinaggio Corsa a Rotelle 2026</span>
+      </div>
+    </a>
+    <a href="index.html" class="cp-back-btn">
+      ← Torna al sito
+    </a>
+  </header>
+
+  <main class="cp-content">
+
+    <span class="cp-tag">Informativa</span>
+    <h1 class="cp-title">Cookie Policy &amp; Privacy</h1>
+    <p class="cp-date">Ultimo aggiornamento: marzo 2026</p>
+
+    <div class="cp-section">
+      <h2>1. Titolare del Trattamento</h2>
+      <p>
+        Il titolare del trattamento dei dati personali è la <strong>Cardano Skating S.R.L. S.S.D.</strong>,
+        organizzatrice dei Campionati Europei di Pattinaggio Corsa a Rotelle 2026,
+        con sede in Cardano al Campo (VA), Italia.
+      </p>
+      <p>
+        Per qualsiasi richiesta relativa alla privacy è possibile contattarci all'indirizzo:
+        <a href="mailto:info-2026european@cardanoskating.it">info-2026european@cardanoskating.it</a>
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>2. Cosa sono i Cookie</h2>
+      <p>
+        I cookie sono piccoli file di testo salvati sul dispositivo dell'utente dal browser
+        durante la navigazione. Questa informativa riguarda anche tecnologie analoghe come
+        il <strong>localStorage</strong>, un'area di memoria del browser utilizzata da questo sito.
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>3. Cookie Utilizzati da Questo Sito</h2>
+      <p>
+        Questo sito utilizza <strong>esclusivamente cookie tecnici strettamente necessari</strong>
+        al suo corretto funzionamento. Non vengono utilizzati cookie di profilazione,
+        cookie di marketing o cookie di terze parti a scopo pubblicitario.
+      </p>
+      <ul>
+        <li>
+          <strong>ec2026-lang</strong>
+          Memorizza la lingua selezionata dall'utente (es. "it", "en"). Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.
+        </li>
+        <li>
+          <strong>ec2026-cookie-consent</strong>
+          Registra l'avvenuta presa visione dell'informativa cookie. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.
+        </li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Questi dati non vengono mai trasmessi a server esterni e rimangono
+        esclusivamente nel browser dell'utente.
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>4. Servizi di Terze Parti</h2>
+      <p>
+        Il sito carica i font tipografici attraverso il servizio <strong>Google Fonts</strong>
+        (Google LLC, USA). Il caricamento dei font comporta la trasmissione dell'indirizzo IP
+        dell'utente ai server di Google. Google dichiara di non utilizzare questi dati per
+        scopi di profilazione nel contesto del servizio Fonts.
+      </p>
+      <p>
+        Per ulteriori informazioni consultare la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>5. Base Giuridica del Trattamento</h2>
+      <p>
+        Il trattamento dei dati tramite cookie tecnici è effettuato sulla base del
+        <strong>legittimo interesse</strong> del titolare (art. 6, par. 1, lett. f del GDPR)
+        e della <strong>necessità contrattuale</strong> di fornire il servizio richiesto
+        dall'utente (art. 6, par. 1, lett. b del GDPR), poiché tali cookie sono
+        indispensabili per il funzionamento del sito.
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>6. Come Disabilitare i Cookie</h2>
+      <p>
+        L'utente può eliminare i dati salvati in localStorage in qualsiasi momento
+        tramite le impostazioni del proprio browser (Strumenti sviluppatore › Application ›
+        Local Storage) oppure cancellando la cronologia e i dati di navigazione.
+      </p>
+      <p>
+        Si noti che la disabilitazione potrebbe compromettere alcune funzionalità del sito
+        (es. memorizzazione della lingua selezionata).
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>7. Diritti dell'Interessato</h2>
+      <p>
+        Ai sensi degli artt. 15–22 del GDPR (Reg. UE 2016/679) e del D.Lgs. 196/2003
+        (come modificato dal D.Lgs. 101/2018), l'utente ha il diritto di:
+      </p>
+      <ul>
+        <li><strong>Accesso</strong> Ottenere conferma del trattamento e copia dei dati.</li>
+        <li><strong>Rettifica</strong> Richiedere la correzione di dati inesatti.</li>
+        <li><strong>Cancellazione</strong> Richiedere la cancellazione dei dati ("diritto all'oblio").</li>
+        <li><strong>Limitazione</strong> Richiedere la limitazione del trattamento.</li>
+        <li><strong>Opposizione</strong> Opporsi al trattamento in qualsiasi momento.</li>
+        <li><strong>Portabilità</strong> Ricevere i dati in formato strutturato e leggibile.</li>
+        <li><strong>Reclamo</strong> Proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).</li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Per esercitare i propri diritti contattare:
+        <a href="mailto:info-2026european@cardanoskating.it">info-2026european@cardanoskating.it</a>
+      </p>
+    </div>
+
+    <div class="cp-section">
+      <h2>8. Modifiche alla Policy</h2>
+      <p>
+        Il titolare si riserva il diritto di aggiornare la presente informativa in qualsiasi
+        momento. Le modifiche saranno pubblicate su questa pagina con indicazione della
+        data di aggiornamento. Si invita a consultare periodicamente questa pagina.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="cp-footer">
+    &copy; 2026 Campionati Europei Pattinaggio Corsa a Rotelle &middot; Cardano al Campo (VA), Italia
+  </footer>
+
+</body>
+</html>

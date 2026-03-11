@@ -62,7 +62,6 @@ const TRANSLATIONS = {
       col_athlete:    "Atleta",
       col_country:    "Nazione",
       col_time:       "Tempo / Punti",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Punti",
@@ -91,21 +90,19 @@ const TRANSLATIONS = {
       pernight:  "/ notte",
       dist:      "dal circuito",
       stars:     "stelle",
-      note:      "Per prenotazioni e tariffe agevolate per atleti e delegazioni, contattare la segreteria organizzativa all'indirizzo <strong>info@ec2026pattinaggio.it</strong>"
+      note:      "Per prenotazioni e tariffe agevolate per atleti e delegazioni, contattare la segreteria organizzativa all'indirizzo <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Luogo",
       title:          "Il Luogo",
-      desc:           "Cardano al Campo ospita per la prima volta i Campionati Europei di Pattinaggio Corsa a Rotelle.",
+      desc:           "Cardano al Campo ospita i Campionati Europei di pattinaggio corsa a rotelle.",
       city:           "Cardano al Campo (VA), Italia",
       country:        "Varese · Lombardia · Italia",
-      city_desc:      "Cardano al Campo è un comune della provincia di Varese, a pochi chilometri dall'aeroporto internazionale di Milano Malpensa. La città offre eccellenti infrastrutture sportive e facili collegamenti con tutta Europa.",
-      vd_venue:       "Impianto",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo è un comune della provincia di Varese, a pochi chilometri dall'aeroporto internazionale di Milano Malpensa, nominato Comune Europeo dello Sport 2023.",
       vd_track:       "Pista",
-      vd_track_v:     "200m omologata UE",
+      vd_track_v:     "200m",
       vd_cap:         "Capienza",
-      vd_cap_v:       "3.500 spettatori",
+      vd_cap_v:       "1.000 spettatori",
       vd_park:        "Parcheggio",
       vd_park_v:      "600 posti gratuiti",
       vd_wifi:        "Connettività",
@@ -117,11 +114,11 @@ const TRANSLATIONS = {
       map_open:       "Apri in Google Maps",
       transport_title: "Come arrivare",
       tr_fly:         "Aereo",
-      tr_fly_d:       "Aeroporto Milano Malpensa (MXP) a 4 km. Navetta gratuita per gli atleti accreditati ogni 30 minuti.",
+      tr_fly_d:       "Aeroporto Milano Malpensa (MXP) a 4 km.",
       tr_train:       "Treno",
-      tr_train_d:     "Stazione FS di Gallarate (3 km). Collegamento diretto da Milano Centrale in 30 minuti.",
+      tr_train_d:     "Stazione FS di Gallarate (6 km). Collegamento diretto da Milano in 40 minuti.",
       tr_car:         "Auto",
-      tr_car_d:       "Uscita A8 Gallarate/Busto Arsizio. Parcheggio gratuito disponibile per tutti i partecipanti.",
+      tr_car_d:       "Uscita A8 Gallarate/Busto Arsizio. Parcheggio gratuito disponibile in zona.",
       tr_bus:         "Bus navetta",
       tr_bus_d:       "Servizio navetta ufficiale dall'aeroporto di Malpensa e dal centro di Gallarate durante tutta la manifestazione."
     },
@@ -137,6 +134,11 @@ const TRANSLATIONS = {
       desc:        "Per informazioni e richieste, contattaci via email, telefono o attraverso i nostri canali social.",
       email_label: "Email",
       phone_label: "Telefono"
+    },
+    cookie: {
+      text:   "Questo sito utilizza esclusivamente cookie tecnici strettamente necessari al suo funzionamento (preferenza lingua, memorizzazione del consenso). Nessun cookie di profilazione o marketing.",
+      accept: "Ho capito",
+      policy: "Cookie Policy"
     }
   },
 
@@ -198,7 +200,6 @@ const TRANSLATIONS = {
       col_athlete:    "Athlete",
       col_country:    "Country",
       col_time:       "Time / Points",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Points",
@@ -227,21 +228,19 @@ const TRANSLATIONS = {
       pernight:     "/ night",
       dist:         "from the circuit",
       stars:        "stars",
-      note:         "For bookings and special rates for athletes and delegations, contact the organising secretariat at <strong>info@ec2026pattinaggio.it</strong>"
+      note:         "For bookings and special rates for athletes and delegations, contact the organising secretariat at <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Venue",
       title:          "The Venue",
-      desc:           "Cardano al Campo hosts the European Inline Speed Skating Championships for the first time.",
+      desc:           "Cardano al Campo hosts the European Inline Speed Skating Championships.",
       city:           "Cardano al Campo (VA), Italy",
       country:        "Varese · Lombardy · Italy",
-      city_desc:      "Cardano al Campo is a municipality in the province of Varese, a few kilometres from Milan Malpensa International Airport. The town offers excellent sports infrastructure and easy connections throughout Europe.",
-      vd_venue:       "Facility",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo is a municipality in the province of Varese, a few kilometres from Milan Malpensa International Airport, named European Town of Sport 2023.",
       vd_track:       "Track",
-      vd_track_v:     "200m EU certified",
+      vd_track_v:     "200m",
       vd_cap:         "Capacity",
-      vd_cap_v:       "3,500 spectators",
+      vd_cap_v:       "1,000 spectators",
       vd_park:        "Parking",
       vd_park_v:      "600 free spaces",
       vd_wifi:        "Connectivity",
@@ -253,11 +252,11 @@ const TRANSLATIONS = {
       map_open:       "Open in Google Maps",
       transport_title: "How to get there",
       tr_fly:         "By plane",
-      tr_fly_d:       "Milan Malpensa Airport (MXP) 4 km away. Free shuttle for accredited athletes every 30 minutes.",
+      tr_fly_d:       "Milan Malpensa Airport (MXP) 4 km away.",
       tr_train:       "By train",
-      tr_train_d:     "Gallarate railway station (3 km). Direct connection from Milan Central in 30 minutes.",
+      tr_train_d:     "Gallarate railway station (6 km). Direct connection from Milan in 40 minutes.",
       tr_car:         "By car",
-      tr_car_d:       "Exit A8 Gallarate/Busto Arsizio. Free parking available for all participants.",
+      tr_car_d:       "Exit A8 Gallarate/Busto Arsizio. Free parking available in the area.",
       tr_bus:         "Shuttle bus",
       tr_bus_d:       "Official shuttle service from Malpensa Airport and Gallarate city centre throughout the event."
     },
@@ -273,6 +272,11 @@ const TRANSLATIONS = {
       desc:        "For information and enquiries, contact us by email, phone or through our social channels.",
       email_label: "Email",
       phone_label: "Phone"
+    },
+    cookie: {
+      text:   "This website uses only strictly necessary technical cookies (language preference, consent storage). No profiling or marketing cookies.",
+      accept: "Got it",
+      policy: "Cookie Policy"
     }
   },
 
@@ -334,7 +338,6 @@ const TRANSLATIONS = {
       col_athlete:    "Athlète",
       col_country:    "Pays",
       col_time:       "Temps / Points",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Points",
@@ -363,21 +366,19 @@ const TRANSLATIONS = {
       pernight:     "/ nuit",
       dist:         "du circuit",
       stars:        "étoiles",
-      note:         "Pour les réservations et tarifs préférentiels pour les athlètes et délégations, contactez le secrétariat d'organisation : <strong>info@ec2026pattinaggio.it</strong>"
+      note:         "Pour les réservations et tarifs préférentiels pour les athlètes et délégations, contactez le secrétariat d'organisation : <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Site",
       title:          "Le Lieu",
-      desc:           "Cardano al Campo accueille pour la première fois les Championnats d'Europe de Patinage de Vitesse en Ligne.",
+      desc:           "Cardano al Campo accueille les Championnats d'Europe de Patinage de Vitesse en Ligne.",
       city:           "Cardano al Campo (VA), Italie",
       country:        "Varese · Lombardie · Italie",
-      city_desc:      "Cardano al Campo est une commune de la province de Varese, à quelques kilomètres de l'aéroport international de Milan Malpensa. La ville offre d'excellentes infrastructures sportives et de bonnes liaisons avec toute l'Europe.",
-      vd_venue:       "Installation",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo est une commune de la province de Varese, à quelques kilomètres de l'aéroport international de Milan Malpensa, nommée Commune Européenne du Sport 2023.",
       vd_track:       "Piste",
-      vd_track_v:     "200m homologuée UE",
+      vd_track_v:     "200m",
       vd_cap:         "Capacité",
-      vd_cap_v:       "3 500 spectateurs",
+      vd_cap_v:       "1 000 spectateurs",
       vd_park:        "Parking",
       vd_park_v:      "600 places gratuites",
       vd_wifi:        "Connectivité",
@@ -389,11 +390,11 @@ const TRANSLATIONS = {
       map_open:       "Ouvrir dans Google Maps",
       transport_title: "Comment s'y rendre",
       tr_fly:         "Avion",
-      tr_fly_d:       "Aéroport de Milan Malpensa (MXP) à 4 km. Navette gratuite pour les athlètes accrédités toutes les 30 minutes.",
+      tr_fly_d:       "Aéroport de Milan Malpensa (MXP) à 4 km.",
       tr_train:       "Train",
-      tr_train_d:     "Gare de Gallarate (3 km). Connexion directe depuis Milan Centrale en 30 minutes.",
+      tr_train_d:     "Gare de Gallarate (6 km). Connexion directe depuis Milan en 40 minutes.",
       tr_car:         "Voiture",
-      tr_car_d:       "Sortie A8 Gallarate/Busto Arsizio. Parking gratuit disponible pour tous les participants.",
+      tr_car_d:       "Sortie A8 Gallarate/Busto Arsizio. Parking gratuit disponible dans la zone.",
       tr_bus:         "Navette",
       tr_bus_d:       "Service de navette officielle depuis l'aéroport de Malpensa et le centre de Gallarate pendant toute la manifestation."
     },
@@ -409,6 +410,11 @@ const TRANSLATIONS = {
       desc:        "Pour toute information ou demande, contactez-nous par email, téléphone ou via nos réseaux sociaux.",
       email_label: "Email",
       phone_label: "Téléphone"
+    },
+    cookie: {
+      text:   "Ce site utilise uniquement des cookies techniques strictement nécessaires (préférence de langue, mémorisation du consentement). Aucun cookie de profilage ou de marketing.",
+      accept: "J'ai compris",
+      policy: "Politique de cookies"
     }
   },
 
@@ -470,7 +476,6 @@ const TRANSLATIONS = {
       col_athlete:    "Athlet/in",
       col_country:    "Land",
       col_time:       "Zeit / Punkte",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Punkte",
@@ -499,21 +504,19 @@ const TRANSLATIONS = {
       pernight:     "/ Nacht",
       dist:         "von der Strecke",
       stars:        "Sterne",
-      note:         "Für Buchungen und Sonderkonditionen für Athleten und Delegationen wenden Sie sich bitte an das Organisationsbüro: <strong>info@ec2026pattinaggio.it</strong>"
+      note:         "Für Buchungen und Sonderkonditionen für Athleten und Delegationen wenden Sie sich bitte an das Organisationsbüro: <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Veranstaltungsort",
       title:          "Der Veranstaltungsort",
-      desc:           "Cardano al Campo richtet die Europameisterschaften im Inline-Speedskating zum ersten Mal aus.",
+      desc:           "Cardano al Campo richtet die Europameisterschaften im Inline-Speedskating aus.",
       city:           "Cardano al Campo (VA), Italien",
       country:        "Varese · Lombardei · Italien",
-      city_desc:      "Cardano al Campo ist eine Gemeinde in der Provinz Varese, wenige Kilometer vom internationalen Flughafen Mailand Malpensa entfernt. Die Stadt bietet hervorragende Sportinfrastruktur und gute Anbindungen an ganz Europa.",
-      vd_venue:       "Anlage",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo ist eine Gemeinde in der Provinz Varese, wenige Kilometer vom internationalen Flughafen Mailand Malpensa entfernt, ausgezeichnet als Europäische Sportgemeinde 2023.",
       vd_track:       "Bahn",
-      vd_track_v:     "200m EU-zertifiziert",
+      vd_track_v:     "200m",
       vd_cap:         "Kapazität",
-      vd_cap_v:       "3.500 Zuschauer",
+      vd_cap_v:       "1.000 Zuschauer",
       vd_park:        "Parkplatz",
       vd_park_v:      "600 kostenlose Plätze",
       vd_wifi:        "Konnektivität",
@@ -525,11 +528,11 @@ const TRANSLATIONS = {
       map_open:       "In Google Maps öffnen",
       transport_title: "Anreise",
       tr_fly:         "Flugzeug",
-      tr_fly_d:       "Flughafen Mailand Malpensa (MXP) 4 km entfernt. Kostenloser Shuttle für akkreditierte Athleten alle 30 Minuten.",
+      tr_fly_d:       "Flughafen Mailand Malpensa (MXP) 4 km entfernt.",
       tr_train:       "Zug",
-      tr_train_d:     "Bahnhof Gallarate (3 km). Direktverbindung von Mailand Centrale in 30 Minuten.",
+      tr_train_d:     "Bahnhof Gallarate (6 km). Direktverbindung von Mailand in 40 Minuten.",
       tr_car:         "Auto",
-      tr_car_d:       "Ausfahrt A8 Gallarate/Busto Arsizio. Kostenlose Parkplätze für alle Teilnehmer.",
+      tr_car_d:       "Ausfahrt A8 Gallarate/Busto Arsizio. Kostenlose Parkplätze in der Umgebung verfügbar.",
       tr_bus:         "Shuttlebus",
       tr_bus_d:       "Offizieller Shuttleservice vom Flughafen Malpensa und dem Zentrum von Gallarate während der gesamten Veranstaltung."
     },
@@ -545,6 +548,11 @@ const TRANSLATIONS = {
       desc:        "Für Informationen und Anfragen kontaktieren Sie uns per E-Mail, Telefon oder über unsere Social-Media-Kanäle.",
       email_label: "E-Mail",
       phone_label: "Telefon"
+    },
+    cookie: {
+      text:   "Diese Website verwendet ausschließlich technisch notwendige Cookies (Spracheinstellung, Speicherung der Einwilligung). Keine Profiling- oder Marketing-Cookies.",
+      accept: "Verstanden",
+      policy: "Cookie-Richtlinie"
     }
   },
 
@@ -606,7 +614,6 @@ const TRANSLATIONS = {
       col_athlete:    "Atleta",
       col_country:    "País",
       col_time:       "Tiempo / Puntos",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Puntos",
@@ -635,21 +642,19 @@ const TRANSLATIONS = {
       pernight:     "/ noche",
       dist:         "del circuito",
       stars:        "estrellas",
-      note:         "Para reservas y tarifas especiales para atletas y delegaciones, contacte con la secretaría organizadora: <strong>info@ec2026pattinaggio.it</strong>"
+      note:         "Para reservas y tarifas especiales para atletas y delegaciones, contacte con la secretaría organizadora: <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Sede",
       title:          "La Sede",
-      desc:           "Cardano al Campo acoge por primera vez los Campeonatos de Europa de Patinaje de Velocidad en Línea.",
+      desc:           "Cardano al Campo acoge los Campeonatos de Europa de Patinaje de Velocidad en Línea.",
       city:           "Cardano al Campo (VA), Italia",
       country:        "Varese · Lombardía · Italia",
-      city_desc:      "Cardano al Campo es un municipio de la provincia de Varese, a pocos kilómetros del aeropuerto internacional de Milán Malpensa. La ciudad ofrece excelentes infraestructuras deportivas y fáciles conexiones con toda Europa.",
-      vd_venue:       "Instalación",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo es un municipio de la provincia de Varese, a pocos kilómetros del aeropuerto internacional de Milán Malpensa, nombrado Municipio Europeo del Deporte 2023.",
       vd_track:       "Pista",
-      vd_track_v:     "200m homologada UE",
+      vd_track_v:     "200m",
       vd_cap:         "Aforo",
-      vd_cap_v:       "3.500 espectadores",
+      vd_cap_v:       "1.000 espectadores",
       vd_park:        "Aparcamiento",
       vd_park_v:      "600 plazas gratuitas",
       vd_wifi:        "Conectividad",
@@ -661,11 +666,11 @@ const TRANSLATIONS = {
       map_open:       "Abrir en Google Maps",
       transport_title: "Cómo llegar",
       tr_fly:         "Avión",
-      tr_fly_d:       "Aeropuerto de Milán Malpensa (MXP) a 4 km. Lanzadera gratuita para atletas acreditados cada 30 minutos.",
+      tr_fly_d:       "Aeropuerto de Milán Malpensa (MXP) a 4 km.",
       tr_train:       "Tren",
-      tr_train_d:     "Estación de Gallarate (3 km). Conexión directa desde Milán Central en 30 minutos.",
+      tr_train_d:     "Estación de Gallarate (6 km). Conexión directa desde Milán en 40 minutos.",
       tr_car:         "Coche",
-      tr_car_d:       "Salida A8 Gallarate/Busto Arsizio. Aparcamiento gratuito para todos los participantes.",
+      tr_car_d:       "Salida A8 Gallarate/Busto Arsizio. Aparcamiento gratuito disponible en la zona.",
       tr_bus:         "Autobús lanzadera",
       tr_bus_d:       "Servicio oficial de lanzadera desde el aeropuerto de Malpensa y el centro de Gallarate durante todo el evento."
     },
@@ -681,6 +686,11 @@ const TRANSLATIONS = {
       desc:        "Para información y consultas, contáctenos por correo electrónico, teléfono o a través de nuestras redes sociales.",
       email_label: "Email",
       phone_label: "Teléfono"
+    },
+    cookie: {
+      text:   "Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias (preferencia de idioma, almacenamiento del consentimiento). Sin cookies de perfilado ni de marketing.",
+      accept: "Entendido",
+      policy: "Política de cookies"
     }
   },
 
@@ -742,7 +752,6 @@ const TRANSLATIONS = {
       col_athlete:    "Atleta",
       col_country:    "País",
       col_time:       "Tempo / Pontos",
-      pista_300:      "300m Sprint",
       pista_500:      "500m",
       pista_1000:     "1000m",
       pista_5000:     "5000m Pontos",
@@ -771,21 +780,19 @@ const TRANSLATIONS = {
       pernight:     "/ noite",
       dist:         "do circuito",
       stars:        "estrelas",
-      note:         "Para reservas e tarifas especiais para atletas e delegações, contacte a secretaria organizadora: <strong>info@ec2026pattinaggio.it</strong>"
+      note:         "Para reservas e tarifas especiais para atletas e delegações, contacte a secretaria organizadora: <strong>info-2026european@cardanoskating.it</strong>"
     },
     luogo: {
       tag:            "Local",
       title:          "O Local",
-      desc:           "Cardano al Campo acolhe pela primeira vez os Campeonatos Europeus de Patinagem de Velocidade em Linha.",
+      desc:           "Cardano al Campo acolhe os Campeonatos Europeus de Patinagem de Velocidade em Linha.",
       city:           "Cardano al Campo (VA), Itália",
       country:        "Varese · Lombardia · Itália",
-      city_desc:      "Cardano al Campo é um município da província de Varese, a poucos quilómetros do Aeroporto Internacional de Milão Malpensa. A cidade oferece excelentes infraestruturas desportivas e boas ligações com toda a Europa.",
-      vd_venue:       "Instalação",
-      vd_venue_v:     "Palaghiaccio Sport Arena",
+      city_desc:      "Cardano al Campo é um município da província de Varese, a poucos quilómetros do Aeroporto Internacional de Milão Malpensa, nomeado Município Europeu do Desporto 2023.",
       vd_track:       "Pista",
-      vd_track_v:     "200m certificada UE",
+      vd_track_v:     "200m",
       vd_cap:         "Capacidade",
-      vd_cap_v:       "3.500 espectadores",
+      vd_cap_v:       "1.000 espectadores",
       vd_park:        "Estacionamento",
       vd_park_v:      "600 lugares gratuitos",
       vd_wifi:        "Conectividade",
@@ -797,11 +804,11 @@ const TRANSLATIONS = {
       map_open:       "Abrir no Google Maps",
       transport_title: "Como chegar",
       tr_fly:         "Avião",
-      tr_fly_d:       "Aeroporto de Milão Malpensa (MXP) a 4 km. Shuttle gratuito para atletas credenciados de 30 em 30 minutos.",
+      tr_fly_d:       "Aeroporto de Milão Malpensa (MXP) a 4 km.",
       tr_train:       "Comboio",
-      tr_train_d:     "Estação de Gallarate (3 km). Ligação direta de Milão Central em 30 minutos.",
+      tr_train_d:     "Estação de Gallarate (6 km). Ligação direta de Milão em 40 minutos.",
       tr_car:         "Carro",
-      tr_car_d:       "Saída A8 Gallarate/Busto Arsizio. Estacionamento gratuito disponível para todos os participantes.",
+      tr_car_d:       "Saída A8 Gallarate/Busto Arsizio. Estacionamento gratuito disponível na área.",
       tr_bus:         "Shuttle",
       tr_bus_d:       "Serviço oficial de shuttle do Aeroporto de Malpensa e do centro de Gallarate durante todo o evento."
     },
@@ -817,6 +824,11 @@ const TRANSLATIONS = {
       desc:        "Para informações e pedidos, contacte-nos por email, telefone ou através dos nossos canais sociais.",
       email_label: "Email",
       phone_label: "Telefone"
+    },
+    cookie: {
+      text:   "Este sítio web utiliza apenas cookies técnicos estritamente necessários (preferência de idioma, registo do consentimento). Sem cookies de rastreamento ou marketing.",
+      accept: "Percebi",
+      policy: "Política de cookies"
     }
   }
 };
