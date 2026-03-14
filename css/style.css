@@ -165,7 +165,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   pointer-events: none;
   transition: opacity var(--trans);
 }
-.nav-backdrop.is-open { opacity: 1; pointer-events: all; }
+.nav-backdrop.is-open { opacity: 1; pointer-events: all; z-index: 350; }
 
 /* ── Nav Drawer ────────────────────────────────────────────── */
 .nav-drawer {
@@ -175,7 +175,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 100%;
   background: var(--c-bg2);
   border-right: 1px solid var(--c-border);
-  z-index: 300;
+  z-index: 400;
   transform: translateX(-100%);
   transition: transform var(--trans);
   display: flex;
