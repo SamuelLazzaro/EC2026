@@ -5,7 +5,19 @@
       "Bash(node -e \"require\\(''puppeteer''\\)\")",
       "Bash(npx puppeteer --version)",
       "Read(//c/Program Files/Google/Chrome/Application/**)",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"d:/Personal/EC2026/diventa-sponsor.pdf\" --print-to-pdf-no-header \"file:///d:/Personal/EC2026/diventa-sponsor-print.html\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"d:/Personal/EC2026/diventa-sponsor.pdf\" --print-to-pdf-no-header \"file:///d:/Personal/EC2026/diventa-sponsor-print.html\")",
+      "Bash(python -c \"import cairosvg; print\\(''cairosvg ok''\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
+      "Bash(inkscape --version)",
+      "Bash(magick --version)",
+      "Bash(node -e \"require\\(''sharp''\\); console.log\\(''sharp ok''\\)\")",
+      "Bash(node -e \"require\\(''svg2img''\\); console.log\\(''svg2img ok''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(cd /tmp)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm --version)",
+      "Bash(python -:*)"
     ]
   }
 }
