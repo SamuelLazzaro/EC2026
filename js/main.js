@@ -246,15 +246,26 @@ if (langFabBtn && langFabMenu) {
 (function () {
   if (!('ontouchstart' in window)) return;
 
-  let touchLink   = null;
-  let touchStartY = 0;
+  let touchLink       = null;
+  let touchStartY     = 0;
+  let scrollCancelled = false;
 
   document.addEventListener('touchstart', function (e) {
     const link = e.target.closest('a[href]');
     if (!link) return;
-    touchLink   = link;
-    touchStartY = e.touches[0].clientY;
+    touchLink       = link;
+    touchStartY     = e.touches[0].clientY;
+    scrollCancelled = false;
     link.classList.add('touch-active');
+  }, { passive: true });
+
+  // Rimuove subito la classe se l'utente inizia a scorrere
+  document.addEventListener('touchmove', function (e) {
+    if (!touchLink || scrollCancelled) return;
+    if (Math.abs(e.touches[0].clientY - touchStartY) > 10) {
+      touchLink.classList.remove('touch-active');
+      scrollCancelled = true;
+    }
   }, { passive: true });
 
   document.addEventListener('touchend', function (e) {
@@ -262,9 +273,8 @@ if (langFabBtn && langFabMenu) {
     const link = touchLink;
     touchLink  = null;
 
-    // Annulla se l'utente stava scorrendo
-    if (Math.abs(e.changedTouches[0].clientY - touchStartY) > 10) {
-      link.classList.remove('touch-active');
+    if (scrollCancelled) {
+      scrollCancelled = false;
       return;
     }
 
@@ -280,6 +290,7 @@ if (langFabBtn && langFabMenu) {
       touchLink.classList.remove('touch-active');
       touchLink = null;
     }
+    scrollCancelled = false;
   });
 })();
 
