@@ -14,19 +14,24 @@ const logoHome       = document.getElementById('logoHome');
    Hamburger / Drawer
    ═══════════════════════════════════════════════════════════ */
 function openNav() {
-  navDrawer.classList.add('is-open');
-  navBackdrop.classList.add('is-open');
-  hamburgerBtn.classList.add('is-open');
-  hamburgerBtn.setAttribute('aria-expanded', 'true');
-  navDrawer.setAttribute('aria-hidden', 'false');
+  navDrawer.style.display = 'flex';
+  requestAnimationFrame(() => {
+    navDrawer.classList.add('is-open');
+    navBackdrop.classList.add('is-open');
+    hamburgerBtn.classList.add('is-open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+  });
 }
 
 function closeNav() {
+  if (!navDrawer.classList.contains('is-open')) return;
   navDrawer.classList.remove('is-open');
   navBackdrop.classList.remove('is-open');
   hamburgerBtn.classList.remove('is-open');
   hamburgerBtn.setAttribute('aria-expanded', 'false');
-  navDrawer.setAttribute('aria-hidden', 'true');
+  navDrawer.addEventListener('transitionend', () => {
+    navDrawer.style.display = 'none';
+  }, { once: true });
 }
 
 hamburgerBtn.addEventListener('click', () => {
@@ -211,20 +216,36 @@ function initAlloggi(root) {
 const langFabBtn  = document.getElementById('langFabBtn');
 const langFabMenu = document.getElementById('langFabMenu');
 
+function openFabMenu() {
+  langFabMenu.style.display = 'flex';
+  requestAnimationFrame(() => {
+    langFabMenu.classList.add('open');
+    langFabBtn.setAttribute('aria-expanded', 'true');
+  });
+}
+
 function closeFabMenu() {
   if (!langFabMenu) return;
+  if (!langFabMenu.classList.contains('open')) return;
   langFabMenu.classList.remove('open');
-  langFabMenu.setAttribute('aria-hidden', 'true');
   langFabBtn.setAttribute('aria-expanded', 'false');
+  function onTransitionEnd(e) {
+    if (e.propertyName === 'opacity') {
+      langFabMenu.style.display = 'none';
+      langFabMenu.removeEventListener('transitionend', onTransitionEnd);
+    }
+  }
+  langFabMenu.addEventListener('transitionend', onTransitionEnd);
 }
 
 if (langFabBtn && langFabMenu) {
   langFabBtn.addEventListener('click', e => {
     e.stopPropagation();
-    const opening = !langFabMenu.classList.contains('open');
-    langFabMenu.classList.toggle('open', opening);
-    langFabBtn.setAttribute('aria-expanded', String(opening));
-    langFabMenu.setAttribute('aria-hidden', String(!opening));
+    if (langFabMenu.classList.contains('open')) {
+      closeFabMenu();
+    } else {
+      openFabMenu();
+    }
   });
 
   // Chiudi cliccando fuori

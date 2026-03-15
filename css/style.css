@@ -176,10 +176,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: var(--c-bg2);
   border-right: 1px solid var(--c-border);
   z-index: 400;
+  display: none;
+  flex-direction: column;
   transform: translateX(-100%);
   transition: transform var(--trans);
-  display: flex;
-  flex-direction: column;
 }
 .nav-drawer.is-open { transform: translateX(0); }
 .nav-drawer-inner {
@@ -1147,7 +1147,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Menu a tendina */
 .lang-fab-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.2rem;
   background: var(--c-card);
@@ -1156,7 +1156,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 0.4rem;
   box-shadow: var(--shadow);
   /* Stato chiuso */
-  pointer-events: none;
   opacity: 0;
   transform: translateY(8px) scale(0.95);
   transform-origin: bottom right;
@@ -1164,7 +1163,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 .lang-fab-menu.open {
-  pointer-events: all;
   opacity: 1;
   transform: translateY(0) scale(1);
 }
