@@ -9,10 +9,6 @@ const navDrawer      = document.getElementById('navDrawer');
 const navBackdrop    = document.getElementById('navBackdrop');
 const logoHome       = document.getElementById('logoHome');
 
-let currentSection = null;
-
-/* ── Sezione correntemente caricata (per ri-tradurre) ──── */
-let _currentSectionName = 'home';
 
 /* ═══════════════════════════════════════════════════════════
    Hamburger / Drawer
@@ -47,7 +43,6 @@ document.addEventListener('keydown', e => {
    Caricamento sezioni
    ═══════════════════════════════════════════════════════════ */
 async function loadSection(name) {
-  if (name === _currentSectionName && currentSection !== null) return;
 
   // Mostra spinner
   loadingSpinner.classList.remove('hidden');
@@ -77,9 +72,6 @@ async function loadSection(name) {
     if (name === 'classifiche')   initClassifiche(wrapper);
     if (name === 'alloggi')       initAlloggi(wrapper);
 
-    _currentSectionName = name;
-    currentSection = wrapper;
-
     // Aggiorna link attivo nel nav
     document.querySelectorAll('.nav-link').forEach(link => {
       link.classList.toggle('active', link.dataset.section === name);
@@ -106,7 +98,10 @@ document.querySelectorAll('.nav-link').forEach(link => {
     e.preventDefault();
     const section = link.dataset.section;
     if (section) {
-      _currentSectionName = null; // forza reload per cambio lingua
+      const url = section === 'home'
+        ? location.pathname + location.search
+        : '#' + section;
+      history.pushState(null, '', url);
       loadSection(section);
     }
     closeNav();
@@ -116,16 +111,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
 /* ── Click sul logo → home ───────────────────────────────── */
 logoHome.addEventListener('click', e => {
   e.preventDefault();
-  _currentSectionName = null;
+  history.pushState(null, '', location.pathname + location.search);
   loadSection('home');
   closeNav();
 });
 
+/* ── Navigazione back/forward del browser ────────────────── */
+window.addEventListener('popstate', () => {
+  loadSection(location.hash.slice(1) || 'home');
+});
+
 /* ── Ri-carica sezione corrente al cambio lingua ─────────── */
 document.addEventListener('langchange', () => {
-  const name = _currentSectionName;
-  _currentSectionName = null;
-  loadSection(name);
+  loadSection(location.hash.slice(1) || 'home');
 });
 
 /* ═══════════════════════════════════════════════════════════
@@ -245,4 +243,5 @@ if (langFabBtn && langFabMenu) {
 /* ═══════════════════════════════════════════════════════════
    Avvio
    ═══════════════════════════════════════════════════════════ */
-loadSection('home');
+const initialSection = location.hash.slice(1) || 'home';
+loadSection(initialSection);

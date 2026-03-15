@@ -908,7 +908,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .venue-details-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -956,7 +956,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .transport-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 .transport-card {
