@@ -123,7 +123,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: all var(--trans);
   line-height: 1;
 }
-.lang-btn:hover  { color: var(--c-text); background: rgba(255,255,255,0.07); }
+.lang-btn:hover, .lang-btn.touch-active  { color: var(--c-text); background: rgba(255,255,255,0.07); }
 .lang-btn.active { background: var(--c-accent); color: var(--c-bg); }
 
 /* Hamburger */
@@ -204,6 +204,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: all var(--trans);
 }
 .nav-link:hover,
+.nav-link.touch-active,
 .nav-link.active {
   color: var(--c-accent);
   background: rgba(201, 168, 76, 0.06);
@@ -219,6 +220,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: transform var(--trans);
 }
 .nav-link:hover .nav-arrow,
+.nav-link.touch-active .nav-arrow,
 .nav-link.active .nav-arrow { transform: rotate(-45deg) translateX(2px); }
 
 .nav-footer {
@@ -329,7 +331,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 1.5rem;
   transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
 }
-.card:hover {
+.card:hover, .card.touch-active {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
@@ -699,7 +701,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
   color: var(--c-text);
 }
-.sponsor-card:hover {
+.sponsor-card:hover, .sponsor-card.touch-active {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.55);
@@ -712,7 +714,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 2.25rem 1.5rem;
   background: linear-gradient(135deg, var(--c-card) 0%, rgba(201,168,76,0.04) 100%);
 }
-.sponsor-main:hover {
+.sponsor-main:hover, .sponsor-main.touch-active {
   border-color: var(--c-accent);
   box-shadow: 0 8px 32px rgba(201, 168, 76, 0.15);
 }
@@ -759,7 +761,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-top: 0.1rem;
   transition: opacity var(--trans);
 }
-.sponsor-card:hover .sponsor-url { opacity: 1; }
+.sponsor-card:hover .sponsor-url, .sponsor-card.touch-active .sponsor-url { opacity: 1; }
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -791,7 +793,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   overflow: hidden;
   transition: all var(--trans);
 }
-.hotel-card:hover {
+.hotel-card:hover, .hotel-card.touch-active {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
@@ -969,7 +971,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: flex-start;
   transition: all var(--trans);
 }
-.transport-card:hover { border-color: rgba(201, 168, 76, 0.4); }
+.transport-card:hover, .transport-card.touch-active { border-color: rgba(201, 168, 76, 0.4); }
 .transport-icon { font-size: 1.5rem; flex-shrink: 0; }
 .transport-info { flex: 1; }
 .transport-title {
@@ -1001,7 +1003,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 100%;
   width: 100%;
 }
-.news-card:hover {
+.news-card:hover, .news-card.touch-active {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
@@ -1062,7 +1064,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   gap: 0.3rem;
 }
-.news-card:hover .news-readmore { gap: 0.5rem; }
+.news-card:hover .news-readmore, .news-card.touch-active .news-readmore { gap: 0.5rem; }
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1183,7 +1185,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans), color var(--trans);
 }
 
-.lang-fab-item:hover {
+.lang-fab-item:hover, .lang-fab-item.touch-active {
   background: rgba(201, 168, 76, 0.15);
   color: var(--c-accent-lt);
 }
@@ -1220,7 +1222,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
 }
 
-.contatti-card:hover {
+.contatti-card:hover, .contatti-card.touch-active {
   border-color: var(--c-accent);
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -1239,7 +1241,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans), border-color var(--trans), color var(--trans);
 }
 
-.contatti-card:hover .contatti-icon {
+.contatti-card:hover .contatti-icon, .contatti-card.touch-active .contatti-icon {
   background: var(--c-accent);
   border-color: var(--c-accent);
   color: var(--c-bg);
@@ -1262,10 +1264,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 /* Accent hover per social */
-.contatti-card--ig:hover                { border-color: #e1306c; }
-.contatti-card--ig:hover .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
-.contatti-card--fb:hover                { border-color: #1877f2; }
-.contatti-card--fb:hover .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
+.contatti-card--ig:hover, .contatti-card--ig.touch-active                { border-color: #e1306c; }
+.contatti-card--ig:hover .contatti-icon, .contatti-card--ig.touch-active .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
+.contatti-card--fb:hover, .contatti-card--fb.touch-active                { border-color: #1877f2; }
+.contatti-card--fb:hover .contatti-icon, .contatti-card--fb.touch-active .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
 
 /* ═══════════════════════════════════════════════════════════
    Footer – Contatti
@@ -1292,9 +1294,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: color var(--trans);
 }
 
-.footer-contact-link:hover                        { color: var(--c-accent); }
-.footer-contact-link[href*="instagram.com"]:hover { color: #e1306c; }
-.footer-contact-link[href*="facebook.com"]:hover  { color: #1877f2; }
+.footer-contact-link:hover, .footer-contact-link.touch-active                        { color: var(--c-accent); }
+.footer-contact-link[href*="instagram.com"]:hover, .footer-contact-link[href*="instagram.com"].touch-active { color: #e1306c; }
+.footer-contact-link[href*="facebook.com"]:hover, .footer-contact-link[href*="facebook.com"].touch-active  { color: #1877f2; }
 .footer-contact-link svg { flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1507,7 +1509,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
   transition: border-color var(--trans), background var(--trans);
 }
-.ds-contact-card:hover { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
+.ds-contact-card:hover, .ds-contact-card.touch-active { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
 .ds-contact-role { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-text-mute); }
 .ds-contact-name { font-family: var(--f-title); font-size: 1rem; font-weight: 600; color: var(--c-text); }
 .ds-contact-phone { font-size: 1.05rem; font-weight: 500; color: var(--c-accent); margin-top: 0.2rem; }

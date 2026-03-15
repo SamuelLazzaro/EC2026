@@ -241,6 +241,49 @@ if (langFabBtn && langFabMenu) {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Touch-active effect su <a href> (touch screen)
+   ═══════════════════════════════════════════════════════════ */
+(function () {
+  if (!('ontouchstart' in window)) return;
+
+  let touchLink   = null;
+  let touchStartY = 0;
+
+  document.addEventListener('touchstart', function (e) {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    touchLink   = link;
+    touchStartY = e.touches[0].clientY;
+    link.classList.add('touch-active');
+  }, { passive: true });
+
+  document.addEventListener('touchend', function (e) {
+    if (!touchLink) return;
+    const link = touchLink;
+    touchLink  = null;
+
+    // Annulla se l'utente stava scorrendo
+    if (Math.abs(e.changedTouches[0].clientY - touchStartY) > 10) {
+      link.classList.remove('touch-active');
+      return;
+    }
+
+    e.preventDefault(); // blocca il click sintetico del browser
+    setTimeout(function () {
+      link.classList.remove('touch-active');
+      link.click(); // attiva gli handler esistenti (nav-link, logo, link esterni)
+    }, 100);
+  });
+
+  document.addEventListener('touchcancel', function () {
+    if (touchLink) {
+      touchLink.classList.remove('touch-active');
+      touchLink = null;
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════════════════════════
    Avvio
    ═══════════════════════════════════════════════════════════ */
 const initialSection = location.hash.slice(1) || 'home';
