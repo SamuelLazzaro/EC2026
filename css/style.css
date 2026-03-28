@@ -563,6 +563,24 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-top: 20px;
 }
 
+.div-home-images img, .div-home-images div {
+  width: 30vw;
+  max-width: 200px;
+}
+
+.div-logo-cardano-al-campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.p-text-cardano-al-campo {
+  color: var(--c-text);
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    CLASSIFICHE
