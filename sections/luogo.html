@@ -48,13 +48,12 @@
 		</div>
 	</div>
 
-	<!-- Mappa Google Maps -->
-	<div class="map-container fade-up fade-up-d3">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.1419734654373!2d8.755507275796447!3d45.64797057107753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786621e97732ca7%3A0xf3e767fe66f8c607!2sPista%20di%20Pattinaggio%20Cardano%20al%20Campo!5e0!3m2!1sit!2sit!4v1772272559520!5m2!1sit!2sit"
-			class="map-iframe" style="border:0;" allowfullscreen="" loading="lazy"
-			referrerpolicy="no-referrer-when-downgrade" title="Pista di Pattinaggio Cardano al Campo">
-		</iframe>
+	<!-- Mappa Google Maps (caricata solo dopo consenso cookie) -->
+	<div class="map-container fade-up fade-up-d3" id="mapContainer">
+		<div class="map-placeholder">
+			<p class="map-placeholder-text" data-i18n="luogo.map_consent">Per visualizzare la mappa è necessario accettare i cookie di terze parti (Google Maps).</p>
+			<button class="map-consent-btn" data-i18n="luogo.map_consent_btn">Accetta e mostra mappa</button>
+		</div>
 	</div>
 
 	<!-- Come arrivare -->

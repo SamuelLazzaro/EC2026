@@ -120,7 +120,9 @@ const TRANSLATIONS = {
       tr_car:         "Auto",
       tr_car_d:       "Uscita A8 Gallarate/Busto Arsizio. Parcheggio gratuito disponibile in zona.",
       tr_bus:         "Bus navetta",
-      tr_bus_d:       "Servizio navetta ufficiale dall'aeroporto di Malpensa e dal centro di Gallarate durante tutta la manifestazione."
+      tr_bus_d:       "Servizio navetta ufficiale dall'aeroporto di Malpensa e dal centro di Gallarate durante tutta la manifestazione.",
+      map_consent:     "Per visualizzare la mappa è necessario accettare i cookie di terze parti (Google Maps).",
+      map_consent_btn: "Accetta e mostra mappa"
     },
     news: {
       tag:      "Aggiornamenti",
@@ -136,9 +138,10 @@ const TRANSLATIONS = {
       phone_label: "Telefono"
     },
     cookie: {
-      text:   "Questo sito utilizza esclusivamente cookie tecnici strettamente necessari al suo funzionamento (preferenza lingua, memorizzazione del consenso). Nessun cookie di profilazione o marketing.",
-      accept: "Ho capito",
-      policy: "Cookie Policy"
+      text:   "Questo sito utilizza cookie tecnici necessari e, nella sezione Luogo, Google Maps (cookie di terze parti). Puoi accettare tutti i cookie o solo quelli tecnici.",
+      accept: "Accetta tutti",
+      reject: "Solo tecnici",
+      policy: "Cookie Policy &amp; Privacy"
     }
   },
 
@@ -258,7 +261,9 @@ const TRANSLATIONS = {
       tr_car:         "By car",
       tr_car_d:       "Exit A8 Gallarate/Busto Arsizio. Free parking available in the area.",
       tr_bus:         "Shuttle bus",
-      tr_bus_d:       "Official shuttle service from Malpensa Airport and Gallarate city centre throughout the event."
+      tr_bus_d:       "Official shuttle service from Malpensa Airport and Gallarate city centre throughout the event.",
+      map_consent:     "To view the map you need to accept third-party cookies (Google Maps).",
+      map_consent_btn: "Accept and show map"
     },
     news: {
       tag:      "Updates",
@@ -274,9 +279,10 @@ const TRANSLATIONS = {
       phone_label: "Phone"
     },
     cookie: {
-      text:   "This website uses only strictly necessary technical cookies (language preference, consent storage). No profiling or marketing cookies.",
-      accept: "Got it",
-      policy: "Cookie Policy"
+      text:   "This website uses necessary technical cookies and, in the Venue section, Google Maps (third-party cookies). You can accept all cookies or only technical ones.",
+      accept: "Accept all",
+      reject: "Technical only",
+      policy: "Cookie Policy &amp; Privacy"
     }
   },
 
@@ -396,7 +402,9 @@ const TRANSLATIONS = {
       tr_car:         "Voiture",
       tr_car_d:       "Sortie A8 Gallarate/Busto Arsizio. Parking gratuit disponible dans la zone.",
       tr_bus:         "Navette",
-      tr_bus_d:       "Service de navette officielle depuis l'aéroport de Malpensa et le centre de Gallarate pendant toute la manifestation."
+      tr_bus_d:       "Service de navette officielle depuis l'aéroport de Malpensa et le centre de Gallarate pendant toute la manifestation.",
+      map_consent:     "Pour afficher la carte, vous devez accepter les cookies tiers (Google Maps).",
+      map_consent_btn: "Accepter et afficher la carte"
     },
     news: {
       tag:      "Actualités",
@@ -412,9 +420,10 @@ const TRANSLATIONS = {
       phone_label: "Téléphone"
     },
     cookie: {
-      text:   "Ce site utilise uniquement des cookies techniques strictement nécessaires (préférence de langue, mémorisation du consentement). Aucun cookie de profilage ou de marketing.",
-      accept: "J'ai compris",
-      policy: "Politique de cookies"
+      text:   "Ce site utilise des cookies techniques nécessaires et, dans la section Lieu, Google Maps (cookies tiers). Vous pouvez accepter tous les cookies ou seulement les techniques.",
+      accept: "Tout accepter",
+      reject: "Techniques uniquement",
+      policy: "Politique de cookies &amp; confidentialité"
     }
   },
 
@@ -534,7 +543,9 @@ const TRANSLATIONS = {
       tr_car:         "Auto",
       tr_car_d:       "Ausfahrt A8 Gallarate/Busto Arsizio. Kostenlose Parkplätze in der Umgebung verfügbar.",
       tr_bus:         "Shuttlebus",
-      tr_bus_d:       "Offizieller Shuttleservice vom Flughafen Malpensa und dem Zentrum von Gallarate während der gesamten Veranstaltung."
+      tr_bus_d:       "Offizieller Shuttleservice vom Flughafen Malpensa und dem Zentrum von Gallarate während der gesamten Veranstaltung.",
+      map_consent:     "Um die Karte anzuzeigen, müssen Sie Drittanbieter-Cookies (Google Maps) akzeptieren.",
+      map_consent_btn: "Akzeptieren und Karte anzeigen"
     },
     news: {
       tag:      "Neuigkeiten",
@@ -550,9 +561,10 @@ const TRANSLATIONS = {
       phone_label: "Telefon"
     },
     cookie: {
-      text:   "Diese Website verwendet ausschließlich technisch notwendige Cookies (Spracheinstellung, Speicherung der Einwilligung). Keine Profiling- oder Marketing-Cookies.",
-      accept: "Verstanden",
-      policy: "Cookie-Richtlinie"
+      text:   "Diese Website verwendet technisch notwendige Cookies und im Bereich Veranstaltungsort Google Maps (Drittanbieter-Cookies). Sie können alle Cookies oder nur technische akzeptieren.",
+      accept: "Alle akzeptieren",
+      reject: "Nur technische",
+      policy: "Cookie-Richtlinie &amp; Datenschutz"
     }
   },
 
@@ -672,7 +684,9 @@ const TRANSLATIONS = {
       tr_car:         "Coche",
       tr_car_d:       "Salida A8 Gallarate/Busto Arsizio. Aparcamiento gratuito disponible en la zona.",
       tr_bus:         "Autobús lanzadera",
-      tr_bus_d:       "Servicio oficial de lanzadera desde el aeropuerto de Malpensa y el centro de Gallarate durante todo el evento."
+      tr_bus_d:       "Servicio oficial de lanzadera desde el aeropuerto de Malpensa y el centro de Gallarate durante todo el evento.",
+      map_consent:     "Para ver el mapa debe aceptar las cookies de terceros (Google Maps).",
+      map_consent_btn: "Aceptar y mostrar mapa"
     },
     news: {
       tag:      "Actualidad",
@@ -688,9 +702,10 @@ const TRANSLATIONS = {
       phone_label: "Teléfono"
     },
     cookie: {
-      text:   "Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias (preferencia de idioma, almacenamiento del consentimiento). Sin cookies de perfilado ni de marketing.",
-      accept: "Entendido",
-      policy: "Política de cookies"
+      text:   "Este sitio utiliza cookies técnicas necesarias y, en la sección Lugar, Google Maps (cookies de terceros). Puede aceptar todas las cookies o solo las técnicas.",
+      accept: "Aceptar todo",
+      reject: "Solo técnicas",
+      policy: "Política de cookies &amp; privacidad"
     }
   },
 
@@ -810,7 +825,9 @@ const TRANSLATIONS = {
       tr_car:         "Carro",
       tr_car_d:       "Saída A8 Gallarate/Busto Arsizio. Estacionamento gratuito disponível na área.",
       tr_bus:         "Shuttle",
-      tr_bus_d:       "Serviço oficial de shuttle do Aeroporto de Malpensa e do centro de Gallarate durante todo o evento."
+      tr_bus_d:       "Serviço oficial de shuttle do Aeroporto de Malpensa e do centro de Gallarate durante todo o evento.",
+      map_consent:     "Para ver o mapa é necessário aceitar cookies de terceiros (Google Maps).",
+      map_consent_btn: "Aceitar e mostrar mapa"
     },
     news: {
       tag:      "Atualidades",
@@ -826,9 +843,10 @@ const TRANSLATIONS = {
       phone_label: "Telefone"
     },
     cookie: {
-      text:   "Este sítio web utiliza apenas cookies técnicos estritamente necessários (preferência de idioma, registo do consentimento). Sem cookies de rastreamento ou marketing.",
-      accept: "Percebi",
-      policy: "Política de cookies"
+      text:   "Este sítio utiliza cookies técnicos necessários e, na secção Local, Google Maps (cookies de terceiros). Pode aceitar todos os cookies ou apenas os técnicos.",
+      accept: "Aceitar tudo",
+      reject: "Só técnicos",
+      policy: "Política de cookies &amp; privacidade"
     }
   }
 };

@@ -283,6 +283,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-text-mute);
   letter-spacing: 0.04em;
 }
+.footer-cookie-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  color: var(--c-text-mute);
+  /* text-decoration: underline; */
+  text-underline-offset: 3px;
+  letter-spacing: 0.04em;
+  transition: color var(--trans);
+}
+.footer-cookie-link:hover { color: var(--c-accent); }
 
 /* ── Section Common ────────────────────────────────────────── */
 .section-wrap {
@@ -543,6 +554,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-text-mute);
   letter-spacing: 0.06em;
   margin-top: 0.25rem;
+}
+
+.div-home-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 
@@ -1610,6 +1628,59 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans);
 }
 .cookie-accept-btn:hover { background: var(--c-accent-lt); }
+.cookie-reject-btn {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  color: var(--c-text-mute);
+  font-family: var(--f-title);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: border-color var(--trans), color var(--trans);
+}
+.cookie-reject-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
+
+/* ── Map placeholder (consenso Google Maps) ────────────────── */
+.map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background: var(--c-card, #152340);
+  border: 1px dashed rgba(201, 168, 76, 0.25);
+  border-radius: var(--radius, 12px);
+  padding: 2rem;
+  text-align: center;
+}
+.map-placeholder-text {
+  font-size: 0.88rem;
+  color: var(--c-text-mute);
+  max-width: 420px;
+  line-height: 1.6;
+}
+.map-consent-btn {
+  padding: 0.55rem 1.4rem;
+  background: var(--c-accent);
+  color: var(--c-bg);
+  font-family: var(--f-title);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background var(--trans);
+  flex-shrink: 0;
+}
+.map-consent-btn:hover { background: var(--c-accent-lt); }
 
 @media (max-width: 500px) {
   .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }

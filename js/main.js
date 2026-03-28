@@ -76,6 +76,7 @@ async function loadSection(name) {
     if (name === 'home')          initHome(wrapper);
     if (name === 'classifiche')   initClassifiche(wrapper);
     if (name === 'alloggi')       initAlloggi(wrapper);
+    if (name === 'luogo')         initLuogo(wrapper);
 
     // Aggiorna link attivo nel nav
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -208,6 +209,14 @@ function initAlloggi(root) {
       });
     });
   });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Init: Luogo – Mappa condizionale (consenso cookie)
+   ═══════════════════════════════════════════════════════════ */
+function initLuogo(root) {
+  const container = root.querySelector('#mapContainer');
+  if (container && window.ec2026InitMap) window.ec2026InitMap(container);
 }
 
 /* ═══════════════════════════════════════════════════════════
