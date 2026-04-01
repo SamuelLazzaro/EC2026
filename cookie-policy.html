@@ -32,7 +32,10 @@
       line-height: 1.7;
     }
     a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
-    a:hover { color: var(--c-accent-lt); }
+    
+    @media (pointer: fine) {
+      a:hover { color: var(--c-accent-lt); }
+    }
 
     /* Header */
     .cp-header {
@@ -88,7 +91,10 @@
       letter-spacing: 0.04em;
       transition: background 0.2s;
     }
-    .cp-back-btn:hover { background: rgba(201, 168, 76, 0.18); color: var(--c-accent-lt); }
+
+    @media (pointer: fine) {
+      .cp-back-btn:hover { background: rgba(201, 168, 76, 0.18); color: var(--c-accent-lt); }
+    }
 
     /* Content */
     .cp-content {

@@ -114,7 +114,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-text);
 }
 
-#logoHome:hover .st0, #logoHome.touch-active.st0 {
+@media (pointer: fine) {
+  #logoHome:hover .st0 {
+    fill: #987f3a;
+  }
+}
+
+#logoHome.touch-active.st0 {
   fill: #987f3a;
 }
 
@@ -132,7 +138,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: all var(--trans);
   line-height: 1;
 }
-.lang-btn:hover, .lang-btn.touch-active  { color: var(--c-text); background: rgba(255,255,255,0.07); }
+
+@media (pointer: fine) {
+  .lang-btn:hover { color: var(--c-text); background: rgba(255,255,255,0.07); }
+}
+
+.lang-btn.touch-active  { color: var(--c-text); background: rgba(255,255,255,0.07); }
 .lang-btn.active { background: var(--c-accent); color: var(--c-bg); }
 
 /* Hamburger */
@@ -148,7 +159,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans);
   flex-shrink: 0;
 }
-.hamburger:hover { background: rgba(255,255,255,0.07); }
+
+@media (pointer: fine) {
+  .hamburger:hover { background: rgba(255,255,255,0.07); }
+}
+
 .hamburger-line {
   display: block;
   width: 21px;
@@ -212,7 +227,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-left: 3px solid transparent;
   transition: all var(--trans);
 }
-.nav-link:hover,
+
+@media (pointer: fine) {
+  .nav-link:hover {
+    color: var(--c-accent);
+    background: rgba(201, 168, 76, 0.06);
+    border-left-color: var(--c-accent);
+  }
+}
+
 .nav-link.touch-active,
 .nav-link.active {
   color: var(--c-accent);
@@ -228,7 +251,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   flex-shrink: 0;
   transition: transform var(--trans);
 }
-.nav-link:hover .nav-arrow,
+@media (pointer: fine) {
+  .nav-link:hover .nav-arrow { transform: rotate(-45deg) translateX(2px); }
+}
+
 .nav-link.touch-active .nav-arrow,
 .nav-link.active .nav-arrow { transform: rotate(-45deg) translateX(2px); }
 
@@ -293,7 +319,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: 0.04em;
   transition: color var(--trans);
 }
-.footer-cookie-link:hover { color: var(--c-accent); }
+
+@media (pointer: fine) {
+  .footer-cookie-link:hover { color: var(--c-accent); }
+}
 
 /* ── Section Common ────────────────────────────────────────── */
 .section-wrap {
@@ -351,7 +380,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 1.5rem;
   transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
 }
-.card:hover, .card.touch-active {
+
+@media (pointer: fine) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201, 168, 76, 0.5);
+  }
+}
+
+.card.touch-active {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
@@ -608,7 +646,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   white-space: nowrap;
   flex-shrink: 0;
 }
-.tab-btn:hover  { color: var(--c-text); }
+
+@media (pointer: fine) {
+  .tab-btn:hover  { color: var(--c-text); }
+}
+
 .tab-btn.active { color: var(--c-accent); border-bottom-color: var(--c-accent); }
 
 .tab-panel { display: none; }
@@ -651,7 +693,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   vertical-align: middle;
 }
 .ranking-table tr:last-child td { border-bottom: none; }
-.ranking-table tr:hover td { background: rgba(201, 168, 76, 0.03); }
+@media (pointer: fine) {
+  .ranking-table tr:hover td { background: rgba(201, 168, 76, 0.03); }
+}
 
 .rank-pos {
   font-family: var(--f-title);
@@ -747,11 +791,19 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
   color: var(--c-text);
 }
-.sponsor-card:hover, .sponsor-card.touch-active {
+.sponsor-card.touch-active {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.55);
   background: var(--c-card2);
+}
+@media (pointer: fine) {
+  .sponsor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201, 168, 76, 0.55);
+    background: var(--c-card2);
+  }
 }
 
 /* Card main sponsor: bordo oro, padding maggiore */
@@ -760,9 +812,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 2.25rem 1.5rem;
   background: linear-gradient(135deg, var(--c-card) 0%, rgba(201,168,76,0.04) 100%);
 }
-.sponsor-main:hover, .sponsor-main.touch-active {
+.sponsor-main.touch-active {
   border-color: var(--c-accent);
   box-shadow: 0 8px 32px rgba(201, 168, 76, 0.15);
+}
+@media (pointer: fine) {
+  .sponsor-main:hover {
+    border-color: var(--c-accent);
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.15);
+  }
 }
 
 /* Logo placeholder */
@@ -807,7 +865,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-top: 0.1rem;
   transition: opacity var(--trans);
 }
-.sponsor-card:hover .sponsor-url, .sponsor-card.touch-active .sponsor-url { opacity: 1; }
+.sponsor-card.touch-active .sponsor-url { opacity: 1; }
+@media (pointer: fine) {
+  .sponsor-card:hover .sponsor-url { opacity: 1; }
+}
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -829,7 +890,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-text-mute);
   transition: all var(--trans);
 }
-.filter-btn:hover  { border-color: var(--c-accent); color: var(--c-accent); }
+@media (pointer: fine) {
+  .filter-btn:hover  { border-color: var(--c-accent); color: var(--c-accent); }
+}
 .filter-btn.active { background: var(--c-accent); color: var(--c-bg); border-color: var(--c-accent); }
 
 .hotel-card {
@@ -839,10 +902,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   overflow: hidden;
   transition: all var(--trans);
 }
-.hotel-card:hover, .hotel-card.touch-active {
+.hotel-card.touch-active {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
+}
+@media (pointer: fine) {
+  .hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201, 168, 76, 0.5);
+  }
 }
 .hotel-img {
   height: 155px;
@@ -1017,7 +1087,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: flex-start;
   transition: all var(--trans);
 }
-.transport-card:hover, .transport-card.touch-active { border-color: rgba(201, 168, 76, 0.4); }
+.transport-card.touch-active { border-color: rgba(201, 168, 76, 0.4); }
+@media (pointer: fine) {
+  .transport-card:hover { border-color: rgba(201, 168, 76, 0.4); }
+}
 .transport-icon { font-size: 1.5rem; flex-shrink: 0; }
 .transport-info { flex: 1; }
 .transport-title {
@@ -1049,10 +1122,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 100%;
   width: 100%;
 }
-.news-card:hover, .news-card.touch-active {
+.news-card.touch-active {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: rgba(201, 168, 76, 0.5);
+}
+@media (pointer: fine) {
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201, 168, 76, 0.5);
+  }
 }
 .news-img {
   height: 180px;
@@ -1110,7 +1190,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   gap: 0.3rem;
 }
-.news-card:hover .news-readmore, .news-card.touch-active .news-readmore { gap: 0.5rem; }
+.news-card.touch-active .news-readmore { gap: 0.5rem; }
+@media (pointer: fine) {
+  .news-card:hover .news-readmore { gap: 0.5rem; }
+}
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1229,9 +1312,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans), color var(--trans);
 }
 
-.lang-fab-item:hover, .lang-fab-item.touch-active {
+.lang-fab-item.touch-active {
   background: rgba(201, 168, 76, 0.15);
   color: var(--c-accent-lt);
+}
+@media (pointer: fine) {
+  .lang-fab-item:hover {
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--c-accent-lt);
+  }
 }
 
 .lang-fab-item.active {
@@ -1266,10 +1355,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
 }
 
-.contatti-card:hover, .contatti-card.touch-active {
+.contatti-card.touch-active {
   border-color: var(--c-accent);
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+@media (pointer: fine) {
+  .contatti-card:hover {
+    border-color: var(--c-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .contatti-icon {
@@ -1285,10 +1381,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans), border-color var(--trans), color var(--trans);
 }
 
-.contatti-card:hover .contatti-icon, .contatti-card.touch-active .contatti-icon {
+.contatti-card.touch-active .contatti-icon {
   background: var(--c-accent);
   border-color: var(--c-accent);
   color: var(--c-bg);
+}
+@media (pointer: fine) {
+  .contatti-card:hover .contatti-icon {
+    background: var(--c-accent);
+    border-color: var(--c-accent);
+    color: var(--c-bg);
+  }
 }
 
 .contatti-label {
@@ -1308,10 +1411,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 /* Accent hover per social */
-.contatti-card--ig:hover, .contatti-card--ig.touch-active                { border-color: #e1306c; }
-.contatti-card--ig:hover .contatti-icon, .contatti-card--ig.touch-active .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
-.contatti-card--fb:hover, .contatti-card--fb.touch-active                { border-color: #1877f2; }
-.contatti-card--fb:hover .contatti-icon, .contatti-card--fb.touch-active .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
+.contatti-card--ig.touch-active                { border-color: #e1306c; }
+.contatti-card--ig.touch-active .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
+.contatti-card--fb.touch-active                { border-color: #1877f2; }
+.contatti-card--fb.touch-active .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
+@media (pointer: fine) {
+  .contatti-card--ig:hover                { border-color: #e1306c; }
+  .contatti-card--ig:hover .contatti-icon { background: #e1306c; border-color: #e1306c; color: #fff; }
+  .contatti-card--fb:hover                { border-color: #1877f2; }
+  .contatti-card--fb:hover .contatti-icon { background: #1877f2; border-color: #1877f2; color: #fff; }
+}
 
 /* ═══════════════════════════════════════════════════════════
    Footer – Contatti
@@ -1338,9 +1447,14 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: color var(--trans);
 }
 
-.footer-contact-link:hover, .footer-contact-link.touch-active                        { color: var(--c-accent); }
-.footer-contact-link[href*="instagram.com"]:hover, .footer-contact-link[href*="instagram.com"].touch-active { color: #e1306c; }
-.footer-contact-link[href*="facebook.com"]:hover, .footer-contact-link[href*="facebook.com"].touch-active  { color: #1877f2; }
+.footer-contact-link.touch-active                        { color: var(--c-accent); }
+.footer-contact-link[href*="instagram.com"].touch-active { color: #e1306c; }
+.footer-contact-link[href*="facebook.com"].touch-active  { color: #1877f2; }
+@media (pointer: fine) {
+  .footer-contact-link:hover                        { color: var(--c-accent); }
+  .footer-contact-link[href*="instagram.com"]:hover { color: #e1306c; }
+  .footer-contact-link[href*="facebook.com"]:hover  { color: #1877f2; }
+}
 .footer-contact-link svg { flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1482,7 +1596,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: transform var(--trans), opacity var(--trans);
   cursor: pointer;
 }
-.ds-gallery-img:hover { transform: scale(1.02); opacity: 0.9; }
+@media (pointer: fine) {
+  .ds-gallery-img:hover { transform: scale(1.02); opacity: 0.9; }
+}
 
 /* Lead text */
 .ds-lead { font-size: 1rem; line-height: 1.8; color: var(--c-text); }
@@ -1553,7 +1669,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
   transition: border-color var(--trans), background var(--trans);
 }
-.ds-contact-card:hover, .ds-contact-card.touch-active { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
+.ds-contact-card.touch-active { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
+@media (pointer: fine) {
+  .ds-contact-card:hover { border-color: var(--c-accent); background: rgba(201, 168, 76, 0.06); }
+}
 .ds-contact-role { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-text-mute); }
 .ds-contact-name { font-family: var(--f-title); font-size: 1rem; font-weight: 600; color: var(--c-text); }
 .ds-contact-phone { font-size: 1.05rem; font-weight: 500; color: var(--c-accent); margin-top: 0.2rem; }
@@ -1631,7 +1750,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   white-space: nowrap;
   transition: color var(--trans);
 }
-.cookie-policy-link:hover { color: var(--c-accent-lt); }
+@media (pointer: fine) {
+  .cookie-policy-link:hover { color: var(--c-accent-lt); }
+}
 .cookie-accept-btn {
   padding: 0.5rem 1.25rem;
   background: var(--c-accent);
@@ -1645,7 +1766,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   white-space: nowrap;
   transition: background var(--trans);
 }
-.cookie-accept-btn:hover { background: var(--c-accent-lt); }
+@media (pointer: fine) {
+  .cookie-accept-btn:hover { background: var(--c-accent-lt); }
+}
 .cookie-reject-btn {
   padding: 0.5rem 1.25rem;
   background: transparent;
@@ -1660,7 +1783,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   white-space: nowrap;
   transition: border-color var(--trans), color var(--trans);
 }
-.cookie-reject-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
+@media (pointer: fine) {
+  .cookie-reject-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
+}
 
 /* ── Map placeholder (consenso Google Maps) ────────────────── */
 .map-placeholder {
@@ -1698,7 +1823,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: background var(--trans);
   flex-shrink: 0;
 }
-.map-consent-btn:hover { background: var(--c-accent-lt); }
+@media (pointer: fine) {
+  .map-consent-btn:hover { background: var(--c-accent-lt); }
+}
 
 @media (max-width: 500px) {
   .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
