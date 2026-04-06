@@ -76,6 +76,7 @@ async function loadSection(name) {
     if (name === 'home')          initHome(wrapper);
     if (name === 'classifiche')   initClassifiche(wrapper);
     if (name === 'alloggi')       initAlloggi(wrapper);
+    if (name === 'ristorazione')  initRistorazione(wrapper);
     if (name === 'luogo')         initLuogo(wrapper);
 
     // Aggiorna link attivo nel nav
@@ -195,6 +196,26 @@ function initClassifiche(root) {
    Init: Alloggi – Filter buttons
    ═══════════════════════════════════════════════════════════ */
 function initAlloggi(root) {
+  const filterBtns = root.querySelectorAll('.filter-btn');
+  const cards      = root.querySelectorAll('.hotel-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const type = btn.dataset.filter;
+      cards.forEach(card => {
+        const show = type === 'all' || card.dataset.type === type;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Init: Ristorazione – Filter buttons
+   ═══════════════════════════════════════════════════════════ */
+function initRistorazione(root) {
   const filterBtns = root.querySelectorAll('.filter-btn');
   const cards      = root.querySelectorAll('.hotel-card');
 

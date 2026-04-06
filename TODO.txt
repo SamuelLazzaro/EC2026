@@ -3,3 +3,22 @@ class="news-cat">Sponsor
 class="news-cat">Atleti
 class="news-cat">Logistica
 class="news-cat">Media
+
+- Area camper
+- Area food & beverage
+- Area camper -> sezione alloggi
+
+- Preventivo protezioni interne alla pista
+- Preventivo per le tribune
+- Diretta streaming 
+- Preventivo per generatori all'interno della pista
+- Internet e rete wi-fi
+- Squadra di calcio + comune per area camper
+- Generatori per area camper
+- Trovare qualche parcheggiatore
+- Sistemazione area food & beverage in pista
+- Sistemazione gazebo per venditori
+- Organizzazione mensa
+- Organizzazione bar 
+- Costi SIAE 
+- Servizio di biglietteria online

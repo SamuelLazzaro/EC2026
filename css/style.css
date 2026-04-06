@@ -619,6 +619,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: clamp(12px, 1.4vw, 16px);
 }
 
+.p-home-organizer {
+  margin: 20px;
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    CLASSIFICHE
@@ -1334,10 +1338,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .contatti-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .contatti-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contatti-card {

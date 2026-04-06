@@ -18,7 +18,8 @@ const TRANSLATIONS = {
       home:        "Home",
       classifiche: "Classifiche",
       sponsor:     "Sponsor",
-      alloggi:     "Alloggi",
+      alloggi:        "Alloggi",
+      ristorazione:   "Ristorazione",
       luogo:       "Luogo",
       news:        "News",
       contatti:        "Contatti",
@@ -48,7 +49,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Atleti attesi",
       stat_nations:   "Nazioni",
       stat_disc:      "Discipline",
-      stat_events:    "Gare in programma"
+      stat_events:    "Gare in programma",
+      organizer:      "La Cardano Skating S.r.l. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle, con il Patrocinio del Comune di Cardano al Campo."
     },
     classifiche: {
       tag:            "Risultati",
@@ -91,6 +93,15 @@ const TRANSLATIONS = {
       dist:      "dal circuito",
       stars:     "stelle",
       note:      "Per prenotazioni e tariffe agevolate per atleti e delegazioni, contattare la segreteria organizzativa all'indirizzo <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Dove mangiare",
+      title:             "Ristorazione",
+      desc:              "Ristoranti, bar e pizzerie convenzionate.",
+      filter_all:        "Tutti",
+      filter_ristorante: "Ristorante",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzeria"
     },
     luogo: {
       tag:            "Luogo",
@@ -159,7 +170,8 @@ const TRANSLATIONS = {
       home:        "Home",
       classifiche: "Rankings",
       sponsor:     "Sponsors",
-      alloggi:     "Accommodation",
+      alloggi:        "Accommodation",
+      ristorazione:   "Food & Beverage",
       luogo:       "Venue",
       news:        "News",
       contatti:        "Contacts",
@@ -189,7 +201,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Expected athletes",
       stat_nations:   "Nations",
       stat_disc:      "Disciplines",
-      stat_events:    "Scheduled events"
+      stat_events:    "Scheduled events",
+      organizer:      "Cardano Skating S.r.l. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026, under the patronage of the Municipality of Cardano al Campo."
     },
     classifiche: {
       tag:            "Results",
@@ -232,6 +245,15 @@ const TRANSLATIONS = {
       dist:         "from the circuit",
       stars:        "stars",
       note:         "For bookings and special rates for athletes and delegations, contact the organising secretariat at <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Where to eat",
+      title:             "Food & Beverage",
+      desc:              "Affiliated restaurants, bars and pizzerias.",
+      filter_all:        "All",
+      filter_ristorante: "Restaurant",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzeria"
     },
     luogo: {
       tag:            "Venue",
@@ -300,7 +322,8 @@ const TRANSLATIONS = {
       home:        "Accueil",
       classifiche: "Classements",
       sponsor:     "Sponsors",
-      alloggi:     "Hébergements",
+      alloggi:        "Hébergements",
+      ristorazione:   "Restauration",
       luogo:       "Lieu",
       news:        "Actualités",
       contatti:        "Contacts",
@@ -330,7 +353,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Athlètes attendus",
       stat_nations:   "Nations",
       stat_disc:      "Disciplines",
-      stat_events:    "Épreuves prévues"
+      stat_events:    "Épreuves prévues",
+      organizer:      "La Cardano Skating S.r.l. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne, avec le patronage de la Commune de Cardano al Campo."
     },
     classifiche: {
       tag:            "Résultats",
@@ -373,6 +397,15 @@ const TRANSLATIONS = {
       dist:         "du circuit",
       stars:        "étoiles",
       note:         "Pour les réservations et tarifs préférentiels pour les athlètes et délégations, contactez le secrétariat d'organisation : <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Où manger",
+      title:             "Restauration",
+      desc:              "Restaurants, bars et pizzerias conventionnés.",
+      filter_all:        "Tous",
+      filter_ristorante: "Restaurant",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzeria"
     },
     luogo: {
       tag:            "Site",
@@ -441,7 +474,8 @@ const TRANSLATIONS = {
       home:        "Startseite",
       classifiche: "Ergebnisse",
       sponsor:     "Sponsoren",
-      alloggi:     "Unterkünfte",
+      alloggi:        "Unterkünfte",
+      ristorazione:   "Gastronomie",
       luogo:       "Veranstaltungsort",
       news:        "Neuigkeiten",
       contatti:        "Kontakt",
@@ -471,7 +505,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Erwartete Athleten",
       stat_nations:   "Nationen",
       stat_disc:      "Disziplinen",
-      stat_events:    "Geplante Wettbewerbe"
+      stat_events:    "Geplante Wettbewerbe",
+      organizer:      "Die Cardano Skating S.r.l. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating, unter der Schirmherrschaft der Gemeinde Cardano al Campo."
     },
     classifiche: {
       tag:            "Ergebnisse",
@@ -514,6 +549,15 @@ const TRANSLATIONS = {
       dist:         "von der Strecke",
       stars:        "Sterne",
       note:         "Für Buchungen und Sonderkonditionen für Athleten und Delegationen wenden Sie sich bitte an das Organisationsbüro: <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Essen & Trinken",
+      title:             "Gastronomie",
+      desc:              "Vertragsrestaurants, Bars und Pizzerien.",
+      filter_all:        "Alle",
+      filter_ristorante: "Restaurant",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzeria"
     },
     luogo: {
       tag:            "Veranstaltungsort",
@@ -582,7 +626,8 @@ const TRANSLATIONS = {
       home:        "Inicio",
       classifiche: "Clasificaciones",
       sponsor:     "Patrocinadores",
-      alloggi:     "Alojamientos",
+      alloggi:        "Alojamientos",
+      ristorazione:   "Restauración",
       luogo:       "Sede",
       news:        "Noticias",
       contatti:        "Contacto",
@@ -612,7 +657,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Atletas esperados",
       stat_nations:   "Naciones",
       stat_disc:      "Disciplinas",
-      stat_events:    "Pruebas programadas"
+      stat_events:    "Pruebas programadas",
+      organizer:      "La Cardano Skating S.r.l. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea, bajo el patrocinio del Municipio de Cardano al Campo."
     },
     classifiche: {
       tag:            "Resultados",
@@ -655,6 +701,15 @@ const TRANSLATIONS = {
       dist:         "del circuito",
       stars:        "estrellas",
       note:         "Para reservas y tarifas especiales para atletas y delegaciones, contacte con la secretaría organizadora: <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Dónde comer",
+      title:             "Restauración",
+      desc:              "Restaurantes, bares y pizzerías concertados.",
+      filter_all:        "Todos",
+      filter_ristorante: "Restaurante",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzería"
     },
     luogo: {
       tag:            "Sede",
@@ -723,7 +778,8 @@ const TRANSLATIONS = {
       home:        "Início",
       classifiche: "Classificações",
       sponsor:     "Patrocinadores",
-      alloggi:     "Alojamentos",
+      alloggi:        "Alojamentos",
+      ristorazione:   "Restauração",
       luogo:       "Local",
       news:        "Notícias",
       contatti:        "Contacto",
@@ -753,7 +809,8 @@ const TRANSLATIONS = {
       stat_athletes:  "Atletas esperados",
       stat_nations:   "Nações",
       stat_disc:      "Disciplinas",
-      stat_events:    "Provas programadas"
+      stat_events:    "Provas programadas",
+      organizer:      "A Cardano Skating S.r.l. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha, com o patrocínio do Município de Cardano al Campo."
     },
     classifiche: {
       tag:            "Resultados",
@@ -796,6 +853,15 @@ const TRANSLATIONS = {
       dist:         "do circuito",
       stars:        "estrelas",
       note:         "Para reservas e tarifas especiais para atletas e delegações, contacte a secretaria organizadora: <strong>info-2026european@cardanoskating.it</strong>"
+    },
+    ristorazione: {
+      tag:               "Onde comer",
+      title:             "Restauração",
+      desc:              "Restaurantes, bares e pizzarias conveniados.",
+      filter_all:        "Todos",
+      filter_ristorante: "Restaurante",
+      filter_bar:        "Bar",
+      filter_pizzeria:   "Pizzaria"
     },
     luogo: {
       tag:            "Local",
