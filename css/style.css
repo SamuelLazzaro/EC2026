@@ -311,7 +311,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .footer-cookie-link {
   display: inline-block;
-  margin-top: 0.4rem;
+  /* margin-top: 0.4rem; */
   font-size: 0.68rem;
   color: var(--c-text-mute);
   /* text-decoration: underline; */
@@ -1443,7 +1443,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   justify-content: center;
   align-items: center;
   gap: 0.2rem 1.25rem;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
 }
 
 .footer-contact-link {
