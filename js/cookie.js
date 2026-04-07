@@ -29,6 +29,17 @@
     }
   };
 
+  /**
+   * Riapre il banner cookie azzerando i consensi salvati.
+   * Esposta globalmente per eventuali link "Gestisci preferenze".
+   */
+  window.ec2026ShowPreferences = function () {
+    localStorage.removeItem(TECH_KEY);
+    localStorage.removeItem(MAPS_KEY);
+    banner.classList.remove('hidden');
+    prefBtn.classList.add('hidden');
+  };
+
   function replaceWithIframe(container) {
     container.innerHTML = '';
     const iframe = document.createElement('iframe');
@@ -42,16 +53,27 @@
     container.appendChild(iframe);
   }
 
-  /* ── Banner ─────────────────────────────────────────────── */
+  /* ── Banner & FAB ───────────────────────────────────────── */
   const banner    = document.getElementById('cookieBanner');
   const acceptBtn = document.getElementById('cookieAcceptBtn');
   const rejectBtn = document.getElementById('cookieRejectBtn');
+  const prefBtn   = document.getElementById('cookiePrefBtn');
 
   if (!banner || !acceptBtn) return;
 
+  function hideBannerShowFab() {
+    banner.classList.add('hidden');
+    if (prefBtn) prefBtn.classList.remove('hidden');
+  }
+
+  /* FAB: riapertura preferenze (listener sempre attaccato) */
+  if (prefBtn) {
+    prefBtn.addEventListener('click', window.ec2026ShowPreferences);
+  }
+
   /* Se il consenso tecnico è già stato registrato, nascondi subito il banner */
   if (localStorage.getItem(TECH_KEY) === 'accepted') {
-    banner.classList.add('hidden');
+    hideBannerShowFab();
     return;
   }
 
@@ -59,7 +81,7 @@
   acceptBtn.addEventListener('click', function () {
     localStorage.setItem(TECH_KEY, 'accepted');
     localStorage.setItem(MAPS_KEY, 'accepted');
-    banner.classList.add('hidden');
+    hideBannerShowFab();
     /* Se la sezione Luogo è già caricata, carica subito la mappa */
     const mapContainer = document.getElementById('mapContainer');
     if (mapContainer && !mapContainer.querySelector('iframe')) {
@@ -71,7 +93,7 @@
   if (rejectBtn) {
     rejectBtn.addEventListener('click', function () {
       localStorage.setItem(TECH_KEY, 'accepted');
-      banner.classList.add('hidden');
+      hideBannerShowFab();
     });
   }
 })();

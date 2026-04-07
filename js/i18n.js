@@ -152,7 +152,8 @@ const TRANSLATIONS = {
       text:   "Questo sito utilizza cookie tecnici necessari e, nella sezione Luogo, Google Maps (cookie di terze parti). Puoi accettare tutti i cookie o solo quelli tecnici.",
       accept: "Accetta tutti",
       reject: "Solo tecnici",
-      policy: "Cookie Policy &amp; Privacy"
+      policy: "Cookie Policy &amp; Privacy",
+      prefs:  "Gestisci preferenze cookie"
     }
   },
 
@@ -304,7 +305,8 @@ const TRANSLATIONS = {
       text:   "This website uses necessary technical cookies and, in the Venue section, Google Maps (third-party cookies). You can accept all cookies or only technical ones.",
       accept: "Accept all",
       reject: "Technical only",
-      policy: "Cookie Policy &amp; Privacy"
+      policy: "Cookie Policy &amp; Privacy",
+      prefs:  "Manage cookie preferences"
     }
   },
 
@@ -456,7 +458,8 @@ const TRANSLATIONS = {
       text:   "Ce site utilise des cookies techniques nécessaires et, dans la section Lieu, Google Maps (cookies tiers). Vous pouvez accepter tous les cookies ou seulement les techniques.",
       accept: "Tout accepter",
       reject: "Techniques uniquement",
-      policy: "Politique de cookies &amp; confidentialité"
+      policy: "Politique de cookies &amp; confidentialité",
+      prefs:  "Gérer les préférences cookies"
     }
   },
 
@@ -608,7 +611,8 @@ const TRANSLATIONS = {
       text:   "Diese Website verwendet technisch notwendige Cookies und im Bereich Veranstaltungsort Google Maps (Drittanbieter-Cookies). Sie können alle Cookies oder nur technische akzeptieren.",
       accept: "Alle akzeptieren",
       reject: "Nur technische",
-      policy: "Cookie-Richtlinie &amp; Datenschutz"
+      policy: "Cookie-Richtlinie &amp; Datenschutz",
+      prefs:  "Cookie-Einstellungen verwalten"
     }
   },
 
@@ -760,7 +764,8 @@ const TRANSLATIONS = {
       text:   "Este sitio utiliza cookies técnicas necesarias y, en la sección Lugar, Google Maps (cookies de terceros). Puede aceptar todas las cookies o solo las técnicas.",
       accept: "Aceptar todo",
       reject: "Solo técnicas",
-      policy: "Política de cookies &amp; privacidad"
+      policy: "Política de cookies &amp; privacidad",
+      prefs:  "Gestionar preferencias de cookies"
     }
   },
 
@@ -912,7 +917,8 @@ const TRANSLATIONS = {
       text:   "Este sítio utiliza cookies técnicos necessários e, na secção Local, Google Maps (cookies de terceiros). Pode aceitar todos os cookies ou apenas os técnicos.",
       accept: "Aceitar tudo",
       reject: "Só técnicos",
-      policy: "Política de cookies &amp; privacidade"
+      policy: "Política de cookies &amp; privacidade",
+      prefs:  "Gerir preferências de cookies"
     }
   }
 };
@@ -954,6 +960,9 @@ function applyTranslations(root) {
       // innerHTML per supportare tag <strong> ecc. nelle note
       el.innerHTML = val;
     }
+  });
+  scope.querySelectorAll('[data-i18n-label]').forEach(el => {
+    el.setAttribute('aria-label', t(el.getAttribute('data-i18n-label')));
   });
   // Aggiorna il title della pagina
   const titleEl = document.querySelector('title');
