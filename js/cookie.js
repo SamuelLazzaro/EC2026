@@ -75,33 +75,34 @@ function ec2026ShowPreferences() {
    ═══════════════════════════════════════════════════════════ */
 
 /* FAB: riapertura preferenze (listener sempre attaccato) */
-if (prefBtn) {
-  prefBtn.addEventListener('click', ec2026ShowPreferences);
-}
+prefBtn?.addEventListener('click', ec2026ShowPreferences);
 
-if (banner && acceptBtn) {
+function initBanner() {
+  if (!banner || !acceptBtn) return;
+
   /* Se il consenso tecnico è già stato registrato, nascondi subito il banner */
   if (localStorage.getItem(TECH_KEY) === 'accepted') {
     hideBannerShowFab();
-  } else {
-    /* Accetta tutti: cookie tecnici + Google Maps */
-    acceptBtn.addEventListener('click', function () {
-      localStorage.setItem(TECH_KEY, 'accepted');
-      localStorage.setItem(MAPS_KEY, 'accepted');
-      hideBannerShowFab();
-      /* Se la sezione Luogo è già caricata, carica subito la mappa */
-      const mapContainer = document.getElementById('mapContainer');
-      if (mapContainer && !mapContainer.querySelector('iframe')) {
-        replaceWithIframe(mapContainer);
-      }
-    });
-
-    /* Solo tecnici: rifiuta i cookie di terze parti */
-    if (rejectBtn) {
-      rejectBtn.addEventListener('click', function () {
-        localStorage.setItem(TECH_KEY, 'accepted');
-        hideBannerShowFab();
-      });
-    }
+    return;
   }
 }
+
+/* Accetta tutti: cookie tecnici + Google Maps */
+acceptBtn.addEventListener('click', function () {
+  localStorage.setItem(TECH_KEY, 'accepted');
+  localStorage.setItem(MAPS_KEY, 'accepted');
+  hideBannerShowFab();
+  /* Se la sezione Luogo è già caricata, carica subito la mappa */
+  const mapContainer = document.getElementById('mapContainer');
+  if (mapContainer && !mapContainer.querySelector('iframe')) {
+    replaceWithIframe(mapContainer);
+  }
+});
+
+/* Solo tecnici: rifiuta i cookie di terze parti */
+rejectBtn?.addEventListener('click', function () {
+  localStorage.setItem(TECH_KEY, 'accepted');
+  hideBannerShowFab();
+});
+
+initBanner();
