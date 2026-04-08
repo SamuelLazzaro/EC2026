@@ -1789,21 +1789,50 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .cookie-reject-btn {
   padding: 0.5rem 1.25rem;
   background: transparent;
-  color: var(--c-text-mute);
+  color: var(--c-accent);
   font-family: var(--f-title);
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--c-accent);
   border-radius: var(--radius-sm);
   white-space: nowrap;
-  transition: border-color var(--trans), color var(--trans);
+  transition: border-color var(--trans), color var(--trans), background var(--trans);
 }
 @media (pointer: fine) {
-  .cookie-reject-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
+  .cookie-reject-btn:hover { background: rgba(201, 168, 76, 0.12); color: var(--c-accent-lt); border-color: var(--c-accent-lt); }
 }
-.cookie-reject-btn.touch-active { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
+.cookie-reject-btn.touch-active { background: rgba(201, 168, 76, 0.12); color: var(--c-accent-lt); border-color: var(--c-accent-lt); }
+
+/* ── Footer legal links ─────────────────────────────────── */
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-legal-sep {
+  color: var(--c-text-mute);
+  font-size: 0.7rem;
+}
+.footer-cookie-prefs {
+  font-size: 0.75rem;
+  color: var(--c-text-mute);
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 3px; */
+  padding: 0;
+  font-family: inherit;
+  transition: color var(--trans);
+}
+@media (pointer: fine) {
+  .footer-cookie-prefs:hover { color: var(--c-accent-lt); }
+}
+.footer-cookie-prefs.touch-active { color: var(--c-accent-lt); }
 
 /* ── Map placeholder (consenso Google Maps) ────────────────── */
 .map-placeholder {
