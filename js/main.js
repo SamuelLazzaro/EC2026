@@ -295,14 +295,18 @@ if (langFabBtn && langFabMenu) {
    Touch-active effect su <a href> (touch screen)
    ═══════════════════════════════════════════════════════════ */
 (function () {
-  if (!('ontouchstart' in window)) return;
+  if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) return;
 
   let touchLink       = null;
   let touchStartY     = 0;
   let scrollCancelled = false;
 
   document.addEventListener('touchstart', function (e) {
-    const link = e.target.closest('a[href]');
+    const link = e.target.closest(
+      'a[href], button, .card, .sponsor-card, .sponsor-main, ' +
+      '.hotel-card, .transport-card, .news-card, .lang-fab-item, ' +
+      '.contatti-card, .ds-contact-card'
+    );
     if (!link) return;
     touchLink       = link;
     touchStartY     = e.touches[0].clientY;

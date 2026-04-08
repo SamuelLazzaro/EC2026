@@ -30,7 +30,7 @@
       line-height: 1.7;
     }
     a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
-    
+
     @media (pointer: fine) {
       a:hover { color: var(--c-accent-lt); }
     }
@@ -73,6 +73,38 @@
       font-size: 0.6rem;
       letter-spacing: 0.06em;
       color: var(--c-text);
+    }
+    .cp-header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    /* Language switcher */
+    .cp-lang {
+      display: flex;
+      gap: 0.3rem;
+    }
+    .cp-lang-btn {
+      padding: 0.28rem 0.55rem;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: 4px;
+      color: var(--c-text-mute);
+      font-family: var(--f-title);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .cp-lang-btn.active {
+      background: rgba(201, 168, 76, 0.18);
+      color: var(--c-accent);
+      border-color: var(--c-accent);
+    }
+    @media (pointer: fine) {
+      .cp-lang-btn:hover { background: rgba(201, 168, 76, 0.18); color: var(--c-accent-lt); }
     }
     .cp-back-btn {
       display: inline-flex;
@@ -182,37 +214,41 @@
         <path d="M399.74,308.92c-8.31,6.35-19.55,14.83-33.15,24.82-2.67,1.96-6.37,1.53-8.57-.94-3.58-4.01-9.02-6.31-14.95-5.53-7.69,1.01-13.74,7.2-14.57,14.91-.29,2.72.05,5.32.91,7.68h0s1.29,2.75,1.29,2.75l5.56,11.31c.98,1.6,2.02,3.35,3.01,4.7.81,1.11,2.37,1.3,3.66,1.28,1.29-.02,2.58-.48,3.62-1.37l17.97-15.51c1.74-1.5,4.21.67,2.94,2.59l-19.05,22.62c-3.9,4.96-11.26,5.41-15.74.95l-10.3-11.2c-1.38-1.62-2.94-3.69-4.75-2.57l-117.01,79.63c-5.04,3.04-1.18,10.72,4.26,8.49l108.82-44.61c12.8-5.51,18.34,2.13,18.03,13.97l-1.13,25.53c-.23,5.15,6.74,6.94,9.03,2.33l17.79-35.94c2.14-4.32,2.62-9.28,1.35-13.94-.32-1.18-.49-2.38-.5-3.58-.04-2.72.7-5.42,2.17-7.77l46.49-74.71c2.24-4.52-3.16-8.96-7.16-5.9" fill="#C9A84C"/>
       </svg>
       <div class="cp-logo-text">
-        <span class="cp-logo-title">Campionati Europei Pattinaggio Corsa 2026</span>
-        <span class="cp-logo-sub">19–26 luglio · Cardano al Campo, Italia</span>
+        <span class="cp-logo-title" data-i18n="header.title">Campionati Europei Pattinaggio Corsa 2026</span>
+        <span class="cp-logo-sub" data-i18n="header.sub">19–26 luglio · Cardano al Campo, Italia</span>
       </div>
     </a>
-    <a href="index.html" class="cp-back-btn">
-      ← Torna al sito
-    </a>
+    <div class="cp-header-right">
+      <div class="cp-lang">
+        <button class="cp-lang-btn lang-btn" data-lang="it">IT</button>
+        <button class="cp-lang-btn lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="index.html" class="cp-back-btn" data-i18n="cookiepage.back">← Torna al sito</a>
+    </div>
   </header>
 
   <main class="cp-content">
 
-    <span class="cp-tag">Informativa</span>
+    <span class="cp-tag" data-i18n="cookiepage.tag">Informativa</span>
     <h1 class="cp-title">Cookie Policy &amp; Privacy</h1>
-    <p class="cp-date">Ultimo aggiornamento: marzo 2026</p>
+    <p class="cp-date" data-i18n="cookiepage.date">Ultimo aggiornamento: marzo 2026</p>
 
     <div class="cp-section">
-      <h2>1. Titolare del Trattamento</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s1_title">1. Titolare del Trattamento</h2>
+      <p data-i18n="cookiepage.s1_p1">
         Il titolare del trattamento dei dati personali è la <strong>Cardano Skating S.R.L. S.S.D.</strong>,
         organizzatrice dei Campionati Europei di Pattinaggio Corsa a Rotelle 2026,
         con sede in Cardano al Campo (VA), Italia.
       </p>
-      <p>
+      <p data-i18n="cookiepage.s1_p2">
         Per qualsiasi richiesta relativa alla privacy è possibile contattarci all'indirizzo:
         <a href="mailto:info-2026european@cardanoskating.it">info-2026european@cardanoskating.it</a>
       </p>
     </div>
 
     <div class="cp-section">
-      <h2>2. Cosa sono i Cookie</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s2_title">2. Cosa sono i Cookie</h2>
+      <p data-i18n="cookiepage.s2_p1">
         I cookie sono piccoli file di testo salvati sul dispositivo dell'utente dal browser
         durante la navigazione. Questa informativa riguarda anche tecnologie analoghe come
         il <strong>localStorage</strong>, un'area di memoria del browser utilizzata da questo sito.
@@ -220,44 +256,44 @@
     </div>
 
     <div class="cp-section">
-      <h2>3. Cookie Utilizzati da Questo Sito</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s3_title">3. Cookie Utilizzati da Questo Sito</h2>
+      <p data-i18n="cookiepage.s3_p1">
         Questo sito utilizza <strong>cookie tecnici strettamente necessari</strong>
         al suo corretto funzionamento e, previa accettazione, cookie di terze parti
         tramite il servizio Google Maps nella sezione <em>Luogo</em>.
       </p>
-      <p><strong>Cookie tecnici (sempre attivi)</strong></p>
+      <p><strong data-i18n="cookiepage.s3_strong">Cookie tecnici (sempre attivi)</strong></p>
       <ul>
         <li>
           <strong>ec2026-lang</strong>
-          Memorizza la lingua selezionata dall'utente (es. "it", "en"). Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.
+          <span data-i18n="cookiepage.s3_li1">Memorizza la lingua selezionata dall'utente (es. "it", "en"). Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
         </li>
         <li>
           <strong>ec2026-cookie-consent</strong>
-          Registra l'avvenuta presa visione dell'informativa cookie. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.
+          <span data-i18n="cookiepage.s3_li2">Registra l'avvenuta presa visione dell'informativa cookie. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
         </li>
         <li>
           <strong>ec2026-maps-consent</strong>
-          Registra il consenso specifico al caricamento di Google Maps. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.
+          <span data-i18n="cookiepage.s3_li3">Registra il consenso specifico al caricamento di Google Maps. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
         </li>
       </ul>
-      <p style="margin-top: 0.75rem;">
+      <p style="margin-top: 0.75rem;" data-i18n="cookiepage.s3_p2">
         I dati tecnici non vengono mai trasmessi a server esterni e rimangono
         esclusivamente nel browser dell'utente.
       </p>
     </div>
 
     <div class="cp-section">
-      <h2>4. Servizi di Terze Parti</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s4_title">4. Servizi di Terze Parti</h2>
+      <p data-i18n="cookiepage.s4_p1">
         I font tipografici (Montserrat e Inter) utilizzati dal sito sono ospitati direttamente
         sui server del sito e non comportano alcuna trasmissione di dati a terze parti.
       </p>
-      <p style="margin-top: 0.75rem;">
+      <p style="margin-top: 0.75rem;" data-i18n="cookiepage.s4_p2">
         Le icone delle bandiere per la selezione della lingua sono anch'esse ospitate
         localmente e non richiedono il caricamento di risorse esterne.
       </p>
-      <p style="margin-top: 0.75rem;">
+      <p style="margin-top: 0.75rem;" data-i18n="cookiepage.s4_p3">
         La sezione <em>Luogo</em> utilizza <strong>Google Maps</strong> (Google LLC, USA)
         per visualizzare la mappa interattiva della sede dell'evento. Questo servizio viene
         caricato <strong>solo previo esplicito consenso</strong> dell'utente. Accettando,
@@ -266,27 +302,27 @@
       <ul>
         <li>
           <strong>NID</strong>
-          Cookie di preferenza/personalizzazione Google. Durata: ~6 mesi. Dominio: .google.com.
+          <span data-i18n="cookiepage.s4_li_nid">Cookie di preferenza/personalizzazione Google. Durata: ~6 mesi. Dominio: .google.com.</span>
         </li>
         <li>
           <strong>CONSENT / SOCS</strong>
-          Registra le scelte di consenso dell'utente per i servizi Google. Durata: variabile. Dominio: .google.com.
+          <span data-i18n="cookiepage.s4_li_con">Registra le scelte di consenso dell'utente per i servizi Google. Durata: variabile. Dominio: .google.com.</span>
         </li>
       </ul>
-      <p style="margin-top: 0.75rem;">
+      <p style="margin-top: 0.75rem;" data-i18n="cookiepage.s4_p4">
         Per ulteriori informazioni su Google consultare la
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.
       </p>
     </div>
 
     <div class="cp-section">
-      <h2>5. Trasferimento dei Dati Extra-UE</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s5_title">5. Trasferimento dei Dati Extra-UE</h2>
+      <p data-i18n="cookiepage.s5_p1">
         Il servizio di terze parti utilizzato da questo sito (Google Maps) può trasferire
         i dati dell'utente (in particolare l'indirizzo IP) al di fuori dello Spazio Economico
         Europeo, in particolare negli <strong>Stati Uniti</strong>.
       </p>
-      <p>
+      <p data-i18n="cookiepage.s5_p2">
         Tali trasferimenti avvengono nel rispetto delle garanzie previste dal GDPR (art. 46),
         in particolare attraverso le <strong>Clausole Contrattuali Standard</strong> (Standard
         Contractual Clauses) approvate dalla Commissione Europea e/o, per Google LLC,
@@ -296,13 +332,13 @@
     </div>
 
     <div class="cp-section">
-      <h2>6. Dati Raccolti Direttamente dal Sito</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s6_title">6. Dati Raccolti Direttamente dal Sito</h2>
+      <p data-i18n="cookiepage.s6_p1">
         Questo sito <strong>non raccoglie direttamente alcun dato personale</strong> degli utenti.
         Non sono presenti moduli di contatto, registrazioni, iscrizioni a newsletter
         o qualsiasi altro meccanismo che comporti l'invio di dati personali ai server del titolare.
       </p>
-      <p>
+      <p data-i18n="cookiepage.s6_p2">
         I recapiti (email, telefono) presenti nella sezione <em>Contatti</em> sono forniti
         a titolo informativo. Qualsiasi comunicazione avviata dall'utente tramite tali canali
         è gestita al di fuori di questo sito web e soggetta alle politiche privacy del
@@ -311,15 +347,15 @@
     </div>
 
     <div class="cp-section">
-      <h2>7. Base Giuridica del Trattamento</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s7_title">7. Base Giuridica del Trattamento</h2>
+      <p data-i18n="cookiepage.s7_p1">
         Il trattamento dei dati tramite <strong>cookie tecnici</strong> è effettuato sulla base del
         <strong>legittimo interesse</strong> del titolare (art. 6, par. 1, lett. f del GDPR)
         e della <strong>necessità contrattuale</strong> di fornire il servizio richiesto
         dall'utente (art. 6, par. 1, lett. b del GDPR), poiché tali cookie sono
         indispensabili per il funzionamento del sito.
       </p>
-      <p>
+      <p data-i18n="cookiepage.s7_p2">
         Il trattamento dei dati tramite <strong>Google Maps</strong> è effettuato sulla base del
         <strong>consenso esplicito</strong> dell'utente (art. 6, par. 1, lett. a del GDPR),
         espresso attraverso l'apposito pulsante nel banner cookie o direttamente nella sezione
@@ -329,42 +365,42 @@
     </div>
 
     <div class="cp-section">
-      <h2>8. Come Disabilitare i Cookie</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s8_title">8. Come Disabilitare i Cookie</h2>
+      <p data-i18n="cookiepage.s8_p1">
         L'utente può eliminare i dati salvati in localStorage in qualsiasi momento
         tramite le impostazioni del proprio browser (Strumenti sviluppatore › Application ›
         Local Storage) oppure cancellando la cronologia e i dati di navigazione.
       </p>
-      <p>
+      <p data-i18n="cookiepage.s8_p2">
         Si noti che la disabilitazione potrebbe compromettere alcune funzionalità del sito
         (es. memorizzazione della lingua selezionata).
       </p>
     </div>
 
     <div class="cp-section">
-      <h2>9. Diritti dell'Interessato</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s9_title">9. Diritti dell'Interessato</h2>
+      <p data-i18n="cookiepage.s9_intro">
         Ai sensi degli artt. 15–22 del GDPR (Reg. UE 2016/679) e del D.Lgs. 196/2003
         (come modificato dal D.Lgs. 101/2018), l'utente ha il diritto di:
       </p>
       <ul>
-        <li><strong>Accesso</strong> Ottenere conferma del trattamento e copia dei dati.</li>
-        <li><strong>Rettifica</strong> Richiedere la correzione di dati inesatti.</li>
-        <li><strong>Cancellazione</strong> Richiedere la cancellazione dei dati ("diritto all'oblio").</li>
-        <li><strong>Limitazione</strong> Richiedere la limitazione del trattamento.</li>
-        <li><strong>Opposizione</strong> Opporsi al trattamento in qualsiasi momento.</li>
-        <li><strong>Portabilità</strong> Ricevere i dati in formato strutturato e leggibile.</li>
-        <li><strong>Reclamo</strong> Proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).</li>
+        <li><strong>Accesso</strong> <span data-i18n="cookiepage.s9_access">Ottenere conferma del trattamento e copia dei dati.</span></li>
+        <li><strong>Rettifica</strong> <span data-i18n="cookiepage.s9_rect">Richiedere la correzione di dati inesatti.</span></li>
+        <li><strong>Cancellazione</strong> <span data-i18n="cookiepage.s9_del">Richiedere la cancellazione dei dati ("diritto all'oblio").</span></li>
+        <li><strong>Limitazione</strong> <span data-i18n="cookiepage.s9_limit">Richiedere la limitazione del trattamento.</span></li>
+        <li><strong>Opposizione</strong> <span data-i18n="cookiepage.s9_obj">Opporsi al trattamento in qualsiasi momento.</span></li>
+        <li><strong>Portabilità</strong> <span data-i18n="cookiepage.s9_port">Ricevere i dati in formato strutturato e leggibile.</span></li>
+        <li><strong>Reclamo</strong> <span data-i18n="cookiepage.s9_comp">Proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).</span></li>
       </ul>
-      <p style="margin-top: 0.75rem;">
+      <p style="margin-top: 0.75rem;" data-i18n="cookiepage.s9_p2">
         Per esercitare i propri diritti contattare:
         <a href="mailto:info-2026european@cardanoskating.it">info-2026european@cardanoskating.it</a>
       </p>
     </div>
 
     <div class="cp-section">
-      <h2>10. Modifiche alla Policy</h2>
-      <p>
+      <h2 data-i18n="cookiepage.s10_title">10. Modifiche alla Policy</h2>
+      <p data-i18n="cookiepage.s10_p1">
         Il titolare si riserva il diritto di aggiornare la presente informativa in qualsiasi
         momento. Le modifiche saranno pubblicate su questa pagina con indicazione della
         data di aggiornamento. Si invita a consultare periodicamente questa pagina.
@@ -373,9 +409,10 @@
 
   </main>
 
-  <footer class="cp-footer">
+  <footer class="cp-footer" data-i18n="footer.rights">
     &copy; 2026 Campionati Europei Pattinaggio Corsa a Rotelle &middot; Cardano al Campo (VA), Italia
   </footer>
 
+  <script src="js/i18n.js"></script>
 </body>
 </html>

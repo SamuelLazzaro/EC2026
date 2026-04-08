@@ -164,6 +164,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .hamburger:hover { background: rgba(255,255,255,0.07); }
 }
+.hamburger.touch-active { background: rgba(255,255,255,0.07); }
 
 .hamburger-line {
   display: block;
@@ -324,6 +325,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .footer-cookie-link:hover { color: var(--c-accent); }
 }
+.footer-cookie-link.touch-active { color: var(--c-accent); }
 
 /* ── Section Common ────────────────────────────────────────── */
 .section-wrap {
@@ -655,6 +657,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .tab-btn:hover  { color: var(--c-text); }
 }
+.tab-btn.touch-active { color: var(--c-text); }
 
 .tab-btn.active { color: var(--c-accent); border-bottom-color: var(--c-accent); }
 
@@ -898,6 +901,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .filter-btn:hover  { border-color: var(--c-accent); color: var(--c-accent); }
 }
+.filter-btn.touch-active { border-color: var(--c-accent); color: var(--c-accent); }
 .filter-btn.active { background: var(--c-accent); color: var(--c-bg); border-color: var(--c-accent); }
 
 .hotel-card {
@@ -1764,6 +1768,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .cookie-policy-link:hover { color: var(--c-accent-lt); }
 }
+.cookie-policy-link.touch-active { color: var(--c-accent-lt); }
 .cookie-accept-btn {
   padding: 0.5rem 1.25rem;
   background: var(--c-accent);
@@ -1780,6 +1785,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .cookie-accept-btn:hover { background: var(--c-accent-lt); }
 }
+.cookie-accept-btn.touch-active { background: var(--c-accent-lt); }
 .cookie-reject-btn {
   padding: 0.5rem 1.25rem;
   background: transparent;
@@ -1797,6 +1803,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .cookie-reject-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
 }
+.cookie-reject-btn.touch-active { border-color: rgba(255,255,255,0.35); color: var(--c-text); }
 
 /* ── Map placeholder (consenso Google Maps) ────────────────── */
 .map-placeholder {
@@ -1837,6 +1844,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (pointer: fine) {
   .map-consent-btn:hover { background: var(--c-accent-lt); }
 }
+.map-consent-btn.touch-active { background: var(--c-accent-lt); }
 
 @media (max-width: 500px) {
   .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
@@ -1875,4 +1883,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     border-color: var(--c-accent);
     transform: scale(1.08);
   }
+}
+.cookie-pref-btn.touch-active {
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+  transform: scale(1.08);
 }
