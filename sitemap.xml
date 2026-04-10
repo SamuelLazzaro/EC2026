@@ -658,17 +658,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- ══════════════════════════════════════════════════════════════
-       PAGINA EVENTO DEDICATA  (priority 0.9)
-       ══════════════════════════════════════════════════════════════ -->
-  <url>
-    <loc>https://www.euroskatingcardano2026.it/campionati-europei-pattinaggio-corsa-cardano-al-campo-2026/</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- ══════════════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════════════
        COOKIE & PRIVACY POLICY  (priority 0.2)
        ══════════════════════════════════════════════════════════════ -->
   <url>
