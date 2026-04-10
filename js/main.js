@@ -107,7 +107,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     if (section) {
       const url = section === 'home'
         ? location.pathname + location.search
-        : '#' + section;
+        : location.pathname + location.search + '#' + section;
       history.pushState(null, '', url);
       loadSection(section);
     }

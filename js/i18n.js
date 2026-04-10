@@ -1326,6 +1326,14 @@ function setLanguage(lang) {
   if (!TRANSLATIONS[lang]) return;
   currentLang = lang;
   localStorage.setItem('ec2026-lang', lang);
+  // Aggiorna il parametro ?lang=XX nell'URL (senza ricaricare la pagina)
+  const url = new URL(location.href);
+  if (lang === 'it') {
+    url.searchParams.delete('lang');
+  } else {
+    url.searchParams.set('lang', lang);
+  }
+  history.replaceState(null, '', url.toString());
   applyTranslations();
   // Aggiorna bottoni
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1342,10 +1350,12 @@ function setLanguage(lang) {
 }
 
 /**
- * Rileva la lingua dal browser e dalla scelta precedente
- * dell'utente (localStorage).
+ * Rileva la lingua dal parametro URL (?lang=XX), dalla scelta
+ * precedente dell'utente (localStorage) o dal browser.
  */
 function detectLanguage() {
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  if (urlLang && TRANSLATIONS[urlLang]) return urlLang;
   const saved = localStorage.getItem('ec2026-lang');
   if (saved && TRANSLATIONS[saved]) return saved;
   const browser = (navigator.language || navigator.userLanguage || 'it').split('-')[0].toLowerCase();

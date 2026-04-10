@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.euroskatingcardano2026.it/sitemap.xml
