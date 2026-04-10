@@ -1317,6 +1317,46 @@ function applyTranslations(root) {
   if (titleEl) titleEl.textContent = t('meta.title');
   // Aggiorna lang attribute
   document.documentElement.lang = currentLang;
+  // Aggiorna lo schema Event JSON-LD nella lingua attiva
+  updateEventSchema();
+}
+
+/**
+ * Aggiorna il tag JSON-LD dello schema Event con il name e la
+ * description nella lingua attiva, per il SEO multilingue.
+ */
+function updateEventSchema() {
+  const schemaEl = document.getElementById('schema-event');
+  if (!schemaEl) return;
+  schemaEl.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    'name': t('meta.title'),
+    'description': t('meta.desc'),
+    'inLanguage': currentLang,
+    'startDate': '2026-07-19',
+    'endDate': '2026-07-26',
+    'eventStatus': 'https://schema.org/EventScheduled',
+    'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+    'location': {
+      '@type': 'Place',
+      'name': 'Pista Comunale di Cardano al Campo',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Via Carreggia',
+        'addressLocality': 'Cardano al Campo',
+        'addressRegion': 'VA',
+        'postalCode': '21010',
+        'addressCountry': 'IT'
+      }
+    },
+    'organizer': {
+      '@type': 'Organization',
+      'name': 'Cardano Skating S.r.l. SSD',
+      'url': 'https://www.euroskatingcardano2026.it'
+    },
+    'url': 'https://www.euroskatingcardano2026.it'
+  });
 }
 
 /**
