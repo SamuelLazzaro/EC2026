@@ -8,7 +8,7 @@ const TRANSLATIONS = {
   it: {
     meta: {
       title: "Campionati Europei Pattinaggio Corsa a Rotelle 2026 | Cardano al Campo – Sito Ufficiale",
-      desc:  "19–26 luglio 2026: programma, classifiche, alloggi e logistica. Sito ufficiale dei Campionati Europei di Pattinaggio Corsa a Rotelle – Cardano al Campo (VA), Italia."
+      desc:  "Sito ufficiale dei Campionati Europei di Pattinaggio Corsa a Rotelle – Cardano al Campo (VA), Italia, 19–26 luglio 2026: programma, classifiche, alloggi e logistica."
     },
     header: {
       title: "Campionati Europei Pattinaggio Corsa 2026",
@@ -219,7 +219,7 @@ const TRANSLATIONS = {
   en: {
     meta: {
       title: "European Inline Speed Skating Championships 2026 | Cardano al Campo – Official Site",
-      desc:  "19–26 July 2026: schedule, results, accommodation and logistics. Official website of the European Inline Speed Skating Championships – Cardano al Campo (VA), Italy."
+      desc:  "Official website of the European Inline Speed Skating Championships – Cardano al Campo (VA), Italy, 19–26 July 2026: schedule, results, accommodation and logistics."
     },
     header: {
       title: "European Inline Speed Skating Championships 2026",
@@ -430,7 +430,7 @@ const TRANSLATIONS = {
   fr: {
     meta: {
       title: "Championnats d'Europe de Patinage de Vitesse en Ligne 2026 | Cardano al Campo – Site Officiel",
-      desc:  "19–26 juillet 2026 : programme, résultats, hébergement et logistique. Site officiel des Championnats d'Europe de Patinage de Vitesse en Ligne – Cardano al Campo (VA), Italie."
+      desc:  "Site officiel des Championnats d'Europe de Patinage de Vitesse en Ligne – Cardano al Campo (VA), Italie, 19–26 juillet 2026 : programme, résultats, hébergement et logistique."
     },
     header: {
       title: "Championnats d'Europe de Patinage en Ligne 2026",
@@ -641,7 +641,7 @@ const TRANSLATIONS = {
   de: {
     meta: {
       title: "Europameisterschaften Inline-Speedskating 2026 | Cardano al Campo – Offizielle Website",
-      desc:  "19.–26. Juli 2026: Programm, Ergebnisse, Unterkunft und Logistik. Offizielle Website der Europameisterschaften Inline-Speedskating – Cardano al Campo (VA), Italien."
+      desc:  "Offizielle Website der Europameisterschaften Inline-Speedskating – Cardano al Campo (VA), Italien, 19.–26. Juli 2026: Programm, Ergebnisse, Unterkunft und Logistik."
     },
     header: {
       title: "Europameisterschaften Inline-Schnelllauf 2026",
@@ -852,7 +852,7 @@ const TRANSLATIONS = {
   es: {
     meta: {
       title: "Campeonatos de Europa de Patinaje de Velocidad en Línea 2026 | Cardano al Campo – Sitio Oficial",
-      desc:  "19-26 de julio de 2026: programa, resultados, alojamiento y logística. Sitio oficial de los Campeonatos de Europa de Patinaje de Velocidad en Línea – Cardano al Campo (VA), Italia."
+      desc:  "Sitio oficial de los Campeonatos de Europa de Patinaje de Velocidad en Línea – Cardano al Campo (VA), Italia, 19-26 de julio de 2026: programa, resultados, alojamiento y logística."
     },
     header: {
       title: "Campeonatos de Europa de Patinaje en Línea 2026",
@@ -1063,7 +1063,7 @@ const TRANSLATIONS = {
   pt: {
     meta: {
       title: "Campeonatos Europeus de Patinagem de Velocidade em Linha 2026 | Cardano al Campo – Site Oficial",
-      desc:  "19-26 de julho de 2026: programa, resultados, alojamento e logística. Site oficial dos Campeonatos Europeus de Patinagem de Velocidade em Linha – Cardano al Campo (VA), Itália."
+      desc:  "Site oficial dos Campeonatos Europeus de Patinagem de Velocidade em Linha – Cardano al Campo (VA), Itália, 19-26 de julho de 2026: programa, resultados, alojamento e logística."
     },
     header: {
       title: "Campeonatos Europeus de Patinagem em Linha 2026",
