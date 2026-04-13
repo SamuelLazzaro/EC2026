@@ -50,7 +50,9 @@ const TRANSLATIONS = {
       stat_nations:   "Nazioni",
       stat_disc:      "Discipline",
       stat_events:    "Gare in programma",
-      organizer:      "La Cardano Skating S.r.l. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle, con il Patrocinio del Comune di Cardano al Campo."
+      organizer:           "La Cardano Skating S.r.l. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle:",
+      patronage_lombardia: "Con il Patrocinio di Regione Lombardia:",
+      patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo:"
     },
     classifiche: {
       tag:            "Risultati",
@@ -261,7 +263,9 @@ const TRANSLATIONS = {
       stat_nations:   "Nations",
       stat_disc:      "Disciplines",
       stat_events:    "Scheduled events",
-      organizer:      "Cardano Skating S.r.l. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026, under the patronage of the Municipality of Cardano al Campo."
+      organizer:           "Cardano Skating S.r.l. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026:",
+      patronage_lombardia: "Under the Patronage of Regione Lombardia:",
+      patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo:"
     },
     classifiche: {
       tag:            "Results",
@@ -472,7 +476,9 @@ const TRANSLATIONS = {
       stat_nations:   "Nations",
       stat_disc:      "Disciplines",
       stat_events:    "Épreuves prévues",
-      organizer:      "La Cardano Skating S.r.l. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne, avec le patronage de la Commune de Cardano al Campo."
+      organizer:           "La Cardano Skating S.r.l. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne :",
+      patronage_lombardia: "Sous le patronage de la Région Lombardie :",
+      patronage_cardano:   "Sous le patronage de la Commune de Cardano al Campo :"
     },
     classifiche: {
       tag:            "Résultats",
@@ -683,7 +689,9 @@ const TRANSLATIONS = {
       stat_nations:   "Nationen",
       stat_disc:      "Disziplinen",
       stat_events:    "Geplante Wettbewerbe",
-      organizer:      "Die Cardano Skating S.r.l. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating, unter der Schirmherrschaft der Gemeinde Cardano al Campo."
+      organizer:           "Die Cardano Skating S.r.l. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating:",
+      patronage_lombardia: "Unter der Schirmherrschaft der Region Lombardei:",
+      patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo:"
     },
     classifiche: {
       tag:            "Ergebnisse",
@@ -894,7 +902,9 @@ const TRANSLATIONS = {
       stat_nations:   "Naciones",
       stat_disc:      "Disciplinas",
       stat_events:    "Pruebas programadas",
-      organizer:      "La Cardano Skating S.r.l. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea, bajo el patrocinio del Municipio de Cardano al Campo."
+      organizer:           "La Cardano Skating S.r.l. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea:",
+      patronage_lombardia: "Bajo el patrocinio de la Región de Lombardía:",
+      patronage_cardano:   "Bajo el patrocinio del Municipio de Cardano al Campo:"
     },
     classifiche: {
       tag:            "Resultados",
@@ -1105,7 +1115,9 @@ const TRANSLATIONS = {
       stat_nations:   "Nações",
       stat_disc:      "Disciplinas",
       stat_events:    "Provas programadas",
-      organizer:      "A Cardano Skating S.r.l. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha, com o patrocínio do Município de Cardano al Campo."
+      organizer:           "A Cardano Skating S.r.l. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha:",
+      patronage_lombardia: "Sob o patrocínio da Região da Lombardia:",
+      patronage_cardano:   "Sob o patrocínio do Município de Cardano al Campo:"
     },
     classifiche: {
       tag:            "Resultados",

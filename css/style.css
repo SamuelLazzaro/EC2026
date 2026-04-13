@@ -601,12 +601,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .div-home-images img, .div-home-images div {
-  width: 30vw;
-  max-width: 200px;
+  width: 50vw;
+  max-width: 300px;
 }
 
 .div-logo-cardano-al-campo {
@@ -615,6 +615,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.logo-img-200px {
+  max-width: 200px !important;
 }
 
 .p-text-cardano-al-campo {
