@@ -5,7 +5,7 @@
 const TECH_KEY = 'ec2026-cookie-consent';
 const MAPS_KEY = 'ec2026-maps-consent';
 
-const MAP_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.1419734654373!2d8.755507275796447!3d45.64797057107753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786621e97732ca7%3A0xf3e767fe66f8c607!2sPista%20di%20Pattinaggio%20Cardano%20al%20Campo!5e0!3m2!1sit!2sit!4v1772272559520!5m2!1sit!2sit';
+const MAP_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.1419734654373!2d8.755507275796447!3d45.64797057107753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786621e97732ca7%3A0xf3e767fe66f8c607!2sPista%20di%20Pattinaggio%20Cardano%20al%20Campo!5e1!3m2!1sit!2sit!4v1772272559520!5m2!1sit!2sit';
 
 const banner    = document.getElementById('cookieBanner');
 const acceptBtn = document.getElementById('cookieAcceptBtn');
