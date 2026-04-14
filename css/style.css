@@ -280,6 +280,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     linear-gradient(165deg, #0a1628 0%, #0e2248 45%, #0a1628 100%);
 }
 
+/* Offset per header fisso durante lo scroll ad ancora */
+#mainContent > section {
+  scroll-margin-top: var(--header-h);
+}
+
+/* Separatore tra sezioni */
+#mainContent > section + section {
+  border-top: 1px solid var(--c-border-sub);
+}
+
 /* Loading */
 .loading-spinner {
   position: absolute;

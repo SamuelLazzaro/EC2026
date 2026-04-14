@@ -1,13 +1,12 @@
 /* ═══════════════════════════════════════════════════════════
-   main.js – Navigazione, caricamento sezioni, countdown
+   main.js – Navigazione smooth-scroll, countdown, sezioni
    ═══════════════════════════════════════════════════════════ */
 
-const mainContent    = document.getElementById('mainContent');
-const loadingSpinner = document.getElementById('loadingSpinner');
-const hamburgerBtn   = document.getElementById('hamburgerBtn');
-const navDrawer      = document.getElementById('navDrawer');
-const navBackdrop    = document.getElementById('navBackdrop');
-const logoHome       = document.getElementById('logoHome');
+const mainContent  = document.getElementById('mainContent');
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navDrawer    = document.getElementById('navDrawer');
+const navBackdrop  = document.getElementById('navBackdrop');
+const logoHome     = document.getElementById('logoHome');
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -44,73 +43,18 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeNav();
 });
 
+
 /* ═══════════════════════════════════════════════════════════
-   Caricamento sezioni
+   Navigazione: click sui link del drawer
    ═══════════════════════════════════════════════════════════ */
-async function loadSection(name) {
-
-  // Mostra spinner
-  loadingSpinner.classList.remove('hidden');
-  // Rimuovi contenuto precedente (tranne spinner)
-  [...mainContent.children].forEach(el => {
-    if (!el.classList.contains('loading-spinner')) el.remove();
-  });
-
-  try {
-    const res = await fetch(`sections/${name}.html`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
-
-    // Crea wrapper con animazione
-    const wrapper = document.createElement('div');
-    wrapper.className = 'section-content fade-up';
-    wrapper.innerHTML = html;
-
-    loadingSpinner.classList.add('hidden');
-    mainContent.appendChild(wrapper);
-
-    // Applica traduzioni all'HTML caricato
-    applyTranslations(wrapper);
-
-    // Inizializzatori specifici per sezione
-    if (name === 'home')          initHome(wrapper);
-    if (name === 'classifiche')   initClassifiche(wrapper);
-    if (name === 'alloggi')       initAlloggi(wrapper);
-    if (name === 'ristorazione')  initRistorazione(wrapper);
-    if (name === 'luogo')         initLuogo(wrapper);
-
-    // Aggiorna link attivo nel nav
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.toggle('active', link.dataset.section === name);
-    });
-
-    // Torna in cima
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  } catch (err) {
-    loadingSpinner.classList.add('hidden');
-    const errDiv = document.createElement('div');
-    errDiv.style.cssText = 'padding:4rem 2rem;text-align:center;color:#6e8bab;';
-    errDiv.innerHTML = `<p style="font-size:3rem;margin-bottom:1rem">⚠️</p>
-                        <p>Impossibile caricare la sezione <strong>${name}</strong>.</p>
-                        <p style="font-size:.8rem;margin-top:.5rem">${err.message}</p>`;
-    mainContent.appendChild(errDiv);
-    console.error('loadSection error:', err);
-  }
-}
-
-/* ── Click sui link di navigazione ───────────────────────── */
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     const section = link.dataset.section;
-    if (section) {
-      const url = section === 'home'
-        ? location.pathname + location.search
-        : location.pathname + location.search + '#' + section;
-      history.pushState(null, '', url);
-      loadSection(section);
-    }
+    const target  = document.getElementById(section);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    const hash = section === 'home' ? '' : '#' + section;
+    history.pushState(null, '', location.pathname + location.search + hash);
     closeNav();
   });
 });
@@ -118,33 +62,54 @@ document.querySelectorAll('.nav-link').forEach(link => {
 /* ── Click sul logo → home ───────────────────────────────── */
 logoHome.addEventListener('click', e => {
   e.preventDefault();
+  const target = document.getElementById('home');
+  if (target) target.scrollIntoView({ behavior: 'smooth' });
   history.pushState(null, '', location.pathname + location.search);
-  loadSection('home');
   closeNav();
 });
 
 /* ── Navigazione back/forward del browser ────────────────── */
 window.addEventListener('popstate', () => {
-  loadSection(location.hash.slice(1) || 'home');
+  const id     = location.hash.slice(1) || 'home';
+  const target = document.getElementById(id);
+  if (target) target.scrollIntoView({ behavior: 'smooth' });
 });
 
-/* ── Ri-carica sezione corrente al cambio lingua ─────────── */
-document.addEventListener('langchange', () => {
-  loadSection(location.hash.slice(1) || 'home');
+
+/* ═══════════════════════════════════════════════════════════
+   IntersectionObserver – aggiorna il link attivo durante lo scroll
+   ═══════════════════════════════════════════════════════════ */
+const sectionIds = ['home', 'luogo', 'news', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
+
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      document.querySelectorAll('.nav-link').forEach(l =>
+        l.classList.toggle('active', l.dataset.section === id)
+      );
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) navObserver.observe(el);
 });
+
 
 /* ═══════════════════════════════════════════════════════════
    Init: Home – Countdown
    ═══════════════════════════════════════════════════════════ */
-function initHome(root) {
+function initHome() {
+  const root      = document.getElementById('home');
   const eventDate = new Date('2026-07-19T00:00:00');
 
   function updateCountdown() {
     const now  = new Date();
     const diff = eventDate - now;
     if (diff <= 0) {
-      // Evento in corso
-      ['cd-days','cd-hours','cd-min','cd-sec'].forEach(id => {
+      ['cd-days', 'cd-hours', 'cd-min', 'cd-sec'].forEach(id => {
         const el = root.querySelector(`#${id}`);
         if (el) el.textContent = '0';
       });
@@ -159,19 +124,14 @@ function initHome(root) {
       const el = root.querySelector(`#${id}`);
       if (el) el.textContent = String(val).padStart(2, '0');
     };
-    set('cd-days', days);
+    set('cd-days',  days);
     set('cd-hours', hours);
-    set('cd-min', minutes);
-    set('cd-sec', seconds);
+    set('cd-min',   minutes);
+    set('cd-sec',   seconds);
   }
 
   updateCountdown();
-  const timer = setInterval(updateCountdown, 1000);
-  // Pulisce l'intervallo se la sezione viene rimossa
-  const obs = new MutationObserver(() => {
-    if (!document.contains(root)) { clearInterval(timer); obs.disconnect(); }
-  });
-  obs.observe(mainContent, { childList: true });
+  setInterval(updateCountdown, 1000);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -240,6 +200,7 @@ function initLuogo(root) {
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
 }
 
+
 /* ═══════════════════════════════════════════════════════════
    Language FAB – Toggle menu
    ═══════════════════════════════════════════════════════════ */
@@ -290,6 +251,7 @@ if (langFabBtn && langFabMenu) {
     if (e.key === 'Escape') closeFabMenu();
   });
 }
+
 
 /* ═══════════════════════════════════════════════════════════
    Touch-active effect su <a href> (touch screen)
@@ -349,8 +311,22 @@ if (langFabBtn && langFabMenu) {
   });
 })();
 
+
 /* ═══════════════════════════════════════════════════════════
    Avvio
    ═══════════════════════════════════════════════════════════ */
-const initialSection = location.hash.slice(1) || 'home';
-loadSection(initialSection);
+initHome();
+initClassifiche(document.getElementById('classifiche'));
+initAlloggi(document.getElementById('alloggi'));
+initRistorazione(document.getElementById('ristorazione'));
+initLuogo(document.getElementById('luogo'));
+
+// Scroll iniziale se l'URL contiene un hash
+const initialId = location.hash.slice(1);
+if (initialId) {
+  const initialEl = document.getElementById(initialId);
+  if (initialEl) {
+    // Piccolo delay per consentire al browser di renderizzare la pagina
+    requestAnimationFrame(() => initialEl.scrollIntoView({ behavior: 'auto' }));
+  }
+}
