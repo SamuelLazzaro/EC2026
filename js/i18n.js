@@ -1363,7 +1363,16 @@ function updateEventSchema() {
     '@context': 'https://schema.org',
     '@type': 'Event',
     'name': t('meta.title'),
+    'alternateName': [
+      'Campionato Europeo di Pattinaggio Corsa a Rotelle 2026',
+      'Campionati Europei Pattinaggio Corsa Cardano al Campo 2026',
+      'Campionato Europeo Pattinaggio Corsa Cardano al Campo 2026',
+      'European Inline Speed Skating Championships 2026',
+      '2026 European Inline Speed Skating Championships Cardano al Campo',
+      'European Speed Skating Championships Cardano al Campo 2026'
+    ],
     'description': t('meta.desc'),
+    'image': 'https://www.euroskatingcardano2026.it/logo.png',
     'inLanguage': currentLang,
     'startDate': '2026-07-19',
     'endDate': '2026-07-26',
