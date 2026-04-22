@@ -8,7 +8,7 @@ const TRANSLATIONS = {
   it: {
     meta: {
       title: "Campionati Europei Pattinaggio Corsa a Rotelle 2026 | Cardano al Campo – Sito Ufficiale",
-      desc:  "Sito ufficiale dei Campionati Europei di Pattinaggio Corsa a Rotelle – Cardano al Campo (VA), Italia, 19–26 luglio 2026: programma, classifiche, alloggi e logistica."
+      desc:  "Sito ufficiale dei Campionati Europei di Pattinaggio Corsa a Rotelle 2026: i Campionati Europei si tengono a Cardano al Campo (VA), Italia, dal 19 al 26 luglio 2026. Programma, classifiche, alloggi e logistica del Campionato Europeo."
     },
     header: {
       title: "Campionati Europei Pattinaggio Corsa 2026",
