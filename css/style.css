@@ -619,13 +619,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   max-width: 300px;
 }
 
-.div-logo-cardano-al-campo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.div-logo-cardano img {
+  width: 30vw;
 }
+
 
 .logo-img-200px {
   max-width: 200px !important;
@@ -638,6 +635,20 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .p-home-organizer {
   margin: 20px;
+}
+
+.ul-patronage {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+@media (max-width: 700px)
+{
+  .ul-patronage {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 
@@ -828,10 +839,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   }
 }
 
-/* Card main sponsor: bordo oro, padding maggiore */
+/* Card main sponsor: bordo oro, layout hotel-card-like (logo + body) */
 .sponsor-main {
   border-color: rgba(201, 168, 76, 0.35);
-  padding: 2.25rem 1.5rem;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--c-card) 0%, rgba(201,168,76,0.04) 100%);
 }
 .sponsor-main.touch-active {
@@ -859,11 +872,29 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border: 1px solid var(--c-border-sub);
   flex-shrink: 0;
 }
-/* Logo più grande per i main sponsor */
+/* Logo main sponsor: stesso stile della .hotel-img */
 .sponsor-logo-main {
-  padding: 10px;
-  font-size: 1.35rem;
-  border-color: rgba(201, 168, 76, 0.25);
+  width: 100%;
+  height: 155px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(135deg, var(--c-card2) 0%, var(--c-bg2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Body main sponsor: contenitore per nome/settore/url, replica layout di .sponsor-card */
+.sponsor-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 1.5rem 1.25rem;
+  width: 100%;
 }
 
 .sponsor-name {
