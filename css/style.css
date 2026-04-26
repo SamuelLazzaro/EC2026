@@ -1014,7 +1014,18 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   gap: 0.3rem;
 }
-.hotel-detail-icon { font-size: 0.85rem; }
+.hotel-detail-icon, .sponsor-detail-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-accent);
+  vertical-align: -0.15em;
+}
+.hotel-detail-icon svg, .sponsor-detail-icon svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
 .hotel-price {
   margin-top: 0.9rem;
   display: flex;
