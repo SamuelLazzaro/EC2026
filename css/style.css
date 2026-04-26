@@ -912,7 +912,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .sponsor-url, .hotel-url {
   font-size: 0.65rem;
   color: var(--c-accent);
-  opacity: 0.7;
   letter-spacing: 0.03em;
   margin-top: 0.1rem;
   transition: opacity var(--trans);
