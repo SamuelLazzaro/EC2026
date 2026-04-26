@@ -764,7 +764,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Griglia main sponsor: card più grandi, 2 colonne su desktop */
 .sponsor-grid-main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 1.25rem;
 }
 
