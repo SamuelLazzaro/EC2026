@@ -863,8 +863,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 /* Logo più grande per i main sponsor */
 .sponsor-logo-main {
-  width: 84px;
-  height: 84px;
+  width: min-content;
+  height: min-content;
+  padding: 10px;
   font-size: 1.35rem;
   border-color: rgba(201, 168, 76, 0.25);
 }
@@ -879,7 +880,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--c-text-mute);
   letter-spacing: 0.04em;
 }
-.sponsor-url {
+.sponsor-url, .hotel-url {
   font-size: 0.65rem;
   color: var(--c-accent);
   opacity: 0.7;
@@ -972,8 +973,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  flex-direction: column;
   margin-top: 0.9rem;
-  padding-top: 0.9rem;
+  /* padding-top: 0.9rem; */
   border-top: 1px solid var(--c-border-sub);
 }
 .hotel-detail {

@@ -80,7 +80,8 @@ const TRANSLATIONS = {
       title:  "I Nostri Sponsor",
       desc:   "Ringraziamo i partner che rendono possibile questa manifestazione.",
       main:   "Main Sponsor",
-      other:  "Sponsor"
+      other:  "Sponsor",
+      belfor_sector: "Servizi di ripristino e prevenzione dei danni"
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -293,7 +294,8 @@ const TRANSLATIONS = {
       title:  "Our Sponsors",
       desc:   "We thank our partners who make this event possible.",
       main:   "Main Sponsor",
-      other:  "Sponsors"
+      other:  "Sponsors",
+      belfor_sector: "Property restoration & damage prevention"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -506,7 +508,8 @@ const TRANSLATIONS = {
       title:  "Nos Sponsors",
       desc:   "Nous remercions nos partenaires qui rendent cet événement possible.",
       main:   "Sponsor Principal",
-      other:  "Sponsors"
+      other:  "Sponsors",
+      belfor_sector: "Restauration et prévention des dommages"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -719,7 +722,8 @@ const TRANSLATIONS = {
       title:  "Unsere Sponsoren",
       desc:   "Wir danken unseren Partnern, die diese Veranstaltung ermöglichen.",
       main:   "Hauptsponsor",
-      other:  "Sponsoren"
+      other:  "Sponsoren",
+      belfor_sector: "Sanierung und Schadenprävention"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -932,7 +936,8 @@ const TRANSLATIONS = {
       title:  "Nuestros Patrocinadores",
       desc:   "Agradecemos a los socios que hacen posible este evento.",
       main:   "Patrocinador Principal",
-      other:  "Patrocinadores"
+      other:  "Patrocinadores",
+      belfor_sector: "Restauración y prevención de daños"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1145,7 +1150,8 @@ const TRANSLATIONS = {
       title:  "Os Nossos Patrocinadores",
       desc:   "Agradecemos aos parceiros que tornam este evento possível.",
       main:   "Patrocinador Principal",
-      other:  "Patrocinadores"
+      other:  "Patrocinadores",
+      belfor_sector: "Restauração e prevenção de danos"
     },
     alloggi: {
       tag:          "Onde ficar",
@@ -1364,12 +1370,25 @@ function updateEventSchema() {
     '@type': 'Event',
     'name': t('meta.title'),
     'alternateName': [
-      'Campionato Europeo di Pattinaggio Corsa a Rotelle 2026',
-      'Campionati Europei Pattinaggio Corsa Cardano al Campo 2026',
-      'Campionato Europeo Pattinaggio Corsa Cardano al Campo 2026',
-      'European Inline Speed Skating Championships 2026',
-      '2026 European Inline Speed Skating Championships Cardano al Campo',
-      'European Speed Skating Championships Cardano al Campo 2026'
+      "Campionato Europeo di Pattinaggio Corsa a Rotelle 2026",
+      "Campionato Europeo Pattinaggio Corsa Cardano al Campo 2026",
+      "Campionati Europei Pattinaggio Corsa Cardano al Campo 2026",
+      "European Inline Speed Skating Championships 2026",
+      "European Speed Skating Championships 2026",
+      "European Inline Speed Skating Championships Cardano al Campo 2026",
+      "European Speed Skating Championships Cardano al Campo 2026",
+      "European Inline Speed Skating Championships Cardano al Campo",
+      "European Speed Skating Championships Cardano al Campo",
+      "European Inline Speed Skating Championships",
+      "European Speed Skating Championships",
+      "2026 European Inline Speed Skating Championships Cardano al Campo",
+      "European Speed Skating Championships Cardano al Campo 2026",
+      "Campionato Europeo Cardano al Campo 2026",
+      "Campionato Europeo Cardano al Campo",
+      "Campionati Europei Cardano al Campo 2026",
+      "Campionati Europei Cardano al Campo",
+      "Pattinaggio Corsa Cardano al Campo",
+      "Pattinaggio Cardano al Campo"
     ],
     'description': t('meta.desc'),
     'image': 'https://www.euroskatingcardano2026.it/logo.png',
