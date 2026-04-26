@@ -863,8 +863,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 /* Logo più grande per i main sponsor */
 .sponsor-logo-main {
-  width: min-content;
-  height: min-content;
+  width: fit-content;
+  height: fit-content;
   padding: 10px;
   font-size: 1.35rem;
   border-color: rgba(201, 168, 76, 0.25);
