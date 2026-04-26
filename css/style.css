@@ -847,8 +847,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Logo placeholder */
 .sponsor-logo {
-  width: 64px;
-  height: 64px;
   background: rgba(255,255,255,0.05);
   border-radius: 10px;
   display: flex;
@@ -863,8 +861,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 /* Logo più grande per i main sponsor */
 .sponsor-logo-main {
-  width: fit-content;
-  height: fit-content;
   padding: 10px;
   font-size: 1.35rem;
   border-color: rgba(201, 168, 76, 0.25);
@@ -1012,6 +1008,26 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-align: center;
 }
 .alloggi-note strong { color: var(--c-accent); }
+
+.camper-card {
+  grid-column: 1 / -1;
+}
+.camper-card .hotel-body {
+  padding: 1.5rem;
+}
+.camper-text {
+  font-size: 0.88rem;
+  color: var(--c-text-mute);
+  line-height: 1.65;
+  margin-top: 0.6rem;
+}
+.camper-text a {
+  color: var(--c-accent);
+  text-decoration: underline;
+}
+.camper-text strong {
+  color: var(--c-accent);
+}
 
 
 /* ═══════════════════════════════════════════════════════════
