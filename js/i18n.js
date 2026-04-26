@@ -81,7 +81,7 @@ const TRANSLATIONS = {
       desc:   "Ringraziamo i partner che rendono possibile questa manifestazione.",
       main:   "Main Sponsor",
       other:  "Sponsor",
-      belfor_sector: "Servizi di ripristino e prevenzione dei danni"
+      belfor_sector: "Servizi di ripristino, ricostruzione, bonifica e risanamento"
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -297,7 +297,7 @@ const TRANSLATIONS = {
       desc:   "We thank our partners who make this event possible.",
       main:   "Main Sponsor",
       other:  "Sponsors",
-      belfor_sector: "Property restoration & damage prevention"
+      belfor_sector: "Restoration, reinstatement, decontamination and remediation services"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -513,7 +513,7 @@ const TRANSLATIONS = {
       desc:   "Nous remercions nos partenaires qui rendent cet événement possible.",
       main:   "Sponsor Principal",
       other:  "Sponsors",
-      belfor_sector: "Restauration et prévention des dommages"
+      belfor_sector: "Services de remise en état, rénovation, décontamination et assainissement"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -729,7 +729,7 @@ const TRANSLATIONS = {
       desc:   "Wir danken unseren Partnern, die diese Veranstaltung ermöglichen.",
       main:   "Hauptsponsor",
       other:  "Sponsoren",
-      belfor_sector: "Sanierung und Schadenprävention"
+      belfor_sector: "Wiederherstellung, Wiederaufbau, Dekontamination und Schadensanierung"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -945,7 +945,7 @@ const TRANSLATIONS = {
       desc:   "Agradecemos a los socios que hacen posible este evento.",
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
-      belfor_sector: "Restauración y prevención de daños"
+      belfor_sector: "Servicios de recuperación, reconstrucción, descontaminación y rehabilitación"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1161,7 +1161,7 @@ const TRANSLATIONS = {
       desc:   "Agradecemos aos parceiros que tornam este evento possível.",
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
-      belfor_sector: "Restauração e prevenção de danos"
+      belfor_sector: "Serviços de restauro, reconstrução, descontaminação e reabilitação"
     },
     alloggi: {
       tag:          "Onde ficar",
