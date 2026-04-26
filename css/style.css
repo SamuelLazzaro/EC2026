@@ -18,6 +18,8 @@
   --c-border:     rgba(201, 168, 76, 0.22);
   --c-border-sub: rgba(255, 255, 255, 0.06);
 
+  --bg-logo-zone: linear-gradient(135deg, #e6f0fa 0%, #6e8bab 100%);
+
   --header-h:  70px;
   --drawer-w:  300px;
   --max-w:     1200px;
@@ -879,7 +881,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 0;
   border: none;
   border-radius: 0;
-  background: linear-gradient(135deg, var(--c-card2) 0%, var(--c-bg2) 100%);
+  background: var(--bg-logo-zone);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -967,7 +969,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .hotel-img {
   height: 155px;
-  background: linear-gradient(135deg, var(--c-card2) 0%, var(--c-bg2) 100%);
+  background: var(--bg-logo-zone);
   display: flex;
   align-items: center;
   justify-content: center;
