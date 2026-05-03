@@ -81,7 +81,8 @@ const TRANSLATIONS = {
       desc:   "Ringraziamo i partner che rendono possibile questa manifestazione.",
       main:   "Main Sponsor",
       other:  "Sponsor",
-      belfor_sector: "Servizi di ripristino, ricostruzione, bonifica e risanamento"
+      belfor_sector: "Servizi di ripristino, ricostruzione, bonifica e risanamento",
+      sea_sector:    "Gestione infrastrutture e servizi per l'aviazione"
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -152,6 +153,9 @@ const TRANSLATIONS = {
       desc:        "Per informazioni e richieste, contattaci via email, telefono o attraverso i nostri canali social.",
       email_label: "Email",
       phone_label: "Telefono"
+    },
+    bookings: {
+      notice:      "Le squadre che desiderano utilizzare la pista e/o il circuito stradale per allenamenti possono inviare una richiesta a <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "Questo sito utilizza cookie tecnici necessari e, nella sezione Luogo, Google Maps (cookie di terze parti). Puoi accettare tutti i cookie o solo quelli tecnici.",
@@ -297,7 +301,8 @@ const TRANSLATIONS = {
       desc:   "We thank our partners who make this event possible.",
       main:   "Main Sponsor",
       other:  "Sponsors",
-      belfor_sector: "Restoration, reinstatement, decontamination and remediation services"
+      belfor_sector: "Restoration, reinstatement, decontamination and remediation services",
+      sea_sector:    "Airport infrastructure management and aviation services"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -368,6 +373,9 @@ const TRANSLATIONS = {
       desc:        "For information and enquiries, contact us by email, phone or through our social channels.",
       email_label: "Email",
       phone_label: "Phone"
+    },
+    bookings: {
+      notice:      "Teams wishing to use the track and/or the road circuit for training sessions can send a request to <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "This website uses necessary technical cookies and, in the Site section, Google Maps (third-party cookies). You can accept all cookies or only technical ones.",
@@ -513,7 +521,8 @@ const TRANSLATIONS = {
       desc:   "Nous remercions nos partenaires qui rendent cet événement possible.",
       main:   "Sponsor Principal",
       other:  "Sponsors",
-      belfor_sector: "Services de remise en état, rénovation, décontamination et assainissement"
+      belfor_sector: "Services de remise en état, rénovation, décontamination et assainissement",
+      sea_sector:    "Gestion d'infrastructures et services pour l'aviation"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -584,6 +593,9 @@ const TRANSLATIONS = {
       desc:        "Pour toute information ou demande, contactez-nous par email, téléphone ou via nos réseaux sociaux.",
       email_label: "Email",
       phone_label: "Téléphone"
+    },
+    bookings: {
+      notice:      "Les équipes souhaitant utiliser la piste et/ou le circuit routier pour leurs entraînements peuvent envoyer une demande à <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "Ce site utilise des cookies techniques nécessaires et, dans la section Lieu, Google Maps (cookies tiers). Vous pouvez accepter tous les cookies ou seulement les techniques.",
@@ -729,7 +741,8 @@ const TRANSLATIONS = {
       desc:   "Wir danken unseren Partnern, die diese Veranstaltung ermöglichen.",
       main:   "Hauptsponsor",
       other:  "Sponsoren",
-      belfor_sector: "Wiederherstellung, Wiederaufbau, Dekontamination und Schadensanierung"
+      belfor_sector: "Wiederherstellung, Wiederaufbau, Dekontamination und Schadensanierung",
+      sea_sector:    "Verwaltung von Flughafeninfrastrukturen und Luftfahrtdienstleistungen"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -800,6 +813,9 @@ const TRANSLATIONS = {
       desc:        "Für Informationen und Anfragen kontaktieren Sie uns per E-Mail, Telefon oder über unsere Social-Media-Kanäle.",
       email_label: "E-Mail",
       phone_label: "Telefon"
+    },
+    bookings: {
+      notice:      "Mannschaften, die die Bahn und/oder den Straßenrundkurs für Trainingseinheiten nutzen möchten, können ihre Anfrage an folgende Adresse senden: <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "Diese Website verwendet technisch notwendige Cookies und im Bereich Veranstaltungsort Google Maps (Drittanbieter-Cookies). Sie können alle Cookies oder nur technische akzeptieren.",
@@ -945,7 +961,8 @@ const TRANSLATIONS = {
       desc:   "Agradecemos a los socios que hacen posible este evento.",
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
-      belfor_sector: "Servicios de recuperación, reconstrucción, descontaminación y rehabilitación"
+      belfor_sector: "Servicios de recuperación, reconstrucción, descontaminación y rehabilitación",
+      sea_sector:    "Gestión de infraestructuras y servicios para la aviación"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1016,6 +1033,9 @@ const TRANSLATIONS = {
       desc:        "Para información y consultas, contáctenos por correo electrónico, teléfono o a través de nuestras redes sociales.",
       email_label: "Email",
       phone_label: "Teléfono"
+    },
+    bookings: {
+      notice:      "Los equipos que deseen utilizar la pista y/o el circuito en carretera para entrenamientos pueden enviar una solicitud a <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "Este sitio utiliza cookies técnicas necesarias y, en la sección Lugar, Google Maps (cookies de terceros). Puede aceptar todas las cookies o solo las técnicas.",
@@ -1161,7 +1181,8 @@ const TRANSLATIONS = {
       desc:   "Agradecemos aos parceiros que tornam este evento possível.",
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
-      belfor_sector: "Serviços de restauro, reconstrução, descontaminação e reabilitação"
+      belfor_sector: "Serviços de restauro, reconstrução, descontaminação e reabilitação",
+      sea_sector:    "Gestão de infraestruturas e serviços para a aviação"
     },
     alloggi: {
       tag:          "Onde ficar",
@@ -1232,6 +1253,9 @@ const TRANSLATIONS = {
       desc:        "Para informações e pedidos, contacte-nos por email, telefone ou através dos nossos canais sociais.",
       email_label: "Email",
       phone_label: "Telefone"
+    },
+    bookings: {
+      notice:      "As equipas que desejem utilizar a pista e/ou o circuito rodoviário para treinos podem enviar um pedido para <a href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a>."
     },
     cookie: {
       text:   "Este sítio utiliza cookies técnicos necessários e, na secção Local, Google Maps (cookies de terceiros). Pode aceitar todos os cookies ou apenas os técnicos.",
