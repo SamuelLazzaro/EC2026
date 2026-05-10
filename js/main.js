@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'news', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
+const sectionIds = ['home', 'luogo', 'news', 'biglietti', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -202,6 +202,22 @@ function initLuogo(root) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   Init: Biglietti – Eventbrite con consent gating
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Initialize the Biglietti section: wire up Eventbrite consent gating.
+ * @param {HTMLElement} root - The #biglietti section element.
+ */
+function initBiglietti(root) {
+  if (!root) return;
+  const container = root.querySelector('#eventbriteContainer');
+  if (container && window.ec2026InitEventbrite) {
+    window.ec2026InitEventbrite(container);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    Language FAB – Toggle menu
    ═══════════════════════════════════════════════════════════ */
 const langFabBtn  = document.getElementById('langFabBtn');
@@ -320,6 +336,7 @@ initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
+initBiglietti(document.getElementById('biglietti'));
 
 // Scroll iniziale se l'URL contiene un hash
 const initialId = location.hash.slice(1);
