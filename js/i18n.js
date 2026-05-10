@@ -22,7 +22,6 @@ const TRANSLATIONS = {
       ristorazione:   "Ristorazione",
       luogo:       "Luogo",
       news:        "News",
-      biglietti:   "Biglietti",
       contatti:        "Contatti",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italia · 19–26 luglio 2026"
@@ -148,22 +147,6 @@ const TRANSLATIONS = {
       desc:     "Le ultime notizie dai Campionati Europei 2026.",
       readmore: "Leggi di più"
     },
-    biglietti: {
-      tag:         "Acquisto",
-      title:       "I tuoi <span class=\"hl\">Biglietti</span>",
-      desc:        "Scegli il biglietto e acquista online in pochi click tramite Eventbrite.",
-      daily: {
-        name:      "Biglietto giornaliero",
-        desc:      "Biglietto giornaliero"
-      },
-      full: {
-        name:      "Biglietto intera manifestazione",
-        desc:      "Il tuo biglietto per l'intero evento. Valido per tutti i giorni della manifestazione — non perdere nessuna gara, premiazione o momento."
-      },
-      consent_btn: "Accetta e mostra biglietti",
-      cta:         "Acquista su Eventbrite",
-      fallback:    "Acquista biglietti su Eventbrite"
-    },
     contatti: {
       tag:         "Informazioni",
       title:       "Contatti",
@@ -259,7 +242,6 @@ const TRANSLATIONS = {
       ristorazione:   "Food & Beverage",
       luogo:       "Site",
       news:        "News",
-      biglietti:   "Tickets",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italy · 19–26 July 2026"
@@ -385,22 +367,6 @@ const TRANSLATIONS = {
       desc:     "The latest news from the 2026 European Championships.",
       readmore: "Read more"
     },
-    biglietti: {
-      tag:         "Buy",
-      title:       "Your <span class=\"hl\">Tickets</span>",
-      desc:        "Choose your ticket and buy online in a few clicks via Eventbrite.",
-      daily: {
-        name:      "Daily ticket",
-        desc:      "Daily ticket"
-      },
-      full: {
-        name:      "Full event ticket",
-        desc:      "Your ticket for the entire event. Valid for every day of the championships — don't miss a single race, ceremony or moment."
-      },
-      consent_btn: "Accept and show tickets",
-      cta:         "Buy on Eventbrite",
-      fallback:    "Buy tickets on Eventbrite"
-    },
     contatti: {
       tag:         "Information",
       title:       "Contacts",
@@ -496,7 +462,6 @@ const TRANSLATIONS = {
       ristorazione:   "Restauration",
       luogo:       "Lieu",
       news:        "Actualités",
-      biglietti:   "Billets",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italie · 20–26 juillet 2026"
@@ -622,22 +587,6 @@ const TRANSLATIONS = {
       desc:     "Les dernières nouvelles des Championnats d'Europe 2026.",
       readmore: "Lire la suite"
     },
-    biglietti: {
-      tag:         "Achat",
-      title:       "Vos <span class=\"hl\">Billets</span>",
-      desc:        "Choisissez votre billet et achetez en ligne en quelques clics sur Eventbrite.",
-      daily: {
-        name:      "Billet journalier",
-        desc:      "Billet journalier"
-      },
-      full: {
-        name:      "Billet manifestation entière",
-        desc:      "Votre billet pour tout l'événement. Valable tous les jours de la manifestation — ne manquez aucune course, cérémonie ou instant."
-      },
-      consent_btn: "Accepter et afficher les billets",
-      cta:         "Acheter sur Eventbrite",
-      fallback:    "Acheter des billets sur Eventbrite"
-    },
     contatti: {
       tag:         "Informations",
       title:       "Contacts",
@@ -733,7 +682,6 @@ const TRANSLATIONS = {
       ristorazione:   "Gastronomie",
       luogo:       "Veranstaltungsort",
       news:        "Neuigkeiten",
-      biglietti:   "Tickets",
       contatti:        "Kontakt",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italien · 20.–26. Juli 2026"
@@ -859,22 +807,6 @@ const TRANSLATIONS = {
       desc:     "Die neuesten Nachrichten von den Europameisterschaften 2026.",
       readmore: "Weiterlesen"
     },
-    biglietti: {
-      tag:         "Kauf",
-      title:       "Deine <span class=\"hl\">Tickets</span>",
-      desc:        "Wähle dein Ticket und kaufe online in wenigen Klicks über Eventbrite.",
-      daily: {
-        name:      "Tagesticket",
-        desc:      "Tagesticket"
-      },
-      full: {
-        name:      "Gesamtveranstaltungs-Ticket",
-        desc:      "Dein Ticket für die gesamte Veranstaltung. Gültig an allen Tagen — verpasse kein Rennen, keine Zeremonie, keinen Moment."
-      },
-      consent_btn: "Akzeptieren und Tickets anzeigen",
-      cta:         "Auf Eventbrite kaufen",
-      fallback:    "Tickets auf Eventbrite kaufen"
-    },
     contatti: {
       tag:         "Informationen",
       title:       "Kontakt",
@@ -970,7 +902,6 @@ const TRANSLATIONS = {
       ristorazione:   "Restauración",
       luogo:       "Sede",
       news:        "Noticias",
-      biglietti:   "Entradas",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italia · 20–26 de julio de 2026"
@@ -1096,22 +1027,6 @@ const TRANSLATIONS = {
       desc:     "Las últimas noticias de los Campeonatos de Europa 2026.",
       readmore: "Leer más"
     },
-    biglietti: {
-      tag:         "Compra",
-      title:       "Tus <span class=\"hl\">Entradas</span>",
-      desc:        "Elige tu entrada y compra en línea en pocos clics a través de Eventbrite.",
-      daily: {
-        name:      "Entrada diaria",
-        desc:      "Entrada diaria"
-      },
-      full: {
-        name:      "Entrada evento completo",
-        desc:      "Tu entrada para todo el evento. Válida todos los días de la manifestación — no te pierdas ninguna carrera, ceremonia o momento."
-      },
-      consent_btn: "Aceptar y mostrar entradas",
-      cta:         "Comprar en Eventbrite",
-      fallback:    "Comprar entradas en Eventbrite"
-    },
     contatti: {
       tag:         "Información",
       title:       "Contacto",
@@ -1207,7 +1122,6 @@ const TRANSLATIONS = {
       ristorazione:   "Restauração",
       luogo:       "Local",
       news:        "Notícias",
-      biglietti:   "Bilhetes",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Itália · 20–26 de julho de 2026"
@@ -1332,22 +1246,6 @@ const TRANSLATIONS = {
       title:    "Notícias",
       desc:     "As últimas notícias dos Campeonatos Europeus 2026.",
       readmore: "Ler mais"
-    },
-    biglietti: {
-      tag:         "Compra",
-      title:       "Os teus <span class=\"hl\">Bilhetes</span>",
-      desc:        "Escolhe o teu bilhete e compra online em poucos cliques no Eventbrite.",
-      daily: {
-        name:      "Bilhete diário",
-        desc:      "Bilhete diário"
-      },
-      full: {
-        name:      "Bilhete evento completo",
-        desc:      "O teu bilhete para todo o evento. Válido em todos os dias da manifestação — não percas nenhuma corrida, cerimónia ou momento."
-      },
-      consent_btn: "Aceitar e mostrar bilhetes",
-      cta:         "Comprar no Eventbrite",
-      fallback:    "Comprar bilhetes no Eventbrite"
     },
     contatti: {
       tag:         "Informação",
