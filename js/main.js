@@ -272,6 +272,47 @@ function initVenueCarousel(root) {
   updateArrowState();
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Init: Venue videos – stacked vs side-by-side responsive layout
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Switch the venue videos layout from stacked (column) to side-by-side
+ * (row) when both videos can't fit vertically inside the visible
+ * viewport area (viewport height minus the sticky header).
+ * Re-evaluates on window resize.
+ * @param {HTMLElement} root - The Luogo section root element.
+ */
+function initVenueVideosLayout(root) {
+  const wrapper = root.querySelector('.venue-videos');
+  if (!wrapper) return;
+  const videos = Array.from(wrapper.querySelectorAll('.venue-video'));
+  if (videos.length < 2) return;
+
+  const VIDEO_RATIO = 9 / 16;
+  // Tolerance >1 keeps the layout stacked even when it slightly overflows the
+  // viewport, postponing the switch to side-by-side until the wrapper is wide
+  // enough that two videos in a row are still comfortably sized (otherwise
+  // there is a range of widths in which side-by-side videos look tiny).
+  const STACKED_OVERFLOW_TOLERANCE = 1.3;
+
+  const evaluateLayout = () => {
+    const wrapperWidth = wrapper.clientWidth;
+    if (wrapperWidth === 0) return;
+    const gapPx = parseFloat(
+      getComputedStyle(wrapper).rowGap || getComputedStyle(wrapper).gap || '0'
+    ) || 0;
+    const stackedHeight = videos.length * (wrapperWidth * VIDEO_RATIO) + (videos.length - 1) * gapPx;
+    const headerH = parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue('--header-h')
+    ) || 0;
+    const availableHeight = (window.innerHeight - headerH) * STACKED_OVERFLOW_TOLERANCE;
+    wrapper.classList.toggle('is-side-by-side', stackedHeight > availableHeight);
+  };
+
+  evaluateLayout();
+  window.addEventListener('resize', evaluateLayout);
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    Language FAB – Toggle menu
@@ -393,6 +434,7 @@ initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
 initVenueCarousel(document.getElementById('luogo'));
+initVenueVideosLayout(document.getElementById('luogo'));
 
 // Scroll iniziale se l'URL contiene un hash
 const initialId = location.hash.slice(1);

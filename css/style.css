@@ -1186,6 +1186,14 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     border-radius: var(--radius);
     object-fit: contain;
 }
+.venue-videos.is-side-by-side {
+    flex-direction: row;
+}
+.venue-videos.is-side-by-side .venue-video {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+}
 .venue-carousel-arrow {
     display: none;
 }
