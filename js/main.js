@@ -200,6 +200,78 @@ function initLuogo(root) {
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Init: Venue carousel – scroll-snap + indicator sync
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Initialize the venue photo carousel inside the Luogo section.
+ * Highlights the active indicator via IntersectionObserver and
+ * lets the user jump to a slide by clicking on an indicator bar.
+ * @param {HTMLElement} root - The Luogo section root element.
+ */
+function initVenueCarousel(root) {
+  const track = root.querySelector('#venueCarouselTrack');
+  const indicators = root.querySelector('#venueCarouselIndicators');
+  if (!track || !indicators) return;
+
+  const slides = Array.from(track.children);
+  const bars = Array.from(indicators.querySelectorAll('.venue-carousel-bar'));
+  if (slides.length === 0 || slides.length !== bars.length) return;
+
+  bars.forEach((bar, index) => {
+    bar.addEventListener('click', () => {
+      slides[index].scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      });
+    });
+  });
+
+  const prevBtn = root.querySelector('#venueCarouselPrev');
+  const nextBtn = root.querySelector('#venueCarouselNext');
+  let currentIndex = 0;
+
+  /**
+   * Scroll the carousel to a given slide index and refresh arrow disabled state.
+   * @param {number} index
+   */
+  const goToSlide = (index) => {
+    const clamped = Math.max(0, Math.min(slides.length - 1, index));
+    slides[clamped].scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest'
+    });
+  };
+
+  const updateArrowState = () => {
+    if (prevBtn) prevBtn.disabled = currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentIndex === slides.length - 1;
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+        const index = slides.indexOf(entry.target);
+        if (index === -1) return;
+        currentIndex = index;
+        bars.forEach((b, i) => b.classList.toggle('is-active', i === index));
+        updateArrowState();
+      }
+    });
+  }, {
+    root: track,
+    threshold: [0.6]
+  });
+
+  slides.forEach((slide) => observer.observe(slide));
+
+  if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+  updateArrowState();
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    Language FAB – Toggle menu
@@ -320,6 +392,7 @@ initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
+initVenueCarousel(document.getElementById('luogo'));
 
 // Scroll iniziale se l'URL contiene un hash
 const initialId = location.hash.slice(1);

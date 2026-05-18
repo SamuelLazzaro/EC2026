@@ -1139,6 +1139,128 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   line-height: 1.3;
 }
 
+/* Venue carousel (foto impianto) */
+.venue-carousel {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.venue-carousel-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    border-radius: var(--radius);
+}
+.venue-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+.venue-carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--c-card);
+}
+.venue-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.venue-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+.venue-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    background: #000;
+    border-radius: var(--radius);
+    object-fit: contain;
+}
+.venue-carousel-arrow {
+    display: none;
+}
+@media (pointer: fine) {
+    .venue-carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid var(--c-border);
+        border-radius: 50%;
+        background: rgba(10, 22, 40, 0.72);
+        color: var(--c-accent);
+        cursor: pointer;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: background var(--trans), border-color var(--trans), opacity var(--trans);
+    }
+    .venue-carousel-arrow svg {
+        width: 18px;
+        height: 18px;
+        display: block;
+    }
+    .venue-carousel-arrow-prev {
+        left: 0.75rem;
+    }
+    .venue-carousel-arrow-next {
+        right: 0.75rem;
+    }
+    .venue-carousel-arrow:hover {
+        background: rgba(10, 22, 40, 0.9);
+        border-color: var(--c-accent);
+    }
+    .venue-carousel-arrow:disabled {
+        opacity: 0.3;
+        cursor: default;
+    }
+}
+.venue-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+.venue-carousel-bar {
+    width: 20px;
+    height: 4px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background var(--trans), width var(--trans);
+}
+.venue-carousel-bar.is-active {
+    background: var(--c-accent);
+    width: 28px;
+}
+@media (pointer: fine) {
+    .venue-carousel-bar:hover {
+        background: var(--c-accent);
+    }
+}
+@media (min-width: 768px) {
+    .venue-carousel-slide {
+        flex-basis: calc(70% - 0.5rem);
+    }
+}
+
 .map-container {
   border: 1px solid var(--c-border);
   border-radius: var(--radius);
