@@ -313,6 +313,40 @@ function initVenueVideosLayout(root) {
   window.addEventListener('resize', evaluateLayout);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Init: Venue videos – pause when out of viewport
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Pauses each venue video when it scrolls out of the viewport and
+ * resumes it when it scrolls back in. Saves bandwidth/CPU on long
+ * sessions where the user is far from the Luogo section.
+ * @param {HTMLElement} root - The Luogo section root element.
+ */
+function initVenueVideosVisibility(root) {
+  const videos = Array.from(root.querySelectorAll('.venue-video'));
+  if (videos.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          // Browsers may reject play() (e.g. autoplay policy on some setups);
+          // ignore — the user can press the controls manually.
+          playPromise.catch(() => {});
+        }
+      } else if (!video.paused) {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  videos.forEach((video) => observer.observe(video));
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    Language FAB – Toggle menu
@@ -435,6 +469,7 @@ initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
 initVenueCarousel(document.getElementById('luogo'));
 initVenueVideosLayout(document.getElementById('luogo'));
+initVenueVideosVisibility(document.getElementById('luogo'));
 
 // Scroll iniziale se l'URL contiene un hash
 const initialId = location.hash.slice(1);
