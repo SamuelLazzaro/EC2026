@@ -216,7 +216,31 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 100%;
   padding-top: var(--header-h);
 }
-.nav-list { flex: 1; padding: 1.5rem 0; }
+.nav-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 1.5rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-accent-dk) transparent;
+}
+.nav-list::-webkit-scrollbar {
+    width: 6px;
+}
+.nav-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.nav-list::-webkit-scrollbar-thumb {
+    background: var(--c-accent-dk);
+    border-radius: 999px;
+    transition: background var(--trans);
+}
+@media (pointer: fine) {
+    .nav-list::-webkit-scrollbar-thumb:hover {
+        background: var(--c-accent);
+    }
+}
 .nav-link {
   display: flex;
   align-items: center;
