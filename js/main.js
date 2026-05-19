@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'news', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
+const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -204,10 +204,10 @@ function initLuogo(root) {
    Init: Venue carousel – scroll-snap + indicator sync
    ═══════════════════════════════════════════════════════════ */
 /**
- * Initialize the venue photo carousel inside the Luogo section.
+ * Initialize the venue photo carousel inside the Impianto section.
  * Highlights the active indicator via IntersectionObserver and
  * lets the user jump to a slide by clicking on an indicator bar.
- * @param {HTMLElement} root - The Luogo section root element.
+ * @param {HTMLElement} root - The Impianto section root element.
  */
 function initVenueCarousel(root) {
   const track = root.querySelector('#venueCarouselTrack');
@@ -280,7 +280,7 @@ function initVenueCarousel(root) {
  * (row) when both videos can't fit vertically inside the visible
  * viewport area (viewport height minus the sticky header).
  * Re-evaluates on window resize.
- * @param {HTMLElement} root - The Luogo section root element.
+ * @param {HTMLElement} root - The Impianto section root element.
  */
 function initVenueVideosLayout(root) {
   const wrapper = root.querySelector('.venue-videos');
@@ -319,8 +319,8 @@ function initVenueVideosLayout(root) {
 /**
  * Pauses each venue video when it scrolls out of the viewport and
  * resumes it when it scrolls back in. Saves bandwidth/CPU on long
- * sessions where the user is far from the Luogo section.
- * @param {HTMLElement} root - The Luogo section root element.
+ * sessions where the user is far from the Impianto section.
+ * @param {HTMLElement} root - The Impianto section root element.
  */
 function initVenueVideosVisibility(root) {
   const videos = Array.from(root.querySelectorAll('.venue-video'));
@@ -467,9 +467,9 @@ initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
-initVenueCarousel(document.getElementById('luogo'));
-initVenueVideosLayout(document.getElementById('luogo'));
-initVenueVideosVisibility(document.getElementById('luogo'));
+initVenueCarousel(document.getElementById('impianto'));
+initVenueVideosLayout(document.getElementById('impianto'));
+initVenueVideosVisibility(document.getElementById('impianto'));
 
 // Scroll iniziale se l'URL contiene un hash
 const initialId = location.hash.slice(1);

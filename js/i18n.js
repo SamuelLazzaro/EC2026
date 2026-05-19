@@ -21,6 +21,7 @@ const TRANSLATIONS = {
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
       luogo:       "Luogo",
+      impianto:    "Impianto Sportivo",
       news:        "News",
       contatti:        "Contatti",
       diventa_sponsor: "Diventa Sponsor",
@@ -141,6 +142,11 @@ const TRANSLATIONS = {
       map_consent:     "Per visualizzare la mappa è necessario accettare i cookie di terze parti (Google Maps).",
       map_consent_btn: "Accetta e mostra mappa"
     },
+    impianto: {
+      tag:    "Struttura",
+      title:  "L'<span class=\"hl\">Impianto Sportivo</span>",
+      desc:   "Foto, video e caratteristiche dell'impianto sportivo che ospita i Campionati Europei."
+    },
     news: {
       tag:      "Aggiornamenti",
       title:    "News",
@@ -241,6 +247,7 @@ const TRANSLATIONS = {
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
       luogo:       "Site",
+      impianto:    "Sports Centre",
       news:        "News",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
@@ -361,6 +368,11 @@ const TRANSLATIONS = {
       map_consent:     "To view the map you need to accept third-party cookies (Google Maps).",
       map_consent_btn: "Accept and show map"
     },
+    impianto: {
+      tag:    "Facility",
+      title:  "The <span class=\"hl\">Sports Centre</span>",
+      desc:   "Photos, videos and details of the sports facility hosting the European Championships."
+    },
     news: {
       tag:      "Updates",
       title:    "News",
@@ -461,6 +473,7 @@ const TRANSLATIONS = {
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
       luogo:       "Lieu",
+      impianto:    "Centre Sportif",
       news:        "Actualités",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
@@ -581,6 +594,11 @@ const TRANSLATIONS = {
       map_consent:     "Pour afficher la carte, vous devez accepter les cookies tiers (Google Maps).",
       map_consent_btn: "Accepter et afficher la carte"
     },
+    impianto: {
+      tag:    "Installation",
+      title:  "Le <span class=\"hl\">Centre Sportif</span>",
+      desc:   "Photos, vidéos et caractéristiques du centre sportif accueillant les Championnats d'Europe."
+    },
     news: {
       tag:      "Actualités",
       title:    "Actualités",
@@ -681,6 +699,7 @@ const TRANSLATIONS = {
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
       luogo:       "Veranstaltungsort",
+      impianto:    "Sportzentrum",
       news:        "Neuigkeiten",
       contatti:        "Kontakt",
       diventa_sponsor: "Diventa Sponsor",
@@ -801,6 +820,11 @@ const TRANSLATIONS = {
       map_consent:     "Um die Karte anzuzeigen, müssen Sie Drittanbieter-Cookies (Google Maps) akzeptieren.",
       map_consent_btn: "Akzeptieren und Karte anzeigen"
     },
+    impianto: {
+      tag:    "Sportstätte",
+      title:  "Das <span class=\"hl\">Sportzentrum</span>",
+      desc:   "Fotos, Videos und Merkmale des Sportzentrums, das die Europameisterschaften ausrichtet."
+    },
     news: {
       tag:      "Neuigkeiten",
       title:    "Neuigkeiten",
@@ -901,6 +925,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
       luogo:       "Sede",
+      impianto:    "Centro Deportivo",
       news:        "Noticias",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
@@ -1021,6 +1046,11 @@ const TRANSLATIONS = {
       map_consent:     "Para ver el mapa debe aceptar las cookies de terceros (Google Maps).",
       map_consent_btn: "Aceptar y mostrar mapa"
     },
+    impianto: {
+      tag:    "Recinto",
+      title:  "El <span class=\"hl\">Centro Deportivo</span>",
+      desc:   "Fotos, vídeos y características del centro deportivo que acoge los Campeonatos de Europa."
+    },
     news: {
       tag:      "Actualidad",
       title:    "Noticias",
@@ -1121,6 +1151,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
       luogo:       "Local",
+      impianto:    "Centro Desportivo",
       news:        "Notícias",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
@@ -1240,6 +1271,11 @@ const TRANSLATIONS = {
       tr_bus_d:       "Serviço oficial de shuttle do Aeroporto de Malpensa e do centro de Gallarate durante todo o evento.",
       map_consent:     "Para ver o mapa é necessário aceitar cookies de terceiros (Google Maps).",
       map_consent_btn: "Aceitar e mostrar mapa"
+    },
+    impianto: {
+      tag:    "Instalação",
+      title:  "O <span class=\"hl\">Centro Desportivo</span>",
+      desc:   "Fotos, vídeos e características do centro desportivo que acolhe os Campeonatos da Europa."
     },
     news: {
       tag:      "Atualidades",
