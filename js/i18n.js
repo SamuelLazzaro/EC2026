@@ -83,7 +83,8 @@ const TRANSLATIONS = {
       main:   "Main Sponsor",
       other:  "Sponsor",
       belfor_sector: "Servizi di ripristino, ricostruzione, bonifica e risanamento",
-      sea_sector:    "Gestione infrastrutture e servizi per l'aviazione"
+      sea_sector:    "Gestione infrastrutture e servizi per l'aviazione",
+      buytec_sector: "PC, tablet, smartphone e monitor ricondizionati",
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -309,7 +310,8 @@ const TRANSLATIONS = {
       main:   "Main Sponsor",
       other:  "Sponsors",
       belfor_sector: "Restoration, reinstatement, decontamination and remediation services",
-      sea_sector:    "Airport infrastructure management and aviation services"
+      sea_sector:    "Airport infrastructure management and aviation services",
+      buytec_sector: "Refurbished PCs, tablets, smartphones and monitors"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -535,7 +537,8 @@ const TRANSLATIONS = {
       main:   "Sponsor Principal",
       other:  "Sponsors",
       belfor_sector: "Services de remise en état, rénovation, décontamination et assainissement",
-      sea_sector:    "Gestion d'infrastructures et services pour l'aviation"
+      sea_sector:    "Gestion d'infrastructures et services pour l'aviation",
+      buytec_sector: "PC, tablettes, smartphones et écrans reconditionnés"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -761,7 +764,8 @@ const TRANSLATIONS = {
       main:   "Hauptsponsor",
       other:  "Sponsoren",
       belfor_sector: "Wiederherstellung, Wiederaufbau, Dekontamination und Schadensanierung",
-      sea_sector:    "Verwaltung von Flughafeninfrastrukturen und Luftfahrtdienstleistungen"
+      sea_sector:    "Verwaltung von Flughafeninfrastrukturen und Luftfahrtdienstleistungen",
+      buytec_sector: "Generalüberholte PCs, Tablets, Smartphones und Monitore"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -987,7 +991,8 @@ const TRANSLATIONS = {
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
       belfor_sector: "Servicios de recuperación, reconstrucción, descontaminación y rehabilitación",
-      sea_sector:    "Gestión de infraestructuras y servicios para la aviación"
+      sea_sector:    "Gestión de infraestructuras y servicios para la aviación",
+      buytec_sector: "PC, tabletas, smartphones y monitores reacondicionados"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1213,7 +1218,8 @@ const TRANSLATIONS = {
       main:   "Patrocinador Principal",
       other:  "Patrocinadores",
       belfor_sector: "Serviços de restauro, reconstrução, descontaminação e reabilitação",
-      sea_sector:    "Gestão de infraestruturas e serviços para a aviação"
+      sea_sector:    "Gestão de infraestruturas e serviços para a aviação",
+      buytec_sector: "PCs, tablets, smartphones e monitores recondicionados"
     },
     alloggi: {
       tag:          "Onde ficar",
