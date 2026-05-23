@@ -2168,3 +2168,85 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-color: var(--c-accent);
   transform: scale(1.08);
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   PROGRAMMA – Vertical timeline of race days
+   ═══════════════════════════════════════════════════════════ */
+.programma-timeline {
+    --programma-dot-size: 12px;
+    --programma-dot-center-x: 21px;
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.programma-timeline::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: var(--programma-dot-center-x);
+    width: 2px;
+    margin-left: -1px;
+    background: linear-gradient(180deg, var(--c-accent), var(--c-accent-dk));
+    opacity: 0.55;
+    border-radius: 1px;
+}
+.programma-item {
+    position: relative;
+    padding: 1.1rem 1.4rem 1.1rem 3rem;
+    margin-bottom: 1rem;
+    background: var(--c-card);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
+}
+.programma-item:last-child {
+    margin-bottom: 0;
+}
+.programma-item::before {
+    content: "";
+    position: absolute;
+    top: 1.4rem;
+    left: calc(var(--programma-dot-center-x) - (var(--programma-dot-size) / 2));
+    width: var(--programma-dot-size);
+    height: var(--programma-dot-size);
+    border-radius: 50%;
+    background: var(--c-accent);
+    box-shadow: 0 0 0 4px var(--c-bg), 0 0 0 5px rgba(201, 168, 76, 0.35);
+}
+@media (pointer: fine) {
+    .programma-item:hover {
+        border-color: rgba(201, 168, 76, 0.5);
+        transform: translateX(2px);
+        box-shadow: var(--shadow-sm);
+    }
+}
+.programma-date {
+    font-family: var(--f-title);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 0.3rem;
+}
+.programma-event {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: var(--c-text);
+    line-height: 1.45;
+}
+@media (max-width: 480px) {
+    .programma-timeline {
+        --programma-dot-center-x: 18px;
+    }
+    .programma-item {
+        padding: 1rem 1.1rem 1rem 2.6rem;
+    }
+    .programma-event {
+        font-size: 0.98rem;
+    }
+}

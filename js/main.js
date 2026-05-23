@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
+const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'programma', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
