@@ -882,7 +882,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Card main sponsor: bordo oro e gradient distintivo */
 .sponsor-main {
-  border-color: rgba(201, 168, 76, 0.35);
+  border-width: 3px;
+  border-color: rgba(201, 168, 76, 0.55);
   background: linear-gradient(135deg, var(--c-card) 0%, rgba(201,168,76,0.04) 100%);
 }
 .sponsor-main.touch-active {
