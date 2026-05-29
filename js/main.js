@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'programma', 'alloggi', 'ristorazione', 'classifiche', 'contatti'];
+const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'programma', 'alloggi', 'ristorazione', 'maratona', 'classifiche', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -198,6 +198,35 @@ function initRistorazione(root) {
 function initLuogo(root) {
   const container = root.querySelector('#mapContainer');
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Init: Maratona – Mappa percorso condizionale (consenso cookie)
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Initialize the marathon route map. The map iframe is loaded only
+ * after the user has granted consent for third-party Google Maps
+ * cookies (same gating used in the Luogo section).
+ *
+ * The map URL is built dynamically from data-attributes on the
+ * container (see cookie.js): when the viewport crosses one of the
+ * configured breakpoints we reload the iframe so that Google Maps
+ * picks up the right zoom level for the new viewport width — the
+ * embed has no native auto-fit, so this reload is what keeps the
+ * full marathon route visible on every screen size.
+ * @param {HTMLElement} root - The Maratona section root element.
+ */
+function initMaratona(root) {
+  const container = root.querySelector('#maratonaMapContainer');
+  if (!container || !window.ec2026InitMap) return;
+  window.ec2026InitMap(container);
+
+  if (!window.ec2026RefreshMap) return;
+  const mqMobile = window.matchMedia('(max-width: 640px)');
+  const mqTablet = window.matchMedia('(max-width: 860px)');
+  const onBreakpointChange = () => window.ec2026RefreshMap(container);
+  mqMobile.addEventListener('change', onBreakpointChange);
+  mqTablet.addEventListener('change', onBreakpointChange);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -467,6 +496,7 @@ initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
+initMaratona(document.getElementById('maratona'));
 initVenueCarousel(document.getElementById('impianto'));
 initVenueVideosLayout(document.getElementById('impianto'));
 initVenueVideosVisibility(document.getElementById('impianto'));

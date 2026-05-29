@@ -185,6 +185,12 @@
 					</a>
 				</li>
 				<li>
+					<a href="#maratona" class="nav-link" data-section="maratona">
+						<span class="nav-arrow"></span>
+						<span data-i18n="nav.maratona">Maratona</span>
+					</a>
+				</li>
+				<li>
 					<a href="#classifiche" class="nav-link" data-section="classifiche">
 						<span class="nav-arrow"></span>
 						<span data-i18n="nav.classifiche">Classifiche</span>
@@ -1190,6 +1196,62 @@
 
 				<!-- Griglia locali -->
 				<div class="grid-2 fade-up fade-up-d2">
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ── Maratona ───────────────────────────────────────── -->
+		<section id="maratona" class="section-content">
+			<!-- ── sections/maratona.html ────────────────────────────── -->
+			<div class="section-wrap">
+
+				<div class="section-header fade-up">
+					<div class="section-tag" data-i18n="maratona.tag">Iscrizioni</div>
+					<h2 class="section-title" data-i18n="maratona.title">La <span class="hl">Maratona</span></h2>
+					<div class="gold-divider"></div>
+					<p class="section-desc" data-i18n="maratona.desc">
+						La maratona dei Campionati Europei è aperta a tutti gli atleti, anche a chi non è convocato dalla propria nazionale.
+					</p>
+				</div>
+
+				<div class="maratona-intro fade-up fade-up-d1">
+					<p class="maratona-text" data-i18n="maratona.intro">
+						La <strong>European Marathon Open Championship 2026</strong> è una gara di 42 km su strada, aperta a tutti gli atleti. A differenza delle altre prove dei Campionati Europei – riservate alle delegazioni nazionali – la maratona può essere disputata anche da atleti non convocati dalle rispettive federazioni. Le iscrizioni possono essere effettuate tramite l'apposito pulsante.
+					</p>
+				</div>
+
+				<div class="maratona-cta-wrap fade-up fade-up-d2">
+					<a class="cta-register-btn"
+						href="https://www.wskate.net/wse_marathon_registrations.php?id_event=12"
+						target="_blank" rel="noopener noreferrer">
+						<span data-i18n="maratona.cta_register">Iscriviti alla European Marathon Open Championship 2026</span>
+						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+							aria-hidden="true">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+
+				<!-- Mappa percorso (caricata solo dopo consenso cookie) -->
+				<div class="map-container fade-up fade-up-d3"
+					id="maratonaMapContainer"
+					data-map-src="https://www.google.com/maps/d/u/0/embed?mid=1ZKoz8lO0GRe-iBeIpQLwjivxxlsIUlY&ehbc=2E312F"
+					data-map-title="Percorso della maratona"
+					data-map-center="45.638692,8.763423"
+					data-map-zoom-desktop="15"
+					data-map-zoom-tablet="14"
+					data-map-zoom-mobile="14">
+					<div class="map-placeholder">
+						<p class="map-placeholder-text" data-i18n="maratona.map_consent">
+							Per visualizzare la mappa del percorso è necessario accettare i cookie di terze parti (Google Maps).
+						</p>
+						<button class="map-consent-btn" data-i18n="maratona.map_consent_btn">
+							Accetta e mostra mappa
+						</button>
+					</div>
 				</div>
 
 			</div>

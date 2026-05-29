@@ -17,6 +17,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Home",
       classifiche: "Classifiche",
+      maratona:    "Maratona",
       sponsor:     "Sponsor",
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
@@ -55,6 +56,15 @@ const TRANSLATIONS = {
       organizer:           "La Cardano Skating S.r.l. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle:",
       patronage_lombardia: "Con il patrocinio di:",
       patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo:"
+    },
+    maratona: {
+      tag:             "Iscrizioni",
+      title:           "<span class=\"hl\">Maratona</span>",
+      desc:            "La maratona dei Campionati Europei è aperta a tutti gli atleti, anche a chi non è convocato dalla propria nazionale.",
+      intro:           "La <strong>European Marathon Open Championship 2026</strong> è una gara di 42 km su strada, aperta a tutti gli atleti. A differenza delle altre prove dei Campionati Europei – riservate alle delegazioni nazionali – la maratona può essere disputata anche da atleti non convocati dalle rispettive federazioni.<br>Le iscrizioni possono essere effettuate tramite l'apposito pulsante.",
+      cta_register:    "Iscriviti alla European Marathon Open Championship 2026",
+      map_consent:     "Per visualizzare la mappa del percorso è necessario accettare i cookie di terze parti (Google Maps).",
+      map_consent_btn: "Accetta e mostra mappa"
     },
     classifiche: {
       tag:            "Risultati",
@@ -264,6 +274,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Home",
       classifiche: "Rankings",
+      maratona:    "Marathon",
       sponsor:     "Sponsors",
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
@@ -302,6 +313,15 @@ const TRANSLATIONS = {
       organizer:           "Cardano Skating S.r.l. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026:",
       patronage_lombardia: "Under the patronage of:",
       patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo:"
+    },
+    maratona: {
+      tag:             "Registration",
+      title:           "<span class=\"hl\">Marathon</span>",
+      desc:            "The European Championships marathon is open to all athletes, including skaters not called up by their national team.",
+      intro:           "The <strong>European Marathon Open Championship 2026</strong> is a 42 km road race open to all athletes. Unlike the other European Championship events – reserved for national delegations – the marathon can also be entered by athletes who are not selected by their respective federations.<br>Registrations can be completed via the dedicated button below.",
+      cta_register:    "Register for the European Marathon Open Championship 2026",
+      map_consent:     "To view the route map you need to accept third-party cookies (Google Maps).",
+      map_consent_btn: "Accept and show map"
     },
     classifiche: {
       tag:            "Results",
@@ -511,6 +531,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Accueil",
       classifiche: "Classements",
+      maratona:    "Marathon",
       sponsor:     "Sponsors",
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
@@ -549,6 +570,15 @@ const TRANSLATIONS = {
       organizer:           "La Cardano Skating S.r.l. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne :",
       patronage_lombardia: "Sous le patronage de :",
       patronage_cardano:   "Sous le patronage de la Commune de Cardano al Campo :"
+    },
+    maratona: {
+      tag:             "Inscriptions",
+      title:           "<span class=\"hl\">Marathon</span>",
+      desc:            "Le marathon des Championnats d'Europe est ouvert à tous les athlètes, y compris à ceux qui ne sont pas convoqués par leur équipe nationale.",
+      intro:           "L'<strong>European Marathon Open Championship 2026</strong> est une course sur route de 42 km, ouverte à tous les athlètes. Contrairement aux autres épreuves des Championnats d'Europe – réservées aux délégations nationales – le marathon peut également être disputé par des athlètes non convoqués par leurs fédérations respectives.<br>Les inscriptions peuvent être effectuées via le bouton ci-dessous.",
+      cta_register:    "S'inscrire à l'European Marathon Open Championship 2026",
+      map_consent:     "Pour afficher la carte du parcours, vous devez accepter les cookies tiers (Google Maps).",
+      map_consent_btn: "Accepter et afficher la carte"
     },
     classifiche: {
       tag:            "Résultats",
@@ -758,6 +788,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Startseite",
       classifiche: "Ergebnisse",
+      maratona:    "Marathon",
       sponsor:     "Sponsoren",
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
@@ -796,6 +827,15 @@ const TRANSLATIONS = {
       organizer:           "Die Cardano Skating S.r.l. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating:",
       patronage_lombardia: "Unter der schirmherrschaft von:",
       patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo:"
+    },
+    maratona: {
+      tag:             "Anmeldung",
+      title:           "<span class=\"hl\">Marathon</span>",
+      desc:            "Der Marathon der Europameisterschaften steht allen Athletinnen und Athleten offen – auch jenen, die nicht von ihrer Nationalmannschaft nominiert wurden.",
+      intro:           "Die <strong>European Marathon Open Championship 2026</strong> ist ein 42-km-Straßenrennen, das allen Athletinnen und Athleten offensteht. Anders als die übrigen Wettbewerbe der Europameisterschaft – die den Nationaldelegationen vorbehalten sind – kann am Marathon auch teilnehmen, wer nicht vom jeweiligen Verband nominiert wurde.<br>Die Anmeldung kann über die entsprechende Schaltfläche unten erfolgen.",
+      cta_register:    "Anmeldung zur European Marathon Open Championship 2026",
+      map_consent:     "Um die Streckenkarte anzuzeigen, müssen Sie Drittanbieter-Cookies (Google Maps) akzeptieren.",
+      map_consent_btn: "Akzeptieren und Karte anzeigen"
     },
     classifiche: {
       tag:            "Ergebnisse",
@@ -1005,6 +1045,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Inicio",
       classifiche: "Clasificaciones",
+      maratona:    "Maratón",
       sponsor:     "Patrocinadores",
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
@@ -1043,6 +1084,15 @@ const TRANSLATIONS = {
       organizer:           "La Cardano Skating S.r.l. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea:",
       patronage_lombardia: "Bajo el patrocinio de:",
       patronage_cardano:   "Bajo el patrocinio del Municipio de Cardano al Campo:"
+    },
+    maratona: {
+      tag:             "Inscripciones",
+      title:           "<span class=\"hl\">Maratón</span>",
+      desc:            "El maratón de los Campeonatos de Europa está abierto a todos los atletas, incluidos los patinadores no convocados por su selección nacional.",
+      intro:           "El <strong>European Marathon Open Championship 2026</strong> es una carrera de 42 km en ruta, abierta a todos los atletas. A diferencia de las demás pruebas del Campeonato de Europa – reservadas a las delegaciones nacionales – el maratón también puede ser disputado por atletas no convocados por sus respectivas federaciones.<br>Las inscripciones pueden realizarse mediante el botón correspondiente situado más abajo.",
+      cta_register:    "Inscríbete al European Marathon Open Championship 2026",
+      map_consent:     "Para ver el mapa del recorrido es necesario aceptar las cookies de terceros (Google Maps).",
+      map_consent_btn: "Aceptar y mostrar mapa"
     },
     classifiche: {
       tag:            "Resultados",
@@ -1252,6 +1302,7 @@ const TRANSLATIONS = {
     nav: {
       home:        "Início",
       classifiche: "Classificações",
+      maratona:    "Maratona",
       sponsor:     "Patrocinadores",
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
@@ -1290,6 +1341,15 @@ const TRANSLATIONS = {
       organizer:           "A Cardano Skating S.r.l. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha:",
       patronage_lombardia: "Sob o patrocínio de:",
       patronage_cardano:   "Sob o patrocínio do Município de Cardano al Campo:"
+    },
+    maratona: {
+      tag:             "Inscrições",
+      title:           "<span class=\"hl\">Maratona</span>",
+      desc:            "A maratona dos Campeonatos Europeus está aberta a todos os atletas, incluindo patinadores não convocados pela sua seleção nacional.",
+      intro:           "O <strong>European Marathon Open Championship 2026</strong> é uma corrida de 42 km em estrada, aberta a todos os atletas. Ao contrário das outras provas do Campeonato Europeu – reservadas às delegações nacionais – a maratona também pode ser disputada por atletas não convocados pelas respetivas federações.<br>As inscrições podem ser efetuadas através do botão correspondente abaixo.",
+      cta_register:    "Inscreva-se no European Marathon Open Championship 2026",
+      map_consent:     "Para visualizar o mapa do percurso é necessário aceitar os cookies de terceiros (Google Maps).",
+      map_consent_btn: "Aceitar e mostrar mapa"
     },
     classifiche: {
       tag:            "Resultados",
