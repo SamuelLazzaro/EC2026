@@ -187,7 +187,7 @@ const TRANSLATIONS = {
       cat_men:             "Uomini",
       cat_ladies:          "Donne",
       add_training_title:  "Possibilità di allenamento aggiuntive",
-      add_training_note:   "Nei giorni precedenti all'evento sarà possibile acquistare ulteriori sessioni di allenamento. Contattare la segreteria organizzativa per prenotare in anticipo. Ogni sessione ha un costo di 100,- €."
+      add_training_note:   "Nei giorni precedenti all'evento sarà possibile acquistare ulteriori sessioni di allenamento. Contattare la segreteria organizzativa per prenotare in anticipo. Ogni sessione ha un costo di 100,00 €."
     },
     luogo: {
       tag:            "Luogo",
@@ -797,7 +797,7 @@ const TRANSLATIONS = {
       cat_men:             "Hommes",
       cat_ladies:          "Femmes",
       add_training_title:  "Possibilités d'entraînement supplémentaires",
-      add_training_note:   "Dans les jours précédant l'événement, il sera possible d'acquérir des créneaux d'entraînement supplémentaires. Veuillez contacter le bureau organisateur pour réserver ces créneaux à l'avance. Chaque créneau coûtera 100,- €."
+      add_training_note:   "Dans les jours précédant l'événement, il sera possible d'acquérir des créneaux d'entraînement supplémentaires. Veuillez contacter le bureau organisateur pour réserver ces créneaux à l'avance. Chaque créneau coûtera 100,00 €."
     },
     luogo: {
       tag:            "Site",
@@ -1102,7 +1102,7 @@ const TRANSLATIONS = {
       cat_men:             "Herren",
       cat_ladies:          "Damen",
       add_training_title:  "Zusätzliche Trainingsmöglichkeiten",
-      add_training_note:   "In den Tagen vor der Veranstaltung können zusätzliche Trainingseinheiten erworben werden. Bitte wenden Sie sich zur Vorabbuchung an das Organisationsbüro. Jede Einheit kostet 100,- €."
+      add_training_note:   "In den Tagen vor der Veranstaltung können zusätzliche Trainingseinheiten erworben werden. Bitte wenden Sie sich zur Vorabbuchung an das Organisationsbüro. Jede Einheit kostet 100,00 €."
     },
     luogo: {
       tag:            "Veranstaltungsort",
@@ -1407,7 +1407,7 @@ const TRANSLATIONS = {
       cat_men:             "Hombres",
       cat_ladies:          "Mujeres",
       add_training_title:  "Posibilidades de entrenamiento adicionales",
-      add_training_note:   "En los días previos al evento será posible adquirir franjas horarias de entrenamiento adicionales. Póngase en contacto con la oficina organizadora para reservar estas franjas con antelación. Cada franja tendrá un coste de 100,- €."
+      add_training_note:   "En los días previos al evento será posible adquirir franjas horarias de entrenamiento adicionales. Póngase en contacto con la oficina organizadora para reservar estas franjas con antelación. Cada franja tendrá un coste de 100,00 €."
     },
     luogo: {
       tag:            "Sede",
@@ -1712,7 +1712,7 @@ const TRANSLATIONS = {
       cat_men:             "Homens",
       cat_ladies:          "Mulheres",
       add_training_title:  "Possibilidades de treino adicionais",
-      add_training_note:   "Nos dias anteriores ao evento será possível adquirir sessões de treino adicionais. Por favor, contacte o gabinete organizador para reservar com antecedência. Cada sessão tem um custo de 100,- €."
+      add_training_note:   "Nos dias anteriores ao evento será possível adquirir sessões de treino adicionais. Por favor, contacte o gabinete organizador para reservar com antecedência. Cada sessão tem um custo de 100,00 €."
     },
     luogo: {
       tag:            "Local",
