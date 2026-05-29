@@ -845,7 +845,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Griglia sponsor normali: card più piccole, 3 colonne */
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 0.5fr));
   gap: 1rem;
 }
 
@@ -883,7 +883,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Card main sponsor: bordo oro e gradient distintivo */
 .sponsor-main {
   border-width: 3px;
-  border-color: rgba(201, 168, 76, 0.55);
+  border-color: rgba(201, 168, 76, 0.75);
   background: linear-gradient(135deg, var(--c-card) 0%, rgba(201,168,76,0.04) 100%);
 }
 .sponsor-main.touch-active {
@@ -2292,6 +2292,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     display: flex;
     justify-content: center;
     margin-bottom: 2.25rem;
+}
+
+.programma-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
 
 .cta-register-btn {
