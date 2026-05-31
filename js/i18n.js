@@ -117,11 +117,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Dove mangiare",
       title:             "Ristorazione",
-      desc:              "Ristoranti, bar e pizzerie convenzionate.",
       filter_all:        "Tutti",
+      filter_catering:   "Catering",
       filter_ristorante: "Ristorante",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzeria"
+      filter_pizzeria:   "Pizzeria",
+      sagre_service:     "Servizio di pranzo e cena all'interno dell'impianto"
     },
     programma: {
       tag:            "Calendario",
@@ -422,11 +423,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Where to eat",
       title:             "Food & Beverage",
-      desc:              "Affiliated restaurants, bars and pizzerias.",
       filter_all:        "All",
+      filter_catering:   "Catering",
       filter_ristorante: "Restaurant",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzeria"
+      filter_pizzeria:   "Pizzeria",
+      sagre_service:     "Lunch and dinner service inside the venue"
     },
     programma: {
       tag:            "Schedule",
@@ -727,11 +729,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Où manger",
       title:             "Restauration",
-      desc:              "Restaurants, bars et pizzerias conventionnés.",
       filter_all:        "Tous",
+      filter_catering:   "Catering",
       filter_ristorante: "Restaurant",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzeria"
+      filter_pizzeria:   "Pizzeria",
+      sagre_service:     "Service de déjeuner et de dîner à l'intérieur du site"
     },
     programma: {
       tag:            "Calendrier",
@@ -1032,11 +1035,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Essen & Trinken",
       title:             "Gastronomie",
-      desc:              "Vertragsrestaurants, Bars und Pizzerien.",
       filter_all:        "Alle",
+      filter_catering:   "Catering",
       filter_ristorante: "Restaurant",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzeria"
+      filter_pizzeria:   "Pizzeria",
+      sagre_service:     "Mittag- und Abendessen direkt am Veranstaltungsort"
     },
     programma: {
       tag:            "Zeitplan",
@@ -1337,11 +1341,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Dónde comer",
       title:             "Restauración",
-      desc:              "Restaurantes, bares y pizzerías concertados.",
       filter_all:        "Todos",
+      filter_catering:   "Catering",
       filter_ristorante: "Restaurante",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzería"
+      filter_pizzeria:   "Pizzería",
+      sagre_service:     "Servicio de almuerzo y cena dentro del recinto"
     },
     programma: {
       tag:            "Calendario",
@@ -1642,11 +1647,12 @@ const TRANSLATIONS = {
     ristorazione: {
       tag:               "Onde comer",
       title:             "Restauração",
-      desc:              "Restaurantes, bares e pizzarias conveniados.",
       filter_all:        "Todos",
+      filter_catering:   "Catering",
       filter_ristorante: "Restaurante",
       filter_bar:        "Bar",
-      filter_pizzeria:   "Pizzaria"
+      filter_pizzeria:   "Pizzaria",
+      sagre_service:     "Serviço de almoço e jantar dentro do recinto"
     },
     programma: {
       tag:            "Calendário",
