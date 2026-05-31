@@ -214,7 +214,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: var(--header-h);
 }
 .nav-list {
     flex: 1;
