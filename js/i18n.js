@@ -19,6 +19,7 @@ const TRANSLATIONS = {
       classifiche: "Classifiche",
       maratona:    "Maratona",
       sponsor:     "Sponsor",
+      biglietti:   "Biglietti",
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
       programma:      "Programma",
@@ -97,6 +98,11 @@ const TRANSLATIONS = {
       sea_sector:    "Gestione infrastrutture e servizi per l'aviazione",
       buytec_sector: "PC, tablet, smartphone e monitor ricondizionati",
       tradeco_sector: "Società industriale e logistica specializzata nel ciclo completo di smontaggio, recupero, vendita e gestione di impianti per il comparto ceramico",
+    },
+    biglietti: {
+      tag:    "Biglietteria",
+      title:  "<span class=\"hl\">Biglietti</span>",
+      notice: "L'acquisto dei biglietti online sarà disponibile a breve."
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -325,6 +331,7 @@ const TRANSLATIONS = {
       classifiche: "Rankings",
       maratona:    "Marathon",
       sponsor:     "Sponsors",
+      biglietti:   "Tickets",
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
       programma:      "Schedule",
@@ -403,6 +410,11 @@ const TRANSLATIONS = {
       sea_sector:    "Airport infrastructure management and aviation services",
       buytec_sector: "Refurbished PCs, tablets, smartphones and monitors",
       tradeco_sector: "Industrial and logistics company specialising in the complete cycle of dismantling, recovery, sale and management of plants for the ceramics sector"
+    },
+    biglietti: {
+      tag:    "Ticket Office",
+      title:  "<span class=\"hl\">Tickets</span>",
+      notice: "Online ticket purchase will be available soon."
     },
     alloggi: {
       tag:          "Where to stay",
@@ -631,6 +643,7 @@ const TRANSLATIONS = {
       classifiche: "Classements",
       maratona:    "Marathon",
       sponsor:     "Sponsors",
+      biglietti:   "Billets",
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
       programma:      "Programme",
@@ -709,6 +722,11 @@ const TRANSLATIONS = {
       sea_sector:    "Gestion d'infrastructures et services pour l'aviation",
       buytec_sector: "PC, tablettes, smartphones et écrans reconditionnés",
       tradeco_sector: "Société industrielle et logistique spécialisée dans le cycle complet de démantèlement, récupération, vente et gestion d'installations pour le secteur de la céramique"
+    },
+    biglietti: {
+      tag:    "Billetterie",
+      title:  "<span class=\"hl\">Billets</span>",
+      notice: "L'achat de billets en ligne sera bientôt disponible."
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -937,6 +955,7 @@ const TRANSLATIONS = {
       classifiche: "Ergebnisse",
       maratona:    "Marathon",
       sponsor:     "Sponsoren",
+      biglietti:   "Tickets",
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
       programma:      "Programm",
@@ -1015,6 +1034,11 @@ const TRANSLATIONS = {
       sea_sector:    "Verwaltung von Flughafeninfrastrukturen und Luftfahrtdienstleistungen",
       buytec_sector: "Generalüberholte PCs, Tablets, Smartphones und Monitore",
       tradeco_sector: "Industrie- und Logistikunternehmen, spezialisiert auf den vollständigen Zyklus von Demontage, Rückgewinnung, Verkauf und Verwaltung von Anlagen für die Keramikbranche"
+    },
+    biglietti: {
+      tag:    "Ticketverkauf",
+      title:  "<span class=\"hl\">Tickets</span>",
+      notice: "Der Online-Ticketkauf wird in Kürze verfügbar sein."
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -1243,6 +1267,7 @@ const TRANSLATIONS = {
       classifiche: "Clasificaciones",
       maratona:    "Maratón",
       sponsor:     "Patrocinadores",
+      biglietti:   "Entradas",
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
       programma:      "Programa",
@@ -1321,6 +1346,11 @@ const TRANSLATIONS = {
       sea_sector:    "Gestión de infraestructuras y servicios para la aviación",
       buytec_sector: "PC, tabletas, smartphones y monitores reacondicionados",
       tradeco_sector: "Empresa industrial y logística especializada en el ciclo completo de desmontaje, recuperación, venta y gestión de instalaciones para el sector cerámico"
+    },
+    biglietti: {
+      tag:    "Taquilla",
+      title:  "<span class=\"hl\">Entradas</span>",
+      notice: "La compra de entradas en línea estará disponible próximamente."
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1549,6 +1579,7 @@ const TRANSLATIONS = {
       classifiche: "Classificações",
       maratona:    "Maratona",
       sponsor:     "Patrocinadores",
+      biglietti:   "Bilhetes",
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
       programma:      "Programa",
@@ -1627,6 +1658,11 @@ const TRANSLATIONS = {
       sea_sector:    "Gestão de infraestruturas e serviços para a aviação",
       buytec_sector: "PCs, tablets, smartphones e monitores recondicionados",
       tradeco_sector: "Empresa industrial e logística especializada no ciclo completo de desmontagem, recuperação, venda e gestão de instalações para o setor cerâmico"
+    },
+    biglietti: {
+      tag:    "Bilheteira",
+      title:  "<span class=\"hl\">Bilhetes</span>",
+      notice: "A compra de bilhetes online estará disponível em breve."
     },
     alloggi: {
       tag:          "Onde ficar",

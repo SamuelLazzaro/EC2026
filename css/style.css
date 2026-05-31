@@ -286,14 +286,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .nav-link.touch-active .nav-arrow,
 .nav-link.active .nav-arrow { transform: rotate(-45deg) translateX(2px); }
 
-.nav-footer {
-  padding: 1rem 1.75rem;
-  border-top: 1px solid var(--c-border-sub);
-  font-size: 0.68rem;
-  color: var(--c-text-mute);
-  letter-spacing: 0.05em;
-}
-
 /* ── Main Content ──────────────────────────────────────────── */
 .main-content {
   flex: 1;
