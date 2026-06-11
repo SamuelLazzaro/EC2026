@@ -103,7 +103,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Biglietteria",
       title:  "<span class=\"hl\">Biglietti</span>",
-      notice: "L'acquisto dei biglietti online sarà disponibile a breve."
+      button: "Acquista i biglietti"
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -416,7 +416,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Ticket Office",
       title:  "<span class=\"hl\">Tickets</span>",
-      notice: "Online ticket purchase will be available soon."
+      button: "Buy tickets"
     },
     alloggi: {
       tag:          "Where to stay",
@@ -729,7 +729,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Billetterie",
       title:  "<span class=\"hl\">Billets</span>",
-      notice: "L'achat de billets en ligne sera bientôt disponible."
+      button: "Acheter des billets"
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -1042,7 +1042,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Ticketverkauf",
       title:  "<span class=\"hl\">Tickets</span>",
-      notice: "Der Online-Ticketkauf wird in Kürze verfügbar sein."
+      button: "Tickets kaufen"
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -1355,7 +1355,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Taquilla",
       title:  "<span class=\"hl\">Entradas</span>",
-      notice: "La compra de entradas en línea estará disponible próximamente."
+      button: "Comprar entradas"
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1668,7 +1668,7 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Bilheteira",
       title:  "<span class=\"hl\">Bilhetes</span>",
-      notice: "A compra de bilhetes online estará disponível em breve."
+      button: "Comprar bilhetes"
     },
     alloggi: {
       tag:          "Onde ficar",

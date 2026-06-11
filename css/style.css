@@ -2285,6 +2285,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     margin-bottom: 2.25rem;
 }
 
+.biglietti-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto 0.5rem;
+}
+
 .programma-cta-wrap {
     display: flex;
     justify-content: center;
