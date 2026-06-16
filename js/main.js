@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'impianto', 'news', 'sponsor', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
+const sectionIds = ['home', 'luogo', 'impianto', 'sponsor', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -442,7 +442,7 @@ if (langFabBtn && langFabMenu) {
   document.addEventListener('touchstart', function (e) {
     const link = e.target.closest(
       'a[href], button, .card, .sponsor-card, .sponsor-main, ' +
-      '.hotel-card, .transport-card, .news-card, .lang-fab-item, ' +
+      '.hotel-card, .transport-card, .lang-fab-item, ' +
       '.contatti-card, .ds-contact-card'
     );
     if (!link) return;

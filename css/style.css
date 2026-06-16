@@ -1335,100 +1335,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 
 /* ═══════════════════════════════════════════════════════════
-   NEWS
-   ═══════════════════════════════════════════════════════════ */
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  gap: 1.5rem;
-}
-
-.news-card {
-  background: var(--c-card);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: all var(--trans);
-  height: 100%;
-  width: 100%;
-}
-.news-card.touch-active {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-  border-color: rgba(201, 168, 76, 0.5);
-}
-@media (pointer: fine) {
-  .news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
-    border-color: rgba(201, 168, 76, 0.5);
-  }
-}
-.news-img {
-  height: 180px;
-  background: linear-gradient(135deg, var(--c-card2) 0%, var(--c-bg2) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-  flex-shrink: 0;
-  position: relative;
-}
-.news-cat {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-bg);
-  background: var(--c-accent);
-  padding: 0.2rem 0.55rem;
-  border-radius: 4px;
-}
-.news-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
-.news-title {
-  font-family: var(--f-title);
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-  flex: 1;
-}
-.news-excerpt {
-  font-size: 0.8rem;
-  color: var(--c-text-mute);
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-.news-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--c-border-sub);
-}
-.news-date { font-size: 0.7rem; color: var(--c-text-mute); }
-.news-readmore {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--c-accent);
-  letter-spacing: 0.04em;
-  transition: gap var(--trans);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-.news-card.touch-active .news-readmore { gap: 0.5rem; }
-@media (pointer: fine) {
-  .news-card:hover .news-readmore { gap: 0.5rem; }
-}
-
-
-/* ═══════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
 /* Su schermi grandi il selettore lingua nel drawer non serve */
@@ -1452,7 +1358,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .countdown-item { min-width: 62px; padding: 0.7rem 0.8rem; }
   .stats-bar { gap: 1.25rem; }
   .site-intro { padding: 1.75rem 1rem; }
-  .news-grid,
   .grid-2,
   .grid-3 { grid-template-columns: 1fr; }
 }

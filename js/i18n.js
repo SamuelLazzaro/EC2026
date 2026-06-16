@@ -25,7 +25,6 @@ const TRANSLATIONS = {
       programma:      "Programma",
       luogo:       "Luogo",
       impianto:    "Impianto Sportivo",
-      news:        "News",
       contatti:        "Contatti",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italia · 19–26 luglio 2026"
@@ -234,12 +233,6 @@ const TRANSLATIONS = {
       title:  "L'<span class=\"hl\">Impianto Sportivo</span>",
       desc:   "Foto, video e caratteristiche dell'impianto sportivo che ospita i Campionati Europei."
     },
-    news: {
-      tag:      "Aggiornamenti",
-      title:    "News",
-      desc:     "Le ultime notizie dai Campionati Europei 2026.",
-      readmore: "Leggi di più"
-    },
     contatti: {
       tag:         "Informazioni",
       title:       "Contatti",
@@ -338,7 +331,6 @@ const TRANSLATIONS = {
       programma:      "Schedule",
       luogo:       "Site",
       impianto:    "Sports Centre",
-      news:        "News",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italy · 19–26 July 2026"
@@ -547,12 +539,6 @@ const TRANSLATIONS = {
       title:  "The <span class=\"hl\">Sports Centre</span>",
       desc:   "Photos, videos and details of the sports facility hosting the European Championships."
     },
-    news: {
-      tag:      "Updates",
-      title:    "News",
-      desc:     "The latest news from the 2026 European Championships.",
-      readmore: "Read more"
-    },
     contatti: {
       tag:         "Information",
       title:       "Contacts",
@@ -651,7 +637,6 @@ const TRANSLATIONS = {
       programma:      "Programme",
       luogo:       "Lieu",
       impianto:    "Centre Sportif",
-      news:        "Actualités",
       contatti:        "Contacts",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italie · 20–26 juillet 2026"
@@ -860,12 +845,6 @@ const TRANSLATIONS = {
       title:  "Le <span class=\"hl\">Centre Sportif</span>",
       desc:   "Photos, vidéos et caractéristiques du centre sportif accueillant les Championnats d'Europe."
     },
-    news: {
-      tag:      "Actualités",
-      title:    "Actualités",
-      desc:     "Les dernières nouvelles des Championnats d'Europe 2026.",
-      readmore: "Lire la suite"
-    },
     contatti: {
       tag:         "Informations",
       title:       "Contacts",
@@ -964,7 +943,6 @@ const TRANSLATIONS = {
       programma:      "Programm",
       luogo:       "Veranstaltungsort",
       impianto:    "Sportzentrum",
-      news:        "Neuigkeiten",
       contatti:        "Kontakt",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italien · 20.–26. Juli 2026"
@@ -1173,12 +1151,6 @@ const TRANSLATIONS = {
       title:  "Das <span class=\"hl\">Sportzentrum</span>",
       desc:   "Fotos, Videos und Merkmale des Sportzentrums, das die Europameisterschaften ausrichtet."
     },
-    news: {
-      tag:      "Neuigkeiten",
-      title:    "Neuigkeiten",
-      desc:     "Die neuesten Nachrichten von den Europameisterschaften 2026.",
-      readmore: "Weiterlesen"
-    },
     contatti: {
       tag:         "Informationen",
       title:       "Kontakt",
@@ -1277,7 +1249,6 @@ const TRANSLATIONS = {
       programma:      "Programa",
       luogo:       "Sede",
       impianto:    "Centro Deportivo",
-      news:        "Noticias",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Italia · 20–26 de julio de 2026"
@@ -1486,12 +1457,6 @@ const TRANSLATIONS = {
       title:  "El <span class=\"hl\">Centro Deportivo</span>",
       desc:   "Fotos, vídeos y características del centro deportivo que acoge los Campeonatos de Europa."
     },
-    news: {
-      tag:      "Actualidad",
-      title:    "Noticias",
-      desc:     "Las últimas noticias de los Campeonatos de Europa 2026.",
-      readmore: "Leer más"
-    },
     contatti: {
       tag:         "Información",
       title:       "Contacto",
@@ -1590,7 +1555,6 @@ const TRANSLATIONS = {
       programma:      "Programa",
       luogo:       "Local",
       impianto:    "Centro Desportivo",
-      news:        "Notícias",
       contatti:        "Contacto",
       diventa_sponsor: "Diventa Sponsor",
       footer:          "Cardano al Campo (VA), Itália · 20–26 de julho de 2026"
@@ -1798,12 +1762,6 @@ const TRANSLATIONS = {
       tag:    "Instalação",
       title:  "O <span class=\"hl\">Centro Desportivo</span>",
       desc:   "Fotos, vídeos e características do centro desportivo que acolhe os Campeonatos da Europa."
-    },
-    news: {
-      tag:      "Atualidades",
-      title:    "Notícias",
-      desc:     "As últimas notícias dos Campeonatos Europeus 2026.",
-      readmore: "Ler mais"
     },
     contatti: {
       tag:         "Informação",
