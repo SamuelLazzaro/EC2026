@@ -102,7 +102,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Biglietteria",
       title:  "<span class=\"hl\">Biglietti</span>",
-      button: "Acquista i biglietti"
+      button: "Acquista i biglietti",
+      note_disabili: "L'ingresso è gratuito per le persone con disabilità.",
+      note_online: "I biglietti possono essere acquistati anche in loco, ma sempre tramite la piattaforma online."
     },
     alloggi: {
       tag:       "Dove dormire",
@@ -408,7 +410,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Ticket Office",
       title:  "<span class=\"hl\">Tickets</span>",
-      button: "Buy tickets"
+      button: "Buy tickets",
+      note_disabili: "Admission is free for people with disabilities.",
+      note_online: "Tickets can also be purchased on site, but always through the online platform."
     },
     alloggi: {
       tag:          "Where to stay",
@@ -714,7 +718,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Billetterie",
       title:  "<span class=\"hl\">Billets</span>",
-      button: "Acheter des billets"
+      button: "Acheter des billets",
+      note_disabili: "L'entrée est gratuite pour les personnes en situation de handicap.",
+      note_online: "Les billets peuvent aussi être achetés sur place, mais toujours via la plateforme en ligne."
     },
     alloggi: {
       tag:          "Où séjourner",
@@ -1020,7 +1026,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Ticketverkauf",
       title:  "<span class=\"hl\">Tickets</span>",
-      button: "Tickets kaufen"
+      button: "Tickets kaufen",
+      note_disabili: "Der Eintritt ist für Menschen mit Behinderung kostenlos.",
+      note_online: "Tickets können auch vor Ort gekauft werden, jedoch immer über die Online-Plattform."
     },
     alloggi: {
       tag:          "Unterkunft",
@@ -1326,7 +1334,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Taquilla",
       title:  "<span class=\"hl\">Entradas</span>",
-      button: "Comprar entradas"
+      button: "Comprar entradas",
+      note_disabili: "La entrada es gratuita para las personas con discapacidad.",
+      note_online: "Las entradas también se pueden comprar in situ, pero siempre a través de la plataforma online."
     },
     alloggi: {
       tag:          "Dónde alojarse",
@@ -1632,7 +1642,9 @@ const TRANSLATIONS = {
     biglietti: {
       tag:    "Bilheteira",
       title:  "<span class=\"hl\">Bilhetes</span>",
-      button: "Comprar bilhetes"
+      button: "Comprar bilhetes",
+      note_disabili: "A entrada é gratuita para pessoas com deficiência.",
+      note_online: "Os bilhetes também podem ser comprados no local, mas sempre através da plataforma online."
     },
     alloggi: {
       tag:          "Onde ficar",
