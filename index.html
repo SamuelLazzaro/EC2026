@@ -1367,7 +1367,6 @@
 					<button class="filter-btn active" data-filter="all" data-i18n="ristorazione.filter_all">Tutti</button>
 					<button class="filter-btn" data-filter="in-impianto" data-i18n="ristorazione.filter_in_impianto">In impianto</button>
 					<button class="filter-btn" data-filter="ristorante" data-i18n="ristorazione.filter_ristorante">Ristoranti</button>
-					<button class="filter-btn" data-filter="bar" data-i18n="ristorazione.filter_bar">Bar</button>
 					<button class="filter-btn" data-filter="pizzeria" data-i18n="ristorazione.filter_pizzeria">Pizzerie</button>
 				</div>
 
@@ -1393,6 +1392,54 @@
 								</div>
 							</div>
 						</a>
+					</div>
+					
+					<!-- Servizio bar in impianto (bevande / snack) -->
+					
+					<div class="hotel-card menu-card" data-type="in-impianto">
+						<div class="menu-card-head">
+							<span class="menu-card-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2h15a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4h-1.1A6.002 6.002 0 0 1 9 14.917V18h4a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h3v-3.083A6.002 6.002 0 0 1 2 9V3a1 1 0 0 1 1-1zm14 6a2 2 0 0 0 2-2V4h-2v4z"/></svg>
+							</span>
+							<div>
+								<div class="hotel-name" data-i18n="ristorazione.bar_title">Bar</div>
+								<div class="menu-card-sub" data-i18n="ristorazione.onsite_note">Servizio interno all'impianto</div>
+							</div>
+						</div>
+						<ul class="menu-list">
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_acqua">Acqua</span><span class="menu-item-dots"></span><span class="menu-item-price">1,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_bibite">Bibite</span><span class="menu-item-dots"></span><span class="menu-item-price">2,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_birra">Birra</span><span class="menu-item-dots"></span><span class="menu-item-price">5,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_caffe">Caffè</span><span class="menu-item-dots"></span><span class="menu-item-price">1,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_ghiaccioli">Ghiaccioli</span><span class="menu-item-dots"></span><span class="menu-item-price">1,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_patatine">Patatine (monodose)</span><span class="menu-item-dots"></span><span class="menu-item-price">1,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name">Spritz</span><span class="menu-item-dots"></span><span class="menu-item-price">5,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_trancio_pizza">Trancio di pizza</span><span class="menu-item-dots"></span><span class="menu-item-price">3,00 €</span></li>
+						</ul>
+					</div>
+					
+					<!-- Servizio bar in impianto (gelati) -->
+					
+					<div class="hotel-card menu-card" data-type="in-impianto">
+						<div class="menu-card-head">
+							<span class="menu-card-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 1 4.96 4.355 4 4 0 0 1-.46 7.945 1 1 0 0 1-.08.003l-3.42 8.07a1 1 0 0 1-1.84 0l-3.42-8.07A1 1 0 0 1 7.5 14.3a4 4 0 0 1-.46-7.945A5 5 0 0 1 12 2zm0 13.873-2.02 4.766L12 21.4l2.02-4.761-.02.001a3.98 3.98 0 0 1-4 0z"/></svg>
+							</span>
+							<div>
+								<div class="hotel-name" data-i18n="ristorazione.gelati_title">Gelati</div>
+								<div class="menu-card-sub" data-i18n="ristorazione.onsite_note">Servizio interno all'impianto</div>
+							</div>
+						</div>
+						<ul class="menu-list">
+							<li class="menu-item"><span class="menu-item-name">Calippo</span><span class="menu-item-dots"></span><span class="menu-item-price">2,50 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_cono">Cono</span><span class="menu-item-dots"></span><span class="menu-item-price">3,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_coppa_caffe">Coppa caffè</span><span class="menu-item-dots"></span><span class="menu-item-price">3,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name">Cucciolone</span><span class="menu-item-dots"></span><span class="menu-item-price">3,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name" data-i18n="ristorazione.item_ghiacciolo">Ghiacciolo</span><span class="menu-item-dots"></span><span class="menu-item-price">1,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name">Liuk</span><span class="menu-item-dots"></span><span class="menu-item-price">2,50 €</span></li>
+							<li class="menu-item"><span class="menu-item-name">Magnum</span><span class="menu-item-dots"></span><span class="menu-item-price">3,00 €</span></li>
+							<li class="menu-item"><span class="menu-item-name">Super Twist</span><span class="menu-item-dots"></span><span class="menu-item-price">2,50 €</span></li>
+						</ul>
 					</div>
 				</div>
 

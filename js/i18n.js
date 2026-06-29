@@ -103,7 +103,7 @@ const TRANSLATIONS = {
       tag:    "Biglietteria",
       title:  "<span class=\"hl\">Biglietti</span>",
       button: "Acquista i biglietti",
-      note_disabili: "L'ingresso è gratuito per le persone con disabilità.",
+      note_disabili: "L'ingresso è gratuito per le persone con disabilità e per il loro accompagnatore.",
       note_online: "I biglietti possono essere acquistati anche in loco, ma sempre tramite la piattaforma online."
     },
     alloggi: {
@@ -130,7 +130,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Ristorante",
       filter_bar:        "Bar",
       filter_pizzeria:   "Pizzeria",
-      sagre_service:     "Servizio di pranzo e cena all'interno dell'impianto"
+      sagre_service:     "Servizio di pranzo e cena all'interno dell'impianto",
+      bar_title: "Bar",
+      gelati_title: "Gelati",
+      onsite_note: "Servizio interno all'impianto",
+      item_acqua: "Acqua",
+      item_bibite: "Bibite",
+      item_birra: "Birra",
+      item_caffe: "Caffè",
+      item_ghiaccioli: "Ghiaccioli",
+      item_patatine: "Patatine (monodose)",
+      item_trancio_pizza: "Trancio di pizza",
+      item_cono: "Cono",
+      item_coppa_caffe: "Coppa caffè",
+      item_ghiacciolo: "Ghiacciolo"
     },
     programma: {
       tag:            "Calendario",
@@ -411,7 +424,7 @@ const TRANSLATIONS = {
       tag:    "Ticket Office",
       title:  "<span class=\"hl\">Tickets</span>",
       button: "Buy tickets",
-      note_disabili: "Admission is free for people with disabilities.",
+      note_disabili: "Admission is free for people with disabilities and their companion.",
       note_online: "Tickets can also be purchased on site, but always through the online platform."
     },
     alloggi: {
@@ -438,7 +451,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Restaurant",
       filter_bar:        "Bar",
       filter_pizzeria:   "Pizzeria",
-      sagre_service:     "Lunch and dinner service inside the venue"
+      sagre_service:     "Lunch and dinner service inside the venue",
+      bar_title: "Bar",
+      gelati_title: "Ice cream",
+      onsite_note: "Service inside the venue",
+      item_acqua: "Water",
+      item_bibite: "Soft drinks",
+      item_birra: "Beer",
+      item_caffe: "Coffee",
+      item_ghiaccioli: "Ice pops",
+      item_patatine: "Crisps (single pack)",
+      item_trancio_pizza: "Pizza slice",
+      item_cono: "Cone",
+      item_coppa_caffe: "Coffee tub",
+      item_ghiacciolo: "Ice lolly"
     },
     programma: {
       tag:            "Schedule",
@@ -719,7 +745,7 @@ const TRANSLATIONS = {
       tag:    "Billetterie",
       title:  "<span class=\"hl\">Billets</span>",
       button: "Acheter des billets",
-      note_disabili: "L'entrée est gratuite pour les personnes en situation de handicap.",
+      note_disabili: "L'entrée est gratuite pour les personnes en situation de handicap et leur accompagnateur.",
       note_online: "Les billets peuvent aussi être achetés sur place, mais toujours via la plateforme en ligne."
     },
     alloggi: {
@@ -746,7 +772,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Restaurant",
       filter_bar:        "Bar",
       filter_pizzeria:   "Pizzeria",
-      sagre_service:     "Service de déjeuner et de dîner à l'intérieur du site"
+      sagre_service:     "Service de déjeuner et de dîner à l'intérieur du site",
+      bar_title: "Bar",
+      gelati_title: "Glaces",
+      onsite_note: "Service à l'intérieur du site",
+      item_acqua: "Eau",
+      item_bibite: "Boissons",
+      item_birra: "Bière",
+      item_caffe: "Café",
+      item_ghiaccioli: "Glaces à l'eau",
+      item_patatine: "Chips (sachet individuel)",
+      item_trancio_pizza: "Part de pizza",
+      item_cono: "Cornet",
+      item_coppa_caffe: "Pot café",
+      item_ghiacciolo: "Glace à l'eau"
     },
     programma: {
       tag:            "Calendrier",
@@ -1027,7 +1066,7 @@ const TRANSLATIONS = {
       tag:    "Ticketverkauf",
       title:  "<span class=\"hl\">Tickets</span>",
       button: "Tickets kaufen",
-      note_disabili: "Der Eintritt ist für Menschen mit Behinderung kostenlos.",
+      note_disabili: "Der Eintritt ist für Menschen mit Behinderung und ihre Begleitperson kostenlos.",
       note_online: "Tickets können auch vor Ort gekauft werden, jedoch immer über die Online-Plattform."
     },
     alloggi: {
@@ -1054,7 +1093,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Restaurant",
       filter_bar:        "Bar",
       filter_pizzeria:   "Pizzeria",
-      sagre_service:     "Mittag- und Abendessen direkt am Veranstaltungsort"
+      sagre_service:     "Mittag- und Abendessen direkt am Veranstaltungsort",
+      bar_title: "Bar",
+      gelati_title: "Eis",
+      onsite_note: "Service direkt am Veranstaltungsort",
+      item_acqua: "Wasser",
+      item_bibite: "Erfrischungsgetränke",
+      item_birra: "Bier",
+      item_caffe: "Kaffee",
+      item_ghiaccioli: "Wassereis",
+      item_patatine: "Chips (Einzelpackung)",
+      item_trancio_pizza: "Pizzastück",
+      item_cono: "Hörnchen",
+      item_coppa_caffe: "Kaffeebecher",
+      item_ghiacciolo: "Wassereis am Stiel"
     },
     programma: {
       tag:            "Zeitplan",
@@ -1335,7 +1387,7 @@ const TRANSLATIONS = {
       tag:    "Taquilla",
       title:  "<span class=\"hl\">Entradas</span>",
       button: "Comprar entradas",
-      note_disabili: "La entrada es gratuita para las personas con discapacidad.",
+      note_disabili: "La entrada es gratuita para las personas con discapacidad y su acompañante.",
       note_online: "Las entradas también se pueden comprar in situ, pero siempre a través de la plataforma online."
     },
     alloggi: {
@@ -1362,7 +1414,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Restaurante",
       filter_bar:          "Bar",
       filter_pizzeria:     "Pizzería",
-      sagre_service:     "Servicio de almuerzo y cena dentro del recinto"
+      sagre_service:     "Servicio de almuerzo y cena dentro del recinto",
+      bar_title: "Bar",
+      gelati_title: "Helados",
+      onsite_note: "Servicio dentro del recinto",
+      item_acqua: "Agua",
+      item_bibite: "Refrescos",
+      item_birra: "Cerveza",
+      item_caffe: "Café",
+      item_ghiaccioli: "Polos de hielo",
+      item_patatine: "Patatas fritas (monodosis)",
+      item_trancio_pizza: "Porción de pizza",
+      item_cono: "Cono",
+      item_coppa_caffe: "Tarrina de café",
+      item_ghiacciolo: "Polo de hielo"
     },
     programma: {
       tag:            "Calendario",
@@ -1643,7 +1708,7 @@ const TRANSLATIONS = {
       tag:    "Bilheteira",
       title:  "<span class=\"hl\">Bilhetes</span>",
       button: "Comprar bilhetes",
-      note_disabili: "A entrada é gratuita para pessoas com deficiência.",
+      note_disabili: "A entrada é gratuita para pessoas com deficiência e o seu acompanhante.",
       note_online: "Os bilhetes também podem ser comprados no local, mas sempre através da plataforma online."
     },
     alloggi: {
@@ -1670,7 +1735,20 @@ const TRANSLATIONS = {
       filter_ristorante:   "Restaurante",
       filter_bar:          "Bar",
       filter_pizzeria:     "Pizzaria",
-      sagre_service:     "Serviço de almoço e jantar dentro do recinto"
+      sagre_service:     "Serviço de almoço e jantar dentro do recinto",
+      bar_title: "Bar",
+      gelati_title: "Gelados",
+      onsite_note: "Serviço dentro do recinto",
+      item_acqua: "Água",
+      item_bibite: "Refrigerantes",
+      item_birra: "Cerveja",
+      item_caffe: "Café",
+      item_ghiaccioli: "Gelados de água",
+      item_patatine: "Batatas fritas (individual)",
+      item_trancio_pizza: "Fatia de pizza",
+      item_cono: "Cone",
+      item_coppa_caffe: "Taça de café",
+      item_ghiacciolo: "Gelado de água"
     },
     programma: {
       tag:            "Calendário",

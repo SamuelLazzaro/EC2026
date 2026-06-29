@@ -1057,6 +1057,69 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .hotel-price-per { font-size: 0.72rem; color: var(--c-text-mute); }
 
+/* Menu card (bar / gelati price list — servizio in impianto) */
+.menu-card {
+    padding: 1.5rem;
+}
+.menu-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--c-border-sub);
+}
+.menu-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    color: var(--c-accent);
+}
+.menu-card-icon svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.menu-card-sub {
+    font-size: 0.75rem;
+    color: var(--c-text-mute);
+    margin-top: 0.15rem;
+}
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.55rem 0;
+}
+.menu-item + .menu-item {
+    border-top: 1px solid var(--c-border-sub);
+}
+.menu-item-name {
+    font-size: 0.9rem;
+    color: var(--c-text);
+}
+.menu-item-dots {
+    flex: 1;
+    align-self: center;
+    border-bottom: 1px dotted var(--c-border);
+}
+.menu-item-price {
+    font-family: var(--f-title);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--c-accent);
+    white-space: nowrap;
+}
+
 .alloggi-note {
   margin-top: 2.5rem;
   padding: 1.25rem 1.5rem;
