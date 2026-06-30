@@ -99,6 +99,7 @@ const TRANSLATIONS = {
       bcc_sector:    "Banca di credito cooperativo al servizio del territorio e delle comunità locali",
       tradeco_sector: "Società industriale e logistica specializzata nel ciclo completo di smontaggio, recupero, vendita e gestione di impianti per il comparto ceramico",
       fiamma_sector: "Azienda leader nella produzione di accessori tecnici per il mercato dei veicoli ricreativi",
+      atp_sector:    "Produttore di pavimentazioni sportive in resina sintetica",
     },
     biglietti: {
       tag:    "Biglietteria",
@@ -419,7 +420,8 @@ const TRANSLATIONS = {
       buytec_sector: "Refurbished PCs, tablets, smartphones and monitors",
       bcc_sector:    "Cooperative credit bank serving the local area and communities",
       tradeco_sector: "Industrial and logistics company specialising in the complete cycle of dismantling, recovery, sale and management of plants for the ceramics sector",
-      fiamma_sector: "Leading manufacturer of technical accessories for the recreational vehicle market"
+      fiamma_sector: "Leading manufacturer of technical accessories for the recreational vehicle market",
+      atp_sector:    "Manufacturer of synthetic resin sports surfaces"
     },
     biglietti: {
       tag:    "Ticket Office",
@@ -740,7 +742,8 @@ const TRANSLATIONS = {
       buytec_sector: "PC, tablettes, smartphones et écrans reconditionnés",
       bcc_sector:    "Banque de crédit coopératif au service du territoire et des communautés locales",
       tradeco_sector: "Société industrielle et logistique spécialisée dans le cycle complet de démantèlement, récupération, vente et gestion d'installations pour le secteur de la céramique",
-      fiamma_sector: "Entreprise leader dans la production d'accessoires techniques pour le marché des véhicules de loisirs"
+      fiamma_sector: "Entreprise leader dans la production d'accessoires techniques pour le marché des véhicules de loisirs",
+      atp_sector:    "Fabricant de revêtements sportifs en résine synthétique"
     },
     biglietti: {
       tag:    "Billetterie",
@@ -1061,7 +1064,8 @@ const TRANSLATIONS = {
       buytec_sector: "Generalüberholte PCs, Tablets, Smartphones und Monitore",
       bcc_sector:    "Genossenschaftsbank im Dienst des Gebiets und der lokalen Gemeinschaften",
       tradeco_sector: "Industrie- und Logistikunternehmen, spezialisiert auf den vollständigen Zyklus von Demontage, Rückgewinnung, Verkauf und Verwaltung von Anlagen für die Keramikbranche",
-      fiamma_sector: "Führendes Unternehmen in der Herstellung technischer Zubehörteile für den Markt der Freizeitfahrzeuge"
+      fiamma_sector: "Führendes Unternehmen in der Herstellung technischer Zubehörteile für den Markt der Freizeitfahrzeuge",
+      atp_sector:    "Hersteller von Sportböden aus Kunstharz"
     },
     biglietti: {
       tag:    "Ticketverkauf",
@@ -1382,7 +1386,8 @@ const TRANSLATIONS = {
       buytec_sector: "PC, tabletas, smartphones y monitores reacondicionados",
       bcc_sector:    "Banco de crédito cooperativo al servicio del territorio y de las comunidades locales",
       tradeco_sector: "Empresa industrial y logística especializada en el ciclo completo de desmontaje, recuperación, venta y gestión de instalaciones para el sector cerámico",
-      fiamma_sector: "Empresa líder en la producción de accesorios técnicos para el mercado de los vehículos recreativos"
+      fiamma_sector: "Empresa líder en la producción de accesorios técnicos para el mercado de los vehículos recreativos",
+      atp_sector:    "Fabricante de pavimentos deportivos de resina sintética"
     },
     biglietti: {
       tag:    "Taquilla",
@@ -1703,7 +1708,8 @@ const TRANSLATIONS = {
       buytec_sector: "PCs, tablets, smartphones e monitores recondicionados",
       bcc_sector:    "Banco de crédito cooperativo ao serviço do território e das comunidades locais",
       tradeco_sector: "Empresa industrial e logística especializada no ciclo completo de desmontagem, recuperação, venda e gestão de instalações para o setor cerâmico",
-      fiamma_sector: "Empresa líder na produção de acessórios técnicos para o mercado dos veículos de lazer"
+      fiamma_sector: "Empresa líder na produção de acessórios técnicos para o mercado dos veículos de lazer",
+      atp_sector:    "Fabricante de pavimentos desportivos em resina sintética"
     },
     biglietti: {
       tag:    "Bilheteira",
