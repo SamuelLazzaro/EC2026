@@ -55,7 +55,9 @@ const TRANSLATIONS = {
       stat_events:    "Gare in programma",
       organizer:           "La Cardano Skating S.r.l. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle:",
       patronage_lombardia: "Con il patrocinio di:",
-      patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo:"
+      patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo:",
+      patronage_provincia: "Con il patrocinio della Provincia di Varese:",
+      patronage_camera:    "Con il patrocinio della Camera di Commercio di Varese:"
     },
     maratona: {
       tag:             "Iscrizioni",
@@ -377,7 +379,9 @@ const TRANSLATIONS = {
       stat_events:    "Scheduled events",
       organizer:           "Cardano Skating S.r.l. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026:",
       patronage_lombardia: "Under the patronage of:",
-      patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo:"
+      patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo:",
+      patronage_provincia: "Under the patronage of the Province of Varese:",
+      patronage_camera:    "Under the patronage of the Varese Chamber of Commerce:"
     },
     maratona: {
       tag:             "Registration",
@@ -699,7 +703,9 @@ const TRANSLATIONS = {
       stat_events:    "Épreuves prévues",
       organizer:           "La Cardano Skating S.r.l. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne :",
       patronage_lombardia: "Sous le patronage de :",
-      patronage_cardano:   "Sous le patronage de la Commune de Cardano al Campo :"
+      patronage_cardano:   "Sous le patronage de la Commune de Cardano al Campo :",
+      patronage_provincia: "Sous le patronage de la Province de Varèse :",
+      patronage_camera:    "Sous le patronage de la Chambre de Commerce de Varèse :"
     },
     maratona: {
       tag:             "Inscriptions",
@@ -1021,7 +1027,9 @@ const TRANSLATIONS = {
       stat_events:    "Geplante Wettbewerbe",
       organizer:           "Die Cardano Skating S.r.l. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating:",
       patronage_lombardia: "Unter der schirmherrschaft von:",
-      patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo:"
+      patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo:",
+      patronage_provincia: "Unter der Schirmherrschaft der Provinz Varese:",
+      patronage_camera:    "Unter der Schirmherrschaft der Handelskammer Varese:"
     },
     maratona: {
       tag:             "Anmeldung",
@@ -1343,7 +1351,9 @@ const TRANSLATIONS = {
       stat_events:    "Pruebas programadas",
       organizer:           "La Cardano Skating S.r.l. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea:",
       patronage_lombardia: "Bajo el patrocinio de:",
-      patronage_cardano:   "Bajo el patrocinio del Municipio de Cardano al Campo:"
+      patronage_cardano:   "Bajo el patrocinio del Municipio de Cardano al Campo:",
+      patronage_provincia: "Bajo el patrocinio de la Provincia de Varese:",
+      patronage_camera:    "Bajo el patrocinio de la Cámara de Comercio de Varese:"
     },
     maratona: {
       tag:             "Inscripciones",
@@ -1665,7 +1675,9 @@ const TRANSLATIONS = {
       stat_events:    "Provas programadas",
       organizer:           "A Cardano Skating S.r.l. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha:",
       patronage_lombardia: "Sob o patrocínio de:",
-      patronage_cardano:   "Sob o patrocínio do Município de Cardano al Campo:"
+      patronage_cardano:   "Sob o patrocínio do Município de Cardano al Campo:",
+      patronage_provincia: "Sob o patrocínio da Província de Varese:",
+      patronage_camera:    "Sob o patrocínio da Câmara de Comércio de Varese:"
     },
     maratona: {
       tag:             "Inscrições",
