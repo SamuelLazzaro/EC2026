@@ -820,10 +820,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 /* Griglia main sponsor: card più grandi, 2 colonne su desktop */
+/* Flexbox (non grid): vedi nota su .sponsor-grid. Mantiene centrate
+   orizzontalmente anche le righe parzialmente piene dei main sponsor. */
 .sponsor-grid-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
+}
+.sponsor-grid-main .sponsor-card {
+  flex: 0 1 290px;
 }
 
 /* Separatore tra main e altri sponsor */
@@ -848,10 +854,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 /* Griglia sponsor normali: card più piccole, 3 colonne */
+/* Flexbox (non grid) così le righe parzialmente piene restano centrate
+   orizzontalmente: lo spazio residuo si distribuisce ai due lati, non solo
+   a destra come accadrebbe con le tracce vuote di un grid auto-fill. */
 .sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 0.5fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+}
+.sponsor-grid .sponsor-card {
+  flex: 0 1 200px;
 }
 
 /* Card base (link cliccabile): layout uniforme — logo a tutta larghezza in cima, body sotto */
@@ -953,14 +966,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .sponsor-card:hover .sponsor-url { opacity: 1; }
 }
 
-/* Sotto i 410px le card sponsor non principali stanno su un'unica colonna:
-   centra la traccia della griglia per allinearle orizzontalmente al centro */
+/* Sotto i 410px le card sponsor non principali stanno su un'unica colonna.
+   Il centraggio è già garantito dal justify-content del layout flex; qui
+   allarghiamo solo la card per sfruttare meglio lo schermo stretto. */
 @media (max-width: 410px) {
-  .sponsor-grid {
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 0.7fr));
+  .sponsor-grid .sponsor-card {
+    flex-basis: 240px;
   }
-
 }
 
 
