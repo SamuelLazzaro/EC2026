@@ -96,6 +96,7 @@ const TRANSLATIONS = {
       belfor_sector: "Servizi di ripristino, ricostruzione, bonifica e risanamento",
       sea_sector:    "Gestione infrastrutture e servizi per l'aviazione",
       buytec_sector: "PC, tablet, smartphone e monitor ricondizionati",
+      bcc_sector:    "Banca di credito cooperativo al servizio del territorio e delle comunità locali",
       tradeco_sector: "Società industriale e logistica specializzata nel ciclo completo di smontaggio, recupero, vendita e gestione di impianti per il comparto ceramico",
       fiamma_sector: "Azienda leader nella produzione di accessori tecnici per il mercato dei veicoli ricreativi",
     },
@@ -416,6 +417,7 @@ const TRANSLATIONS = {
       belfor_sector: "Restoration, reinstatement, decontamination and remediation services",
       sea_sector:    "Airport infrastructure management and aviation services",
       buytec_sector: "Refurbished PCs, tablets, smartphones and monitors",
+      bcc_sector:    "Cooperative credit bank serving the local area and communities",
       tradeco_sector: "Industrial and logistics company specialising in the complete cycle of dismantling, recovery, sale and management of plants for the ceramics sector",
       fiamma_sector: "Leading manufacturer of technical accessories for the recreational vehicle market"
     },
@@ -736,6 +738,7 @@ const TRANSLATIONS = {
       belfor_sector: "Services de remise en état, rénovation, décontamination et assainissement",
       sea_sector:    "Gestion d'infrastructures et services pour l'aviation",
       buytec_sector: "PC, tablettes, smartphones et écrans reconditionnés",
+      bcc_sector:    "Banque de crédit coopératif au service du territoire et des communautés locales",
       tradeco_sector: "Société industrielle et logistique spécialisée dans le cycle complet de démantèlement, récupération, vente et gestion d'installations pour le secteur de la céramique",
       fiamma_sector: "Entreprise leader dans la production d'accessoires techniques pour le marché des véhicules de loisirs"
     },
@@ -1056,6 +1059,7 @@ const TRANSLATIONS = {
       belfor_sector: "Wiederherstellung, Wiederaufbau, Dekontamination und Schadensanierung",
       sea_sector:    "Verwaltung von Flughafeninfrastrukturen und Luftfahrtdienstleistungen",
       buytec_sector: "Generalüberholte PCs, Tablets, Smartphones und Monitore",
+      bcc_sector:    "Genossenschaftsbank im Dienst des Gebiets und der lokalen Gemeinschaften",
       tradeco_sector: "Industrie- und Logistikunternehmen, spezialisiert auf den vollständigen Zyklus von Demontage, Rückgewinnung, Verkauf und Verwaltung von Anlagen für die Keramikbranche",
       fiamma_sector: "Führendes Unternehmen in der Herstellung technischer Zubehörteile für den Markt der Freizeitfahrzeuge"
     },
@@ -1376,6 +1380,7 @@ const TRANSLATIONS = {
       belfor_sector: "Servicios de recuperación, reconstrucción, descontaminación y rehabilitación",
       sea_sector:    "Gestión de infraestructuras y servicios para la aviación",
       buytec_sector: "PC, tabletas, smartphones y monitores reacondicionados",
+      bcc_sector:    "Banco de crédito cooperativo al servicio del territorio y de las comunidades locales",
       tradeco_sector: "Empresa industrial y logística especializada en el ciclo completo de desmontaje, recuperación, venta y gestión de instalaciones para el sector cerámico",
       fiamma_sector: "Empresa líder en la producción de accesorios técnicos para el mercado de los vehículos recreativos"
     },
@@ -1696,6 +1701,7 @@ const TRANSLATIONS = {
       belfor_sector: "Serviços de restauro, reconstrução, descontaminação e reabilitação",
       sea_sector:    "Gestão de infraestruturas e serviços para a aviação",
       buytec_sector: "PCs, tablets, smartphones e monitores recondicionados",
+      bcc_sector:    "Banco de crédito cooperativo ao serviço do território e das comunidades locais",
       tradeco_sector: "Empresa industrial e logística especializada no ciclo completo de desmontagem, recuperação, venda e gestão de instalações para o setor cerâmico",
       fiamma_sector: "Empresa líder na produção de acessórios técnicos para o mercado dos veículos de lazer"
     },

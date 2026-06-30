@@ -939,6 +939,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .sponsor-card:hover .sponsor-url { opacity: 1; }
 }
 
+/* Sotto i 410px le card sponsor non principali stanno su un'unica colonna:
+   centra la traccia della griglia per allinearle orizzontalmente al centro */
+@media (max-width: 410px) {
+  .sponsor-grid {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0.7fr));
+  }
+
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    ALLOGGI
