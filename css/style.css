@@ -652,13 +652,18 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   max-width: 300px;
 }
 
-.div-logo-cardano img {
+.div-logo-cardano img, .div-logo-samarate img {
   width: 30vw;
 }
 
 
 .logo-img-200px {
   max-width: 200px !important;
+}
+
+/* World Skate + Skate Italia: same size, slightly larger than the default logo */
+.div-home-images img.logo-img-org {
+  max-width: 300px;
 }
 
 .p-text-cardano-al-campo {
@@ -683,6 +688,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .ul-patronage {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  /* Enlarge the "contributo" logo on mobile so the embedded
+     "Con il contributo di" caption stays legible. */
+  .div-home-images img.logo-img-contributo {
+    width: 80vw;
+    max-width: 400px;
   }
 }
 
