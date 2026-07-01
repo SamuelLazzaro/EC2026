@@ -666,6 +666,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   max-width: 300px;
 }
 
+/* Cardano Skating: slightly smaller than the two federation logos above */
+.div-home-images img.logo-img-cardano-skating {
+  max-width: 240px;
+}
+
 .p-text-cardano-al-campo {
   color: var(--c-text);
   font-size: clamp(12px, 1.4vw, 16px);
