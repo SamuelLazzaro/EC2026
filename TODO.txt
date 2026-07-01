@@ -22,3 +22,5 @@ class="news-cat">Media
 - Organizzazione bar 
 - Costi SIAE 
 - Servizio di biglietteria online
+
+- new line
