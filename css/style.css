@@ -831,6 +831,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .sponsor-grid-main .sponsor-card {
   flex: 0 1 290px;
 }
+/* Su mobile, quando i main sponsor stanno su una sola colonna, le card
+   crescono a tutta larghezza per allinearsi alle card hotel (.grid-2, che
+   con minmax(290px, 1fr) diventano full-width a colonna singola). La soglia
+   ~600px coincide con quella a cui entrambe le griglie passano a 1 colonna. */
+@media (max-width: 600px) {
+  .sponsor-grid-main .sponsor-card {
+    flex-basis: 100%;
+  }
+}
 
 /* Separatore tra main e altri sponsor */
 .sponsor-divider {
