@@ -1269,6 +1269,18 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 /* Venue carousel (foto impianto) */
+.venue-certification {
+    /* max-width: 720px; */
+    margin: 0 auto 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    background: rgba(201, 168, 76, 0.08);
+    color: var(--c-text);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    text-align: center;
+}
 .venue-carousel {
     position: relative;
     margin-bottom: 2.5rem;

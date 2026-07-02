@@ -258,7 +258,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Struttura",
       title:  "L'<span class=\"hl\">Impianto Sportivo</span>",
-      desc:   "Foto, video e caratteristiche dell'impianto sportivo che ospita i Campionati Europei."
+      desc:   "Foto, video e caratteristiche dell'impianto sportivo che ospita i Campionati Europei.",
+      certification: "La pista da 200m, realizzata con ATP Roller System, è certificata World Skate Class 1, garanzia di superficie e prestazioni ai massimi livelli agonistici."
     },
     contatti: {
       tag:         "Informazioni",
@@ -591,7 +592,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Facility",
       title:  "The <span class=\"hl\">Sports Centre</span>",
-      desc:   "Photos, videos and details of the sports facility hosting the European Championships."
+      desc:   "Photos, videos and details of the sports facility hosting the European Championships.",
+      certification: "The 200m track, built with ATP Roller System, is World Skate Class 1 certified — a guarantee of a surface and performance at the highest competitive level."
     },
     contatti: {
       tag:         "Information",
@@ -924,7 +926,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Installation",
       title:  "Le <span class=\"hl\">Centre Sportif</span>",
-      desc:   "Photos, vidéos et caractéristiques du centre sportif accueillant les Championnats d'Europe."
+      desc:   "Photos, vidéos et caractéristiques du centre sportif accueillant les Championnats d'Europe.",
+      certification: "La piste de 200 m, réalisée avec ATP Roller System, est certifiée World Skate Class 1, gage d'une surface et de performances au plus haut niveau de compétition."
     },
     contatti: {
       tag:         "Informations",
@@ -1257,7 +1260,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Sportstätte",
       title:  "Das <span class=\"hl\">Sportzentrum</span>",
-      desc:   "Fotos, Videos und Merkmale des Sportzentrums, das die Europameisterschaften ausrichtet."
+      desc:   "Fotos, Videos und Merkmale des Sportzentrums, das die Europameisterschaften ausrichtet.",
+      certification: "Die 200-m-Bahn, gebaut mit dem ATP Roller System, ist nach World Skate Class 1 zertifiziert — Garant für eine Oberfläche und Leistungen auf höchstem Wettkampfniveau."
     },
     contatti: {
       tag:         "Informationen",
@@ -1590,7 +1594,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Recinto",
       title:  "El <span class=\"hl\">Centro Deportivo</span>",
-      desc:   "Fotos, vídeos y características del centro deportivo que acoge los Campeonatos de Europa."
+      desc:   "Fotos, vídeos y características del centro deportivo que acoge los Campeonatos de Europa.",
+      certification: "La pista de 200 m, realizada con ATP Roller System, está certificada World Skate Class 1, garantía de una superficie y un rendimiento al máximo nivel competitivo."
     },
     contatti: {
       tag:         "Información",
@@ -1923,7 +1928,8 @@ const TRANSLATIONS = {
     impianto: {
       tag:    "Instalação",
       title:  "O <span class=\"hl\">Centro Desportivo</span>",
-      desc:   "Fotos, vídeos e características do centro desportivo que acolhe os Campeonatos da Europa."
+      desc:   "Fotos, vídeos e características do centro desportivo que acolhe os Campeonatos da Europa.",
+      certification: "A pista de 200 m, realizada com o ATP Roller System, é certificada World Skate Class 1, garantia de uma superfície e de um desempenho ao mais alto nível competitivo."
     },
     contatti: {
       tag:         "Informação",
