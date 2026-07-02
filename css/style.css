@@ -640,11 +640,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-top: 0.25rem;
 }
 
-.div-home-images {
+.div-home-images, .div-logo-european {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
+}
+
+.div-logo-european {
+  margin-top: 0px;
+}
+
+.div-logo-european img {
+  width: 90vw;
+  max-width: 700px;
+  margin-bottom: 20px;
 }
 
 .div-home-images img, .div-home-images div {
@@ -668,7 +678,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Cardano Skating: slightly smaller than the two federation logos above */
 .div-home-images img.logo-img-cardano-skating {
-  max-width: 240px;
+  max-width: 200px;
 }
 
 .p-text-cardano-al-campo {
