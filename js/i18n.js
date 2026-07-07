@@ -116,7 +116,7 @@ const TRANSLATIONS = {
       tag:    "Biglietteria",
       title:  "<span class=\"hl\">Biglietti</span>",
       button: "Acquista i biglietti",
-      note_disabili: "L'ingresso è gratuito per le persone con disabilità e per il loro accompagnatore. È comunque necessario acquistare sulla piattaforma il biglietto dedicato gratuito.",
+      note_disabili: "L'ingresso è gratuito per le persone con disabilità e per il loro accompagnatore. È comunque necessario acquistare sulla piattaforma il biglietto dedicato gratuito. All'ingresso potrà essere richiesta documentazione attestante la disabilità.",
       note_online: "I biglietti possono essere acquistati anche in loco, ma sempre tramite la piattaforma online."
     },
     alloggi: {
@@ -450,7 +450,7 @@ const TRANSLATIONS = {
       tag:    "Ticket Office",
       title:  "<span class=\"hl\">Tickets</span>",
       button: "Buy tickets",
-      note_disabili: "Admission is free for people with disabilities and their companion. However, the dedicated free ticket must still be purchased on the platform.",
+      note_disabili: "Admission is free for people with disabilities and their companion. However, the dedicated free ticket must still be purchased on the platform. Proof of disability may be requested at the entrance.",
       note_online: "Tickets can also be purchased on site, but always through the online platform."
     },
     alloggi: {
@@ -784,7 +784,7 @@ const TRANSLATIONS = {
       tag:    "Billetterie",
       title:  "<span class=\"hl\">Billets</span>",
       button: "Acheter des billets",
-      note_disabili: "L'entrée est gratuite pour les personnes en situation de handicap et leur accompagnateur. Il est toutefois nécessaire d'acquérir sur la plateforme le billet dédié gratuit.",
+      note_disabili: "L'entrée est gratuite pour les personnes en situation de handicap et leur accompagnateur. Il est toutefois nécessaire d'acquérir sur la plateforme le billet dédié gratuit. Un justificatif attestant du handicap pourra être demandé à l'entrée.",
       note_online: "Les billets peuvent aussi être achetés sur place, mais toujours via la plateforme en ligne."
     },
     alloggi: {
@@ -1118,7 +1118,7 @@ const TRANSLATIONS = {
       tag:    "Ticketverkauf",
       title:  "<span class=\"hl\">Tickets</span>",
       button: "Tickets kaufen",
-      note_disabili: "Der Eintritt ist für Menschen mit Behinderung und ihre Begleitperson kostenlos. Das entsprechende kostenlose Ticket muss jedoch über die Plattform erworben werden.",
+      note_disabili: "Der Eintritt ist für Menschen mit Behinderung und ihre Begleitperson kostenlos. Das entsprechende kostenlose Ticket muss jedoch über die Plattform erworben werden. Am Eingang kann ein Nachweis der Behinderung verlangt werden.",
       note_online: "Tickets können auch vor Ort gekauft werden, jedoch immer über die Online-Plattform."
     },
     alloggi: {
@@ -1452,7 +1452,7 @@ const TRANSLATIONS = {
       tag:    "Taquilla",
       title:  "<span class=\"hl\">Entradas</span>",
       button: "Comprar entradas",
-      note_disabili: "La entrada es gratuita para las personas con discapacidad y su acompañante. No obstante, es necesario adquirir en la plataforma la entrada gratuita específica.",
+      note_disabili: "La entrada es gratuita para las personas con discapacidad y su acompañante. No obstante, es necesario adquirir en la plataforma la entrada gratuita específica. En la entrada podrá solicitarse documentación que acredite la discapacidad.",
       note_online: "Las entradas también se pueden comprar in situ, pero siempre a través de la plataforma online."
     },
     alloggi: {
@@ -1786,7 +1786,7 @@ const TRANSLATIONS = {
       tag:    "Bilheteira",
       title:  "<span class=\"hl\">Bilhetes</span>",
       button: "Comprar bilhetes",
-      note_disabili: "A entrada é gratuita para pessoas com deficiência e o seu acompanhante. No entanto, é necessário adquirir na plataforma o bilhete gratuito dedicado.",
+      note_disabili: "A entrada é gratuita para pessoas com deficiência e o seu acompanhante. No entanto, é necessário adquirir na plataforma o bilhete gratuito dedicado. À entrada poderá ser solicitada documentação comprovativa da deficiência.",
       note_online: "Os bilhetes também podem ser comprados no local, mas sempre através da plataforma online."
     },
     alloggi: {
