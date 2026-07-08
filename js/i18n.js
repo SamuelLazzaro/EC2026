@@ -54,11 +54,11 @@ const TRANSLATIONS = {
       stat_disc:      "Discipline",
       stat_events:    "Gare in programma",
       organizer:           "La Cardano Skating S.R.L. SSD organizza dal 19 al 26 luglio 2026 i campionati europei di pattinaggio corsa a rotelle:",
-      patronage_lombardia: "Con il Patrocinio di:",
-      patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo:",
-      patronage_provincia: "Con il Patrocinio della Provincia di Varese:",
-      patronage_camera:    "Con il Patrocinio della Camera di Commercio di Varese:",
-      patronage_samarate:  "Con il Patrocinio del Comune di Samarate:"
+      patronage_lombardia: "Con il Patrocinio di",
+      patronage_cardano:   "Con il Patrocinio del Comune di Cardano al Campo",
+      patronage_provincia: "Con il Patrocinio di",
+      patronage_camera:    "Con il Patrocinio di",
+      patronage_samarate:  "Con il Patrocinio del Comune di Samarate"
     },
     maratona: {
       tag:             "Iscrizioni",
@@ -388,11 +388,11 @@ const TRANSLATIONS = {
       stat_disc:      "Disciplines",
       stat_events:    "Scheduled events",
       organizer:           "Cardano Skating S.R.L. SSD organises the European Inline Speed Skating Championships from 19 to 26 July 2026:",
-      patronage_lombardia: "Under the Patronage of:",
-      patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo:",
-      patronage_provincia: "Under the Patronage of the Province of Varese:",
-      patronage_camera:    "Under the Patronage of the Varese Chamber of Commerce:",
-      patronage_samarate:  "Under the Patronage of the Municipality of Samarate:"
+      patronage_lombardia: "Under the Patronage of",
+      patronage_cardano:   "Under the Patronage of the Municipality of Cardano al Campo",
+      patronage_provincia: "Under the Patronage of",
+      patronage_camera:    "Under the Patronage of",
+      patronage_samarate:  "Under the Patronage of the Municipality of Samarate"
     },
     maratona: {
       tag:             "Registration",
@@ -722,11 +722,11 @@ const TRANSLATIONS = {
       stat_disc:      "Disciplines",
       stat_events:    "Épreuves prévues",
       organizer:           "La Cardano Skating S.R.L. SSD organise du 19 au 26 juillet 2026 les championnats d'Europe de patinage de vitesse en ligne :",
-      patronage_lombardia: "Sous le Patronage de :",
-      patronage_cardano:   "Sous le Patronage de la Commune de Cardano al Campo :",
-      patronage_provincia: "Sous le Patronage de la Province de Varèse :",
-      patronage_camera:    "Sous le Patronage de la Chambre de Commerce de Varèse :",
-      patronage_samarate:  "Sous le Patronage de la Commune de Samarate :"
+      patronage_lombardia: "Sous le Patronage de",
+      patronage_cardano:   "Sous le Patronage de la Commune de Cardano al Campo",
+      patronage_provincia: "Sous le Patronage de",
+      patronage_camera:    "Sous le Patronage de",
+      patronage_samarate:  "Sous le Patronage de la Commune de Samarate"
     },
     maratona: {
       tag:             "Inscriptions",
@@ -1056,11 +1056,11 @@ const TRANSLATIONS = {
       stat_disc:      "Disziplinen",
       stat_events:    "Geplante Wettbewerbe",
       organizer:           "Die Cardano Skating S.R.L. SSD veranstaltet vom 19. bis 26. Juli 2026 die Europameisterschaften im Inline-Speedskating:",
-      patronage_lombardia: "Unter der Schirmherrschaft von:",
-      patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo:",
-      patronage_provincia: "Unter der Schirmherrschaft der Provinz Varese:",
-      patronage_camera:    "Unter der Schirmherrschaft der Handelskammer Varese:",
-      patronage_samarate:  "Unter der Schirmherrschaft der Gemeinde Samarate:"
+      patronage_lombardia: "Unter der Schirmherrschaft von",
+      patronage_cardano:   "Unter der Schirmherrschaft der Gemeinde Cardano al Campo",
+      patronage_provincia: "Unter der Schirmherrschaft der",
+      patronage_camera:    "Unter der Schirmherrschaft der",
+      patronage_samarate:  "Unter der Schirmherrschaft der Gemeinde Samarate"
     },
     maratona: {
       tag:             "Anmeldung",
@@ -1390,11 +1390,11 @@ const TRANSLATIONS = {
       stat_disc:      "Disciplinas",
       stat_events:    "Pruebas programadas",
       organizer:           "La Cardano Skating S.R.L. SSD organiza del 19 al 26 de julio de 2026 los campeonatos de Europa de patinaje de velocidad en línea:",
-      patronage_lombardia: "Bajo el Patrocinio de:",
-      patronage_cardano:   "Bajo el Patrocinio del Municipio de Cardano al Campo:",
-      patronage_provincia: "Bajo el Patrocinio de la Provincia de Varese:",
-      patronage_camera:    "Bajo el Patrocinio de la Cámara de Comercio de Varese:",
-      patronage_samarate:  "Bajo el Patrocinio del Municipio de Samarate:"
+      patronage_lombardia: "Bajo el Patrocinio de",
+      patronage_cardano:   "Bajo el Patrocinio del Municipio de Cardano al Campo",
+      patronage_provincia: "Bajo el Patrocinio de",
+      patronage_camera:    "Bajo el Patrocinio de",
+      patronage_samarate:  "Bajo el Patrocinio del Municipio de Samarate"
     },
     maratona: {
       tag:             "Inscripciones",
@@ -1724,11 +1724,11 @@ const TRANSLATIONS = {
       stat_disc:      "Disciplinas",
       stat_events:    "Provas programadas",
       organizer:           "A Cardano Skating S.R.L. SSD organiza de 19 a 26 de julho de 2026 os campeonatos europeus de patinagem de velocidade em linha:",
-      patronage_lombardia: "Sob o Patrocínio de:",
-      patronage_cardano:   "Sob o Patrocínio do Município de Cardano al Campo:",
-      patronage_provincia: "Sob o Patrocínio da Província de Varese:",
-      patronage_camera:    "Sob o Patrocínio da Câmara de Comércio de Varese:",
-      patronage_samarate:  "Sob o Patrocínio do Município de Samarate:"
+      patronage_lombardia: "Sob o Patrocínio de",
+      patronage_cardano:   "Sob o Patrocínio do Município de Cardano al Campo",
+      patronage_provincia: "Sob o Patrocínio de",
+      patronage_camera:    "Sob o Patrocínio de",
+      patronage_samarate:  "Sob o Patrocínio do Município de Samarate"
     },
     maratona: {
       tag:             "Inscrições",
