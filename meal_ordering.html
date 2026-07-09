@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meal Orders · European Inline Speed Skating Championships 2026</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<style>
+		:root {
+			--bg: #EEF2F6;
+			--surface: #FFFFFF;
+			--ink: #0A1628;
+			--muted: #5C6B7A;
+			--line: #E1E7EE;
+			--primary: #14325C;
+			--primary-dark: #0A1628;
+			--accent: #C9A84C;
+			--gold: #E19A00;
+			--gold-soft: #FCF3DE;
+			--gold-line: #F0D89A;
+			--gold-ink: #8a5d00;
+			--red: #C23B2E;
+			--red-soft: #FBE9E6;
+			--red-line: #EEC0B9;
+			--red-ink: #8a271c;
+			--ok: #1E824C;
+			--display: "Montserrat", system-ui, sans-serif;
+			--body: "Inter", system-ui, -apple-system, sans-serif;
+			--radius: 14px;
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0
+		}
+
+		body {
+			background: var(--bg);
+			color: var(--ink);
+			font-family: var(--body);
+			line-height: 1.5;
+			-webkit-font-smoothing: antialiased;
+			padding: 24px 16px 64px;
+		}
+
+		.wrap {
+			max-width: 660px;
+			margin: 0 auto
+		}
+
+		/* ---- Header ---- */
+		.masthead {
+			background: var(--ink);
+			color: #fff;
+			border-radius: var(--radius);
+			padding: 22px 22px 20px;
+			position: relative;
+			overflow: hidden;
+			border-top: 4px solid var(--accent);
+		}
+
+		.mast-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin-bottom: 8px
+		}
+
+		.eyebrow {
+			font-family: var(--body);
+			font-size: 11px;
+			font-weight: 600;
+			letter-spacing: .14em;
+			text-transform: uppercase;
+			color: var(--accent);
+			margin: 0;
+		}
+
+		.langtog {
+			display: inline-flex;
+			border: 1px solid rgba(255, 255, 255, .28);
+			border-radius: 999px;
+			overflow: hidden;
+			flex: 0 0 auto
+		}
+
+		.langtog button {
+			background: transparent;
+			border: none;
+			color: #B9C9DA;
+			font-family: var(--body);
+			font-weight: 700;
+			font-size: 12px;
+			letter-spacing: .06em;
+			padding: 6px 13px;
+			cursor: pointer;
+			transition: background .12s, color .12s;
+		}
+
+		.langtog button.active {
+			background: #fff;
+			color: var(--ink)
+		}
+
+		.event-logo {
+			display: block;
+			width: 100%;
+			max-width: 340px;
+			height: auto;
+			margin: 2px 0;
+		}
+
+		/* ---- Day picker ---- */
+		.daybar {
+			background: var(--surface);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			margin-top: 14px;
+			padding: 14px 16px;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			flex-wrap: wrap;
+		}
+
+		.daybar .lab {
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: .06em;
+			text-transform: uppercase;
+			color: var(--muted)
+		}
+
+		.matchday {
+			display: flex;
+			align-items: baseline;
+			gap: 10px;
+			margin-left: auto
+		}
+
+		.matchday .wd {
+			font-family: var(--display);
+			font-weight: 700;
+			font-size: 15px;
+			color: var(--primary)
+		}
+
+		.matchday .dt {
+			font-family: var(--display);
+			font-weight: 700;
+			font-size: 28px;
+			letter-spacing: -.02em
+		}
+
+		.matchday .mo {
+			font-size: 13px;
+			color: var(--muted);
+			font-weight: 600
+		}
+
+		select,
+		input[type=number],
+		textarea {
+			font-family: var(--body);
+			font-size: 15px;
+			color: var(--ink);
+			background: #fff;
+			border: 1.5px solid var(--line);
+			border-radius: 10px;
+			padding: 11px 12px;
+			width: 100%;
+			transition: border-color .15s, box-shadow .15s;
+		}
+
+		select:focus,
+		input:focus,
+		textarea:focus {
+			outline: none;
+			border-color: var(--primary);
+			box-shadow: 0 0 0 3px rgba(20, 50, 92, .18);
+		}
+
+		#daySelect {
+			max-width: 320px
+		}
+
+		/* ---- Cards ---- */
+		.card {
+			background: var(--surface);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			margin-top: 14px;
+			padding: 18px 18px 20px;
+		}
+
+		.field-label {
+			display: block;
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: .06em;
+			text-transform: uppercase;
+			color: var(--muted);
+			margin-bottom: 8px;
+		}
+
+		.req {
+			color: var(--red);
+			font-weight: 700
+		}
+
+		.meal-head {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin: 6px 0 2px;
+			font-family: var(--display);
+			font-weight: 700;
+			font-size: 16px;
+		}
+
+		.meal-head .tag {
+			width: 22px;
+			height: 4px;
+			border-radius: 2px
+		}
+
+		.meal-head.lunch {
+			color: var(--gold-ink)
+		}
+
+		.meal-head.lunch .tag {
+			background: var(--gold)
+		}
+
+		.meal-head.dinner {
+			color: var(--primary)
+		}
+
+		.meal-head.dinner .tag {
+			background: var(--primary)
+		}
+
+		.opt {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			padding: 13px 0;
+			border-top: 1px solid var(--line)
+		}
+
+		.opt:first-of-type {
+			border-top: none
+		}
+
+		.opt-info {
+			flex: 1;
+			min-width: 0
+		}
+
+		.opt-name {
+			font-weight: 700;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			flex-wrap: wrap
+		}
+
+		.veg {
+			font-size: 10px;
+			font-weight: 700;
+			letter-spacing: .06em;
+			text-transform: uppercase;
+			color: var(--ok);
+			border: 1px solid #B9DBC8;
+			background: #EBF6EF;
+			border-radius: 999px;
+			padding: 2px 7px;
+		}
+
+		.opt-dishes {
+			color: var(--muted);
+			font-size: 13px;
+			margin-top: 3px
+		}
+
+		.lunch-edge {
+			box-shadow: inset 4px 0 0 var(--gold);
+			padding-left: 12px;
+			margin-left: -12px;
+			border-radius: 2px
+		}
+
+		.dinner-edge {
+			box-shadow: inset 4px 0 0 var(--primary);
+			padding-left: 12px;
+			margin-left: -12px;
+			border-radius: 2px
+		}
+
+		/* ---- Stepper ---- */
+		.stepper {
+			display: flex;
+			align-items: center;
+			flex: 0 0 auto
+		}
+
+		.stepper button {
+			width: 38px;
+			height: 40px;
+			border: 1.5px solid var(--line);
+			background: #fff;
+			font-size: 20px;
+			line-height: 1;
+			color: var(--primary);
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background .12s, border-color .12s;
+		}
+
+		.stepper button:hover {
+			background: #F3F7FB;
+			border-color: var(--primary)
+		}
+
+		.stepper button.minus {
+			border-radius: 10px 0 0 10px
+		}
+
+		.stepper button.plus {
+			border-radius: 0 10px 10px 0
+		}
+
+		.stepper input {
+			width: 56px;
+			height: 40px;
+			text-align: center;
+			border-left: none;
+			border-right: none;
+			border-radius: 0;
+			padding: 0;
+			font-weight: 700;
+			font-size: 16px;
+			-moz-appearance: textfield;
+		}
+
+		.stepper input::-webkit-outer-spin-button,
+		.stepper input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0
+		}
+
+		.stepper input.has {
+			color: var(--primary);
+			background: #F6FAFE
+		}
+
+		textarea {
+			min-height: 96px;
+			resize: vertical
+		}
+
+		.hint {
+			font-size: 12.5px;
+			color: var(--muted);
+			margin-top: 7px
+		}
+
+		/* ---- Footer / submit ---- */
+		.footer-bar {
+			position: sticky;
+			bottom: 0;
+			margin-top: 16px;
+			background: var(--surface);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			padding: 14px 16px;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			flex-wrap: wrap;
+			box-shadow: 0 -6px 20px rgba(16, 35, 58, .06);
+		}
+
+		.total {
+			font-size: 13px;
+			color: var(--muted);
+			font-weight: 600
+		}
+
+		.total b {
+			font-family: var(--display);
+			font-size: 22px;
+			color: var(--ink);
+			font-weight: 700;
+			margin-right: 5px
+		}
+
+		.btn {
+			margin-left: auto;
+			background: var(--primary);
+			color: #fff;
+			border: none;
+			border-radius: 10px;
+			font-family: var(--body);
+			font-weight: 700;
+			font-size: 15px;
+			padding: 13px 26px;
+			cursor: pointer;
+			transition: background .15s, transform .05s;
+		}
+
+		.btn:hover {
+			background: var(--primary-dark)
+		}
+
+		.btn:active {
+			transform: translateY(1px)
+		}
+
+		.btn:disabled {
+			background: #9DB3C9;
+			cursor: not-allowed
+		}
+
+		.msg {
+			margin-top: 12px;
+			padding: 12px 14px;
+			border-radius: 10px;
+			font-size: 14px;
+			display: none
+		}
+
+		.msg.err {
+			background: var(--red-soft);
+			border: 1px solid var(--red-line);
+			color: var(--red-ink)
+		}
+
+		.privacy {
+			font-size: 11.5px;
+			color: var(--muted);
+			margin-top: 18px;
+			text-align: center;
+			line-height: 1.5
+		}
+
+		.hp {
+			position: absolute;
+			left: -9999px;
+			width: 1px;
+			height: 1px;
+			overflow: hidden
+		}
+
+		/* ---- Success ---- */
+		.done {
+			display: none;
+			text-align: center;
+			padding: 36px 24px
+		}
+
+		.done.show {
+			display: block
+		}
+
+		.done .mark {
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			background: #EBF6EF;
+			border: 2px solid #B9DBC8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 16px;
+			font-size: 32px;
+			color: var(--ok);
+		}
+
+		.done h2 {
+			font-family: var(--display);
+			font-weight: 700;
+			margin: 0 0 6px
+		}
+
+		.done p {
+			color: var(--muted);
+			margin: 0 auto;
+			max-width: 420px
+		}
+
+		.summary {
+			text-align: left;
+			max-width: 420px;
+			margin: 20px auto 0;
+			background: var(--bg);
+			border: 1px solid var(--line);
+			border-radius: 10px;
+			padding: 14px 16px;
+			font-size: 14px;
+		}
+
+		.summary .row {
+			display: flex;
+			justify-content: space-between;
+			padding: 3px 0
+		}
+
+		.summary .row span:last-child {
+			font-weight: 700
+		}
+
+		.linkbtn {
+			background: none;
+			border: 1.5px solid var(--line);
+			color: var(--primary);
+			font-weight: 700;
+			border-radius: 10px;
+			padding: 11px 22px;
+			margin-top: 22px;
+			cursor: pointer;
+			font-family: var(--body);
+			font-size: 14px;
+		}
+
+		.linkbtn:hover {
+			border-color: var(--primary);
+			background: #F3F7FB
+		}
+
+		@media (max-width:520px) {
+			.matchday {
+				margin-left: 0;
+				width: 100%;
+				justify-content: flex-start
+			}
+
+			.opt {
+				flex-wrap: wrap
+			}
+		}
+
+		@media (prefers-reduced-motion:reduce) {
+			* {
+				transition: none !important
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+
+		<header class="masthead">
+			<div class="mast-top">
+				<p class="eyebrow" data-i18n="eyebrow"></p>
+				<div class="langtog" role="group" aria-label="Language">
+					<button type="button" data-lang="it">IT</button>
+					<button type="button" data-lang="en">EN</button>
+				</div>
+			</div>
+			<img class="event-logo" src="logo-completed-trasparente.png"
+				alt="European Speed Skating Championships 2026 — 19–26 July 2026, Cardano al Campo, Italy">
+		</header>
+
+		<div id="formArea">
+			<div class="daybar">
+				<span class="lab" data-i18n="orderForDay"></span>
+				<select id="daySelect" aria-label="Day"></select>
+				<div class="matchday" id="matchday"></div>
+			</div>
+
+			<div class="card">
+				<label class="field-label" for="country"><span data-i18n="countryLabel"></span> <span
+						class="req">*</span></label>
+				<select id="country" required>
+					<option value="" disabled selected data-i18n="selectCountry"></option>
+				</select>
+			</div>
+
+			<div class="card">
+				<span class="field-label" data-i18n="quantitiesLabel"></span>
+				<div id="meals"></div>
+			</div>
+
+			<div class="card">
+				<label class="field-label" for="notes" data-i18n="notesLabel"></label>
+				<textarea id="notes" data-i18n-ph="notesPh"></textarea>
+				<div class="hint" data-i18n="notesHint"></div>
+			</div>
+
+			<div class="hp"><label>Leave empty<input type="text" id="website" tabindex="-1" autocomplete="off"></label>
+			</div>
+
+			<div id="errBox" class="msg err"></div>
+
+			<div class="footer-bar">
+				<div class="total"><b id="totalCount">0</b><span data-i18n="mealsForDay"></span></div>
+				<button class="btn" id="submitBtn" data-i18n="sendOrder"></button>
+			</div>
+
+			<p class="privacy" data-i18n="privacy"></p>
+		</div>
+
+		<div class="done" id="doneScreen">
+			<div class="mark">✓</div>
+			<h2 data-i18n="doneTitle"></h2>
+			<p data-i18n="doneText"></p>
+			<div class="summary" id="doneSummary"></div>
+			<button class="linkbtn" id="againBtn" data-i18n="orderAnother"></button>
+		</div>
+
+	</div>
+
+	<script>
+		/* ============================================================
+		   1) CONFIG — paste your Google Apps Script Web App URL here
+		   ============================================================ */
+		const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxthYbvqVKTAxKcQ9uVXHa2nCAlutOiUiaUdzMhEa2J2wFEaJFFy-upicLy8ZrSfCw/exec";   // e.g. https://script.google.com/macros/s/AKfy.../exec
+
+		/* ============================================================
+		   2) TRANSLATIONS
+		   ============================================================ */
+		const I18N = {
+			it: {
+				eyebrow: "Ordinazione pasti",
+				title: "Campionati Europei di Pattinaggio Corsa in Linea 2026",
+				place: "Cardano al Campo, Italia · 19–26 luglio 2026",
+				orderForDay: "Ordina per il giorno",
+				countryLabel: "Nazione / Squadra nazionale",
+				selectCountry: "Seleziona la tua nazione…",
+				quantitiesLabel: "Quantità per opzione di menù",
+				notesLabel: "Note — allergie, intolleranze, modifiche",
+				notesPh: "es. 2 porzioni senza glutine; 1 persona allergica alla frutta secca; niente maiale per 3 atleti…",
+				notesHint: "Facoltativo. Usato solo per preparare il catering della tua squadra.",
+				mealsForDay: "pasti per questo giorno",
+				sendOrder: "Invia ordine",
+				sending: "Invio…",
+				privacy: "L'organizzatore (Cardano Skating S.R.L. S.S.D.) tratta questi dati solo per pianificare il catering dell'evento e li cancella al termine. Non inserire più dati personali del necessario.",
+				doneTitle: "Ordine ricevuto",
+				doneText: "Grazie. Il tuo ordine è stato registrato. Puoi inviare un altro giorno se necessario.",
+				orderAnother: "Ordina un altro giorno",
+				lunch: "Pranzo", dinner: "Cena", vegetarian: "Vegetariano",
+				country: "Nazione", day: "Giorno", totalMeals: "Totale pasti",
+				errCountry: "Seleziona la tua nazione prima di inviare.",
+				errQty: "Inserisci almeno una quantità.",
+				errSend: "Impossibile inviare l'ordine. Controlla la connessione e riprova.",
+				demoText: "Anteprima demo — imposta SCRIPT_URL per registrare gli ordini nel tuo Google Sheet."
+			},
+			en: {
+				eyebrow: "Meal Ordering",
+				title: "European Inline Speed Skating Championships 2026",
+				place: "Cardano al Campo, Italy · 19–26 July 2026",
+				orderForDay: "Order for day",
+				countryLabel: "Country / National team",
+				selectCountry: "Select your country…",
+				quantitiesLabel: "Quantities per menu option",
+				notesLabel: "Notes — allergies, intolerances, changes",
+				notesPh: "e.g. 2 gluten-free portions; 1 person allergic to nuts; no pork for 3 athletes…",
+				notesHint: "Optional. Used only to prepare the catering for your team.",
+				mealsForDay: "meals for this day",
+				sendOrder: "Send order",
+				sending: "Sending…",
+				privacy: "The organiser (Cardano Skating S.R.L. S.S.D.) processes this data only to plan catering for the event, and deletes it afterwards. Do not enter more personal data than necessary.",
+				doneTitle: "Order received",
+				doneText: "Thank you. Your meal order has been recorded. You can submit another day if needed.",
+				orderAnother: "Order another day",
+				lunch: "Lunch", dinner: "Dinner", vegetarian: "Vegetarian",
+				country: "Country", day: "Day", totalMeals: "Total meals",
+				errCountry: "Please select your country before sending.",
+				errQty: "Please enter at least one meal quantity.",
+				errSend: "Could not send the order. Check your connection and try again.",
+				demoText: "Demo preview — set SCRIPT_URL to record orders in your Google Sheet."
+			}
+		};
+		const LOCALE = { it: "it-IT", en: "en-GB" };
+
+		/* ============================================================
+		   3) DATA  (dishes in both languages)
+		   ============================================================ */
+		const COUNTRIES = ["Denmark", "France", "Germany", "United Kingdom", "Hungary", "Italy", "Latvia",
+			"Netherlands", "Poland", "Portugal", "Spain", "Switzerland", "Ukraine", "Austria", "Czechia"];
+
+		// opts: l1..l3 lunch, d1..d3 dinner. null = not served that day.
+		const MENU = [
+			{
+				iso: "2026-07-16", opts: {
+					l1: null, l2: null, l3: null,
+					d1: { it: ["Lasagna alla bolognese", "Roast beef", "Insalata mista"], en: ["Lasagna Bolognese", "Roast beef", "Mixed salad"] },
+					d2: { it: ["Riso con verdure", "Pesce al forno", "Fagiolini"], en: ["Rice with vegetables", "Baked fish", "Green beans"] },
+					d3: { it: ["Lasagna alle verdure", "Stracchino", "Insalata mista"], en: ["Vegetable lasagna", "Stracchino cheese", "Mixed salad"] }
+				}
+			},
+			{
+				iso: "2026-07-17", opts: {
+					l1: { it: ["Pasta al pesto", "Tacchino arrosto", "Piselli"], en: ["Pesto pasta", "Roast turkey", "Peas"] },
+					l2: { it: ["Riso basmati", "Platessa al limone", "Verdure al forno"], en: ["Basmati rice", "Plaice with lemon", "Baked vegetables"] },
+					l3: { it: ["Pasta alla norma", "Burger vegetale", "Piselli"], en: ["Pasta alla Norma", "Veggie burger", "Peas"] },
+					d1: { it: ["Gnocchi al pomodoro", "Orata al forno", "Verdure grigliate"], en: ["Gnocchi with tomato sauce", "Baked sea bream", "Grilled vegetables"] },
+					d2: { it: ["Pasta integrale alle verdure", "Hamburger di manzo", "Patate al forno"], en: ["Wholewheat pasta with vegetables", "Beef burger", "Baked potatoes"] },
+					d3: { it: ["Gnocchi al pomodoro", "Hamburger vegetale", "Verdure grigliate"], en: ["Gnocchi with tomato sauce", "Veggie burger", "Grilled vegetables"] }
+				}
+			},
+			{
+				iso: "2026-07-18", opts: {
+					l1: { it: ["Pasta tonno e pomodoro", "Lonza al forno", "Fagiolini"], en: ["Pasta with tuna and tomato", "Baked pork loin", "Green beans"] },
+					l2: { it: ["Riso basmati", "Branzino al forno", "Carote"], en: ["Basmati rice", "Baked sea bass", "Carrots"] },
+					l3: { it: ["Pasta alla crudaiola", "Polpette di ceci", "Carote"], en: ["Pasta with raw tomato sauce", "Chickpea patties", "Carrots"] },
+					d1: { it: ["Pasta gratinata", "Prosciutto cotto", "Insalata"], en: ["Baked pasta (au gratin)", "Cooked ham", "Salad"] },
+					d2: { it: ["Cannelloni ricotta e spinaci", "Platessa al forno", "Broccoli"], en: ["Ricotta and spinach cannelloni", "Baked plaice", "Broccoli"] },
+					d3: { it: ["Cannelloni ricotta e spinaci", "Insalata ricca (insalata, pomodoro, ceci e feta)"], en: ["Ricotta and spinach cannelloni", "Rich salad (lettuce, tomato, chickpeas, feta)"] }
+				}
+			},
+			{
+				iso: "2026-07-19", opts: {
+					l1: { it: ["Pasta primavera", "Pollo alla griglia", "Fagiolini"], en: ["Pasta primavera", "Grilled chicken", "Green beans"] },
+					l2: { it: ["Cous cous alle verdure", "Sgombro al forno", "Zucchine al forno"], en: ["Vegetable couscous", "Baked mackerel", "Baked zucchini"] },
+					l3: { it: ["Cous cous con verdure", "Hummus", "Zucchine al forno"], en: ["Couscous with vegetables", "Hummus", "Baked zucchini"] },
+					d1: { it: ["Parmigiana di melanzane", "Bresaola con grana", "Insalata"], en: ["Eggplant parmigiana", "Bresaola with grana cheese", "Salad"] },
+					d2: { it: ["Riso basmati", "Seppioline in umido", "Spinaci"], en: ["Basmati rice", "Stewed cuttlefish", "Spinach"] },
+					d3: { it: ["Parmigiana di melanzane", "Frittata con formaggio", "Spinaci"], en: ["Eggplant parmigiana", "Cheese omelette", "Spinach"] }
+				}
+			},
+			{
+				iso: "2026-07-20", opts: {
+					l1: { it: ["Pasta al pomodoro fresco", "Arrosto di vitello", "Verdure miste"], en: ["Pasta with fresh tomato", "Roast veal", "Mixed vegetables"] },
+					l2: { it: ["Pasta al pesto", "Salmone al forno", "Patate arrosto"], en: ["Pesto pasta", "Baked salmon", "Roast potatoes"] },
+					l3: { it: ["Pasta in crema di peperoni", "Falafel al forno", "Verdure miste"], en: ["Pasta with pepper cream", "Baked falafel", "Mixed vegetables"] },
+					d1: { it: ["Riso basmati", "Pollo al curry", "Verdure"], en: ["Basmati rice", "Chicken curry", "Vegetables"] },
+					d2: { it: ["Pasta alla crudaiola", "Merluzzo al forno", "Patate"], en: ["Pasta with raw tomato sauce", "Baked cod", "Potatoes"] },
+					d3: { it: ["Riso basmati", "Frittata alle verdure", "Verdure"], en: ["Basmati rice", "Vegetable omelette", "Vegetables"] }
+				}
+			},
+			{
+				iso: "2026-07-21", opts: {
+					l1: { it: ["Pasta al pomodoro", "Petto di pollo alla griglia", "Zucchine grigliate"], en: ["Tomato pasta", "Grilled chicken breast", "Grilled zucchini"] },
+					l2: { it: ["Pasta alla crema di zucchine", "Branzino al forno", "Carote al vapore"], en: ["Pasta with zucchini cream", "Baked sea bass", "Steamed carrots"] },
+					l3: { it: ["Pasta al pesto", "Burger di ceci", "Zucchine grigliate"], en: ["Pesto pasta", "Chickpea burger", "Grilled zucchini"] },
+					d1: { it: ["Lasagna alla bolognese", "Roast beef", "Insalata mista"], en: ["Lasagna Bolognese", "Roast beef", "Mixed salad"] },
+					d2: { it: ["Riso basmati", "Salmone al forno", "Fagiolini"], en: ["Basmati rice", "Baked salmon", "Green beans"] },
+					d3: { it: ["Lasagna alle verdure", "Falafel", "Insalata mista"], en: ["Vegetable lasagna", "Falafel", "Mixed salad"] }
+				}
+			},
+			{
+				iso: "2026-07-22", opts: {
+					l1: { it: ["Pasta alla norma", "Tacchino arrosto", "Piselli"], en: ["Pasta alla Norma", "Roast turkey", "Peas"] },
+					l2: { it: ["Riso basmati", "Seppioline al limone", "Verdure al forno"], en: ["Basmati rice", "Cuttlefish with lemon", "Baked vegetables"] },
+					l3: { it: ["Pasta alla norma", "Burger vegetale", "Piselli"], en: ["Pasta alla Norma", "Veggie burger", "Peas"] },
+					d1: { it: ["Pasta integrale alle verdure", "Hamburger di manzo", "Patate al forno"], en: ["Wholewheat pasta with vegetables", "Beef burger", "Baked potatoes"] },
+					d2: { it: ["Gnocchi al pomodoro", "Orata al forno", "Verdure grigliate"], en: ["Gnocchi with tomato sauce", "Baked sea bream", "Grilled vegetables"] },
+					d3: { it: ["Gnocchi al pomodoro", "Tortino di patate e formaggio", "Verdure grigliate"], en: ["Gnocchi with tomato sauce", "Potato and cheese pie", "Grilled vegetables"] }
+				}
+			},
+			{
+				iso: "2026-07-23", opts: {
+					l1: { it: ["Pasta tonno e pomodoro", "Lonza al forno", "Fagiolini"], en: ["Pasta with tuna and tomato", "Baked pork loin", "Green beans"] },
+					l2: { it: ["Riso basmati", "Platessa al pomodoro", "Carote"], en: ["Basmati rice", "Plaice with tomato", "Carrots"] },
+					l3: { it: ["Riso con crema di pomodoro crudo", "Polpette di ceci", "Carote"], en: ["Rice with raw tomato cream", "Chickpea patties", "Carrots"] },
+					d1: { it: ["Cannelloni ricotta e spinaci", "Prosciutto cotto", "Insalata"], en: ["Ricotta and spinach cannelloni", "Cooked ham", "Salad"] },
+					d2: { it: ["Riso alle verdure", "Platessa al forno", "Broccoli"], en: ["Rice with vegetables", "Baked plaice", "Broccoli"] },
+					d3: { it: ["Cannelloni ricotta e spinaci", "Arrosto di ceci", "Insalata"], en: ["Ricotta and spinach cannelloni", "Roast chickpeas", "Salad"] }
+				}
+			},
+			{
+				iso: "2026-07-24", opts: {
+					l1: { it: ["Pasta primavera", "Pollo alla griglia", "Patate lesse"], en: ["Pasta primavera", "Grilled chicken", "Boiled potatoes"] },
+					l2: { it: ["Cous cous alle verdure", "Sgombro al forno", "Zucchine"], en: ["Vegetable couscous", "Baked mackerel", "Zucchini"] },
+					l3: { it: ["Cous cous con verdure", "Arrosto di ceci", "Zucchine"], en: ["Couscous with vegetables", "Roast chickpeas", "Zucchini"] },
+					d1: { it: ["Pasta al ragù", "Bresaola con grana", "Insalata"], en: ["Pasta with ragù", "Bresaola with grana cheese", "Salad"] },
+					d2: { it: ["Riso basmati", "Tacchino alla griglia", "Spinaci"], en: ["Basmati rice", "Grilled turkey", "Spinach"] },
+					d3: { it: ["Parmigiana di melanzane", "Insalata ricca (insalata, pomodoro, ceci e feta)", "Spinaci"], en: ["Eggplant parmigiana", "Rich salad (lettuce, tomato, chickpeas, feta)", "Spinach"] }
+				}
+			},
+			{
+				iso: "2026-07-25", opts: {
+					l1: { it: ["Pasta al pomodoro fresco", "Arrosto di vitello", "Verdure miste"], en: ["Pasta with fresh tomato", "Roast veal", "Mixed vegetables"] },
+					l2: { it: ["Pasta in crema di zucchine", "Salmone al forno", "Patate arrosto"], en: ["Pasta with zucchini cream", "Baked salmon", "Roast potatoes"] },
+					l3: { it: ["Pasta al pesto", "Falafel al forno", "Verdure miste"], en: ["Pesto pasta", "Baked falafel", "Mixed vegetables"] },
+					d1: { it: ["Riso basmati", "Pollo alla griglia", "Verdure"], en: ["Basmati rice", "Grilled chicken", "Vegetables"] },
+					d2: { it: ["Pasta al tonno", "Merluzzo al forno", "Patate"], en: ["Tuna pasta", "Baked cod", "Potatoes"] },
+					d3: { it: ["Riso basmati", "Frittata alle verdure", "Verdure"], en: ["Basmati rice", "Vegetable omelette", "Vegetables"] }
+				}
+			},
+			{
+				iso: "2026-07-26", opts: {
+					l1: { it: ["Pasta al pomodoro", "Petto di pollo alla griglia", "Zucchine grigliate"], en: ["Tomato pasta", "Grilled chicken breast", "Grilled zucchini"] },
+					l2: { it: ["Pasta al pesto", "Merluzzo al forno", "Carote al vapore"], en: ["Pesto pasta", "Baked cod", "Steamed carrots"] },
+					l3: { it: ["Pasta al pesto e fagiolini", "Burger di ceci", "Zucchine grigliate"], en: ["Pesto pasta with green beans", "Chickpea burger", "Grilled zucchini"] },
+					d1: { it: ["Lasagna alla bolognese", "Roast beef", "Insalata mista"], en: ["Lasagna Bolognese", "Roast beef", "Mixed salad"] },
+					d2: { it: ["Riso basmati", "Salmone al forno", "Fagiolini"], en: ["Basmati rice", "Baked salmon", "Green beans"] },
+					d3: { it: ["Lasagna alle verdure", "Arrosto di ceci", "Insalata mista"], en: ["Vegetable lasagna", "Roast chickpeas", "Mixed salad"] }
+				}
+			}
+		];
+
+		const ORDER_KEYS = ["l1", "l2", "l3", "d1", "d2", "d3"];
+
+		/* ============================================================
+		   4) STATE + ELEMENTS
+		   ============================================================ */
+		let lang = "en";
+		let currentDay = null;
+		let qty = {};
+
+		const daySelect = document.getElementById("daySelect");
+		const countrySel = document.getElementById("country");
+		const mealsEl = document.getElementById("meals");
+		const matchday = document.getElementById("matchday");
+		const totalCount = document.getElementById("totalCount");
+		const submitBtn = document.getElementById("submitBtn");
+		const errBox = document.getElementById("errBox");
+
+		COUNTRIES.forEach(c => { const o = document.createElement("option"); o.value = c; o.textContent = c; countrySel.appendChild(o); });
+		MENU.forEach(day => { const o = document.createElement("option"); o.value = day.iso; daySelect.appendChild(o); });
+
+		/* ============================================================
+		   5) HELPERS
+		   ============================================================ */
+		function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+		function dparts(iso) {
+			const [y, m, d] = iso.split("-").map(Number);
+			const dt = new Date(y, m - 1, d), loc = LOCALE[lang];
+			return {
+				wd: cap(dt.toLocaleDateString(loc, { weekday: "short" }).replace(".", "")),
+				d: String(d),
+				mo: cap(dt.toLocaleDateString(loc, { month: "long" }))
+			};
+		}
+		function optLabel(key) {
+			const word = key[0] === "l" ? I18N[lang].lunch : I18N[lang].dinner;
+			return word + " " + key[1];
+		}
+
+		/* ============================================================
+		   6) RENDER
+		   ============================================================ */
+		function applyStaticI18n() {
+			const t = I18N[lang];
+			document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t[el.dataset.i18n]; });
+			document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t[el.dataset.i18nPh]; });
+			document.documentElement.lang = lang;
+			document.querySelectorAll(".langtog button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+		}
+
+		function fillDaySelect() {
+			Array.from(daySelect.options).forEach(opt => {
+				const p = dparts(opt.value); opt.textContent = `${p.wd} ${p.d} ${p.mo}`;
+			});
+		}
+
+		function renderDay(iso) {
+			currentDay = MENU.find(d => d.iso === iso) || MENU[0];
+			daySelect.value = currentDay.iso;
+			qty = {}; ORDER_KEYS.forEach(k => qty[k] = 0);
+
+			const p = dparts(currentDay.iso);
+			matchday.innerHTML = `<span class="wd">${p.wd}</span><span class="dt">${p.d}</span><span class="mo">${p.mo}</span>`;
+
+			mealsEl.innerHTML = "";
+			let lunchDone = false, dinnerDone = false;
+			ORDER_KEYS.forEach(key => {
+				const opt = currentDay.opts[key];
+				if (!opt) return;
+				const isLunch = key[0] === "l";
+				if (isLunch && !lunchDone) { mealsEl.appendChild(mealHead("lunch")); lunchDone = true; }
+				if (!isLunch && !dinnerDone) { mealsEl.appendChild(mealHead("dinner")); dinnerDone = true; }
+				mealsEl.appendChild(optionRow(key, opt[lang], isLunch));
+			});
+			updateTotal();
+
+			const u = new URL(window.location); u.searchParams.set("giorno", currentDay.iso);
+			history.replaceState(null, "", u);
+		}
+
+		function mealHead(type) {
+			const div = document.createElement("div");
+			div.className = "meal-head " + type;
+			div.innerHTML = `<span class="tag"></span>${I18N[lang][type]}`;
+			div.style.marginTop = type === "dinner" ? "18px" : "4px";
+			return div;
+		}
+
+		function optionRow(key, dishes, isLunch) {
+			const isVeg = key[1] === "3";
+			const row = document.createElement("div"); row.className = "opt";
+			const info = document.createElement("div"); info.className = "opt-info " + (isLunch ? "lunch-edge" : "dinner-edge");
+			info.innerHTML =
+				`<div class="opt-name">${optLabel(key)}${isVeg ? `<span class="veg">${I18N[lang].vegetarian}</span>` : ""}</div>` +
+				`<div class="opt-dishes">${dishes.join(" · ")}</div>`;
+			row.appendChild(info);
+			row.appendChild(stepper(key));
+			return row;
+		}
+
+		function stepper(key) {
+			const s = document.createElement("div"); s.className = "stepper";
+			const minus = document.createElement("button"); minus.type = "button"; minus.className = "minus"; minus.textContent = "−"; minus.setAttribute("aria-label", optLabel(key) + " −");
+			const inp = document.createElement("input"); inp.type = "number"; inp.min = "0"; inp.max = "100"; inp.value = String(qty[key]); inp.inputMode = "numeric"; inp.setAttribute("aria-label", optLabel(key));
+			const plus = document.createElement("button"); plus.type = "button"; plus.className = "plus"; plus.textContent = "+"; plus.setAttribute("aria-label", optLabel(key) + " +");
+			if (qty[key] > 0) inp.classList.add("has");
+			function set(v) { v = Math.max(0, Math.min(100, parseInt(v, 10) || 0)); qty[key] = v; inp.value = v; inp.classList.toggle("has", v > 0); updateTotal(); }
+			minus.onclick = () => set(qty[key] - 1);
+			plus.onclick = () => set(qty[key] + 1);
+			inp.oninput = () => set(inp.value);
+			s.append(minus, inp, plus);
+			return s;
+		}
+
+		function updateTotal() { totalCount.textContent = ORDER_KEYS.reduce((a, k) => a + (qty[k] || 0), 0); }
+
+		function setLang(l) {
+			if (l === lang) return;
+			lang = l;
+			applyStaticI18n();
+			fillDaySelect();
+			submitBtn.textContent = I18N[lang].sendOrder;
+			renderDay(currentDay ? currentDay.iso : MENU[0].iso);
+			const u = new URL(window.location); u.searchParams.set("lang", lang); history.replaceState(null, "", u);
+		}
+
+		/* ============================================================
+		   7) SUBMIT
+		   ============================================================ */
+		daySelect.addEventListener("change", e => renderDay(e.target.value));
+		document.querySelectorAll(".langtog button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+		submitBtn.addEventListener("click", submit);
+
+		async function submit() {
+			const t = I18N[lang];
+			errBox.style.display = "none";
+			if (!countrySel.value) { showErr(t.errCountry); countrySel.focus(); return; }
+			const total = ORDER_KEYS.reduce((a, k) => a + (qty[k] || 0), 0);
+			if (total === 0) { showErr(t.errQty); return; }
+			if (document.getElementById("website").value) return;
+
+			const payload = {
+				country: countrySel.value, date: currentDay.iso,
+				dayLabel: (() => { const p = dparts(currentDay.iso); return `${p.wd} ${p.d} ${p.mo}`; })(),
+				l1: qty.l1, l2: qty.l2, l3: qty.l3, d1: qty.d1, d2: qty.d2, d3: qty.d3,
+				notes: document.getElementById("notes").value.trim(), website: ""
+			};
+
+			submitBtn.disabled = true; submitBtn.textContent = t.sending;
+
+			if (SCRIPT_URL.indexOf("INCOLLA") !== -1) { setTimeout(() => showDone(payload, true), 500); return; }
+
+			try {
+				const res = await fetch(SCRIPT_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload), redirect: "follow" });
+				const out = await res.json();
+				if (out.status === "success") { showDone(payload, false); }
+				else { throw new Error(out.message || "Server error"); }
+			} catch (err) {
+				submitBtn.disabled = false; submitBtn.textContent = t.sendOrder;
+				showErr(t.errSend + " (" + err.message + ")");
+			}
+		}
+
+		function showErr(m) { errBox.textContent = m; errBox.style.display = "block"; }
+
+		function showDone(p, demo) {
+			const t = I18N[lang], rows = [];
+			rows.push(row(t.country, p.country));
+			rows.push(row(t.day, p.dayLabel));
+			ORDER_KEYS.forEach(k => { if (p[k] > 0) rows.push(row(optLabel(k), p[k])); });
+			rows.push(row(t.totalMeals, ORDER_KEYS.reduce((a, k) => a + p[k], 0)));
+			document.getElementById("doneSummary").innerHTML = rows.join("");
+			document.getElementById("formArea").style.display = "none";
+			const done = document.getElementById("doneScreen"); done.classList.add("show");
+			if (demo) { done.querySelector("p").textContent = t.demoText; }
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		}
+		function row(a, b) { return `<div class="row"><span>${a}</span><span>${b}</span></div>`; }
+
+		document.getElementById("againBtn").addEventListener("click", () => {
+			submitBtn.disabled = false; submitBtn.textContent = I18N[lang].sendOrder;
+			countrySel.value = ""; document.getElementById("notes").value = "";
+			document.getElementById("doneScreen").classList.remove("show");
+			document.getElementById("formArea").style.display = "";
+			document.querySelector('.done p').textContent = I18N[lang].doneText;
+			renderDay(currentDay.iso);
+		});
+
+		/* ============================================================
+		   8) INIT — language from ?lang= or browser; day from ?giorno=
+		   ============================================================ */
+		(function init() {
+			const params = new URL(window.location).searchParams;
+			const qlang = params.get("lang");
+			lang = (qlang === "it" || qlang === "en") ? qlang : ((navigator.language || "en").toLowerCase().startsWith("it") ? "it" : "en");
+			applyStaticI18n();
+			fillDaySelect();
+			submitBtn.textContent = I18N[lang].sendOrder;
+			const startIso = params.get("giorno");
+			renderDay(MENU.some(d => d.iso === startIso) ? startIso : MENU[0].iso);
+		})();
+	</script>
+</body>
+
+</html>
