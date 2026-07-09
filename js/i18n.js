@@ -63,7 +63,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Iscrizioni",
       title:           "<span class=\"hl\">Maratona</span>",
-      desc:            "La maratona dei Campionati Europei è aperta a tutti gli atleti, anche a chi non è convocato dalla propria nazionale.",
+      desc:            "La maratona dei Campionati Europei è aperta a tutti gli atleti delle categorie Junior/Senior, anche a chi non è convocato dalla propria nazionale.",
       intro:           "La <strong>European Marathon Open Championship 2026</strong> è una gara di 42 km su strada, aperta a tutti gli atleti. A differenza delle altre prove dei Campionati Europei – riservate alle delegazioni nazionali – la maratona può essere disputata anche da atleti non convocati dalle rispettive federazioni.<br><br>Le <strong>iscrizioni</strong> possono essere effettuate tramite l'apposito pulsante.<br><br>I <strong>numeri di gara</strong> per gli atleti che gareggiano per un team, e non per la propria nazionale, dovranno essere ritirati presso la segreteria all'interno dell'impianto sportivo in cui si terrà la manifestazione: il sabato dalle 10:00 alle 19:00 oppure la domenica mattina dalle 7:00 alle 8:30. Gli atleti che gareggiano per la propria nazionale utilizzeranno invece il numero di gara consegnato per l'intera manifestazione.",
       cta_register:    "Iscriviti alla European Marathon Open Championship 2026",
       map_consent:     "Per visualizzare la mappa del percorso è necessario accettare i cookie di terze parti (Google Maps).",
@@ -397,7 +397,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Registration",
       title:           "<span class=\"hl\">Marathon</span>",
-      desc:            "The European Championships marathon is open to all athletes, including skaters not called up by their national team.",
+      desc:            "The European Championships marathon is open to all athletes in the Junior/Senior categories, including skaters not called up by their national team.",
       intro:           "The <strong>European Marathon Open Championship 2026</strong> is a 42 km road race open to all athletes. Unlike the other European Championship events – reserved for national delegations – the marathon can also be entered by athletes who are not selected by their respective federations.<br><br><strong>Registrations</strong> can be completed via the dedicated button below.<br><br><strong>Race numbers</strong> for athletes competing for a team, and not for their national federation, must be collected at the secretariat inside the sports venue hosting the event, on Saturday from 10:00 to 19:00 or on Sunday morning from 7:00 to 8:30. Athletes competing for their national team will instead use the race number issued for the entire event.",
       cta_register:    "Register for the European Marathon Open Championship 2026",
       map_consent:     "To view the route map you need to accept third-party cookies (Google Maps).",
@@ -731,7 +731,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Inscriptions",
       title:           "<span class=\"hl\">Marathon</span>",
-      desc:            "Le marathon des Championnats d'Europe est ouvert à tous les athlètes, y compris à ceux qui ne sont pas convoqués par leur équipe nationale.",
+      desc:            "Le marathon des Championnats d'Europe est ouvert à tous les athlètes des catégories Junior/Senior, y compris à ceux qui ne sont pas convoqués par leur équipe nationale.",
       intro:           "L'<strong>European Marathon Open Championship 2026</strong> est une course sur route de 42 km, ouverte à tous les athlètes. Contrairement aux autres épreuves des Championnats d'Europe – réservées aux délégations nationales – le marathon peut également être disputé par des athlètes non convoqués par leurs fédérations respectives.<br><br>Les <strong>inscriptions</strong> peuvent être effectuées via le bouton ci-dessous.<br><br>Les <strong>dossards</strong> des athlètes qui concourent pour un team, et non pour leur fédération nationale, devront être retirés au secrétariat situé à l'intérieur du site sportif accueillant la manifestation, le samedi de 10h00 à 19h00 ou le dimanche matin de 7h00 à 8h30. Les athlètes qui concourent pour leur équipe nationale utiliseront en revanche le dossard remis pour l'ensemble de la manifestation.",
       cta_register:    "S'inscrire à l'European Marathon Open Championship 2026",
       map_consent:     "Pour afficher la carte du parcours, vous devez accepter les cookies tiers (Google Maps).",
@@ -1065,7 +1065,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Anmeldung",
       title:           "<span class=\"hl\">Marathon</span>",
-      desc:            "Der Marathon der Europameisterschaften steht allen Athletinnen und Athleten offen – auch jenen, die nicht von ihrer Nationalmannschaft nominiert wurden.",
+      desc:            "Der Marathon der Europameisterschaften steht allen Athletinnen und Athleten der Kategorien Junior/Senior offen – auch jenen, die nicht von ihrer Nationalmannschaft nominiert wurden.",
       intro:           "Die <strong>European Marathon Open Championship 2026</strong> ist ein 42-km-Straßenrennen, das allen Athletinnen und Athleten offensteht. Anders als die übrigen Wettbewerbe der Europameisterschaft – die den Nationaldelegationen vorbehalten sind – kann am Marathon auch teilnehmen, wer nicht vom jeweiligen Verband nominiert wurde.<br><br>Die <strong>Anmeldung</strong> kann über die entsprechende Schaltfläche unten erfolgen.<br><br>Athletinnen und Athleten, die für ein Team und nicht für ihren nationalen Verband starten, müssen ihre <strong>Startnummer</strong> im Sekretariat innerhalb der Sportanlage abholen, in der die Veranstaltung ausgetragen wird, am Samstag von 10:00 bis 19:00 Uhr oder am Sonntagmorgen von 7:00 bis 8:30 Uhr. Athletinnen und Athleten, die für ihre Nationalmannschaft antreten, verwenden hingegen die für die gesamte Veranstaltung ausgegebene Startnummer.",
       cta_register:    "Anmeldung zur European Marathon Open Championship 2026",
       map_consent:     "Um die Streckenkarte anzuzeigen, müssen Sie Drittanbieter-Cookies (Google Maps) akzeptieren.",
@@ -1399,7 +1399,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Inscripciones",
       title:           "<span class=\"hl\">Maratón</span>",
-      desc:            "El maratón de los Campeonatos de Europa está abierto a todos los atletas, incluidos los patinadores no convocados por su selección nacional.",
+      desc:            "El maratón de los Campeonatos de Europa está abierto a todos los atletas de las categorías Junior/Senior, incluidos los patinadores no convocados por su selección nacional.",
       intro:           "El <strong>European Marathon Open Championship 2026</strong> es una carrera de 42 km en ruta, abierta a todos los atletas. A diferencia de las demás pruebas del Campeonato de Europa – reservadas a las delegaciones nacionales – el maratón también puede ser disputado por atletas no convocados por sus respectivas federaciones.<br><br>Las <strong>inscripciones</strong> pueden realizarse mediante el botón correspondiente situado más abajo.<br><br>Los <strong>dorsales</strong> de los atletas que compiten por un team, y no por su selección nacional, deberán retirarse en la secretaría situada dentro de la instalación deportiva sede del evento, el sábado de 10:00 a 19:00 o el domingo por la mañana de 7:00 a 8:30. Los atletas que compiten por su selección nacional utilizarán en cambio el dorsal entregado para toda la competición.",
       cta_register:    "Inscríbete al European Marathon Open Championship 2026",
       map_consent:     "Para ver el mapa del recorrido es necesario aceptar las cookies de terceros (Google Maps).",
@@ -1733,7 +1733,7 @@ const TRANSLATIONS = {
     maratona: {
       tag:             "Inscrições",
       title:           "<span class=\"hl\">Maratona</span>",
-      desc:            "A maratona dos Campeonatos Europeus está aberta a todos os atletas, incluindo patinadores não convocados pela sua seleção nacional.",
+      desc:            "A maratona dos Campeonatos Europeus está aberta a todos os atletas das categorias Junior/Senior, incluindo patinadores não convocados pela sua seleção nacional.",
       intro:           "O <strong>European Marathon Open Championship 2026</strong> é uma corrida de 42 km em estrada, aberta a todos os atletas. Ao contrário das outras provas do Campeonato Europeu – reservadas às delegações nacionais – a maratona também pode ser disputada por atletas não convocados pelas respetivas federações.<br><br>As <strong>inscrições</strong> podem ser efetuadas através do botão correspondente abaixo.<br><br>Os <strong>dorsais</strong> dos atletas que competem por um team, e não pela sua federação nacional, deverão ser levantados na secretaria, no interior da instalação desportiva que acolhe o evento, no sábado das 10:00 às 19:00 ou no domingo de manhã das 7:00 às 8:30. Os atletas que competem pela sua seleção nacional utilizarão o dorsal entregue para toda a competição.",
       cta_register:    "Inscreva-se no European Marathon Open Championship 2026",
       map_consent:     "Para visualizar o mapa do percurso é necessário aceitar os cookies de terceiros (Google Maps).",
