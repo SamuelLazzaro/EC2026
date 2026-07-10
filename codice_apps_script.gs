@@ -15,7 +15,13 @@
  */
 
 const SHEET_NAME = "Ordini";
+const SQUADRE_SHEET = "Squadre";   // foglio con la tabella Token -> Nazione
 const TIMEZONE = "Europe/Rome";
+
+// Progetto Apps Script standalone: non c'e' un foglio "attivo", quindi indichiamo
+// esplicitamente su quale Google Sheet lavorare. Incolla qui l'ID del foglio,
+// che trovi nel suo URL:  .../spreadsheets/d/<QUESTO_E_L_ID>/edit
+const SPREADSHEET_ID = "INCOLLA_QUI_L_ID_DEL_FOGLIO";
 
 const HEADERS = ["Data invio","Nazione","Giorno","Pranzo 1","Pranzo 2","Pranzo 3 (Veg)",
                  "Cena 1","Cena 2","Cena 3 (Veg)","Totale","Note"];
@@ -36,13 +42,19 @@ function doPost(e) {
     // Anti-bot: se il campo honeypot e' pieno, ignora silenziosamente.
     if (data.website) return json({ status: "success" });
 
+    // Verifica del token: la nazione e' determinata dal server a partire dal
+    // token, non dal client. Un token assente o sconosciuto viene rifiutato
+    // senza scrivere nulla (impedisce di ordinare per conto di un'altra nazione).
+    const countryEn = getSquadraFromToken_(data.token);
+    if (!countryEn) return json({ status: "error", message: "Token non valido" });
+
     const sheet = getSheet_();
 
     const l1 = clamp_(data.l1), l2 = clamp_(data.l2), l3 = clamp_(data.l3);
     const d1 = clamp_(data.d1), d2 = clamp_(data.d2), d3 = clamp_(data.d3);
     const total = l1 + l2 + l3 + d1 + d2 + d3;
 
-    const nazione = PAESI_IT[data.country] || String(data.country || "");
+    const nazione = PAESI_IT[countryEn] || countryEn;
     const giorno = parseDate_(data.date);   // Date reale: si ordina e si mostra come 17/07/2026
 
     sheet.appendRow([
@@ -59,13 +71,26 @@ function doPost(e) {
   }
 }
 
-// Apri l'URL /exec nel browser per verificare che l'app web sia attiva.
-function doGet() {
+// GET ?t=TOKEN -> restituisce la nazione associata al token, che il form usa
+// solo per mostrarla all'utente ("Stai ordinando per: ..."). La verifica vera
+// resta nel doPost. Senza token, risponde con un semplice ping di stato.
+function doGet(e) {
+  const token = e && e.parameter ? e.parameter.t : "";
+  if (token) {
+    const countryEn = getSquadraFromToken_(token);
+    if (countryEn) return json({ status: "ok", country: countryEn });
+    return json({ status: "error", message: "Token non valido" });
+  }
   return json({ status: "ok", info: "Endpoint ordini pasti attivo" });
 }
 
+// Restituisce lo spreadsheet su cui lavorare. Progetto standalone -> openById.
+function getSpreadsheet_() {
+  return SpreadsheetApp.openById(SPREADSHEET_ID);
+}
+
 function getSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = getSpreadsheet_();
   let sheet = ss.getSheetByName(SHEET_NAME);
   const nuovo = !sheet;
   if (nuovo) sheet = ss.insertSheet(SHEET_NAME);
@@ -95,6 +120,88 @@ function clamp_(v) {
   const n = parseInt(v, 10);
   if (isNaN(n)) return 0;
   return Math.max(0, Math.min(100, n));
+}
+
+/**
+ * Cerca un token nel foglio "Squadre" e restituisce il nome della nazione
+ * (in inglese, coerente con le chiavi di PAESI_IT) oppure null se il token
+ * non esiste o e' stato disattivato.
+ *
+ * Struttura attesa del foglio "Squadre":
+ *   A: Token   |   B: Nazione (inglese)   |   C: Attivo (SI/NO, opzionale)
+ *
+ * La colonna C e' facoltativa: se assente o vuota, la squadra e' considerata
+ * attiva. Impostare "NO" permette di revocare un link senza cancellare la riga.
+ */
+function getSquadraFromToken_(token) {
+  const tokenPulito = String(token || "").trim();
+  if (!tokenPulito) return null;
+
+  const ss = getSpreadsheet_();
+  const sheet = ss.getSheetByName(SQUADRE_SHEET);
+  if (!sheet || sheet.getLastRow() < 2) return null;
+
+  // dati[0] e' l'intestazione: si parte da i = 1.
+  const dati = sheet.getDataRange().getValues();
+  for (let i = 1; i < dati.length; i++) {
+    const tokenRiga = String(dati[i][0] || "").trim();
+    if (tokenRiga && tokenRiga === tokenPulito) {
+      const attivo = dati[i].length > 2 ? String(dati[i][2] || "SI").trim().toUpperCase() : "SI";
+      if (attivo === "NO") return null;
+      return String(dati[i][1] || "").trim();
+    }
+  }
+  return null;
+}
+
+/**
+ * ESEGUI UNA VOLTA dall'editor Apps Script (menu "Esegui") per creare il
+ * foglio "Squadre" con un token univoco per ogni nazione.
+ *
+ * ATTENZIONE: se il foglio "Squadre" esiste gia', la funzione si ferma e non
+ * lo tocca, per non invalidare i link gia' distribuiti. Per rigenerare tutto,
+ * elimina prima manualmente il foglio "Squadre".
+ *
+ * Dopo l'esecuzione, in "Squadre" trovi Token | Nazione | Attivo. Il link da
+ * inviare a ogni squadra ha il formato:  .../meal_ordering.html?t=TOKEN
+ */
+function generaSquadre() {
+  // Prefisso leggibile per nazione (solo estetico: la verifica usa il token intero).
+  const PREFISSI = {
+    "Denmark": "DK", "France": "FR", "Germany": "DE", "United Kingdom": "GB",
+    "Hungary": "HU", "Italy": "IT", "Latvia": "LV", "Netherlands": "NL",
+    "Poland": "PL", "Portugal": "PT", "Spain": "ES", "Switzerland": "CH",
+    "Ukraine": "UA", "Austria": "AT", "Czechia": "CZ"
+  };
+
+  const ss = getSpreadsheet_();
+  if (ss.getSheetByName(SQUADRE_SHEET)) {
+    throw new Error('Il foglio "' + SQUADRE_SHEET + '" esiste gia\'. Eliminalo prima di rigenerare i token.');
+  }
+
+  const sheet = ss.insertSheet(SQUADRE_SHEET);
+  sheet.appendRow(["Token", "Nazione", "Attivo"]);
+  sheet.getRange(1, 1, 1, 3).setFontWeight("bold");
+  sheet.setFrozenRows(1);
+
+  Object.keys(PREFISSI).forEach(function (nazione) {
+    const token = PREFISSI[nazione] + "-" + randomToken_(10);
+    sheet.appendRow([token, nazione, "SI"]);
+  });
+}
+
+/**
+ * Genera una stringa casuale di lunghezza "len".
+ * L'alfabeto esclude i caratteri ambigui (0/O, 1/I/L) per evitare errori di
+ * trascrizione quando i token vengono copiati o letti a voce.
+ */
+function randomToken_(len) {
+  const alfabeto = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  let s = "";
+  for (let i = 0; i < len; i++) {
+    s += alfabeto.charAt(Math.floor(Math.random() * alfabeto.length));
+  }
+  return s;
 }
 
 function json(obj) {

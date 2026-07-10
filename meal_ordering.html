@@ -466,6 +466,20 @@
 			overflow: hidden
 		}
 
+		/* ---- Read-only team name ---- */
+		.team-name {
+			font-family: var(--display);
+			font-weight: 700;
+			font-size: 20px;
+			color: var(--ink);
+		}
+
+		.team-name.team-loading {
+			font-size: 15px;
+			font-weight: 600;
+			color: var(--muted);
+		}
+
 		/* ---- Success ---- */
 		.done {
 			display: none;
@@ -489,6 +503,12 @@
 			margin: 0 auto 16px;
 			font-size: 32px;
 			color: var(--ok);
+		}
+
+		.done .mark.bad {
+			background: var(--red-soft);
+			border-color: var(--red-line);
+			color: var(--red-ink);
 		}
 
 		.done h2 {
@@ -585,11 +605,8 @@
 			</div>
 
 			<div class="card">
-				<label class="field-label" for="country"><span data-i18n="countryLabel"></span> <span
-						class="req">*</span></label>
-				<select id="country" required>
-					<option value="" disabled selected data-i18n="selectCountry"></option>
-				</select>
+				<span class="field-label" data-i18n="countryLabel"></span>
+				<div class="team-name team-loading" id="teamName" data-i18n="teamLoading"></div>
 			</div>
 
 			<div class="card">
@@ -624,13 +641,19 @@
 			<button class="linkbtn" id="againBtn" data-i18n="orderAnother"></button>
 		</div>
 
+		<div class="done" id="blockScreen">
+			<div class="mark bad">✕</div>
+			<h2 data-i18n="linkInvalidTitle"></h2>
+			<p data-i18n="linkInvalidText"></p>
+		</div>
+
 	</div>
 
 	<script>
 		/* ============================================================
 		   1) CONFIG — paste your Google Apps Script Web App URL here
 		   ============================================================ */
-		const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxthYbvqVKTAxKcQ9uVXHa2nCAlutOiUiaUdzMhEa2J2wFEaJFFy-upicLy8ZrSfCw/exec";   // e.g. https://script.google.com/macros/s/AKfy.../exec
+		const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzXYMPrNKSPm2KifVBdHqpOnVNn0nveF-YiW8iQzRB1rQUnlHA6h7wGCF-4lFddhQ/exec";   // e.g. https://script.google.com/macros/s/AKfy.../exec
 
 		/* ============================================================
 		   2) TRANSLATIONS
@@ -643,6 +666,9 @@
 				orderForDay: "Ordina per il giorno",
 				countryLabel: "Squadra nazionale",
 				selectCountry: "Seleziona la tua nazione…",
+				teamLoading: "Verifica del link…",
+				linkInvalidTitle: "Link non valido",
+				linkInvalidText: "Questo link per l'ordinazione non è valido o è stato disattivato. Contatta l'organizzazione dell'evento per riceverne uno corretto.",
 				quantitiesLabel: "Quantità per opzione di menù",
 				notesLabel: "Note — allergie, intolleranze, modifiche",
 				notesPh: "es. 2 porzioni senza glutine; 1 persona allergica alla frutta secca; niente maiale per 3 atleti…",
@@ -668,6 +694,9 @@
 				orderForDay: "Order for day",
 				countryLabel: "National team",
 				selectCountry: "Select your country…",
+				teamLoading: "Checking link…",
+				linkInvalidTitle: "Invalid link",
+				linkInvalidText: "This ordering link is not valid or has been disabled. Please contact the event organisation to get a correct one.",
 				quantitiesLabel: "Quantities per menu option",
 				notesLabel: "Notes — allergies, intolerances, changes",
 				notesPh: "e.g. 2 gluten-free portions; 1 person allergic to nuts; no pork for 3 athletes…",
@@ -692,8 +721,8 @@
 		/* ============================================================
 		   3) DATA  (dishes in both languages)
 		   ============================================================ */
-		const COUNTRIES = ["Denmark", "France", "Germany", "United Kingdom", "Hungary", "Italy", "Latvia",
-			"Netherlands", "Poland", "Portugal", "Spain", "Switzerland", "Ukraine", "Austria", "Czechia"];
+		// The national team is no longer chosen here: it is resolved server-side
+		// from the token in the URL (?t=...), so there is no country list client-side.
 
 		// opts: l1..l3 lunch, d1..d3 dinner. null = not served that day.
 		const MENU = [
@@ -815,17 +844,36 @@
 		let lang = "en";
 		let currentDay = null;
 		let qty = {};
+		let token = "";        // ordering token read from ?t= (verified server-side)
+		let teamCountry = "";  // national team name resolved from the token, for display
 
 		const daySelect = document.getElementById("daySelect");
-		const countrySel = document.getElementById("country");
+		const teamNameEl = document.getElementById("teamName");
 		const mealsEl = document.getElementById("meals");
 		const matchday = document.getElementById("matchday");
 		const totalCount = document.getElementById("totalCount");
 		const submitBtn = document.getElementById("submitBtn");
 		const errBox = document.getElementById("errBox");
 
-		COUNTRIES.forEach(c => { const o = document.createElement("option"); o.value = c; o.textContent = c; countrySel.appendChild(o); });
-		MENU.forEach(day => { const o = document.createElement("option"); o.value = day.iso; daySelect.appendChild(o); });
+		/**
+		 * Returns today's date as an ISO string (YYYY-MM-DD) in local time.
+		 * @returns {string}
+		 */
+		function todayIso() {
+			const now = new Date();
+			const year = now.getFullYear();
+			const month = String(now.getMonth() + 1).padStart(2, "0");
+			const day = String(now.getDate()).padStart(2, "0");
+			return `${year}-${month}-${day}`;
+		}
+
+		// Only today and future days can be ordered: days already past are removed
+		// from the picker. ISO date strings (YYYY-MM-DD) compare correctly with a
+		// plain lexicographic >=, so no Date parsing is needed here.
+		const TODAY_ISO = todayIso();
+		const SELECTABLE_DAYS = MENU.filter(day => day.iso >= TODAY_ISO);
+
+		SELECTABLE_DAYS.forEach(day => { const o = document.createElement("option"); o.value = day.iso; daySelect.appendChild(o); });
 
 		/* ============================================================
 		   5) HELPERS
@@ -942,13 +990,17 @@
 		async function submit() {
 			const t = I18N[lang];
 			errBox.style.display = "none";
-			if (!countrySel.value) { showErr(t.errCountry); countrySel.focus(); return; }
+			// Safety net: without a resolved team the form should already be blocked.
+			if (!teamCountry) { blockAccess(); return; }
 			const total = ORDER_KEYS.reduce((a, k) => a + (qty[k] || 0), 0);
 			if (total === 0) { showErr(t.errQty); return; }
 			if (document.getElementById("website").value) return;
 
 			const payload = {
-				country: countrySel.value, date: currentDay.iso,
+				// The server derives the country from the token; `country` is sent
+				// only so it can be shown in the confirmation summary below.
+				token: token,
+				country: teamCountry, date: currentDay.iso,
 				dayLabel: (() => { const p = dparts(currentDay.iso); return `${p.wd} ${p.d} ${p.mo}`; })(),
 				l1: qty.l1, l2: qty.l2, l3: qty.l3, d1: qty.d1, d2: qty.d2, d3: qty.d3,
 				notes: document.getElementById("notes").value.trim(), website: ""
@@ -987,7 +1039,7 @@
 
 		document.getElementById("againBtn").addEventListener("click", () => {
 			submitBtn.disabled = false; submitBtn.textContent = I18N[lang].sendOrder;
-			countrySel.value = ""; document.getElementById("notes").value = "";
+			document.getElementById("notes").value = "";
 			document.getElementById("doneScreen").classList.remove("show");
 			document.getElementById("formArea").style.display = "";
 			document.querySelector('.done p').textContent = I18N[lang].doneText;
@@ -995,17 +1047,70 @@
 		});
 
 		/* ============================================================
-		   8) INIT — language from ?lang= or browser; day from ?giorno=
+		   8) TOKEN — resolve the national team from ?t= (server-side check)
 		   ============================================================ */
-		(function init() {
+		/**
+		 * Reads the token from ?t=, asks the server which team it belongs to and
+		 * unlocks the form. Security note: the real check happens server-side on
+		 * submit; here we only resolve the display name. If the token is missing
+		 * or invalid, the whole form is blocked (option A).
+		 * @returns {Promise<void>}
+		 */
+		async function resolveTeam() {
+			token = new URL(window.location).searchParams.get("t") || "";
+
+			// Demo mode: SCRIPT_URL not configured yet -> skip the server check so
+			// the page can still be previewed offline.
+			if (SCRIPT_URL.indexOf("INCOLLA") !== -1) { showTeam("Demo"); return; }
+
+			if (!token) { blockAccess(); return; }
+
+			try {
+				const res = await fetch(SCRIPT_URL + "?t=" + encodeURIComponent(token), { method: "GET" });
+				const out = await res.json();
+				if (out.status === "ok" && out.country) { showTeam(out.country); }
+				else { blockAccess(); }
+			} catch (err) {
+				blockAccess();
+			}
+		}
+
+		/**
+		 * Shows the resolved team name (read-only) and enables submission.
+		 * @param {string} name English country name returned by the server
+		 */
+		function showTeam(name) {
+			teamCountry = name;
+			teamNameEl.textContent = name;
+			teamNameEl.classList.remove("team-loading");
+			// Drop the i18n binding so a later language switch does not overwrite
+			// the resolved name with the "Checking link…" placeholder.
+			teamNameEl.removeAttribute("data-i18n");
+			submitBtn.disabled = false;
+		}
+
+		/** Hides the form and shows the "invalid link" screen. */
+		function blockAccess() {
+			document.getElementById("formArea").style.display = "none";
+			document.getElementById("doneScreen").classList.remove("show");
+			document.getElementById("blockScreen").classList.add("show");
+		}
+
+		/* ============================================================
+		   9) INIT — language from ?lang= or browser; day from ?giorno=
+		   ============================================================ */
+		(async function init() {
 			const params = new URL(window.location).searchParams;
 			const qlang = params.get("lang");
 			lang = (qlang === "it" || qlang === "en") ? qlang : ((navigator.language || "en").toLowerCase().startsWith("it") ? "it" : "en");
 			applyStaticI18n();
 			fillDaySelect();
 			submitBtn.textContent = I18N[lang].sendOrder;
+			submitBtn.disabled = true;   // stays locked until the token is verified
 			const startIso = params.get("giorno");
-			renderDay(MENU.some(d => d.iso === startIso) ? startIso : MENU[0].iso);
+			const defaultIso = SELECTABLE_DAYS.length ? SELECTABLE_DAYS[0].iso : MENU[0].iso;
+			renderDay(SELECTABLE_DAYS.some(d => d.iso === startIso) ? startIso : defaultIso);
+			await resolveTeam();
 		})();
 	</script>
 </body>
