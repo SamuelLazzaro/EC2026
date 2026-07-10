@@ -21,7 +21,7 @@ const TIMEZONE = "Europe/Rome";
 // Progetto Apps Script standalone: non c'e' un foglio "attivo", quindi indichiamo
 // esplicitamente su quale Google Sheet lavorare. Incolla qui l'ID del foglio,
 // che trovi nel suo URL:  .../spreadsheets/d/<QUESTO_E_L_ID>/edit
-const SPREADSHEET_ID = "INCOLLA_QUI_L_ID_DEL_FOGLIO";
+const SPREADSHEET_ID = "1hQCtIUuQ6oHnOenhxRbZnXMLaAiL3kNCx83QVO7cZJA";
 
 const HEADERS = ["Data invio","Nazione","Giorno","Pranzo 1","Pranzo 2","Pranzo 3 (Veg)",
                  "Cena 1","Cena 2","Cena 3 (Veg)","Totale","Note"];
@@ -29,10 +29,11 @@ const HEADERS = ["Data invio","Nazione","Giorno","Pranzo 1","Pranzo 2","Pranzo 3
 // Nomi Paesi: valore inviato dal form (inglese) -> etichetta italiana per il foglio.
 const PAESI_IT = {
   "Denmark":"Danimarca", "France":"Francia", "Germany":"Germania",
-  "United Kingdom":"Regno Unito", "Hungary":"Ungheria", "Italy":"Italia",
+  "Great Britain":"Gran Bretagna", "Hungary":"Ungheria", "Italy":"Italia",
   "Latvia":"Lettonia", "Netherlands":"Paesi Bassi", "Poland":"Polonia",
   "Portugal":"Portogallo", "Spain":"Spagna", "Switzerland":"Svizzera",
-  "Ukraine":"Ucraina", "Austria":"Austria", "Czechia":"Repubblica Ceca"
+  "Ukraine":"Ucraina", "Austria":"Austria", "Czechia":"Repubblica Ceca",
+  "Slovakia":"Slovacchia", "Belgium":"Belgio"
 };
 
 function doPost(e) {
@@ -155,39 +156,52 @@ function getSquadraFromToken_(token) {
 }
 
 /**
- * ESEGUI UNA VOLTA dall'editor Apps Script (menu "Esegui") per creare il
- * foglio "Squadre" con un token univoco per ogni nazione.
+ * ESEGUI dall'editor Apps Script (menu "Esegui") per popolare il foglio
+ * "Squadre" con un token univoco per ogni nazione.
  *
- * ATTENZIONE: se il foglio "Squadre" esiste gia', la funzione si ferma e non
- * lo tocca, per non invalidare i link gia' distribuiti. Per rigenerare tutto,
- * elimina prima manualmente il foglio "Squadre".
+ * E' SICURA DA RIESEGUIRE: crea il foglio se manca e aggiunge solo le nazioni
+ * ANCORA ASSENTI. Le righe gia' presenti (e quindi i link gia' distribuiti)
+ * non vengono toccate. Al termine, il log ("Esecuzione" > "Log") elenca cosa
+ * e' stato aggiunto.
  *
- * Dopo l'esecuzione, in "Squadre" trovi Token | Nazione | Attivo. Il link da
- * inviare a ogni squadra ha il formato:  .../meal_ordering.html?t=TOKEN
+ * In "Squadre" trovi Token | Nazione | Attivo. Il link da inviare a ogni
+ * squadra ha il formato:  .../meal_ordering.html?t=TOKEN
  */
 function generaSquadre() {
   // Prefisso leggibile per nazione (solo estetico: la verifica usa il token intero).
   const PREFISSI = {
-    "Denmark": "DK", "France": "FR", "Germany": "DE", "United Kingdom": "GB",
+    "Denmark": "DK", "France": "FR", "Germany": "DE", "Great Britain": "GB",
     "Hungary": "HU", "Italy": "IT", "Latvia": "LV", "Netherlands": "NL",
     "Poland": "PL", "Portugal": "PT", "Spain": "ES", "Switzerland": "CH",
-    "Ukraine": "UA", "Austria": "AT", "Czechia": "CZ"
+    "Ukraine": "UA", "Austria": "AT", "Czechia": "CZ",
+    "Slovakia": "SK", "Belgium": "BE"
   };
 
   const ss = getSpreadsheet_();
-  if (ss.getSheetByName(SQUADRE_SHEET)) {
-    throw new Error('Il foglio "' + SQUADRE_SHEET + '" esiste gia\'. Eliminalo prima di rigenerare i token.');
+  let sheet = ss.getSheetByName(SQUADRE_SHEET);
+  if (!sheet) {
+    sheet = ss.insertSheet(SQUADRE_SHEET);
+    sheet.appendRow(["Token", "Nazione", "Attivo"]);
+    sheet.getRange(1, 1, 1, 3).setFontWeight("bold");
+    sheet.setFrozenRows(1);
   }
 
-  const sheet = ss.insertSheet(SQUADRE_SHEET);
-  sheet.appendRow(["Token", "Nazione", "Attivo"]);
-  sheet.getRange(1, 1, 1, 3).setFontWeight("bold");
-  sheet.setFrozenRows(1);
+  // Nazioni gia' presenti nel foglio (colonna B), per non aggiungerle due volte.
+  const presenti = {};
+  if (sheet.getLastRow() >= 2) {
+    const nazioniEsistenti = sheet.getRange(2, 2, sheet.getLastRow() - 1, 1).getValues();
+    nazioniEsistenti.forEach(function (riga) { presenti[String(riga[0]).trim()] = true; });
+  }
 
+  const aggiunte = [];
   Object.keys(PREFISSI).forEach(function (nazione) {
+    if (presenti[nazione]) return;
     const token = PREFISSI[nazione] + "-" + randomToken_(10);
     sheet.appendRow([token, nazione, "SI"]);
+    aggiunte.push(nazione + " -> " + token);
   });
+
+  Logger.log(aggiunte.length ? "Aggiunte:\n" + aggiunte.join("\n") : "Nessuna nuova squadra da aggiungere.");
 }
 
 /**
