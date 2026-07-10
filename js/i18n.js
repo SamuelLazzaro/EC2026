@@ -155,7 +155,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Trancio di pizza",
       item_cono: "Cono",
       item_coppa_caffe: "Coppa caffè",
-      item_ghiacciolo: "Ghiacciolo"
+      item_ghiacciolo: "Ghiacciolo",
+      mensa_title: "Menù della mensa",
+      mensa_sub: "A cura di Sagre Prelibate · pranzo e cena in impianto",
+      mensa_view_btn: "Vedi il menù",
+      meal_lunch: "Pranzo",
+      meal_dinner: "Cena",
+      opt_menu1: "Menù 1",
+      opt_menu2: "Menù 2",
+      opt_veg: "Vegetariano",
+      mensa_no_lunch: "Solo cena (giorno di arrivo)"
     },
     programma: {
       tag:            "Calendario",
@@ -493,7 +502,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Pizza slice",
       item_cono: "Cone",
       item_coppa_caffe: "Coffee tub",
-      item_ghiacciolo: "Ice lolly"
+      item_ghiacciolo: "Ice lolly",
+      mensa_title: "Canteen menu",
+      mensa_sub: "By Sagre Prelibate · lunch and dinner on-site",
+      mensa_view_btn: "View the menu",
+      meal_lunch: "Lunch",
+      meal_dinner: "Dinner",
+      opt_menu1: "Menu 1",
+      opt_menu2: "Menu 2",
+      opt_veg: "Vegetarian",
+      mensa_no_lunch: "Dinner only (arrival day)"
     },
     programma: {
       tag:            "Schedule",
@@ -831,7 +849,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Part de pizza",
       item_cono: "Cornet",
       item_coppa_caffe: "Pot café",
-      item_ghiacciolo: "Glace à l'eau"
+      item_ghiacciolo: "Glace à l'eau",
+      mensa_title: "Menu de la cantine",
+      mensa_sub: "Par Sagre Prelibate · déjeuner et dîner sur place",
+      mensa_view_btn: "Voir le menu",
+      meal_lunch: "Déjeuner",
+      meal_dinner: "Dîner",
+      opt_menu1: "Menu 1",
+      opt_menu2: "Menu 2",
+      opt_veg: "Végétarien",
+      mensa_no_lunch: "Dîner uniquement (jour d'arrivée)"
     },
     programma: {
       tag:            "Calendrier",
@@ -1169,7 +1196,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Pizzastück",
       item_cono: "Hörnchen",
       item_coppa_caffe: "Kaffeebecher",
-      item_ghiacciolo: "Wassereis am Stiel"
+      item_ghiacciolo: "Wassereis am Stiel",
+      mensa_title: "Mensa-Menü",
+      mensa_sub: "Von Sagre Prelibate · Mittag- und Abendessen vor Ort",
+      mensa_view_btn: "Menü ansehen",
+      meal_lunch: "Mittagessen",
+      meal_dinner: "Abendessen",
+      opt_menu1: "Menü 1",
+      opt_menu2: "Menü 2",
+      opt_veg: "Vegetarisch",
+      mensa_no_lunch: "Nur Abendessen (Anreisetag)"
     },
     programma: {
       tag:            "Zeitplan",
@@ -1507,7 +1543,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Porción de pizza",
       item_cono: "Cono",
       item_coppa_caffe: "Tarrina de café",
-      item_ghiacciolo: "Polo de hielo"
+      item_ghiacciolo: "Polo de hielo",
+      mensa_title: "Menú del comedor",
+      mensa_sub: "Por Sagre Prelibate · almuerzo y cena en las instalaciones",
+      mensa_view_btn: "Ver el menú",
+      meal_lunch: "Almuerzo",
+      meal_dinner: "Cena",
+      opt_menu1: "Menú 1",
+      opt_menu2: "Menú 2",
+      opt_veg: "Vegetariano",
+      mensa_no_lunch: "Solo cena (día de llegada)"
     },
     programma: {
       tag:            "Calendario",
@@ -1845,7 +1890,16 @@ const TRANSLATIONS = {
       item_trancio_pizza: "Fatia de pizza",
       item_cono: "Cone",
       item_coppa_caffe: "Taça de café",
-      item_ghiacciolo: "Gelado de água"
+      item_ghiacciolo: "Gelado de água",
+      mensa_title: "Menu da cantina",
+      mensa_sub: "Pela Sagre Prelibate · almoço e jantar no local",
+      mensa_view_btn: "Ver o menu",
+      meal_lunch: "Almoço",
+      meal_dinner: "Jantar",
+      opt_menu1: "Menu 1",
+      opt_menu2: "Menu 2",
+      opt_veg: "Vegetariano",
+      mensa_no_lunch: "Apenas jantar (dia de chegada)"
     },
     programma: {
       tag:            "Calendário",

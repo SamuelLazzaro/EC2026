@@ -1601,7 +1601,7 @@
 				</div>
 
 				<!-- Griglia locali -->
-				<div class="grid-2 fade-up fade-up-d2">
+				<div class="grid-2 resto-grid fade-up fade-up-d2">
 					<!-- Sagre Prelibate (servizio in impianto) -->
 					<div class="hotel-card" data-type="in-impianto">
 						<a href="https://www.google.com/maps?q=45.638692,8.763423" target="_blank" rel="noopener noreferrer">
@@ -1622,6 +1622,15 @@
 								</div>
 							</div>
 						</a>
+						<!-- CTA: scorre al blocco menù giornaliero della mensa qui sotto -->
+						<div class="mensa-cta-wrap">
+							<a class="cta-register-btn mensa-jump-btn" href="#menuMensa" id="mensaMenuJump">
+								<span class="mensa-jump-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/></svg>
+								</span>
+								<span data-i18n="ristorazione.mensa_view_btn">Vedi il menù</span>
+							</a>
+						</div>
 					</div>
 
 					<!-- Mastro Pizza (pizzeria) -->
@@ -1701,6 +1710,16 @@
 							<li class="menu-item"><span class="menu-item-name">Super Twist</span><span class="menu-item-dots"></span><span class="menu-item-price">2,50 €</span></li>
 						</ul>
 					</div>
+				</div>
+
+				<!-- Menù giornaliero della mensa (Sagre Prelibate) — popolato da main.js -->
+				<div class="mensa-menu fade-up" id="menuMensa">
+					<div class="mensa-menu-head">
+						<h3 class="mensa-menu-title" data-i18n="ristorazione.mensa_title">Menù della mensa</h3>
+						<p class="mensa-menu-sub" data-i18n="ristorazione.mensa_sub">A cura di Sagre Prelibate · pranzo e cena in impianto</p>
+					</div>
+					<div class="mensa-day-selector" id="mensaDaySelector" role="tablist"></div>
+					<div class="mensa-day-panel" id="mensaDayPanel"></div>
 				</div>
 
 			</div>
@@ -1893,6 +1912,7 @@
 
 	<script src="js/i18n.js"></script>
 	<script src="js/cookie.js"></script>
+	<script src="js/menu-data.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

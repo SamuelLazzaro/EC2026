@@ -1180,6 +1180,171 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     white-space: nowrap;
 }
 
+/* ── Ristorazione: griglia locali in 2×2 su desktop/tablet, colonna singola su mobile.
+   Sovrascrive l'auto-fill di .grid-2 solo per questa sezione tramite la classe
+   modificatrice .resto-grid, senza toccare le altre griglie del sito. ── */
+.resto-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin-inline: auto;
+}
+@media (max-width: 640px) {
+    .resto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Ristorazione: pulsante "Vedi il menù" sulla card Sagre Prelibate ── */
+.mensa-cta-wrap {
+    padding: 0 1.25rem 1.25rem;
+}
+.mensa-jump-btn {
+    width: 100%;
+}
+.mensa-jump-icon {
+    display: inline-flex;
+    align-items: center;
+}
+.mensa-jump-icon svg {
+    width: 1.05rem;
+    height: 1.05rem;
+}
+
+/* ── Ristorazione: menù giornaliero della mensa (Sagre Prelibate) ── */
+.mensa-menu {
+    --mensa-gap: 1.5rem;
+    --mensa-veg: #6fbf73;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--c-border);
+}
+.mensa-menu-head {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+.mensa-menu-title {
+    font-family: var(--f-title);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--c-text);
+}
+.mensa-menu-sub {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--c-text-mute);
+}
+
+/* Selettore giorno: pill a colonna (giorno settimana + numero), va a capo su mobile */
+.mensa-day-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.mensa-day-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    min-width: 3.25rem;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    color: var(--c-text-mute);
+    transition: all var(--trans);
+}
+.mensa-day-weekday {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.mensa-day-num {
+    font-family: var(--f-title);
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+@media (pointer: fine) {
+    .mensa-day-btn:hover {
+        border-color: var(--c-accent);
+        color: var(--c-accent);
+    }
+}
+.mensa-day-btn.touch-active {
+    border-color: var(--c-accent);
+    color: var(--c-accent);
+}
+.mensa-day-btn.active {
+    background: var(--c-accent);
+    color: var(--c-bg);
+    border-color: var(--c-accent);
+}
+
+/* Pannello del giorno: card Pranzo / Cena affiancate (a colonna su mobile) */
+.mensa-meals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--mensa-gap);
+}
+.mensa-meal {
+    background: var(--c-card);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+.mensa-meal-head {
+    font-family: var(--f-title);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--c-border-sub);
+}
+.mensa-option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.mensa-option {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.mensa-option-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--c-text-mute);
+}
+.mensa-option.is-veg .mensa-option-label {
+    color: var(--mensa-veg);
+}
+.mensa-option.is-veg .mensa-option-label::after {
+    content: " 🌱";
+}
+.mensa-dish {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.mensa-dish-line {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--c-text);
+}
+.mensa-note {
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--c-text-mute);
+}
+
 .alloggi-note {
   margin-top: 2.5rem;
   padding: 1.25rem 1.5rem;

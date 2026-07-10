@@ -193,6 +193,137 @@ function initRistorazione(root) {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Init: Ristorazione – Menù giornaliero della mensa (Sagre Prelibate)
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Build the daily canteen-menu widget inside the Ristorazione section.
+ *
+ * The data (MENSA_MENU, from js/menu-data.js) is a list of days, each with a
+ * `lunch` and `dinner` array of options; every option is a list of course
+ * lines available in Italian and English. Only IT/EN exist in the source, so
+ * dish text uses Italian for the `it` locale and English for every other
+ * language (the same EN fallback used across the site). Fixed labels
+ * (Lunch/Dinner/…, weekday names) are localised in all six languages via the
+ * i18n `t()` helper and `Intl`.
+ *
+ * UI: a horizontal day selector (defaulting to today while the event runs,
+ * otherwise the first day) plus one panel showing that day's lunch and dinner.
+ * Re-renders on the `langchange` event.
+ * @param {HTMLElement|null} root - The Ristorazione section root element.
+ */
+function initMensaMenu(root) {
+  if (!root || typeof MENSA_MENU === 'undefined') return;
+
+  const selector = root.querySelector('#mensaDaySelector');
+  const panel    = root.querySelector('#mensaDayPanel');
+  const jumpBtn  = root.querySelector('#mensaMenuJump');
+  if (!selector || !panel || MENSA_MENU.length === 0) return;
+
+  // i18n key for the label of each meal option, by position (3rd = vegetarian).
+  const OPTION_LABEL_KEYS = ['ristorazione.opt_menu1', 'ristorazione.opt_menu2', 'ristorazione.opt_veg'];
+  const VEGETARIAN_INDEX  = 2;
+
+  // Dish text is stored only in IT/EN: use Italian for the IT locale, English
+  // (the site-wide fallback) for every other language.
+  const dishLang = () => (currentLang === 'it' ? 'it' : 'en');
+
+  // Day shown first: today if the championship is running, otherwise day one.
+  // 'en-CA' formats the local date as YYYY-MM-DD, matching the data `date` key.
+  const todayIso = new Date().toLocaleDateString('en-CA');
+  let selectedIndex = MENSA_MENU.findIndex(day => day.date === todayIso);
+  if (selectedIndex === -1) selectedIndex = 0;
+
+  /**
+   * Build one meal card (lunch or dinner) with its labelled options.
+   * @param {string} mealKey - 'lunch' or 'dinner' (used for the i18n label).
+   * @param {Array<{it:string[],en:string[]}>} options - Options for the day.
+   * @returns {string} Meal-card HTML, or '' when there are no options.
+   */
+  const renderMeal = (mealKey, options) => {
+    if (!options || options.length === 0) return '';
+    const lang = dishLang();
+
+    const optionsHtml = options.map((option, index) => {
+      const labelKey     = OPTION_LABEL_KEYS[index] || OPTION_LABEL_KEYS[OPTION_LABEL_KEYS.length - 1];
+      const isVegetarian = index === VEGETARIAN_INDEX;
+      const courseLines  = (option[lang] || option.it || [])
+        .map(line => `<span class="mensa-dish-line">${line}</span>`)
+        .join('');
+      return `
+        <div class="mensa-option${isVegetarian ? ' is-veg' : ''}">
+          <span class="mensa-option-label">${t(labelKey)}</span>
+          <div class="mensa-dish">${courseLines}</div>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="mensa-meal">
+        <div class="mensa-meal-head">${t('ristorazione.meal_' + mealKey)}</div>
+        <div class="mensa-option-list">${optionsHtml}</div>
+      </div>`;
+  };
+
+  /** Render the lunch/dinner panel for the currently selected day. */
+  const renderPanel = () => {
+    const day        = MENSA_MENU[selectedIndex];
+    const hasLunch   = day.lunch && day.lunch.length > 0;
+    const noLunchNote = hasLunch
+      ? ''
+      : `<p class="mensa-note">${t('ristorazione.mensa_no_lunch')}</p>`;
+    panel.innerHTML =
+      `<div class="mensa-meals">${renderMeal('lunch', day.lunch)}${renderMeal('dinner', day.dinner)}</div>${noLunchNote}`;
+  };
+
+  /** (Re)build the day-selector buttons in the active language. */
+  const renderSelector = () => {
+    selector.innerHTML = '';
+    MENSA_MENU.forEach((day, index) => {
+      const date    = new Date(day.date + 'T00:00:00');
+      const weekday = date.toLocaleDateString(currentLang, { weekday: 'short' });
+      const dayNum  = date.getDate();
+
+      const btn = document.createElement('button');
+      btn.type      = 'button';
+      btn.className = 'mensa-day-btn' + (index === selectedIndex ? ' active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', index === selectedIndex ? 'true' : 'false');
+      btn.innerHTML =
+        `<span class="mensa-day-weekday">${weekday}</span><span class="mensa-day-num">${dayNum}</span>`;
+
+      btn.addEventListener('click', () => {
+        selectedIndex = index;
+        selector.querySelectorAll('.mensa-day-btn').forEach((otherBtn, otherIndex) => {
+          const isActive = otherIndex === selectedIndex;
+          otherBtn.classList.toggle('active', isActive);
+          otherBtn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        renderPanel();
+      });
+      selector.appendChild(btn);
+    });
+  };
+
+  const render = () => {
+    renderSelector();
+    renderPanel();
+  };
+
+  render();
+
+  // "Vedi il menù" button on the Sagre Prelibate card: smooth-scroll to this
+  // block without touching the hash-based section routing.
+  if (jumpBtn) {
+    jumpBtn.addEventListener('click', e => {
+      e.preventDefault();
+      root.querySelector('#menuMensa').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  // Language switch: re-render dish text, weekday and fixed labels.
+  document.addEventListener('langchange', render);
+}
+
+/* ═══════════════════════════════════════════════════════════
    Init: Luogo – Mappa condizionale (consenso cookie)
    ═══════════════════════════════════════════════════════════ */
 function initLuogo(root) {
@@ -495,6 +626,7 @@ initHome();
 initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
+initMensaMenu(document.getElementById('ristorazione'));
 initLuogo(document.getElementById('luogo'));
 initMaratona(document.getElementById('maratona'));
 initVenueCarousel(document.getElementById('impianto'));
