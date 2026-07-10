@@ -302,9 +302,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   scroll-margin-top: var(--header-h);
 }
 
-/* Separatore tra sezioni */
+/* Separatore tra sezioni: linea oro in gradiente che sfuma ai lati */
 #mainContent > section + section {
-  border-top: 1px solid var(--c-border-sub);
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--c-accent) 50%,
+    transparent
+  ) 1;
 }
 
 /* Loading */
