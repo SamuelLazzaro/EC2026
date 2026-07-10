@@ -163,7 +163,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menù 1",
       opt_menu2: "Menù 2",
       opt_veg: "Vegetariano",
-      mensa_no_lunch: "Solo cena (giorno di arrivo)"
+      mensa_no_lunch: "Solo cena (giorno di arrivo)",
+      mensa_booking: "Le nazionali sono invitate a scrivere a <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> per ricevere il link di prenotazione di pranzi e cene, così da agevolare la preparazione dei pasti per staff e atleti."
     },
     programma: {
       tag:            "Calendario",
@@ -509,7 +510,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menu 1",
       opt_menu2: "Menu 2",
       opt_veg: "Vegetarian",
-      mensa_no_lunch: "Dinner only (arrival day)"
+      mensa_no_lunch: "Dinner only (arrival day)",
+      mensa_booking: "National teams are invited to write to <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> to receive the booking link for lunches and dinners, helping us plan meals for staff and athletes."
     },
     programma: {
       tag:            "Schedule",
@@ -855,7 +857,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menu 1",
       opt_menu2: "Menu 2",
       opt_veg: "Végétarien",
-      mensa_no_lunch: "Dîner uniquement (jour d'arrivée)"
+      mensa_no_lunch: "Dîner uniquement (jour d'arrivée)",
+      mensa_booking: "Les équipes nationales sont invitées à écrire à <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> pour recevoir le lien de réservation des déjeuners et dîners, afin de faciliter la préparation des repas pour le staff et les athlètes."
     },
     programma: {
       tag:            "Calendrier",
@@ -1201,7 +1204,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menü 1",
       opt_menu2: "Menü 2",
       opt_veg: "Vegetarisch",
-      mensa_no_lunch: "Nur Abendessen (Anreisetag)"
+      mensa_no_lunch: "Nur Abendessen (Anreisetag)",
+      mensa_booking: "Die Nationalmannschaften sind eingeladen, an <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> zu schreiben, um den Reservierungslink für Mittag- und Abendessen zu erhalten und so die Essensplanung für Staff und Athleten zu erleichtern."
     },
     programma: {
       tag:            "Zeitplan",
@@ -1547,7 +1551,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menú 1",
       opt_menu2: "Menú 2",
       opt_veg: "Vegetariano",
-      mensa_no_lunch: "Solo cena (día de llegada)"
+      mensa_no_lunch: "Solo cena (día de llegada)",
+      mensa_booking: "Se invita a las selecciones nacionales a escribir a <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> para recibir el enlace de reserva de almuerzos y cenas, facilitando así la preparación de las comidas para el staff y los atletas."
     },
     programma: {
       tag:            "Calendario",
@@ -1893,7 +1898,8 @@ const TRANSLATIONS = {
       opt_menu1: "Menu 1",
       opt_menu2: "Menu 2",
       opt_veg: "Vegetariano",
-      mensa_no_lunch: "Apenas jantar (dia de chegada)"
+      mensa_no_lunch: "Apenas jantar (dia de chegada)",
+      mensa_booking: "As seleções nacionais são convidadas a escrever para <a class=\"mensa-booking-link\" href=\"mailto:info-2026european@cardanoskating.it\">info-2026european@cardanoskating.it</a> para receber o link de reserva de almoços e jantares, facilitando a preparação das refeições para staff e atletas."
     },
     programma: {
       tag:            "Calendário",

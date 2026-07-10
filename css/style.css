@@ -1234,6 +1234,31 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     color: var(--c-text-mute);
 }
 
+/* Avviso alle nazionali: prenotazione pasti via email */
+.mensa-booking-note {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.35rem;
+    background: rgba(201, 168, 76, 0.06);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--c-text-mute);
+    text-align: center;
+}
+.mensa-booking-link {
+    color: var(--c-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    word-break: break-word;
+}
+@media (pointer: fine) {
+    .mensa-booking-link:hover {
+        color: var(--c-accent-lt);
+    }
+}
+
 /* Selettore giorno: pill a colonna (giorno settimana + numero), va a capo su mobile */
 .mensa-day-selector {
     display: flex;
