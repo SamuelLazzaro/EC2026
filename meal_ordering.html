@@ -1180,13 +1180,22 @@
 			const barRect = footerBar.getBoundingClientRect();
 			const overlapsHorizontally = fabRect.left < barRect.right && fabRect.right > barRect.left;
 			if (overlapsHorizontally) {
-				langFab.style.bottom = (barRect.height + FAB_GAP) + "px";
+				// Anchor the FAB to the footer bar's live top edge rather than to
+				// its height. While the bar is stuck at the bottom this equals
+				// "bar height + gap", but when the page is scrolled all the way
+				// down the sticky bar unsticks and moves up: tracking its top edge
+				// keeps the FAB above it in that case too.
+				const bottomOffset = window.innerHeight - barRect.top + FAB_GAP;
+				langFab.style.bottom = bottomOffset + "px";
 			} else {
 				langFab.style.bottom = ""; // fall back to the CSS default (20px)
 			}
 		}
 
 		window.addEventListener("resize", positionLangFab);
+		// The sticky footer bar detaches from the viewport bottom once the page
+		// is fully scrolled, so its top edge moves with scrolling: recompute then.
+		window.addEventListener("scroll", positionLangFab, { passive: true });
 		// Recompute whenever the footer bar changes size (e.g. text wrapping or a
 		// language switch that changes the label width).
 		new ResizeObserver(positionLangFab).observe(footerBar);
