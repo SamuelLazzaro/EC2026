@@ -1172,27 +1172,29 @@
 		 */
 		const footerBar = document.querySelector(".footer-bar");
 		const FAB_GAP = 12; // px kept between the FAB and the footer bar
+		// Below this width the centered .wrap (max 660px + padding) fills the
+		// viewport, so the footer bar reaches under the FAB and they overlap.
+		// Above it the bar is narrow/centered and never reaches the FAB, so the
+		// lift is applied on mobile only.
+		const mobileQuery = window.matchMedia("(max-width: 700px)");
 
 		function positionLangFab() {
-			// The FAB horizontal position does not depend on its `bottom`, so it
-			// is safe to read even while we are about to change `bottom`.
-			const fabRect = langFab.getBoundingClientRect();
-			const barRect = footerBar.getBoundingClientRect();
-			const overlapsHorizontally = fabRect.left < barRect.right && fabRect.right > barRect.left;
-			if (overlapsHorizontally) {
-				// Anchor the FAB to the footer bar's live top edge rather than to
-				// its height. While the bar is stuck at the bottom this equals
-				// "bar height + gap", but when the page is scrolled all the way
-				// down the sticky bar unsticks and moves up: tracking its top edge
-				// keeps the FAB above it in that case too.
-				const bottomOffset = window.innerHeight - barRect.top + FAB_GAP;
-				langFab.style.bottom = bottomOffset + "px";
-			} else {
-				langFab.style.bottom = ""; // fall back to the CSS default (20px)
+			if (!mobileQuery.matches) {
+				langFab.style.bottom = ""; // desktop: keep the CSS default (20px)
+				return;
 			}
+			// Anchor the FAB to the footer bar's live top edge rather than to
+			// its height. While the bar is stuck at the bottom this equals
+			// "bar height + gap", but when the page is scrolled all the way
+			// down the sticky bar unsticks and moves up: tracking its top edge
+			// keeps the FAB above it in that case too.
+			const barRect = footerBar.getBoundingClientRect();
+			const bottomOffset = window.innerHeight - barRect.top + FAB_GAP;
+			langFab.style.bottom = bottomOffset + "px";
 		}
 
 		window.addEventListener("resize", positionLangFab);
+		mobileQuery.addEventListener("change", positionLangFab);
 		// The sticky footer bar detaches from the viewport bottom once the page
 		// is fully scrolled, so its top edge moves with scrolling: recompute then.
 		window.addEventListener("scroll", positionLangFab, { passive: true });
