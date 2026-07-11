@@ -1161,6 +1161,36 @@
 			if (e.key === "Escape") closeFabMenu();
 		});
 
+		/* ---- Keep the language FAB clear of the sticky footer bar ---- */
+		/**
+		 * On narrow screens the floating language button and the sticky
+		 * "Send order" bar share the bottom-right corner and overlap. This lifts
+		 * the FAB so it always sits just above the footer bar. On wide screens
+		 * the centered footer bar never reaches under the FAB, so the base 20px
+		 * CSS offset is kept. The footer bar height is measured live because it
+		 * changes with the viewport width and the current language.
+		 */
+		const footerBar = document.querySelector(".footer-bar");
+		const FAB_GAP = 12; // px kept between the FAB and the footer bar
+
+		function positionLangFab() {
+			// The FAB horizontal position does not depend on its `bottom`, so it
+			// is safe to read even while we are about to change `bottom`.
+			const fabRect = langFab.getBoundingClientRect();
+			const barRect = footerBar.getBoundingClientRect();
+			const overlapsHorizontally = fabRect.left < barRect.right && fabRect.right > barRect.left;
+			if (overlapsHorizontally) {
+				langFab.style.bottom = (barRect.height + FAB_GAP) + "px";
+			} else {
+				langFab.style.bottom = ""; // fall back to the CSS default (20px)
+			}
+		}
+
+		window.addEventListener("resize", positionLangFab);
+		// Recompute whenever the footer bar changes size (e.g. text wrapping or a
+		// language switch that changes the label width).
+		new ResizeObserver(positionLangFab).observe(footerBar);
+
 		async function submit() {
 			const t = I18N[lang];
 			errBox.style.display = "none";
