@@ -20,6 +20,7 @@ const TRANSLATIONS = {
       maratona:    "Maratona",
       sponsor:     "Sponsor",
       biglietti:   "Biglietti",
+      comunicazioni: "Comunicazioni",
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
       programma:      "Programma",
@@ -111,6 +112,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Azienda leader nella produzione di accessori tecnici per il mercato dei veicoli ricreativi",
       atp_sector:    "Produttore di pavimentazioni sportive, commerciali e industriali in resina sintetica",
       mosa_sector:   "Produttore di piastrelle in ceramica per pavimenti, rivestimenti e facciate",
+    },
+    comunicazioni: {
+      tag:    "Ufficiale",
+      title:  "<span class=\"hl\">Comunicazioni</span>",
+      level_urgent:  "Urgente",
+      level_warning: "Importante",
+      level_info:    "Informazione"
     },
     biglietti: {
       tag:    "Biglietteria",
@@ -368,6 +376,7 @@ const TRANSLATIONS = {
       maratona:    "Marathon",
       sponsor:     "Sponsors",
       biglietti:   "Tickets",
+      comunicazioni: "Announcements",
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
       programma:      "Schedule",
@@ -459,6 +468,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Leading manufacturer of technical accessories for the recreational vehicle market",
       atp_sector:    "Manufacturer of synthetic resin sports, commercial and industrial flooring",
       mosa_sector:   "Manufacturer of ceramic tiles for floors, walls and facades"
+    },
+    comunicazioni: {
+      tag:    "Official",
+      title:  "<span class=\"hl\">Announcements</span>",
+      level_urgent:  "Urgent",
+      level_warning: "Important",
+      level_info:    "Info"
     },
     biglietti: {
       tag:    "Ticket Office",
@@ -716,6 +732,7 @@ const TRANSLATIONS = {
       maratona:    "Marathon",
       sponsor:     "Sponsors",
       biglietti:   "Billets",
+      comunicazioni: "Communications",
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
       programma:      "Programme",
@@ -807,6 +824,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Entreprise leader dans la production d'accessoires techniques pour le marché des véhicules de loisirs",
       atp_sector:    "Fabricant de revêtements sportifs, commerciaux et industriels en résine synthétique",
       mosa_sector:   "Fabricant de carreaux en céramique pour sols, murs et façades"
+    },
+    comunicazioni: {
+      tag:    "Officiel",
+      title:  "<span class=\"hl\">Communications</span>",
+      level_urgent:  "Urgent",
+      level_warning: "Important",
+      level_info:    "Info"
     },
     biglietti: {
       tag:    "Billetterie",
@@ -1064,6 +1088,7 @@ const TRANSLATIONS = {
       maratona:    "Marathon",
       sponsor:     "Sponsoren",
       biglietti:   "Tickets",
+      comunicazioni: "Mitteilungen",
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
       programma:      "Programm",
@@ -1155,6 +1180,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Führendes Unternehmen in der Herstellung technischer Zubehörteile für den Markt der Freizeitfahrzeuge",
       atp_sector:    "Hersteller von Sport-, Gewerbe- und Industrieböden aus Kunstharz",
       mosa_sector:   "Hersteller von Keramikfliesen für Böden, Wände und Fassaden"
+    },
+    comunicazioni: {
+      tag:    "Offiziell",
+      title:  "<span class=\"hl\">Mitteilungen</span>",
+      level_urgent:  "Dringend",
+      level_warning: "Wichtig",
+      level_info:    "Info"
     },
     biglietti: {
       tag:    "Ticketverkauf",
@@ -1412,6 +1444,7 @@ const TRANSLATIONS = {
       maratona:    "Maratón",
       sponsor:     "Patrocinadores",
       biglietti:   "Entradas",
+      comunicazioni: "Comunicaciones",
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
       programma:      "Programa",
@@ -1503,6 +1536,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Empresa líder en la producción de accesorios técnicos para el mercado de los vehículos recreativos",
       atp_sector:    "Fabricante de pavimentos deportivos, comerciales e industriales de resina sintética",
       mosa_sector:   "Fabricante de azulejos de cerámica para suelos, revestimientos y fachadas"
+    },
+    comunicazioni: {
+      tag:    "Oficial",
+      title:  "<span class=\"hl\">Comunicaciones</span>",
+      level_urgent:  "Urgente",
+      level_warning: "Importante",
+      level_info:    "Información"
     },
     biglietti: {
       tag:    "Taquilla",
@@ -1760,6 +1800,7 @@ const TRANSLATIONS = {
       maratona:    "Maratona",
       sponsor:     "Patrocinadores",
       biglietti:   "Bilhetes",
+      comunicazioni: "Comunicados",
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
       programma:      "Programa",
@@ -1851,6 +1892,13 @@ const TRANSLATIONS = {
       fiamma_sector: "Empresa líder na produção de acessórios técnicos para o mercado dos veículos de lazer",
       atp_sector:    "Fabricante de pavimentos desportivos, comerciais e industriais em resina sintética",
       mosa_sector:   "Fabricante de ladrilhos de cerâmica para pavimentos, revestimentos e fachadas"
+    },
+    comunicazioni: {
+      tag:    "Oficial",
+      title:  "<span class=\"hl\">Comunicados</span>",
+      level_urgent:  "Urgente",
+      level_warning: "Importante",
+      level_info:    "Informação"
     },
     biglietti: {
       tag:    "Bilheteira",

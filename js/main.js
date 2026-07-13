@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'impianto', 'sponsor', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
+const sectionIds = ['home', 'luogo', 'impianto', 'sponsor', 'comunicazioni', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -320,6 +320,107 @@ function initMensaMenu(root) {
   }
 
   // Language switch: re-render dish text, weekday and fixed labels.
+  document.addEventListener('langchange', render);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Init: Comunicazioni – Avvisi ufficiali/urgenti
+   ═══════════════════════════════════════════════════════════ */
+/**
+ * Render the official-notices ("Comunicazioni") section from the
+ * COMUNICAZIONI data array (js/comunicazioni-data.js).
+ *
+ * What it does and why:
+ *  - Notices are sorted by urgency (urgent → warning → info) so the
+ *    most important always surfaces first, regardless of array order.
+ *    A stable sort keeps same-level notices in their authored order.
+ *  - Each notice becomes a card with a coloured level badge (label
+ *    localised via i18n keys `comunicazioni.level_*`) and its title /
+ *    body taken from the notice's own per-language objects.
+ *  - A notice body may embed the token "{link}"; it is replaced by an
+ *    inline anchor whose click smooth-scrolls to the element named in
+ *    `notice.link.target` (used to point to the detailed-schedule
+ *    button in the Programma section) instead of following an href.
+ *  - Re-renders on the `langchange` event so text and labels follow
+ *    the active language, mirroring the other localized widgets.
+ *
+ * @param {HTMLElement|null} root - The Comunicazioni section root element.
+ */
+function initComunicazioni(root) {
+  if (!root || typeof COMUNICAZIONI === 'undefined') return;
+
+  const list = root.querySelector('#comunicazioniList');
+  if (!list || COMUNICAZIONI.length === 0) return;
+
+  // Lower rank = higher on the page. Unknown levels fall to the bottom.
+  const LEVEL_RANK = { urgent: 0, warning: 1, info: 2 };
+  const rankOf = (level) => (level in LEVEL_RANK ? LEVEL_RANK[level] : 99);
+
+  // Inline SVG icon per level (kept here, not in data, since it is
+  // presentation and shared by every notice of the same level).
+  const LEVEL_ICONS = {
+    urgent:
+      '<path d="M12 2 1 21h22L12 2z"></path><line x1="12" y1="9" x2="12" y2="14"></line><line x1="12" y1="17.5" x2="12.01" y2="17.5"></line>',
+    warning:
+      '<path d="M12 2 1 21h22L12 2z"></path><line x1="12" y1="9" x2="12" y2="14"></line><line x1="12" y1="17.5" x2="12.01" y2="17.5"></line>',
+    info:
+      '<circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>'
+  };
+
+  // Pick the active-language string, falling back to EN then IT.
+  const pick = (byLang) => byLang[currentLang] || byLang.en || byLang.it || '';
+
+  /**
+   * Turn a notice body into HTML, replacing the "{link}" token (if any)
+   * with an inline anchor carrying the scroll target in a data-attr.
+   * @param {object} notice
+   * @returns {string}
+   */
+  const renderBody = (notice) => {
+    const text = pick(notice.body);
+    if (!notice.link || !text.includes('{link}')) return text;
+    const label  = pick(notice.link.label);
+    const anchor =
+      `<a class="comunicazione-link" href="#" data-target="${notice.link.target}">${label}</a>`;
+    return text.replace('{link}', anchor);
+  };
+
+  const render = () => {
+    const ordered = COMUNICAZIONI
+      .map((notice, index) => ({ notice, index }))
+      .sort((a, b) =>
+        rankOf(a.notice.level) - rankOf(b.notice.level) || a.index - b.index)
+      .map(entry => entry.notice);
+
+    list.innerHTML = ordered.map(notice => {
+      const iconPaths = LEVEL_ICONS[notice.level] || LEVEL_ICONS.info;
+      return `
+        <li class="comunicazione" data-level="${notice.level}">
+          <div class="comunicazione-head">
+            <svg class="comunicazione-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">${iconPaths}</svg>
+            <span class="comunicazione-level">${t('comunicazioni.level_' + notice.level)}</span>
+          </div>
+          <h3 class="comunicazione-title">${pick(notice.title)}</h3>
+          <p class="comunicazione-body">${renderBody(notice)}</p>
+        </li>`;
+    }).join('');
+
+    // Wire the internal inline links (those with a data-target) to
+    // smooth-scroll to their target element (e.g. the detailed-schedule
+    // button) without changing the hash. Links without data-target
+    // (e.g. an external Google Maps link) keep their normal behaviour.
+    list.querySelectorAll('.comunicazione-link[data-target]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.getElementById(anchor.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  };
+
+  render();
   document.addEventListener('langchange', render);
 }
 
@@ -627,6 +728,7 @@ initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initMensaMenu(document.getElementById('ristorazione'));
+initComunicazioni(document.getElementById('comunicazioni'));
 initLuogo(document.getElementById('luogo'));
 initMaratona(document.getElementById('maratona'));
 initVenueCarousel(document.getElementById('impianto'));

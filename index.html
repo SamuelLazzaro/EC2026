@@ -161,6 +161,12 @@
 					</a>
 				</li>
 				<li>
+					<a href="#comunicazioni" class="nav-link" data-section="comunicazioni">
+						<span class="nav-arrow"></span>
+						<span data-i18n="nav.comunicazioni">Comunicazioni</span>
+					</a>
+				</li>
+				<li>
 					<a href="#biglietti" class="nav-link" data-section="biglietti">
 						<span class="nav-arrow"></span>
 						<span data-i18n="nav.biglietti">Biglietti</span>
@@ -1020,6 +1026,23 @@
 			</div>
 		</section>
 
+		<!-- ── Comunicazioni ─────────────────────────────────── -->
+		<section id="comunicazioni" class="section-content">
+			<!-- ── sections/comunicazioni.html ────────────────────── -->
+			<div class="section-wrap">
+
+				<div class="section-header fade-up">
+					<div class="section-tag" data-i18n="comunicazioni.tag">Ufficiale</div>
+					<h2 class="section-title" data-i18n="comunicazioni.title"><span class="hl">Comunicazioni</span></h2>
+					<div class="gold-divider"></div>
+				</div>
+
+				<!-- Populated by initComunicazioni() from js/comunicazioni-data.js -->
+				<ul class="comunicazioni-list fade-up fade-up-d1" id="comunicazioniList"></ul>
+
+			</div>
+		</section>
+
 		<!-- ── Biglietti ──────────────────────────────────────── -->
 		<section id="biglietti" class="section-content">
 			<!-- ── sections/biglietti.html ────────────────────────── -->
@@ -1134,7 +1157,7 @@
 				</ol>
 
 				<div class="programma-cta-wrap fade-up fade-up-d2">
-					<a class="cta-register-btn" href="race_schedule.html">
+					<a class="cta-register-btn" id="programmaCtaDetail" href="race_schedule.html">
 						<span data-i18n="programma.cta_detail">Vedi programma dettagliato</span>
 						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
 							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
@@ -1924,6 +1947,7 @@
 	<script src="js/i18n.js"></script>
 	<script src="js/cookie.js"></script>
 	<script src="js/menu-data.js"></script>
+	<script src="js/comunicazioni-data.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
