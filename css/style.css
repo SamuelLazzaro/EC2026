@@ -990,6 +990,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: 0.03em;
   margin-top: 0.1rem;
   transition: opacity var(--trans);
+  overflow-wrap: anywhere;
 }
 .sponsor-card.touch-active .sponsor-url { opacity: 1; }
 @media (pointer: fine) {
