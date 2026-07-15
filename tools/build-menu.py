@@ -101,15 +101,29 @@ def build_menu():
         iso_date = f"{EVENT_YEAR:04d}-{EVENT_MONTH:02d}-{day_number:02d}"
 
         def build_meal(columns):
-            """Build one meal (lunch or dinner) as a list of bilingual options."""
+            """Build one meal (lunch or dinner) as a list of bilingual options.
+
+            An empty cell becomes a null hole (None) so the position of the
+            options after it is preserved. The website and the ordering form
+            both key the vegetarian tag to the 3rd position, so a day that
+            serves only option 1 and the vegetarian option 3 (e.g. a light
+            lunch) must keep option 2's slot as None instead of shifting the
+            vegetarian option into position 2. Trailing empty slots are dropped,
+            and a meal with no options at all yields an empty list."""
             options = []
             for col in columns:
                 it_lines = split_dish(it_row[col])
                 en_lines = split_dish(en_row[col])
-                # An option exists only if at least one language has content.
+                # An option exists only if at least one language has content;
+                # otherwise keep None as a placeholder for the empty position.
                 if it_lines is None and en_lines is None:
-                    continue
-                options.append({"it": it_lines or en_lines, "en": en_lines or it_lines})
+                    options.append(None)
+                else:
+                    options.append({"it": it_lines or en_lines, "en": en_lines or it_lines})
+            # Drop trailing empty slots; internal gaps (a missing middle
+            # option) are kept so later options do not shift position.
+            while options and options[-1] is None:
+                options.pop()
             return options
 
         days.append({

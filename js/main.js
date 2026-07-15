@@ -244,6 +244,10 @@ function initMensaMenu(root) {
     const lang = dishLang();
 
     const optionsHtml = options.map((option, index) => {
+      // A null slot means that position is not served that day while a later
+      // one is (e.g. only menu 1 + the vegetarian option 3). The index is kept
+      // so the remaining options keep their label and the vegetarian tag.
+      if (!option) return '';
       const labelKey     = OPTION_LABEL_KEYS[index] || OPTION_LABEL_KEYS[OPTION_LABEL_KEYS.length - 1];
       const isVegetarian = index === VEGETARIAN_INDEX;
       const courseLines  = (option[lang] || option.it || [])

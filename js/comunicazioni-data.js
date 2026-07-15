@@ -30,6 +30,26 @@
 
 const COMUNICAZIONI = [
   {
+    id: 'servizio-mensa-domani',
+    level: 'urgent',
+    title: {
+      it: "Servizio mensa disponibile anche domani a pranzo",
+      en: "Canteen service also available tomorrow at lunch",
+      fr: "Service de restauration également disponible demain à midi",
+      de: "Mensa-Service auch morgen mittags verfügbar",
+      es: "Servicio de comedor también disponible mañana al mediodía",
+      pt: "Serviço de cantina também disponível amanhã ao almoço"
+    },
+    body: {
+      it: "Anche domani, giovedì 16 luglio, a pranzo sarà disponibile il servizio mensa presso l'impianto. A breve sarà possibile effettuare l'ordine tramite il link già inviato alle nazionali via email.",
+      en: "Tomorrow, Thursday 16 July, the canteen service will also be available at the venue at lunchtime. It will soon be possible to place your order via the link already sent to the national teams by email.",
+      fr: "Demain, jeudi 16 juillet, le service de restauration sera également disponible à midi sur le site. Il sera bientôt possible de passer commande via le lien déjà envoyé aux équipes nationales par e-mail.",
+      de: "Auch morgen, Donnerstag, den 16. Juli, steht mittags der Mensa-Service an der Anlage zur Verfügung. In Kürze kann die Bestellung über den Link erfolgen, der den Nationalmannschaften bereits per E-Mail zugesandt wurde.",
+      es: "También mañana, jueves 16 de julio, estará disponible el servicio de comedor en la instalación a la hora del almuerzo. En breve será posible realizar el pedido a través del enlace ya enviado a las selecciones nacionales por correo electrónico.",
+      pt: "Também amanhã, quinta-feira, 16 de julho, ao almoço estará disponível o serviço de cantina na instalação. Em breve será possível efetuar o pedido através do link já enviado às seleções nacionais por e-mail."
+    }
+  },
+  {
     id: 'riunione-tecnica',
     level: 'urgent',
     title: {

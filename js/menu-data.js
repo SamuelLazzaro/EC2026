@@ -13,7 +13,29 @@
 const MENSA_MENU = [
   {
     "date": "2026-07-16",
-    "lunch": [],
+    "lunch": [
+      {
+        "it": [
+          "Pasta alla genovese (carne di manzo e cipolla)",
+          "Salsiccia con verdure al forno"
+        ],
+        "en": [
+          "Genovese pasta (beef and onion)",
+          "Sausage with baked vegetables"
+        ]
+      },
+      null,
+      {
+        "it": [
+          "Pasta ai funghi",
+          "Felafel con verdure al forno"
+        ],
+        "en": [
+          "Mushroom pasta",
+          "Falafel with baked vegetables"
+        ]
+      }
+    ],
     "dinner": [
       {
         "it": [
