@@ -404,9 +404,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-top: 0.8rem;
   font-size: 0.95rem;
   color: var(--c-text-mute);
-  max-width: 580px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.65;
 }
 
