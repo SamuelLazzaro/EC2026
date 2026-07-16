@@ -1677,6 +1677,54 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin: 0;
 }
 
+/* Title shown above each parking map to make it clear which car park
+   the frame refers to (street/square names are proper nouns, so they
+   are the same in every language and need no translation). */
+.map-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-title);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  margin: 1.5rem 0 0.6rem;
+}
+.map-label-icon {
+  flex-shrink: 0;
+  color: var(--c-accent);
+}
+
+/* Warning notice shown above a parking map that has availability
+   restrictions (e.g. the Piazza Mercato car park is unavailable on
+   market days). Amber left accent to stand out from the neutral cards. */
+.parking-notice {
+  --notice-color: #e6a23c;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--notice-color);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  margin: 0 0 0.75rem;
+  text-align: left;
+}
+.parking-notice-icon {
+  flex-shrink: 0;
+  color: var(--notice-color);
+}
+.parking-notice-text {
+  font-size: 0.88rem;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0;
+}
+.parking-notice-text strong {
+  color: var(--notice-color);
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE

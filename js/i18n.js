@@ -276,7 +276,8 @@ const TRANSLATIONS = {
       tr_bus:         "Bus navetta",
       tr_bus_d:       "Servizio navetta ufficiale dall'aeroporto di Malpensa e dal centro di Gallarate durante tutta la manifestazione.",
       parking_title:  "Parcheggio",
-      parking_desc:   "Il parcheggio adiacente alla pista sarà chiuso al traffico.<br>Per il pubblico sarà disponibile un parcheggio in Via delle Biolle, a pochi minuti a piedi dalla pista.",
+      parking_desc:   "Il parcheggio adiacente alla pista sarà chiuso al traffico.<br>Per il pubblico saranno disponibili tre parcheggi, tutti a pochi minuti a piedi dalla pista: Via delle Biolle, Via Ettore Mantegazza e Piazza Mercato.",
+      parking_market_notice: "Attenzione: il parcheggio di Piazza Mercato NON sarà disponibile il martedì e il sabato per lo svolgimento del mercato.",
       map_consent:     "Per visualizzare la mappa è necessario accettare i cookie di terze parti (Google Maps).",
       map_consent_btn: "Accetta e mostra mappa"
     },
@@ -635,7 +636,8 @@ const TRANSLATIONS = {
       tr_bus:         "Shuttle bus",
       tr_bus_d:       "Official shuttle service from Malpensa Airport and Gallarate city centre throughout the event.",
       parking_title:  "Parking",
-      parking_desc:   "The car park next to the track will be closed to traffic.<br>Parking for the public will be available on Via delle Biolle, a few minutes' walk from the track.",
+      parking_desc:   "The car park next to the track will be closed to traffic.<br>Three car parks will be available for the public, all a few minutes' walk from the track: Via delle Biolle, Via Ettore Mantegazza and Piazza Mercato.",
+      parking_market_notice: "Please note: the Piazza Mercato car park will NOT be available on Tuesdays and Saturdays due to the market.",
       map_consent:     "To view the map you need to accept third-party cookies (Google Maps).",
       map_consent_btn: "Accept and show map"
     },
@@ -994,7 +996,8 @@ const TRANSLATIONS = {
       tr_bus:         "Navette",
       tr_bus_d:       "Service de navette officielle depuis l'aéroport de Malpensa et le centre de Gallarate pendant toute la manifestation.",
       parking_title:  "Stationnement",
-      parking_desc:   "Le parking adjacent à la piste sera fermé à la circulation.<br>Un parking sera mis à la disposition du public dans la Via delle Biolle, à quelques minutes à pied de la piste.",
+      parking_desc:   "Le parking adjacent à la piste sera fermé à la circulation.<br>Trois parkings seront mis à la disposition du public, tous à quelques minutes à pied de la piste : Via delle Biolle, Via Ettore Mantegazza et Piazza Mercato.",
+      parking_market_notice: "Attention : le parking de la Piazza Mercato ne sera PAS disponible le mardi et le samedi en raison du marché.",
       map_consent:     "Pour afficher la carte, vous devez accepter les cookies tiers (Google Maps).",
       map_consent_btn: "Accepter et afficher la carte"
     },
@@ -1353,7 +1356,8 @@ const TRANSLATIONS = {
       tr_bus:         "Shuttlebus",
       tr_bus_d:       "Offizieller Shuttleservice vom Flughafen Malpensa und dem Zentrum von Gallarate während der gesamten Veranstaltung.",
       parking_title:  "Parkplatz",
-      parking_desc:   "Der Parkplatz neben der Bahn wird für den Verkehr gesperrt.<br>Für das Publikum steht ein Parkplatz in der Via delle Biolle zur Verfügung, nur wenige Gehminuten von der Bahn entfernt.",
+      parking_desc:   "Der Parkplatz neben der Bahn wird für den Verkehr gesperrt.<br>Für das Publikum stehen drei Parkplätze zur Verfügung, alle nur wenige Gehminuten von der Bahn entfernt: Via delle Biolle, Via Ettore Mantegazza und Piazza Mercato.",
+      parking_market_notice: "Achtung: Der Parkplatz an der Piazza Mercato steht dienstags und samstags wegen des Marktes NICHT zur Verfügung.",
       map_consent:     "Um die Karte anzuzeigen, müssen Sie Drittanbieter-Cookies (Google Maps) akzeptieren.",
       map_consent_btn: "Akzeptieren und Karte anzeigen"
     },
@@ -1712,7 +1716,8 @@ const TRANSLATIONS = {
       tr_bus:         "Autobús lanzadera",
       tr_bus_d:       "Servicio oficial de lanzadera desde el aeropuerto de Malpensa y el centro de Gallarate durante todo el evento.",
       parking_title:  "Aparcamiento",
-      parking_desc:   "El aparcamiento adyacente a la pista estará cerrado al tráfico.<br>Para el público habrá disponible un aparcamiento en la Via delle Biolle, a pocos minutos a pie de la pista.",
+      parking_desc:   "El aparcamiento adyacente a la pista estará cerrado al tráfico.<br>Para el público habrá tres aparcamientos disponibles, todos a pocos minutos a pie de la pista: Via delle Biolle, Via Ettore Mantegazza y Piazza Mercato.",
+      parking_market_notice: "Atención: el aparcamiento de Piazza Mercato NO estará disponible los martes y sábados debido al mercado.",
       map_consent:     "Para ver el mapa debe aceptar las cookies de terceros (Google Maps).",
       map_consent_btn: "Aceptar y mostrar mapa"
     },
@@ -2071,7 +2076,8 @@ const TRANSLATIONS = {
       tr_bus:         "Shuttle",
       tr_bus_d:       "Serviço oficial de shuttle do Aeroporto de Malpensa e do centro de Gallarate durante todo o evento.",
       parking_title:  "Estacionamento",
-      parking_desc:   "O estacionamento adjacente à pista estará fechado ao trânsito.<br>Para o público estará disponível um estacionamento na Via delle Biolle, a poucos minutos a pé da pista.",
+      parking_desc:   "O estacionamento adjacente à pista estará fechado ao trânsito.<br>Para o público estarão disponíveis três estacionamentos, todos a poucos minutos a pé da pista: Via delle Biolle, Via Ettore Mantegazza e Piazza Mercato.",
+      parking_market_notice: "Atenção: o estacionamento da Piazza Mercato NÃO estará disponível às terças-feiras e aos sábados devido ao mercado.",
       map_consent:     "Para ver o mapa é necessário aceitar cookies de terceiros (Google Maps).",
       map_consent_btn: "Aceitar e mostrar mapa"
     },

@@ -435,9 +435,15 @@ function initLuogo(root) {
   const container = root.querySelector('#mapContainer');
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
 
-  /* Parking map: same consent gating as the main venue map */
+  /* Parking maps: same consent gating as the main venue map */
   const parkingContainer = root.querySelector('#parkingMapContainer');
   if (parkingContainer && window.ec2026InitMap) window.ec2026InitMap(parkingContainer);
+
+  const parkingContainer2 = root.querySelector('#parkingMapContainer2');
+  if (parkingContainer2 && window.ec2026InitMap) window.ec2026InitMap(parkingContainer2);
+
+  const parkingContainer3 = root.querySelector('#parkingMapContainer3');
+  if (parkingContainer3 && window.ec2026InitMap) window.ec2026InitMap(parkingContainer3);
 }
 
 /* ═══════════════════════════════════════════════════════════
