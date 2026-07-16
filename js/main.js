@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'impianto', 'sponsor', 'comunicazioni', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
+const sectionIds = ['home', 'luogo', 'parcheggi', 'impianto', 'sponsor', 'comunicazioni', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -434,7 +434,12 @@ function initComunicazioni(root) {
 function initLuogo(root) {
   const container = root.querySelector('#mapContainer');
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
+}
 
+/* ═══════════════════════════════════════════════════════════
+   Init: Parcheggi – Mappe condizionali (consenso cookie)
+   ═══════════════════════════════════════════════════════════ */
+function initParcheggi(root) {
   /* Parking maps: same consent gating as the main venue map */
   const parkingContainer = root.querySelector('#parkingMapContainer');
   if (parkingContainer && window.ec2026InitMap) window.ec2026InitMap(parkingContainer);
@@ -744,6 +749,7 @@ initRistorazione(document.getElementById('ristorazione'));
 initMensaMenu(document.getElementById('ristorazione'));
 initComunicazioni(document.getElementById('comunicazioni'));
 initLuogo(document.getElementById('luogo'));
+initParcheggi(document.getElementById('parcheggi'));
 initMaratona(document.getElementById('maratona'));
 initVenueCarousel(document.getElementById('impianto'));
 initVenueVideosLayout(document.getElementById('impianto'));
