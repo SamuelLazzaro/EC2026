@@ -434,6 +434,10 @@ function initComunicazioni(root) {
 function initLuogo(root) {
   const container = root.querySelector('#mapContainer');
   if (container && window.ec2026InitMap) window.ec2026InitMap(container);
+
+  /* Parking map: same consent gating as the main venue map */
+  const parkingContainer = root.querySelector('#parkingMapContainer');
+  if (parkingContainer && window.ec2026InitMap) window.ec2026InitMap(parkingContainer);
 }
 
 /* ═══════════════════════════════════════════════════════════

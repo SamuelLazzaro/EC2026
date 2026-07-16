@@ -78,6 +78,20 @@ function replaceWithIframe(container) {
   container.appendChild(iframe);
 }
 
+/**
+ * Renders every map container in the DOM that hasn't been rendered yet.
+ * Maps consent (MAPS_KEY) is global, so once it is granted — from the
+ * cookie banner OR from any single per-container "accept" button — every
+ * map on the page should appear at once, not just the one that was clicked.
+ */
+function renderAllConsentedMaps() {
+  document.querySelectorAll('.map-container').forEach(function (container) {
+    if (!container.querySelector('iframe')) {
+      replaceWithIframe(container);
+    }
+  });
+}
+
 /* ═══════════════════════════════════════════════════════════
    Banner – utilità
    ═══════════════════════════════════════════════════════════ */
@@ -103,7 +117,7 @@ function ec2026InitMap(container) {
     if (btn) {
       btn.addEventListener('click', function () {
         localStorage.setItem(MAPS_KEY, 'accepted');
-        replaceWithIframe(container);
+        renderAllConsentedMaps();
       });
     }
   }
@@ -158,11 +172,7 @@ acceptBtn.addEventListener('click', function () {
   localStorage.setItem(MAPS_KEY, 'accepted');
   hideBannerShowFab();
   /* Carica subito ogni mappa già montata nel DOM (Luogo, Maratona, ecc.) */
-  document.querySelectorAll('.map-container').forEach(function (container) {
-    if (!container.querySelector('iframe')) {
-      replaceWithIframe(container);
-    }
-  });
+  renderAllConsentedMaps();
 });
 
 /* Solo tecnici: rifiuta i cookie di terze parti */
