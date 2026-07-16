@@ -1662,6 +1662,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .transport-desc { font-size: 0.78rem; color: var(--c-text-mute); line-height: 1.55; }
 
+.parking-card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.parking-desc {
+  font-size: 0.9rem;
+  color: var(--c-text-mute);
+  line-height: 1.6;
+  margin: 0;
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE
