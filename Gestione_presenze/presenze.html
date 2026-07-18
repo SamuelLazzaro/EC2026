@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Gestione presenze · Campionati Europei di Pattinaggio Corsa 2026</title>
+	<link rel="icon" href="../logo.ico">
+	<link rel="stylesheet" href="../css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrap">
+
+		<header class="masthead">
+			<img class="event-logo" src="../logo-completed-trasparent.png"
+				alt="Campionati Europei di Pattinaggio Corsa 2026 — 19–26 luglio 2026, Cardano al Campo, Italia">
+		</header>
+
+		<div id="formArea">
+
+			<!-- Nome e cognome -->
+			<section class="card">
+				<label class="field-label" for="firstName">Nome <span class="req">*</span></label>
+				<input type="text" id="firstName" name="firstName" autocomplete="given-name" maxlength="60">
+
+				<label class="field-label field-label-gap" for="lastName">Cognome <span class="req">*</span></label>
+				<input type="text" id="lastName" name="lastName" autocomplete="family-name" maxlength="60">
+			</section>
+
+			<!-- Giorni di presenza (le card dei giorni sono generate da js/ui.js) -->
+			<section class="card">
+				<span class="field-label">Giorno di presenza <span class="req">*</span></span>
+				<p class="hint hint-top">Ogni invio registra un solo giorno: seleziona la data e poi la fascia
+					oraria. Dopo l'invio potrai inviare un altro giorno.</p>
+				<div id="daysGrid" class="days-grid"></div>
+
+				<span class="field-label field-label-gap">Fascia oraria <span class="req">*</span></span>
+				<div id="slotRow" class="slot-row"></div>
+			</section>
+
+			<!-- Note -->
+			<section class="card">
+				<label class="field-label" for="notes">Note</label>
+				<textarea id="notes"
+					placeholder="es. il 21 arrivo solo dopo le 10; disponibile anche per montaggio/smontaggio…"></textarea>
+				<div class="hint">Facoltativo. Usato solo per organizzare i turni durante l'evento.</div>
+			</section>
+
+			<!-- Honeypot anti-bot: deve restare vuoto -->
+			<div class="hp"><label>Leave empty<input type="text" id="website" tabindex="-1" autocomplete="off"></label>
+			</div>
+
+			<div id="errBox" class="msg err"></div>
+
+			<div class="footer-bar">
+				<div class="total" id="selectionInfo">Nessun giorno selezionato</div>
+				<button class="btn" id="submitBtn" type="button" disabled>Invia presenze</button>
+			</div>
+
+			<p class="privacy">L'organizzatore (Cardano Skating S.R.L. S.S.D.) tratta questi dati solo per pianificare
+				le presenze durante l'evento e li cancella al termine. Non inserire più dati personali del necessario.
+			</p>
+		</div>
+
+		<!-- Schermata di conferma -->
+		<div class="done" id="doneScreen">
+			<div class="mark">✓</div>
+			<h2>Presenze registrate</h2>
+			<p id="doneText">Grazie! La tua presenza è stata salvata. Puoi inviare un altro giorno; reinviando lo
+				stesso giorno con lo stesso nome e cognome, la presenza precedente viene aggiornata.</p>
+			<div class="summary" id="doneSummary"></div>
+			<button class="linkbtn" id="againBtn" type="button">Invia un altro giorno</button>
+		</div>
+
+	</div>
+
+	<script type="module" src="js/main.js"></script>
+</body>
+
+</html>

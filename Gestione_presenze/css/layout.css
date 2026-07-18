@@ -1,0 +1,59 @@
+/* ── Page structure: header, main column, sticky submit bar ─────────── */
+
+.wrap {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+/* Header with the full event logo */
+.masthead {
+    background: var(--ink);
+    border-radius: var(--radius);
+    padding: 22px;
+    border-top: 4px solid var(--accent);
+}
+
+.event-logo {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: auto;
+}
+
+/* Sticky bottom bar with the selection counter and the submit button */
+.footer-bar {
+    position: sticky;
+    bottom: 0;
+    margin-top: var(--card-gap);
+    background: var(--surface);
+    border: var(--control-border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    box-shadow: 0 -6px 20px rgba(16, 35, 58, .06);
+}
+
+.total {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.total b {
+    font-family: var(--display);
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.privacy {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 18px;
+    text-align: center;
+    line-height: 1.5;
+}

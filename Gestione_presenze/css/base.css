@@ -1,0 +1,57 @@
+/* ── Reset, design tokens and global typography ─────────────────────── */
+
+:root {
+    /* Palette (same as meal_ordering / main site) */
+    --bg: #EEF2F6;
+    --surface: #FFFFFF;
+    --ink: #0A1628;
+    --muted: #5C6B7A;
+    --line: #E1E7EE;
+    --primary: #14325C;
+    --primary-dark: #0A1628;
+    --primary-soft: #F3F7FB;
+    --accent: #C9A84C;
+    --red: #C23B2E;
+    --red-soft: #FBE9E6;
+    --red-line: #EEC0B9;
+    --red-ink: #8a271c;
+    --ok: #1E824C;
+    --ok-soft: #EBF6EF;
+    --ok-line: #B9DBC8;
+
+    /* Typography */
+    --display: "Montserrat", system-ui, sans-serif;
+    --body: "Inter", system-ui, -apple-system, sans-serif;
+
+    /* Shared design values */
+    --radius: 14px;
+    --radius-small: 10px;
+    --card-gap: 14px;
+    --focus-ring: 0 0 0 3px rgba(20, 50, 92, .18);
+    --control-border: 1.5px solid var(--line);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 24px 16px 64px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
