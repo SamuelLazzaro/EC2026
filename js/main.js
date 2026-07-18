@@ -103,7 +103,10 @@ sectionIds.forEach(id => {
    ═══════════════════════════════════════════════════════════ */
 function initHome() {
   const root      = document.getElementById('home');
-  const eventDate = new Date('2026-07-19T00:00:00');
+  /* Opening ceremony starts at 18:00 Italian time (CEST, UTC+2) on 19 July 2026.
+     The explicit offset pins the countdown to Italian time for all visitors,
+     regardless of their local timezone. */
+  const eventDate = new Date('2026-07-19T18:00:00+02:00');
 
   function updateCountdown() {
     const now  = new Date();
