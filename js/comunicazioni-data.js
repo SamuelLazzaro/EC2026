@@ -68,5 +68,25 @@ const COMUNICAZIONI = [
       es: "El domingo 19 de julio a las 16:00 se celebrará una reunión técnica en el Aula Magna de la <a class=\"comunicazione-link\" href=\"https://maps.app.goo.gl/UhSxmjzrpu6PEZtS6\" target=\"_blank\" rel=\"noopener noreferrer\">Escuela Secundaria M. Montessori, via Carreggia n.º 2, Cardano al Campo</a>. Están invitados a participar las delegaciones y el personal de las selecciones nacionales, los jueces y los miembros de World Skate y Skate Italia.",
       pt: "No domingo, 19 de julho, às 16h00, realizar-se-á uma reunião técnica no Aula Magna da <a class=\"comunicazione-link\" href=\"https://maps.app.goo.gl/UhSxmjzrpu6PEZtS6\" target=\"_blank\" rel=\"noopener noreferrer\">Escola Secundária M. Montessori, via Carreggia n.º 2, Cardano al Campo</a>. Estão convidados a participar as delegações e o staff das seleções nacionais, os juízes e os membros da World Skate e da Skate Italia."
     }
+  },
+  {
+    id: 'controllo-passaporti-atleti',
+    level: 'urgent',
+    title: {
+      it: "Controllo passaporti atleti – domenica 19 luglio, ore 16:30",
+      en: "Athletes' passport check – Sunday 19 July, 4:30 p.m.",
+      fr: "Contrôle des passeports des athlètes – dimanche 19 juillet, 16h30",
+      de: "Passkontrolle der Athleten – Sonntag, 19. Juli, 16:30 Uhr",
+      es: "Control de pasaportes de los atletas – domingo 19 de julio, 16:30",
+      pt: "Controlo dos passaportes dos atletas – domingo, 19 de julho, 16h30"
+    },
+    body: {
+      it: "Durante la riunione tecnica di domenica 19 luglio, alle ore 16:30, si svolgerà il controllo dei passaporti degli atleti.",
+      en: "During the technical meeting on Sunday 19 July, at 4:30 p.m., the athletes' passport check will take place.",
+      fr: "Lors de la réunion technique du dimanche 19 juillet, à 16h30, aura lieu le contrôle des passeports des athlètes.",
+      de: "Während der technischen Besprechung am Sonntag, den 19. Juli, findet um 16:30 Uhr die Passkontrolle der Athleten statt.",
+      es: "Durante la reunión técnica del domingo 19 de julio, a las 16:30, se llevará a cabo el control de pasaportes de los atletas.",
+      pt: "Durante a reunião técnica de domingo, 19 de julho, às 16h30, realizar-se-á o controlo dos passaportes dos atletas."
+    }
   }
 ];
