@@ -58,13 +58,23 @@ function doPost(e) {
     const nazione = PAESI_IT[countryEn] || countryEn;
     const giorno = parseDate_(data.date);   // Date reale: si ordina e si mostra come 17/07/2026
 
-    sheet.appendRow([
-      new Date(),         // Data invio (data + ora)
-      nazione,            // Nazione (in italiano)
-      giorno,             // Giorno del pasto
-      l1, l2, l3, d1, d2, d3, total,
-      String(data.notes || "")   // Note: nella lingua scritta dal team
-    ]);
+    // Scrittura + riordino sotto lock: se due squadre inviano nello stesso
+    // istante, il sort non deve girare mentre un altro appendRow e' in corso
+    // (rischio di righe spostate a meta' scrittura).
+    const lock = LockService.getScriptLock();
+    lock.waitLock(10000);
+    try {
+      sheet.appendRow([
+        new Date(),         // Data invio (data + ora)
+        nazione,            // Nazione (in italiano)
+        giorno,             // Giorno del pasto
+        l1, l2, l3, d1, d2, d3, total,
+        String(data.notes || "")   // Note: nella lingua scritta dal team
+      ]);
+      ordinaPerGiorno_(sheet);
+    } finally {
+      lock.releaseLock();
+    }
 
     return json({ status: "success" });
   } catch (err) {
@@ -107,6 +117,20 @@ function getSheet_() {
     sheet.getRange("C2:C").setNumberFormat("dd/mm/yyyy");
   }
   return sheet;
+}
+
+/**
+ * Riordina le righe dati (dalla 2 in giu') per "Giorno" (colonna C) e, a
+ * parita' di giorno, per Nazione (colonna B): i cuochi trovano cosi' gli
+ * ordini gia' raggruppati per data. La chiave secondaria serve anche perche'
+ * Range.sort non e' stabile: senza, le righe dello stesso giorno potrebbero
+ * rimescolarsi a ogni nuovo invio.
+ */
+function ordinaPerGiorno_(sheet) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 3) return;   // intestazione + al massimo una riga: nulla da ordinare
+  sheet.getRange(2, 1, lastRow - 1, HEADERS.length)
+       .sort([{ column: 3, ascending: true }, { column: 2, ascending: true }]);
 }
 
 // "2026-07-17" -> oggetto Date locale (evita lo scarto di fuso orario).
