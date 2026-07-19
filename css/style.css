@@ -2756,6 +2756,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     margin-bottom: 2.5rem;
 }
 
+.diretta-cta-wrap {
+    display: flex;
+    justify-content: center;
+}
+
 .cta-register-btn {
     --cta-padding-y: 0.95rem;
     --cta-padding-x: 1.75rem;

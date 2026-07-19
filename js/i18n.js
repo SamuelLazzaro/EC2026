@@ -24,6 +24,7 @@ const TRANSLATIONS = {
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
       programma:      "Programma e risultati",
+      diretta:        "Diretta streaming",
       luogo:       "Luogo",
       parcheggi:   "Parcheggi",
       impianto:    "Impianto Sportivo",
@@ -197,6 +198,11 @@ const TRANSLATIONS = {
       event_strada:   "Gare su strada",
       event_marathon: "Maratona",
       cta_detail:     "Vedi programma e risultati"
+    },
+    diretta: {
+      tag:            "Live",
+      title:          "Diretta <span class=\"hl\">streaming</span>",
+      cta_live:       "Vedi la diretta tv"
     },
     racepage: {
       meta_title:           "Programma dettagliato – EC 2026 Pattinaggio Corsa a Rotelle",
@@ -393,6 +399,7 @@ const TRANSLATIONS = {
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
       programma:      "Schedule and results",
+      diretta:        "Live streaming",
       luogo:       "Venue",
       parcheggi:   "Parking",
       impianto:    "Sports Centre",
@@ -566,6 +573,11 @@ const TRANSLATIONS = {
       event_strada:   "Road races",
       event_marathon: "Marathon",
       cta_detail:     "View schedule and results"
+    },
+    diretta: {
+      tag:            "Live",
+      title:          "Live <span class=\"hl\">streaming</span>",
+      cta_live:       "Watch the live stream"
     },
     racepage: {
       meta_title:           "Detailed Schedule – EC 2026 Inline Speed Skating",
@@ -762,6 +774,7 @@ const TRANSLATIONS = {
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
       programma:      "Programme et résultats",
+      diretta:        "Streaming en direct",
       luogo:       "Lieu",
       parcheggi:   "Parkings",
       impianto:    "Centre Sportif",
@@ -935,6 +948,11 @@ const TRANSLATIONS = {
       event_strada:   "Courses sur route",
       event_marathon: "Marathon",
       cta_detail:     "Voir le programme et les résultats"
+    },
+    diretta: {
+      tag:            "Live",
+      title:          "Streaming en <span class=\"hl\">direct</span>",
+      cta_live:       "Voir la diffusion en direct"
     },
     racepage: {
       meta_title:           "Programme détaillé – EC 2026 Patinage de Vitesse en Ligne",
@@ -1131,6 +1149,7 @@ const TRANSLATIONS = {
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
       programma:      "Programm und Ergebnisse",
+      diretta:        "Livestream",
       luogo:       "Veranstaltungsort",
       parcheggi:   "Parkplätze",
       impianto:    "Sportzentrum",
@@ -1304,6 +1323,11 @@ const TRANSLATIONS = {
       event_strada:   "Straßenrennen",
       event_marathon: "Marathon",
       cta_detail:     "Programm und Ergebnisse anzeigen"
+    },
+    diretta: {
+      tag:            "Live",
+      title:          "Live-<span class=\"hl\">Stream</span>",
+      cta_live:       "Zur Live-Übertragung"
     },
     racepage: {
       meta_title:           "Detailliertes Programm – EM 2026 Inline-Speedskating",
@@ -1500,6 +1524,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
       programma:      "Programa y resultados",
+      diretta:        "Transmisión en directo",
       luogo:       "Sede",
       parcheggi:   "Aparcamientos",
       impianto:    "Centro Deportivo",
@@ -1673,6 +1698,11 @@ const TRANSLATIONS = {
       event_strada:   "Carreras en ruta",
       event_marathon: "Maratón",
       cta_detail:     "Ver programa y resultados"
+    },
+    diretta: {
+      tag:            "En vivo",
+      title:          "Transmisión en <span class=\"hl\">directo</span>",
+      cta_live:       "Ver la transmisión en directo"
     },
     racepage: {
       meta_title:           "Programa detallado – EC 2026 Patinaje de Velocidad en Línea",
@@ -1869,6 +1899,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
       programma:      "Programa e resultados",
+      diretta:        "Transmissão em direto",
       luogo:       "Local",
       parcheggi:   "Estacionamentos",
       impianto:    "Centro Desportivo",
@@ -2042,6 +2073,11 @@ const TRANSLATIONS = {
       event_strada:   "Provas em estrada",
       event_marathon: "Maratona",
       cta_detail:     "Ver programa e resultados"
+    },
+    diretta: {
+      tag:            "Ao vivo",
+      title:          "Transmissão em <span class=\"hl\">direto</span>",
+      cta_live:       "Ver a transmissão em direto"
     },
     racepage: {
       meta_title:           "Programa detalhado – EC 2026 Patinagem de Velocidade em Linha",
