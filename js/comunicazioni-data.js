@@ -30,6 +30,26 @@
 
 const COMUNICAZIONI = [
   {
+    id: 'ingresso-pubblico-orario',
+    level: 'urgent',
+    title: {
+      it: "Ingresso pubblico – apertura alle ore 8:15 ogni giorno",
+      en: "Public entry – opens at 8:15 a.m. every day",
+      fr: "Entrée du public – ouverture à 8h15 chaque jour",
+      de: "Publikumseinlass – täglich ab 8:15 Uhr",
+      es: "Entrada del público – apertura a las 8:15 cada día",
+      pt: "Entrada do público – abertura às 8h15 todos os dias"
+    },
+    body: {
+      it: "L'ingresso per il pubblico inizierà ogni giorno alle ore 8:15, dall'ingresso vicino alla tribuna.",
+      en: "Public entry will start every day at 8:15 a.m., through the entrance next to the grandstand.",
+      fr: "L'entrée du public commencera chaque jour à 8h15, par l'entrée située à côté de la tribune.",
+      de: "Der Einlass für das Publikum beginnt täglich um 8:15 Uhr am Eingang neben der Tribüne.",
+      es: "La entrada del público comenzará cada día a las 8:15, por el acceso situado junto a la tribuna.",
+      pt: "A entrada do público começará todos os dias às 8h15, pelo acesso junto à bancada."
+    }
+  },
+  {
     id: 'controllo-passaporti-atleti',
     level: 'urgent',
     title: {

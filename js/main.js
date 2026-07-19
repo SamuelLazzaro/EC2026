@@ -79,7 +79,7 @@ window.addEventListener('popstate', () => {
 /* ═══════════════════════════════════════════════════════════
    IntersectionObserver – aggiorna il link attivo durante lo scroll
    ═══════════════════════════════════════════════════════════ */
-const sectionIds = ['home', 'luogo', 'parcheggi', 'impianto', 'sponsor', 'comunicazioni', 'biglietti', 'programma', 'maratona', 'classifiche', 'alloggi', 'ristorazione', 'contatti'];
+const sectionIds = ['home', 'luogo', 'parcheggi', 'impianto', 'sponsor', 'comunicazioni', 'biglietti', 'programma', 'maratona', /* 'classifiche', */ 'alloggi', 'ristorazione', 'contatti'];
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -746,7 +746,8 @@ if (langFabBtn && langFabMenu) {
    Avvio
    ═══════════════════════════════════════════════════════════ */
 initHome();
-initClassifiche(document.getElementById('classifiche'));
+// Classifiche section temporarily disabled: merged into "Programma e risultati"
+// initClassifiche(document.getElementById('classifiche'));
 initAlloggi(document.getElementById('alloggi'));
 initRistorazione(document.getElementById('ristorazione'));
 initMensaMenu(document.getElementById('ristorazione'));

@@ -198,12 +198,13 @@
 						<span data-i18n="nav.maratona">Maratona</span>
 					</a>
 				</li>
-				<li>
+				<!-- Classifiche nav entry disabled: section merged into "Programma e risultati" -->
+				<!-- <li>
 					<a href="#classifiche" class="nav-link" data-section="classifiche">
 						<span class="nav-arrow"></span>
 						<span data-i18n="nav.classifiche">Classifiche</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="#alloggi" class="nav-link" data-section="alloggi">
 						<span class="nav-arrow"></span>
@@ -1224,21 +1225,30 @@
 			</div>
 		</section>
 
-		<!-- ── Programma gare ────────────────────────────────── -->
+		<!-- ── Programma e risultati ─────────────────────────── -->
 		<section id="programma" class="section-content">
 			<!-- ── sections/programma.html ─────────────────────────── -->
 			<div class="section-wrap">
 
 				<div class="section-header fade-up">
 					<div class="section-tag" data-i18n="programma.tag">Calendario</div>
-					<h2 class="section-title" data-i18n="programma.title">Programma <span class="hl">gare</span></h2>
+					<h2 class="section-title" data-i18n="programma.title">Programma e <span class="hl">risultati</span></h2>
 					<div class="gold-divider"></div>
-					<p class="section-desc" data-i18n="programma.desc">
-						Il calendario provvisorio della manifestazione, giorno per giorno.
-					</p>
 				</div>
 
-				<ol class="programma-timeline fade-up fade-up-d1">
+				<div class="programma-cta-wrap fade-up fade-up-d1">
+					<a class="cta-register-btn" id="programmaCtaDetail" href="https://www.wskate.net/board/991_WSS0034/index.htm?110001">
+						<span data-i18n="programma.cta_detail">Vedi programma e risultati</span>
+						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+							aria-hidden="true">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+
+				<ol class="programma-timeline fade-up fade-up-d2">
 					<li class="programma-item">
 						<div class="programma-date" data-i18n="programma.d19">19 luglio</div>
 						<div class="programma-event" data-i18n="programma.event_opening">Cerimonia di apertura – ore 18:00</div>
@@ -1272,18 +1282,6 @@
 						<div class="programma-event" data-i18n="programma.event_marathon">Maratona</div>
 					</li>
 				</ol>
-
-				<div class="programma-cta-wrap fade-up fade-up-d2">
-					<a class="cta-register-btn" id="programmaCtaDetail" href="race_schedule.html">
-						<span data-i18n="programma.cta_detail">Vedi programma dettagliato</span>
-						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
-							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-							aria-hidden="true">
-							<line x1="5" y1="12" x2="19" y2="12"></line>
-							<polyline points="12 5 19 12 12 19"></polyline>
-						</svg>
-					</a>
-				</div>
 
 			</div>
 		</section>
@@ -1345,8 +1343,11 @@
 		</section>
 
 		<!-- ── Classifiche ───────────────────────────────────── -->
+		<!-- ── sections/classifiche.html ───────────────────────── -->
+		<!-- Section temporarily disabled: merged into "Programma e risultati".
+		     The tab panels below (PISTA / STRADA / MARATONA) were already commented out. -->
+		<!--
 		<section id="classifiche" class="section-content">
-			<!-- ── sections/classifiche.html ───────────────────────── -->
 			<div class="section-wrap">
 
 				<div class="section-header fade-up">
@@ -1358,12 +1359,12 @@
 					</p>
 				</div>
 
-				<!-- Tab buttons -->
 				<div class="discipline-tabs fade-up fade-up-d1">
 					<button class="tab-btn active" data-tab="pista" data-i18n="classifiche.tab_pista">Pista</button>
 					<button class="tab-btn" data-tab="strada" data-i18n="classifiche.tab_strada">Strada</button>
 					<button class="tab-btn" data-tab="maratona" data-i18n="classifiche.tab_maratona">Maratona</button>
 				</div>
+		-->
 
 				<!-- ── PISTA ──────────────────────────────────────────── -->
 				<!-- <div class="tab-panel active" id="panel-pista">
@@ -1482,8 +1483,10 @@
 					</div>
 				</div> -->
 
+		<!--
 			</div>
 		</section>
+		-->
 
 		<!-- ── Alloggi ─────────────────────────────────────────── -->
 		<section id="alloggi" class="section-content">

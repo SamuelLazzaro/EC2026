@@ -2753,7 +2753,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .programma-cta-wrap {
     display: flex;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .cta-register-btn {

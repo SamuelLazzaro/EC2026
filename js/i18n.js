@@ -23,7 +23,7 @@ const TRANSLATIONS = {
       comunicazioni: "Comunicazioni",
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
-      programma:      "Programma",
+      programma:      "Programma e risultati",
       luogo:       "Luogo",
       parcheggi:   "Parcheggi",
       impianto:    "Impianto Sportivo",
@@ -181,7 +181,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Calendario",
-      title:          "Programma <span class=\"hl\">gare</span>",
+      title:          "Programma e <span class=\"hl\">risultati</span>",
       desc:           "Il calendario provvisorio della manifestazione, giorno per giorno.",
       d19:            "19 luglio",
       d20:            "20 luglio",
@@ -196,7 +196,7 @@ const TRANSLATIONS = {
       event_rest:     "Riposo (eventuale recupero gare su pista)",
       event_strada:   "Gare su strada",
       event_marathon: "Maratona",
-      cta_detail:     "Vedi programma dettagliato"
+      cta_detail:     "Vedi programma e risultati"
     },
     racepage: {
       meta_title:           "Programma dettagliato – EC 2026 Pattinaggio Corsa a Rotelle",
@@ -392,7 +392,7 @@ const TRANSLATIONS = {
       comunicazioni: "Announcements",
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
-      programma:      "Schedule",
+      programma:      "Schedule and results",
       luogo:       "Venue",
       parcheggi:   "Parking",
       impianto:    "Sports Centre",
@@ -550,7 +550,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Schedule",
-      title:          "Race <span class=\"hl\">schedule</span>",
+      title:          "Schedule and <span class=\"hl\">results</span>",
       desc:           "The provisional event schedule, day by day.",
       d19:            "19 July",
       d20:            "20 July",
@@ -565,7 +565,7 @@ const TRANSLATIONS = {
       event_rest:     "Rest day (track races catch-up if needed)",
       event_strada:   "Road races",
       event_marathon: "Marathon",
-      cta_detail:     "View detailed schedule"
+      cta_detail:     "View schedule and results"
     },
     racepage: {
       meta_title:           "Detailed Schedule – EC 2026 Inline Speed Skating",
@@ -761,7 +761,7 @@ const TRANSLATIONS = {
       comunicazioni: "Communications",
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
-      programma:      "Programme",
+      programma:      "Programme et résultats",
       luogo:       "Lieu",
       parcheggi:   "Parkings",
       impianto:    "Centre Sportif",
@@ -919,7 +919,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Calendrier",
-      title:          "Programme des <span class=\"hl\">courses</span>",
+      title:          "Programme et <span class=\"hl\">résultats</span>",
       desc:           "Le calendrier provisoire de la manifestation, jour après jour.",
       d19:            "19 juillet",
       d20:            "20 juillet",
@@ -934,7 +934,7 @@ const TRANSLATIONS = {
       event_rest:     "Repos (rattrapage éventuel des courses sur piste)",
       event_strada:   "Courses sur route",
       event_marathon: "Marathon",
-      cta_detail:     "Voir le programme détaillé"
+      cta_detail:     "Voir le programme et les résultats"
     },
     racepage: {
       meta_title:           "Programme détaillé – EC 2026 Patinage de Vitesse en Ligne",
@@ -1130,7 +1130,7 @@ const TRANSLATIONS = {
       comunicazioni: "Mitteilungen",
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
-      programma:      "Programm",
+      programma:      "Programm und Ergebnisse",
       luogo:       "Veranstaltungsort",
       parcheggi:   "Parkplätze",
       impianto:    "Sportzentrum",
@@ -1288,7 +1288,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Zeitplan",
-      title:          "Wettkampf<span class=\"hl\">programm</span>",
+      title:          "Programm und <span class=\"hl\">Ergebnisse</span>",
       desc:           "Der vorläufige Veranstaltungskalender, Tag für Tag.",
       d19:            "19. Juli",
       d20:            "20. Juli",
@@ -1303,7 +1303,7 @@ const TRANSLATIONS = {
       event_rest:     "Ruhetag (eventueller Nachholtermin der Bahnrennen)",
       event_strada:   "Straßenrennen",
       event_marathon: "Marathon",
-      cta_detail:     "Detailliertes Programm anzeigen"
+      cta_detail:     "Programm und Ergebnisse anzeigen"
     },
     racepage: {
       meta_title:           "Detailliertes Programm – EM 2026 Inline-Speedskating",
@@ -1499,7 +1499,7 @@ const TRANSLATIONS = {
       comunicazioni: "Comunicaciones",
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
-      programma:      "Programa",
+      programma:      "Programa y resultados",
       luogo:       "Sede",
       parcheggi:   "Aparcamientos",
       impianto:    "Centro Deportivo",
@@ -1657,7 +1657,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Calendario",
-      title:          "Programa de <span class=\"hl\">competiciones</span>",
+      title:          "Programa y <span class=\"hl\">resultados</span>",
       desc:           "El calendario provisional del evento, día a día.",
       d19:            "19 de julio",
       d20:            "20 de julio",
@@ -1672,7 +1672,7 @@ const TRANSLATIONS = {
       event_rest:     "Descanso (recuperación eventual de carreras en pista)",
       event_strada:   "Carreras en ruta",
       event_marathon: "Maratón",
-      cta_detail:     "Ver programa detallado"
+      cta_detail:     "Ver programa y resultados"
     },
     racepage: {
       meta_title:           "Programa detallado – EC 2026 Patinaje de Velocidad en Línea",
@@ -1868,7 +1868,7 @@ const TRANSLATIONS = {
       comunicazioni: "Comunicados",
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
-      programma:      "Programa",
+      programma:      "Programa e resultados",
       luogo:       "Local",
       parcheggi:   "Estacionamentos",
       impianto:    "Centro Desportivo",
@@ -2026,7 +2026,7 @@ const TRANSLATIONS = {
     },
     programma: {
       tag:            "Calendário",
-      title:          "Programa de <span class=\"hl\">provas</span>",
+      title:          "Programa e <span class=\"hl\">resultados</span>",
       desc:           "O calendário provisório do evento, dia após dia.",
       d19:            "19 de julho",
       d20:            "20 de julho",
@@ -2041,7 +2041,7 @@ const TRANSLATIONS = {
       event_rest:     "Descanso (recuperação eventual das provas em pista)",
       event_strada:   "Provas em estrada",
       event_marathon: "Maratona",
-      cta_detail:     "Ver programa detalhado"
+      cta_detail:     "Ver programa e resultados"
     },
     racepage: {
       meta_title:           "Programa detalhado – EC 2026 Patinagem de Velocidade em Linha",
