@@ -2752,7 +2752,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .programma-cta-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     margin-bottom: 2.5rem;
 }
 
