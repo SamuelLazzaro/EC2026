@@ -197,7 +197,8 @@ const TRANSLATIONS = {
       event_rest:     "Riposo (eventuale recupero gare su pista)",
       event_strada:   "Gare su strada",
       event_marathon: "Maratona",
-      cta_detail:     "Vedi programma e risultati",
+      cta_detail:     "Vedi risultati pista",
+      cta_road:       "Vedi programma e risultati strada",
       cta_schedule:   "Vedi programma allenamenti / gare su strada"
     },
     diretta: {
@@ -573,7 +574,8 @@ const TRANSLATIONS = {
       event_rest:     "Rest day (track races catch-up if needed)",
       event_strada:   "Road races",
       event_marathon: "Marathon",
-      cta_detail:     "View schedule and results",
+      cta_detail:     "View track results",
+      cta_road:       "View road schedule and results",
       cta_schedule:   "View training / road races schedule"
     },
     diretta: {
@@ -949,7 +951,8 @@ const TRANSLATIONS = {
       event_rest:     "Repos (rattrapage éventuel des courses sur piste)",
       event_strada:   "Courses sur route",
       event_marathon: "Marathon",
-      cta_detail:     "Voir le programme et les résultats",
+      cta_detail:     "Voir les résultats sur piste",
+      cta_road:       "Voir le programme et les résultats sur route",
       cta_schedule:   "Voir le programme des entraînements / courses sur route"
     },
     diretta: {
@@ -1325,7 +1328,8 @@ const TRANSLATIONS = {
       event_rest:     "Ruhetag (eventueller Nachholtermin der Bahnrennen)",
       event_strada:   "Straßenrennen",
       event_marathon: "Marathon",
-      cta_detail:     "Programm und Ergebnisse anzeigen",
+      cta_detail:     "Bahn-Ergebnisse anzeigen",
+      cta_road:       "Straßen-Programm und Ergebnisse anzeigen",
       cta_schedule:   "Trainings- / Straßenrennen-Programm anzeigen"
     },
     diretta: {
@@ -1701,7 +1705,8 @@ const TRANSLATIONS = {
       event_rest:     "Descanso (recuperación eventual de carreras en pista)",
       event_strada:   "Carreras en ruta",
       event_marathon: "Maratón",
-      cta_detail:     "Ver programa y resultados",
+      cta_detail:     "Ver resultados de pista",
+      cta_road:       "Ver programa y resultados de ruta",
       cta_schedule:   "Ver programa de entrenamientos / carreras en ruta"
     },
     diretta: {
@@ -2077,7 +2082,8 @@ const TRANSLATIONS = {
       event_rest:     "Descanso (recuperação eventual das provas em pista)",
       event_strada:   "Provas em estrada",
       event_marathon: "Maratona",
-      cta_detail:     "Ver programa e resultados",
+      cta_detail:     "Ver resultados de pista",
+      cta_road:       "Ver programa e resultados de estrada",
       cta_schedule:   "Ver programa de treinos / corridas de estrada"
     },
     diretta: {
