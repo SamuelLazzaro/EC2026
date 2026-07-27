@@ -198,7 +198,7 @@ const TRANSLATIONS = {
       event_strada:   "Gare su strada",
       event_marathon: "Maratona",
       cta_detail:     "Vedi risultati pista",
-      cta_road:       "Vedi programma e risultati strada",
+      cta_road:       "Vedi risultati strada e maratona",
       cta_schedule:   "Vedi programma allenamenti / gare su strada"
     },
     diretta: {
@@ -575,7 +575,7 @@ const TRANSLATIONS = {
       event_strada:   "Road races",
       event_marathon: "Marathon",
       cta_detail:     "View track results",
-      cta_road:       "View road schedule and results",
+      cta_road:       "View road and marathon results",
       cta_schedule:   "View training / road races schedule"
     },
     diretta: {
@@ -952,7 +952,7 @@ const TRANSLATIONS = {
       event_strada:   "Courses sur route",
       event_marathon: "Marathon",
       cta_detail:     "Voir les résultats sur piste",
-      cta_road:       "Voir le programme et les résultats sur route",
+      cta_road:       "Voir les résultats sur route et marathon",
       cta_schedule:   "Voir le programme des entraînements / courses sur route"
     },
     diretta: {
@@ -1329,7 +1329,7 @@ const TRANSLATIONS = {
       event_strada:   "Straßenrennen",
       event_marathon: "Marathon",
       cta_detail:     "Bahn-Ergebnisse anzeigen",
-      cta_road:       "Straßen-Programm und Ergebnisse anzeigen",
+      cta_road:       "Straßen- und Marathon-Ergebnisse anzeigen",
       cta_schedule:   "Trainings- / Straßenrennen-Programm anzeigen"
     },
     diretta: {
@@ -1706,7 +1706,7 @@ const TRANSLATIONS = {
       event_strada:   "Carreras en ruta",
       event_marathon: "Maratón",
       cta_detail:     "Ver resultados de pista",
-      cta_road:       "Ver programa y resultados de ruta",
+      cta_road:       "Ver resultados de ruta y maratón",
       cta_schedule:   "Ver programa de entrenamientos / carreras en ruta"
     },
     diretta: {
@@ -2083,7 +2083,7 @@ const TRANSLATIONS = {
       event_strada:   "Provas em estrada",
       event_marathon: "Maratona",
       cta_detail:     "Ver resultados de pista",
-      cta_road:       "Ver programa e resultados de estrada",
+      cta_road:       "Ver resultados de estrada e maratona",
       cta_schedule:   "Ver programa de treinos / corridas de estrada"
     },
     diretta: {
