@@ -211,7 +211,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Galleria",
       title:          "<span class=\"hl\">Foto</span>",
-      desc:           "Le fotografie ufficiali dei Campionati Europei, giorno per giorno. Ogni pulsante apre il relativo album su Google Drive.",
+      desc:           "Le fotografie ufficiali dei Campionati Europei, giorno per giorno.",
       day1:           "Foto 1° giorno",
       day2:           "Foto 2° giorno"
     },
@@ -597,7 +597,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Gallery",
       title:          "<span class=\"hl\">Photos</span>",
-      desc:           "The official photographs of the European Championships, day by day. Each button opens the matching album on Google Drive.",
+      desc:           "The official photographs of the European Championships, day by day.",
       day1:           "Day 1 photos",
       day2:           "Day 2 photos"
     },
@@ -983,7 +983,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Galerie",
       title:          "<span class=\"hl\">Photos</span>",
-      desc:           "Les photographies officielles des Championnats d'Europe, jour par jour. Chaque bouton ouvre l'album correspondant sur Google Drive.",
+      desc:           "Les photographies officielles des Championnats d'Europe, jour par jour.",
       day1:           "Photos jour 1",
       day2:           "Photos jour 2"
     },
@@ -1369,7 +1369,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Galerie",
       title:          "<span class=\"hl\">Fotos</span>",
-      desc:           "Die offiziellen Fotos der Europameisterschaften, Tag für Tag. Jede Schaltfläche öffnet das entsprechende Album auf Google Drive.",
+      desc:           "Die offiziellen Fotos der Europameisterschaften, Tag für Tag.",
       day1:           "Fotos Tag 1",
       day2:           "Fotos Tag 2"
     },
@@ -1755,7 +1755,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Galería",
       title:          "<span class=\"hl\">Fotos</span>",
-      desc:           "Las fotografías oficiales de los Campeonatos de Europa, día a día. Cada botón abre el álbum correspondiente en Google Drive.",
+      desc:           "Las fotografías oficiales de los Campeonatos de Europa, día a día.",
       day1:           "Fotos día 1",
       day2:           "Fotos día 2"
     },
@@ -2141,7 +2141,7 @@ const TRANSLATIONS = {
     foto: {
       tag:            "Galeria",
       title:          "<span class=\"hl\">Fotos</span>",
-      desc:           "As fotografias oficiais dos Campeonatos da Europa, dia a dia. Cada botão abre o álbum correspondente no Google Drive.",
+      desc:           "As fotografias oficiais dos Campeonatos da Europa, dia a dia.",
       day1:           "Fotos dia 1",
       day2:           "Fotos dia 2"
     },
