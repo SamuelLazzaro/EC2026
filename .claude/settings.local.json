@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "dev-team@bfinster": false
+  },
   "permissions": {
     "allow": [
       "Bash(python3 -c \":*)",
