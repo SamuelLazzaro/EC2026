@@ -2780,6 +2780,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     justify-content: center;
     gap: var(--cta-gap);
     padding: var(--cta-padding-y) var(--cta-padding-x);
+	width: 250px;
     max-width: 100%;
     background: var(--c-accent);
     color: var(--c-bg);
