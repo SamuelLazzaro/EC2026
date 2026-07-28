@@ -89,13 +89,6 @@
 	      "name": "Cardano Skating S.R.L. SSD",
 	      "url": "https://www.euroskatingcardano2026.it"
 	    },
-	    "offers": {
-	      "@type": "Offer",
-	      "url": "https://www.evients.com/events/european-speed-skating-championships-2026/a4d15360c1ec42f0af80beaa2a81a476",
-	      "price": "8.00",
-	      "priceCurrency": "EUR",
-	      "availability": "https://schema.org/InStock"
-	    },
 	    "url": "https://www.euroskatingcardano2026.it"
 	}
 	</script>
@@ -180,12 +173,13 @@
 						<span data-i18n="nav.comunicazioni">Comunicazioni</span>
 					</a>
 				</li>
-				<li>
+				<!-- Biglietti nav entry disabled: ticket sales closed -->
+				<!-- <li>
 					<a href="#biglietti" class="nav-link" data-section="biglietti">
 						<span class="nav-arrow"></span>
 						<span data-i18n="nav.biglietti">Biglietti</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="#programma" class="nav-link" data-section="programma">
 						<span class="nav-arrow"></span>
@@ -193,11 +187,18 @@
 					</a>
 				</li>
 				<li>
+					<a href="#foto" class="nav-link" data-section="foto">
+						<span class="nav-arrow"></span>
+						<span data-i18n="nav.foto">Foto</span>
+					</a>
+				</li>
+				<!-- Diretta streaming nav entry disabled: live broadcast ended -->
+				<!-- <li>
 					<a href="#diretta" class="nav-link" data-section="diretta">
 						<span class="nav-arrow"></span>
 						<span data-i18n="nav.diretta">Diretta streaming</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="#maratona" class="nav-link" data-section="maratona">
 						<span class="nav-arrow"></span>
@@ -1147,8 +1148,11 @@
 		</section>
 
 		<!-- ── Biglietti ──────────────────────────────────────── -->
+		<!-- ── sections/biglietti.html ────────────────────────── -->
+		<!-- Section temporarily disabled: ticket sales closed.
+		     The Schema.org "offers" block was removed from the JSON-LD accordingly. -->
+		<!--
 		<section id="biglietti" class="section-content">
-			<!-- ── sections/biglietti.html ────────────────────────── -->
 			<div class="section-wrap">
 
 				<div class="section-header fade-up">
@@ -1209,6 +1213,7 @@
 
 			</div>
 		</section>
+		-->
 
 		<!-- ── Programma e risultati ─────────────────────────── -->
 		<section id="programma" class="section-content">
@@ -1280,9 +1285,56 @@
 			</div>
 		</section>
 
+		<!-- ── Foto ───────────────────────────────────────────── -->
+		<section id="foto" class="section-content">
+			<!-- ── sections/foto.html ──────────────────────────────── -->
+			<div class="section-wrap">
+
+				<div class="section-header fade-up">
+					<div class="section-tag" data-i18n="foto.tag">Galleria</div>
+					<h2 class="section-title" data-i18n="foto.title"><span class="hl">Foto</span></h2>
+					<div class="gold-divider"></div>
+					<p class="section-desc" data-i18n="foto.desc">
+						Le fotografie ufficiali dei Campionati Europei, giorno per giorno. Ogni pulsante apre il relativo album su Google Drive.
+					</p>
+				</div>
+
+				<!-- To publish a new album: duplicate one <a> block, point href to the new
+				     Google Drive folder, use the next key (foto.day3, foto.day4, …) and add
+				     that key to every language block in js/i18n.js. -->
+				<div class="foto-cta-wrap fade-up fade-up-d1">
+					<a class="cta-register-btn"
+						href="https://drive.google.com/drive/folders/1Qbcyssdv4jg3EsBtoAzKXM8KmKpXVkRZ?usp=sharing"
+						target="_blank" rel="noopener noreferrer">
+						<span data-i18n="foto.day1">Foto 1° giorno</span>
+						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+							aria-hidden="true">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+					<a class="cta-register-btn"
+						href="https://drive.google.com/drive/folders/19ca5ILmzc30w33SGmHnd9KEapkXsCqQR?usp=sharing"
+						target="_blank" rel="noopener noreferrer">
+						<span data-i18n="foto.day2">Foto 2° giorno</span>
+						<svg class="cta-register-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+							aria-hidden="true">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+
+			</div>
+		</section>
+
 		<!-- ── Diretta streaming ─────────────────────────────── -->
+		<!-- ── sections/diretta.html ───────────────────────────── -->
+		<!-- Section temporarily disabled: the live broadcast has ended. -->
+		<!--
 		<section id="diretta" class="section-content">
-			<!-- ── sections/diretta.html ───────────────────────────── -->
 			<div class="section-wrap">
 
 				<div class="section-header fade-up">
@@ -1307,6 +1359,7 @@
 
 			</div>
 		</section>
+		-->
 
 		<!-- ── Maratona ───────────────────────────────────────── -->
 		<section id="maratona" class="section-content">

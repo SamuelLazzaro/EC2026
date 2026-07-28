@@ -24,6 +24,7 @@ const TRANSLATIONS = {
       alloggi:        "Alloggi",
       ristorazione:   "Ristorazione",
       programma:      "Programma e risultati",
+      foto:           "Foto",
       diretta:        "Diretta streaming",
       luogo:       "Luogo",
       parcheggi:   "Parcheggi",
@@ -205,6 +206,14 @@ const TRANSLATIONS = {
       tag:            "Live",
       title:          "Diretta <span class=\"hl\">streaming</span>",
       cta_live:       "Vedi la diretta tv"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Galleria",
+      title:          "<span class=\"hl\">Foto</span>",
+      desc:           "Le fotografie ufficiali dei Campionati Europei, giorno per giorno. Ogni pulsante apre il relativo album su Google Drive.",
+      day1:           "Foto 1° giorno",
+      day2:           "Foto 2° giorno"
     },
     racepage: {
       meta_title:           "Programma dettagliato – EC 2026 Pattinaggio Corsa a Rotelle",
@@ -401,6 +410,7 @@ const TRANSLATIONS = {
       alloggi:        "Accommodation",
       ristorazione:   "Food & Beverage",
       programma:      "Schedule and results",
+      foto:           "Photos",
       diretta:        "Live streaming",
       luogo:       "Venue",
       parcheggi:   "Parking",
@@ -582,6 +592,14 @@ const TRANSLATIONS = {
       tag:            "Live",
       title:          "Live <span class=\"hl\">streaming</span>",
       cta_live:       "Watch the live stream"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Gallery",
+      title:          "<span class=\"hl\">Photos</span>",
+      desc:           "The official photographs of the European Championships, day by day. Each button opens the matching album on Google Drive.",
+      day1:           "Day 1 photos",
+      day2:           "Day 2 photos"
     },
     racepage: {
       meta_title:           "Detailed Schedule – EC 2026 Inline Speed Skating",
@@ -778,6 +796,7 @@ const TRANSLATIONS = {
       alloggi:        "Hébergements",
       ristorazione:   "Restauration",
       programma:      "Programme et résultats",
+      foto:           "Photos",
       diretta:        "Streaming en direct",
       luogo:       "Lieu",
       parcheggi:   "Parkings",
@@ -959,6 +978,14 @@ const TRANSLATIONS = {
       tag:            "Live",
       title:          "Streaming en <span class=\"hl\">direct</span>",
       cta_live:       "Voir la diffusion en direct"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Galerie",
+      title:          "<span class=\"hl\">Photos</span>",
+      desc:           "Les photographies officielles des Championnats d'Europe, jour par jour. Chaque bouton ouvre l'album correspondant sur Google Drive.",
+      day1:           "Photos jour 1",
+      day2:           "Photos jour 2"
     },
     racepage: {
       meta_title:           "Programme détaillé – EC 2026 Patinage de Vitesse en Ligne",
@@ -1155,6 +1182,7 @@ const TRANSLATIONS = {
       alloggi:        "Unterkünfte",
       ristorazione:   "Gastronomie",
       programma:      "Programm und Ergebnisse",
+      foto:           "Fotos",
       diretta:        "Livestream",
       luogo:       "Veranstaltungsort",
       parcheggi:   "Parkplätze",
@@ -1336,6 +1364,14 @@ const TRANSLATIONS = {
       tag:            "Live",
       title:          "Live-<span class=\"hl\">Stream</span>",
       cta_live:       "Zur Live-Übertragung"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Galerie",
+      title:          "<span class=\"hl\">Fotos</span>",
+      desc:           "Die offiziellen Fotos der Europameisterschaften, Tag für Tag. Jede Schaltfläche öffnet das entsprechende Album auf Google Drive.",
+      day1:           "Fotos Tag 1",
+      day2:           "Fotos Tag 2"
     },
     racepage: {
       meta_title:           "Detailliertes Programm – EM 2026 Inline-Speedskating",
@@ -1532,6 +1568,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamientos",
       ristorazione:   "Restauración",
       programma:      "Programa y resultados",
+      foto:           "Fotos",
       diretta:        "Transmisión en directo",
       luogo:       "Sede",
       parcheggi:   "Aparcamientos",
@@ -1713,6 +1750,14 @@ const TRANSLATIONS = {
       tag:            "En vivo",
       title:          "Transmisión en <span class=\"hl\">directo</span>",
       cta_live:       "Ver la transmisión en directo"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Galería",
+      title:          "<span class=\"hl\">Fotos</span>",
+      desc:           "Las fotografías oficiales de los Campeonatos de Europa, día a día. Cada botón abre el álbum correspondiente en Google Drive.",
+      day1:           "Fotos día 1",
+      day2:           "Fotos día 2"
     },
     racepage: {
       meta_title:           "Programa detallado – EC 2026 Patinaje de Velocidad en Línea",
@@ -1909,6 +1954,7 @@ const TRANSLATIONS = {
       alloggi:        "Alojamentos",
       ristorazione:   "Restauração",
       programma:      "Programa e resultados",
+      foto:           "Fotos",
       diretta:        "Transmissão em direto",
       luogo:       "Local",
       parcheggi:   "Estacionamentos",
@@ -2090,6 +2136,14 @@ const TRANSLATIONS = {
       tag:            "Ao vivo",
       title:          "Transmissão em <span class=\"hl\">direto</span>",
       cta_live:       "Ver a transmissão em direto"
+    },
+    /* Photo albums: add day3, day4, … here when new albums are published */
+    foto: {
+      tag:            "Galeria",
+      title:          "<span class=\"hl\">Fotos</span>",
+      desc:           "As fotografias oficiais dos Campeonatos da Europa, dia a dia. Cada botão abre o álbum correspondente no Google Drive.",
+      day1:           "Fotos dia 1",
+      day2:           "Fotos dia 2"
     },
     racepage: {
       meta_title:           "Programa detalhado – EC 2026 Patinagem de Velocidade em Linha",
