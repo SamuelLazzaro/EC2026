@@ -215,7 +215,9 @@ const TRANSLATIONS = {
       day1:           "Foto 1° giorno",
       day2:           "Foto 2° giorno",
       day3:           "Foto 3° giorno",
-      day4:           "Foto 4° giorno"
+      day4:           "Foto 4° giorno",
+      day5:           "Foto 5° giorno",
+      maratona:       "Foto maratona"
     },
     racepage: {
       meta_title:           "Programma dettagliato – EC 2026 Pattinaggio Corsa a Rotelle",
@@ -603,7 +605,9 @@ const TRANSLATIONS = {
       day1:           "Day 1 photos",
       day2:           "Day 2 photos",
       day3:           "Day 3 photos",
-      day4:           "Day 4 photos"
+      day4:           "Day 4 photos",
+      day5:           "Day 5 photos",
+      maratona:       "Marathon photos"
     },
     racepage: {
       meta_title:           "Detailed Schedule – EC 2026 Inline Speed Skating",
@@ -991,7 +995,9 @@ const TRANSLATIONS = {
       day1:           "Photos jour 1",
       day2:           "Photos jour 2",
       day3:           "Photos jour 3",
-      day4:           "Photos jour 4"
+      day4:           "Photos jour 4",
+      day5:           "Photos jour 5",
+      maratona:       "Photos marathon"
     },
     racepage: {
       meta_title:           "Programme détaillé – EC 2026 Patinage de Vitesse en Ligne",
@@ -1379,7 +1385,9 @@ const TRANSLATIONS = {
       day1:           "Fotos Tag 1",
       day2:           "Fotos Tag 2",
       day3:           "Fotos Tag 3",
-      day4:           "Fotos Tag 4"
+      day4:           "Fotos Tag 4",
+      day5:           "Fotos Tag 5",
+      maratona:       "Fotos Marathon"
     },
     racepage: {
       meta_title:           "Detailliertes Programm – EM 2026 Inline-Speedskating",
@@ -1767,7 +1775,9 @@ const TRANSLATIONS = {
       day1:           "Fotos día 1",
       day2:           "Fotos día 2",
       day3:           "Fotos día 3",
-      day4:           "Fotos día 4"
+      day4:           "Fotos día 4",
+      day5:           "Fotos día 5",
+      maratona:       "Fotos maratón"
     },
     racepage: {
       meta_title:           "Programa detallado – EC 2026 Patinaje de Velocidad en Línea",
@@ -2155,7 +2165,9 @@ const TRANSLATIONS = {
       day1:           "Fotos dia 1",
       day2:           "Fotos dia 2",
       day3:           "Fotos dia 3",
-      day4:           "Fotos dia 4"
+      day4:           "Fotos dia 4",
+      day5:           "Fotos dia 5",
+      maratona:       "Fotos maratona"
     },
     racepage: {
       meta_title:           "Programa detalhado – EC 2026 Patinagem de Velocidade em Linha",
